@@ -30,9 +30,11 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.activity_main);
 		
 		tb=(ToggleButton) this.findViewById(R.id.toggleButton1);
+		tb.setChecked(isMyServiceRunning());
 		
 		final Intent intent = new Intent(this, SwipeService.class);
-		tb.setChecked(isMyServiceRunning());
+//		final Intent intentSecurer = new Intent(this, SwipeServiceSecurer.class);
+		
 		 
 		
 		tb.setOnClickListener(new OnClickListener() {
@@ -40,14 +42,13 @@ public class MainActivity extends Activity{
 			public void onClick(View v) {
 				if(!isMyServiceRunning()){
 					MainActivity.this.startService(intent);
+//					MainActivity.this.startService(intentSecurer);
 				}
 				else{
 					MainActivity.this.stopService(intent);
 				}
-				
 			}
 		});
-		
 	}
 	
 

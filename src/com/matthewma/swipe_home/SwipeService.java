@@ -2,6 +2,10 @@ package com.matthewma.swipe_home;
 
 import java.lang.reflect.Method;
 
+
+
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -31,6 +35,15 @@ public class SwipeService extends Service implements OnGestureListener{
 	  
 	  @Override
 	  public void onCreate() {
+		  Notification notification = new Notification(
+					R.drawable.s, "Swipe Home",
+					System.currentTimeMillis());
+			Intent notificationIntent = new Intent(this, MainActivity.class);
+			PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,notificationIntent, 0);
+			notification.setLatestEventInfo(this, "Swipe Home",null, pendingIntent);
+			startForeground(317, notification); 
+		  
+		  
 		  mButton = new Button(this);
 //		  mButton.setText("B");
 //		  ViewGroup.LayoutParams params = mButton.getLayoutParams();
