@@ -57,7 +57,7 @@ public class SwipeService extends Service implements OnGestureListener{
 //	                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE|WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL|WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
 //	                 PixelFormat.TRANSLUCENT);
 		  WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-	                200, 30,
+	                230, 30,
 //				  	WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
 	                WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
 	                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN|
@@ -124,7 +124,7 @@ public class SwipeService extends Service implements OnGestureListener{
 //		Toast.makeText(this, "angle:"+angle, Toast.LENGTH_SHORT).show();
 
 		if(relativeY>30.0){
-			if(angle<20.){
+			if(angle<25.){
 				Intent i = new Intent(Intent.ACTION_MAIN);
 				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		    	i.addCategory(Intent.CATEGORY_HOME);
