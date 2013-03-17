@@ -36,11 +36,11 @@ public class SwipeService extends Service implements OnGestureListener{
 	  @Override
 	  public void onCreate() {
 		  Notification notification = new Notification(
-					R.drawable.s, "Swipe Home",
+					R.drawable.s_notification, "Swipe Home",
 					System.currentTimeMillis());
 			Intent notificationIntent = new Intent(this, MainActivity.class);
 			PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,notificationIntent, 0);
-			notification.setLatestEventInfo(this, "Swipe Home",null, pendingIntent);
+			notification.setLatestEventInfo(this, "Swipe Home","Relacing Home Button", pendingIntent);
 			startForeground(317, notification); 
 		  
 		  

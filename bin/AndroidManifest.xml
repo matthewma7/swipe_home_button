@@ -30,7 +30,6 @@
             </intent-filter>
         </receiver>
         <service android:name=".SwipeService" />
-        <service android:name=".SwipeServiceSecurer" />
     </application>
 
 </manifest>
