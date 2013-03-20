@@ -9,20 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class MainActivity extends Activity{
-	
-	TextView tv;
 	ToggleButton tb;
-	EditText et1;
-	EditText et2;
-	RadioGroup rg;
-	RadioButton rb;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +20,9 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.activity_main);
 		
 		tb=(ToggleButton) this.findViewById(R.id.toggleButton1);
-		tb.setChecked(isMyServiceRunning());
 		
 		final Intent intent = new Intent(this, SwipeService.class);		
-		 
-		
+				
 		tb.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -55,6 +43,11 @@ public class MainActivity extends Activity{
 //		getMenuInflater().inflate(R.menu.activity_main, menu);
 //		return true;
 //	}
+	@Override
+	protected void onResume(){
+		super.onResume();
+		tb.setChecked(isMyServiceRunning());
+	}
 
 
 	

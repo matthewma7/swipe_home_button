@@ -32,6 +32,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	  Button mButton;
 	  GestureDetector myGesture;
 	  WindowManager wm;
+	  Boolean SwipeNotification=false;
 	  
 	  @Override
 	  public void onCreate() {
@@ -40,7 +41,7 @@ public class SwipeService extends Service implements OnGestureListener{
 					System.currentTimeMillis());
 			Intent notificationIntent = new Intent(this, MainActivity.class);
 			PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,notificationIntent, 0);
-			notification.setLatestEventInfo(this, "Swipe Home","Relacing Home Button", pendingIntent);
+			notification.setLatestEventInfo(this, "Swipe Home","Replacing the home button", pendingIntent);
 			startForeground(317, notification); 
 		  
 		  
@@ -48,9 +49,9 @@ public class SwipeService extends Service implements OnGestureListener{
 //		  mButton.setText("B");
 //		  ViewGroup.LayoutParams params = mButton.getLayoutParams();
 //		    //Button new width
-//		    params.height = 10;
+//		  params.height = 10;
 //
-//		    mButton.setLayoutParams(params);
+//		  mButton.setLayoutParams(params);
 //		  mButton.setLayoutParams (new ViewGroup.LayoutParams(10, 10));
 //		  mButton.setLayoutParams(new LinearLayout.LayoutParams(10, 100));
 		  boolean isDebuggable =  ( 0 != ( getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE ) );
@@ -137,15 +138,8 @@ public class SwipeService extends Service implements OnGestureListener{
 //		Toast.makeText(this, "angle:"+angle, Toast.LENGTH_SHORT).show();
 
 		if(relativeY>30.0){
-			if(angle<25.){
-				Intent i = new Intent(Intent.ACTION_MAIN);
-				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		    	i.addCategory(Intent.CATEGORY_HOME);
-		    	startActivity(i);
-				
-			}
-	    	else{
-	    		try{
+			if(SwipeNotification&&angle>25.){
+				try{
 					Object service = this.getSystemService("statusbar");
 					Class<?> statusbarManager = Class.forName("android.app.StatusBarManager");
 					Method expand = statusbarManager.getMethod("expand");
@@ -154,6 +148,12 @@ public class SwipeService extends Service implements OnGestureListener{
 				catch(Exception e){
 					Log.e("swipe", e.getMessage());
 				}
+			}
+	    	else{
+	    		Intent i = new Intent(Intent.ACTION_MAIN);
+				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		    	i.addCategory(Intent.CATEGORY_HOME);
+		    	startActivity(i);
 	    	}
 		}
 		else{
