@@ -1,6 +1,7 @@
 package com.matthewma.swipe_home;
 
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
@@ -23,7 +24,11 @@ public class MainActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+		ActionBar actionBar = getActionBar();
+		actionBar.show();
+
+	        actionBar.show();
+
 		tb=(ToggleButton) this.findViewById(R.id.toggleButton1);
 		
 		final Intent intent = new Intent(this, SwipeService.class);		
