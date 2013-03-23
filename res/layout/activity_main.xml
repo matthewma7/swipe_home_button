@@ -5,15 +5,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="by Matthew Ma"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
     <ToggleButton
         android:id="@+id/toggleButton1"
         android:layout_width="wrap_content"

@@ -10,12 +10,14 @@ import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -24,7 +26,6 @@ import android.view.GestureDetector.OnGestureListener;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 
 public class SwipeService extends Service implements OnGestureListener{
@@ -37,15 +38,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean prefSwipeNotification;
 
 	@Override
-	public void onCreate() {
-//		Notification notification = new Notification(
-//				R.drawable.s_notification, "Swipe Home",
-//				System.currentTimeMillis());
-//		Intent notificationIntent = new Intent(this, MainActivity.class);
-//		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,notificationIntent, 0);
-//		notification.setLatestEventInfo(this, "Swipe Home","Replacing the home button", pendingIntent);
-//		startForeground(317, notification); 
-		
+	public void onCreate() {		
 		Intent notificationIntent = new Intent(this, MainActivity.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(this,
 		        -1, notificationIntent,
@@ -63,14 +56,6 @@ public class SwipeService extends Service implements OnGestureListener{
 
 
 		mButton = new Button(this);
-		//		  mButton.setText("B");
-		//		  ViewGroup.LayoutParams params = mButton.getLayoutParams();
-		//		    //Button new width
-		//		  params.height = 10;
-		//
-		//		  mButton.setLayoutParams(params);
-		//		  mButton.setLayoutParams (new ViewGroup.LayoutParams(10, 10));
-		//		  mButton.setLayoutParams(new LinearLayout.LayoutParams(10, 100));
 		boolean isDebuggable =  ( 0 != ( getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE ) );
 		if(!isDebuggable){
 			mButton.setVisibility(View.VISIBLE);
@@ -84,16 +69,11 @@ public class SwipeService extends Service implements OnGestureListener{
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		// For each start request, send a message to start a job and deliver the
-		// start ID so we know which request we're stopping when we finish the job
-		//		  WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-		//	                WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT,
-		//	                WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
-		//	                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE|WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL|WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
-		//	                 PixelFormat.TRANSLUCENT);
+		Resources r = getResources();
+		  int px =(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 110, r.getDisplayMetrics());
 		WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-				160, 160,
-				//				  	WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
+				px, px/5,
+				//WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
 				WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
 				WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN|
 				WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|
@@ -101,26 +81,20 @@ public class SwipeService extends Service implements OnGestureListener{
 				WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
 				PixelFormat.TRANSLUCENT);
 		params.gravity = Gravity.BOTTOM | Gravity.CENTER;
-		//	        params.setTitle("Load Average");
-
-		//	        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-		//	        View myview = inflater.inflate(R.layout.nothing, null);
 		myGesture = new GestureDetector(mButton.getContext(),this);
 
 		mButton.setOnTouchListener(new OnTouchListener() {
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				//					Log.e("swipe","onTouch");
-				//					Toast.makeText(ConnectMeService.this, "onTouch", Toast.LENGTH_SHORT).show();
+				//Log.e("swipe","onTouch");
+				//Toast.makeText(ConnectMeService.this, "onTouch", Toast.LENGTH_SHORT).show();
 				return myGesture.onTouchEvent(event);
-				//					return false;
+				//return false;
 			}
 		});
 		wm = (WindowManager) getSystemService(WINDOW_SERVICE);
 		wm.addView(mButton, params);
-		// If we get killed, after returning from here, restart
-
 //		Toast.makeText(this, "Swipe Home Service Started", Toast.LENGTH_SHORT).show();
 		return START_STICKY;
 	}
@@ -140,8 +114,8 @@ public class SwipeService extends Service implements OnGestureListener{
 	@Override
 	public boolean onFling(MotionEvent arg0, MotionEvent arg1, float velocityX,
 			float velocityY) {
-		//		Toast.makeText(this, "onFling", Toast.LENGTH_SHORT).show();
-		//		Log.e("swipe","onFling");
+		//Toast.makeText(this, "onFling", Toast.LENGTH_SHORT).show();
+		//Log.e("swipe","onFling");
 		Float relativeX=Math.abs(arg0.getX()-arg1.getX());
 		Float relativeY=Math.abs(arg0.getY()-arg1.getY());
 		Double angle=Math.atan(relativeX/relativeY)/Math.PI*180;
