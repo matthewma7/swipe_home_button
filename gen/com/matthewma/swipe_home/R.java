@@ -23,6 +23,7 @@ public final class R {
     }
     public static final class id {
         public static final int menu_settings=0x7f090002;
+        public static final int menu_settings_menubutton=0x7f090003;
         public static final int textView1=0x7f090000;
         public static final int toggleButton1=0x7f090001;
     }
@@ -36,14 +37,20 @@ public final class R {
         public static final int app_name=0x7f060000;
         public static final int hello_world=0x7f060001;
         public static final int menu_settings=0x7f060002;
-        public static final int pref_send_report=0x7f060003;
-        public static final int pref_send_report_summary=0x7f060004;
-        public static final int pref_sync_frequency=0x7f060005;
-        public static final int pref_sync_frequency_summary=0x7f060006;
-        public static final int pref_update_setting=0x7f06000a;
-        public static final int pref_user_name=0x7f060007;
-        public static final int pref_user_name_summary=0x7f060008;
-        public static final int pref_user_profile=0x7f060009;
+        /**      <string name="pref_sync_frequency">Sync frequency</string> 
+     <string name="pref_sync_frequency_summary">Set the sync frequency</string> 
+     <string name="pref_user_name">Set username</string> 
+     <string name="pref_user_name_summary">Set your username</string> 
+         */
+        public static final int pref_author=0x7f060009;
+        public static final int pref_author_email_subject=0x7f06000b;
+        public static final int pref_author_summary=0x7f06000a;
+        public static final int pref_category_about=0x7f060003;
+        public static final int pref_category_settings=0x7f060004;
+        public static final int pref_swipe_autostart=0x7f060005;
+        public static final int pref_swipe_autostart_summary=0x7f060006;
+        public static final int pref_swipe_notification=0x7f060007;
+        public static final int pref_swipe_notification_summary=0x7f060008;
     }
     public static final class style {
         /** 

@@ -66,7 +66,7 @@ public class MainActivity extends Activity{
     public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) 
 		{
-			case R.id.menu_settings:
+			case R.id.menu_settings:case R.id.menu_settings_menubutton:
 				Intent i = new Intent(this, SettingsActivity.class);
 				startActivityForResult(i, 1);
 				break;
@@ -77,23 +77,11 @@ public class MainActivity extends Activity{
 	@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
- 
         switch (requestCode) {
         case 1:
-        	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-
-		    StringBuilder builder = new StringBuilder();
-		
-		    builder.append("\n Username: "
-		            + sharedPrefs.getString("prefUsername", "NULL"));
-		
-		    builder.append("\n Send report:"
-		            + sharedPrefs.getBoolean("prefSendReport", false));
-		
-		    builder.append("\n Sync Frequency: "
-		            + sharedPrefs.getString("prefSyncFrequency", "NULL"));
-		
-		    Log.e("swipe",builder.toString());
+        	final Intent intent = new Intent(this, SwipeService.class);
+        	this.stopService(intent);
+			this.startService(intent);
             break;
         }
     }

@@ -8,11 +8,13 @@ import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.os.HandlerThread;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Gravity;
@@ -32,7 +34,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	Button mButton;
 	GestureDetector myGesture;
 	WindowManager wm;
-	Boolean SwipeNotification=true;
+	Boolean prefSwipeNotification;
 
 	@Override
 	public void onCreate() {
@@ -74,6 +76,10 @@ public class SwipeService extends Service implements OnGestureListener{
 			mButton.setVisibility(View.VISIBLE);
 			mButton.setBackgroundColor(Color.TRANSPARENT);  
 		}
+		
+		
+		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+		prefSwipeNotification=sharedPrefs.getBoolean("prefSwipeNotification", false);
 	}
 
 	@Override
@@ -86,7 +92,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		//	                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE|WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL|WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
 		//	                 PixelFormat.TRANSLUCENT);
 		WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-				230, 30,
+				160, 160,
 				//				  	WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
 				WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
 				WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN|
@@ -115,7 +121,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		wm.addView(mButton, params);
 		// If we get killed, after returning from here, restart
 
-		Toast.makeText(this, "Swipe Home Service Started", Toast.LENGTH_SHORT).show();
+//		Toast.makeText(this, "Swipe Home Service Started", Toast.LENGTH_SHORT).show();
 		return START_STICKY;
 	}
 
@@ -128,18 +134,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	@Override
 	public void onDestroy() {
 		wm.removeView(mButton);
-		Toast.makeText(this, "Swipe Home Service Stopped", Toast.LENGTH_SHORT).show();
-	}
-
-	@Override
-	public boolean onDown(MotionEvent arg0) {
-		//		Log.e("swipe","onDown");
-		//		Toast.makeText(this, "onDown", Toast.LENGTH_SHORT).show();
-		//		Intent i = new Intent(Intent.ACTION_MAIN);
-		//		i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		//    	i.addCategory(Intent.CATEGORY_HOME);
-		//    	startActivity(i);
-		return false;
+//		Toast.makeText(this, "Swipe Home Service Stopped", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
@@ -153,7 +148,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		//		Toast.makeText(this, "angle:"+angle, Toast.LENGTH_SHORT).show();
 
 		if(relativeY>30.0){
-			if(SwipeNotification&&angle>25.){
+			if(prefSwipeNotification&&angle>25.){
 				try{
 					Object service = this.getSystemService("statusbar");
 					Class<?> statusbarManager = Class.forName("android.app.StatusBarManager");
@@ -190,35 +185,29 @@ public class SwipeService extends Service implements OnGestureListener{
 
 		return false;
 	}
+	
+	@Override
+	public boolean onDown(MotionEvent arg0) {
+		return false;
+	}
 
 	@Override
 	public void onLongPress(MotionEvent arg0) {
-		//		Log.e("swipe","onLongPress");
-		//		Toast.makeText(this, "onLongPress", Toast.LENGTH_SHORT).show();
-
 	}
 
 	@Override
 	public boolean onScroll(MotionEvent arg0, MotionEvent arg1, float arg2,
 			float arg3) {
-		// TODO Auto-generated method stub
-		//		Log.e("swipe","onScroll");
-		//		Toast.makeText(this, "onScroll", Toast.LENGTH_SHORT).show();
 		return false;
 	}
 
 	@Override
 	public void onShowPress(MotionEvent arg0) {
-		// TODO Auto-generated method stub
-		//		Log.e("swipe","onShowPress");
-		//		Toast.makeText(this, "onShowPress", Toast.LENGTH_SHORT).show();
 
 	}
 
 	@Override
 	public boolean onSingleTapUp(MotionEvent arg0) {
-		// TODO Auto-generated method stub
-		//		Toast.makeText(this, "onSingleTapUp:", Toast.LENGTH_SHORT).show();
 		return false;
 	}
 

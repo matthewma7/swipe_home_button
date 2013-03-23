@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
  
-    <PreferenceCategory android:title="@string/pref_user_profile" >
-        <EditTextPreference
-                android:title="@string/pref_user_name"
-                android:summary="@string/pref_user_name_summary"
-                android:key="prefUsername"/>
-    </PreferenceCategory>
+<!--     <PreferenceCategory android:title="@string/pref_user_profile" > -->
+<!--         <EditTextPreference -->
+<!--                 android:title="@string/pref_user_name" -->
+<!--                 android:summary="@string/pref_user_name_summary" -->
+<!--                 android:key="prefUsername"/> -->
+<!--     </PreferenceCategory> -->
      
-    <PreferenceCategory android:title="@string/pref_update_setting" >
+    <PreferenceCategory android:title="@string/pref_category_settings" >
         <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="prefSendReport"
-            android:summary="@string/pref_send_report_summary"
-            android:title="@string/pref_send_report" >
+            android:defaultValue="true"
+            android:key="prefAutoStart"
+            android:summary="@string/pref_swipe_autostart_summary"
+            android:title="@string/pref_swipe_autostart" >
+        </CheckBoxPreference>
+        
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="prefSwipeNotification"
+            android:summary="@string/pref_swipe_notification_summary"
+            android:title="@string/pref_swipe_notification" >
         </CheckBoxPreference>
  
-        <ListPreference
-            android:key="prefSyncFrequency"
-            android:entries="@array/syncFrequency"
-            android:summary="@string/pref_sync_frequency_summary"
-            android:entryValues="@array/syncFrequencyValues"
-            android:title="@string/pref_sync_frequency" />
+<!--         <ListPreference -->
+<!--             android:key="prefSyncFrequency" -->
+<!--             android:entries="@array/syncFrequency" -->
+<!--             android:summary="@string/pref_sync_frequency_summary" -->
+<!--             android:entryValues="@array/syncFrequencyValues" -->
+<!--             android:title="@string/pref_sync_frequency" /> -->
+        
+        
     </PreferenceCategory>
- 
+    <PreferenceCategory android:title="@string/pref_category_about" >
+    	<Preference android:title="@string/pref_author" 
+            android:summary="@string/pref_author_summary">
+		    <intent android:action="android.intent.action.VIEW"
+		            android:data="mailto:matthew.ma.7@gmail.com" >
+	             <extra android:name="android.intent.extra.SUBJECT" 
+	                 android:value="@string/pref_author_email_subject" />
+            </intent>
+		</Preference>
+ 	</PreferenceCategory>
 </PreferenceScreen>
