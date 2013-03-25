@@ -36,6 +36,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	GestureDetector myGesture;
 	WindowManager wm;
 	Boolean prefSwipeNotification;
+	final int ANGLE=25;
 
 	@Override
 	public void onCreate() {		
@@ -69,17 +70,16 @@ public class SwipeService extends Service implements OnGestureListener{
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		Resources r = getResources();
-		  int px =(int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 110, r.getDisplayMetrics());
+		int px=dp2px(110);
 		WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-				px, px/5,
-				//WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
-				WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
-				WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN|
-				WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|
-				WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL|
-				WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
-				PixelFormat.TRANSLUCENT);
+			px, px/5,
+			//WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
+			WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
+			WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN|
+			WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE|
+			WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL|
+			WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
+			PixelFormat.TRANSLUCENT);
 		params.gravity = Gravity.BOTTOM | Gravity.CENTER;
 		myGesture = new GestureDetector(mButton.getContext(),this);
 
@@ -120,9 +120,10 @@ public class SwipeService extends Service implements OnGestureListener{
 		Float relativeY=Math.abs(arg0.getY()-arg1.getY());
 		Double angle=Math.atan(relativeX/relativeY)/Math.PI*180;
 		//		Toast.makeText(this, "angle:"+angle, Toast.LENGTH_SHORT).show();
-
-		if(relativeY>30.0){
-			if(prefSwipeNotification&&angle>25.){
+		
+		
+		if(relativeY>20){
+			if(prefSwipeNotification&&angle>ANGLE&&relativeY>dp2px(45)){
 				try{
 					Object service = this.getSystemService("statusbar");
 					Class<?> statusbarManager = Class.forName("android.app.StatusBarManager");
@@ -183,6 +184,11 @@ public class SwipeService extends Service implements OnGestureListener{
 	@Override
 	public boolean onSingleTapUp(MotionEvent arg0) {
 		return false;
+	}
+	
+	public int dp2px(int dp){
+		Resources r = getResources();
+	    return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics());
 	}
 
 }
