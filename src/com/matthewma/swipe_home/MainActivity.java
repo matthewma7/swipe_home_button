@@ -7,37 +7,49 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ToggleButton;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity{
-	ToggleButton tb;
+	Button buttonStart;
+	Button buttonStop;
+	TextView textView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		buttonStart=(Button)this.findViewById(R.id.button1);
+		buttonStop=(Button)this.findViewById(R.id.button2);
+		textView=(TextView)this.findViewById(R.id.textView1);
 		ActionBar actionBar = getActionBar();
 		actionBar.show();
 
-	        actionBar.show();
-
-		tb=(ToggleButton) this.findViewById(R.id.toggleButton1);
 		
 		final Intent intent = new Intent(this, SwipeService.class);		
 				
-		tb.setOnClickListener(new OnClickListener() {
+		buttonStart.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				if(!isMyServiceRunning()){
 					MainActivity.this.startService(intent);
+					update(isMyServiceRunning());
 				}
-				else{
+			}
+		});
+		
+		buttonStop.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(isMyServiceRunning()){
 					MainActivity.this.stopService(intent);
+					update(isMyServiceRunning());
 				}
 			}
 		});
@@ -47,7 +59,7 @@ public class MainActivity extends Activity{
 	@Override
 	protected void onResume(){
 		super.onResume();
-		tb.setChecked(isMyServiceRunning());
+		update(isMyServiceRunning());
 	}
 	
 	
@@ -58,9 +70,10 @@ public class MainActivity extends Activity{
 		return true;
 	}
 	
-	
+	private Boolean _wasServiceRunning;
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
+		_wasServiceRunning=isMyServiceRunning();
 		switch (item.getItemId()) 
 		{
 			case R.id.menu_settings:case R.id.menu_settings_menubutton:
@@ -77,11 +90,26 @@ public class MainActivity extends Activity{
         switch (requestCode) {
         case 1:
         	final Intent intent = new Intent(this, SwipeService.class);
-        	this.stopService(intent);
-			this.startService(intent);
+        	if(_wasServiceRunning){
+        		this.stopService(intent);
+    			this.startService(intent);
+        	}
             break;
         }
     }
+	
+	private void update(Boolean isServiceRunning){
+		buttonStart.setEnabled(!isServiceRunning);
+		buttonStop.setEnabled(isServiceRunning);
+		if(isServiceRunning){
+			textView.setText(R.string.service_running);
+			textView.setTextColor(Color.argb(255, 70, 122, 28));
+		}
+		else{
+			textView.setText(R.string.service_not_running);
+			textView.setTextColor(Color.argb(255, 168, 0, 0));
+		}
+	}
 
 	private boolean isMyServiceRunning() {
 	    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);

@@ -123,7 +123,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		
 		
 		if(relativeY>20){
-			if(prefSwipeNotification&&angle>ANGLE&&relativeY>dp2px(45)){
+			if(prefSwipeNotification&&angle>ANGLE&&(relativeY>dp2px(45)||relativeX>dp2px(45))){
 				try{
 					Object service = this.getSystemService("statusbar");
 					Class<?> statusbarManager = Class.forName("android.app.StatusBarManager");

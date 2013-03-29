@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    
+    <string name="service_running">Swipe Home Started</string>
+    <string name="service_not_running">Swipe Home Stopped</string>
+    
     <string name="app_name">Swipe Home</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
 
     <string name="pref_category_about">About</string>
     <string name="pref_category_settings">Settings</string>
+    <string name="pref_category_upgrade">Upgrade</string>
+    
     
     <string name="pref_swipe_autostart">Start at Boot</string>
     <string name="pref_swipe_autostart_summary">Start Swipe Home service after phone boots</string>
@@ -22,4 +30,8 @@
     <string name="pref_author">Author</string>
     <string name="pref_author_summary">Matthew Ma</string>
     <string name="pref_author_email_subject">Regarding Swipe Home</string>
+    
+    
+    <string name="pref_upgrade">Start at boot</string>
+    <string name="pref_upgrade_summary">Upgrade to full version</string>
 </resources>

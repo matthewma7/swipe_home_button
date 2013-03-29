@@ -22,14 +22,26 @@
             android:summary="@string/pref_swipe_notification_summary"
             android:title="@string/pref_swipe_notification" >
         </CheckBoxPreference>
- 
-<!--         <ListPreference -->
-<!--             android:key="prefSyncFrequency" -->
-<!--             android:entries="@array/syncFrequency" -->
-<!--             android:summary="@string/pref_sync_frequency_summary" -->
-<!--             android:entryValues="@array/syncFrequencyValues" -->
-<!--             android:title="@string/pref_sync_frequency" /> -->
         
+<!--          <DialogPreference -->
+<!--             android:dialogIcon="@android:drawable/ic_dialog_alert"       -->
+<!--             android:dialogTitle="Second PreferenceScreen" -->
+<!--             android:dialogMessage="This is a second PreferenceScreen" -->
+<!--             android:positiveButtonText="OK" -->
+<!--             android:negativeButtonText="Cancel"> -->
+ 
+<!--             <EditTextPreference -->
+<!--                 android:name="Username Preference" -->
+<!--                 android:summary="Username from System" -->
+<!--                 android:title="Username" -->
+<!--                 android:key="ApiUsername" /> -->
+<!--             <EditTextPreference -->
+<!--                 android:name="Password Preference" -->
+<!--                 android:summary="Remote Password from System" -->
+<!--                 android:title="Password" -->
+<!--                 android:key="ApiPassword" /> -->
+<!--         </DialogPreference> -->
+         
         
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_category_about" >
@@ -42,4 +54,15 @@
             </intent>
 		</Preference>
  	</PreferenceCategory>
+    
+<!--     <PreferenceCategory android:title="@string/pref_category_upgrade" > -->
+<!--     	<Preference android:title="@string/pref_upgrade"  -->
+<!--             android:summary="@string/pref_upgrade_summary"> -->
+<!-- 		    <intent android:action="android.intent.action.VIEW" -->
+<!-- 		            android:data="mailto:matthew.ma.7@gmail.com" > -->
+<!-- 	             <extra android:name="android.intent.extra.SUBJECT"  -->
+<!-- 	                 android:value="@string/pref_author_email_subject" /> -->
+<!--             </intent> -->
+<!-- 		</Preference> -->
+<!--  	</PreferenceCategory> -->
 </PreferenceScreen>
