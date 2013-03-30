@@ -103,11 +103,11 @@ public class MainActivity extends Activity{
 		buttonStop.setEnabled(isServiceRunning);
 		if(isServiceRunning){
 			textView.setText(R.string.service_running);
-			textView.setTextColor(Color.argb(255, 70, 122, 28));
+			textView.setTextColor(Color.argb(255, 93, 168, 32));
 		}
 		else{
 			textView.setText(R.string.service_not_running);
-			textView.setTextColor(Color.argb(255, 168, 0, 0));
+			textView.setTextColor(Color.argb(255, 199, 0, 0));
 		}
 	}
 

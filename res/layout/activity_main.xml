@@ -15,9 +15,9 @@
         <Button
             android:id="@+id/button1"
             android:textSize="14sp"            
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginRight="10dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/start" />
@@ -25,9 +25,9 @@
         <Button
             android:id="@+id/button2"
             android:textSize="14sp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginLeft="10dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:layout_marginLeft="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/stop" />
@@ -36,6 +36,7 @@
     <TextView
         android:id="@+id/textView1"
         android:textSize="18sp"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout1"
