@@ -37,6 +37,8 @@ public class SwipeService extends Service implements OnGestureListener{
 	WindowManager wm;
 	Boolean prefSwipeNotification;
 	final int ANGLE=25;
+	final int XYThreshold=55;
+	final int buttonSize=120;
 
 	@Override
 	public void onCreate() {		
@@ -50,8 +52,8 @@ public class SwipeService extends Service implements OnGestureListener{
 		            .setSmallIcon(R.drawable.s_notification)
 		            .setWhen(System.currentTimeMillis())
 		            .setAutoCancel(false)
-		            .setContentTitle("Swipe Home")
-		            .setContentText("Replacing your home button")
+		            .setContentTitle(getString(R.string.notification_title))
+		            .setContentText(getString(R.string.notification_text))
 		            .getNotification();
 		startForeground(317, notification);
 
@@ -70,7 +72,7 @@ public class SwipeService extends Service implements OnGestureListener{
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		int px=dp2px(110);
+		int px=dp2px(buttonSize);
 		WindowManager.LayoutParams params = new WindowManager.LayoutParams(
 			px, px/5,
 			//WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
@@ -101,7 +103,6 @@ public class SwipeService extends Service implements OnGestureListener{
 
 	@Override
 	public IBinder onBind(Intent intent) {
-		// We don't provide binding, so return null
 		return null;
 	}
 
@@ -123,7 +124,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		
 		
 		if(relativeY>20){
-			if(prefSwipeNotification&&angle>ANGLE&&(relativeY>dp2px(45)||relativeX>dp2px(45))){
+			if(prefSwipeNotification&&angle>ANGLE&&(relativeY>dp2px(XYThreshold)||relativeX>dp2px(XYThreshold))){
 				try{
 					Object service = this.getSystemService("statusbar");
 					Class<?> statusbarManager = Class.forName("android.app.StatusBarManager");
