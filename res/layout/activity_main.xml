@@ -5,42 +5,42 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" >
+<!--     <LinearLayout -->
+<!--         android:id="@+id/linearLayout1" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:layout_centerHorizontal="true" -->
+<!--         android:layout_centerVertical="true" > -->
 
-        <Button
-            android:id="@+id/button1"
-            android:textSize="14sp"            
-            android:paddingLeft="25dp"
-            android:paddingRight="25dp"
-            android:layout_marginRight="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start" />
+<!--         <Button -->
+<!--             android:id="@+id/button1" -->
+<!--             android:textSize="14sp"             -->
+<!--             android:paddingLeft="25dp" -->
+<!--             android:paddingRight="25dp" -->
+<!--             android:layout_marginRight="15dp" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:text="@string/start" /> -->
 
-        <Button
-            android:id="@+id/button2"
-            android:textSize="14sp"
-            android:paddingLeft="25dp"
-            android:paddingRight="25dp"
-            android:layout_marginLeft="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/stop" />
-    </LinearLayout>
+<!--         <Button -->
+<!--             android:id="@+id/button2" -->
+<!--             android:textSize="14sp" -->
+<!--             android:paddingLeft="25dp" -->
+<!--             android:paddingRight="25dp" -->
+<!--             android:layout_marginLeft="15dp" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:text="@string/stop" /> -->
+<!--     </LinearLayout> -->
 
     <TextView
         android:id="@+id/textView1"
-        android:textSize="18sp"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="52dp" />
+        android:layout_marginTop="230dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

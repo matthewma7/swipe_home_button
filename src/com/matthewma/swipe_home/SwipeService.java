@@ -38,7 +38,8 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean prefSwipeNotification;
 	final int ANGLE=25;
 	final int XYThreshold=55;
-	final int buttonSize=120;
+	final int buttonWidth=120;
+	final int buttonHeight=22;
 
 	@Override
 	public void onCreate() {		
@@ -72,9 +73,10 @@ public class SwipeService extends Service implements OnGestureListener{
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		int px=dp2px(buttonSize);
+		int hight=dp2px(buttonHeight);
+		int width=dp2px(buttonWidth);
 		WindowManager.LayoutParams params = new WindowManager.LayoutParams(
-			px, px/5,
+			width, hight,
 			//WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
 			WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
 			WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN|
@@ -120,10 +122,10 @@ public class SwipeService extends Service implements OnGestureListener{
 		Float relativeX=Math.abs(arg0.getX()-arg1.getX());
 		Float relativeY=Math.abs(arg0.getY()-arg1.getY());
 		Double angle=Math.atan(relativeX/relativeY)/Math.PI*180;
-		//		Toast.makeText(this, "angle:"+angle, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(this, velocityX+":"+velocityY, Toast.LENGTH_SHORT).show();
 		
 		
-		if(relativeY>20){
+		if(relativeY>dp2px(15)||velocityY<-50){
 			if(prefSwipeNotification&&angle>ANGLE&&(relativeY>dp2px(XYThreshold)||relativeX>dp2px(XYThreshold))){
 				try{
 					Object service = this.getSystemService("statusbar");

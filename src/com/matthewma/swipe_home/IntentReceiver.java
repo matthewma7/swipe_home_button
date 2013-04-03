@@ -12,7 +12,8 @@ public class IntentReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
     	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 		Boolean prefAutoStart=sharedPrefs.getBoolean("prefAutoStart", false);
-		if(prefAutoStart){
+		Boolean prefEnable=sharedPrefs.getBoolean("prefEnable", false);
+		if(prefAutoStart&&prefEnable){
 			Intent myIntent = new Intent(context, SwipeService.class);
 	    	context.startService(myIntent);
 		}
