@@ -32,6 +32,13 @@
             android:title="@string/pref_swipe_notification" >
         </CheckBoxPreference>
         
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefTransparentIcon"
+            android:summary="@string/pref_transparenticon_summary"
+            android:title="@string/pref_transparenticon" >
+        </CheckBoxPreference>
+        
 <!--          <DialogPreference -->
 <!--             android:dialogIcon="@android:drawable/ic_dialog_alert"       -->
 <!--             android:dialogTitle="Second PreferenceScreen" -->

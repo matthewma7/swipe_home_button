@@ -11,8 +11,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
+import android.os.Build;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
@@ -42,22 +44,38 @@ public class SwipeService extends Service implements OnGestureListener{
 	final int buttonHeight=22;
 
 	@Override
-	public void onCreate() {		
+	public void onCreate() {
+		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+		prefSwipeNotification=sharedPrefs.getBoolean("prefSwipeNotification", true);
+		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", false);
+		
 		Intent notificationIntent = new Intent(this, MainActivity.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(this,
 		        -1, notificationIntent,
 		        PendingIntent.FLAG_CANCEL_CURRENT);
-		Notification notification = 
-					new Notification.Builder(this)
-					.setContentIntent(contentIntent)
-		            .setSmallIcon(R.drawable.s_notification)
-		            .setWhen(System.currentTimeMillis())
-		            .setAutoCancel(false)
-		            .setContentTitle(getString(R.string.notification_title))
-		            .setContentText(getString(R.string.notification_text))
-		            .getNotification();
+		
+		
+		Notification.Builder notificationBuilder=new Notification.Builder(this);
+		
+		notificationBuilder
+			.setContentIntent(contentIntent)
+            .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.s_notification))
+            .setWhen(0)
+            .setAutoCancel(false)
+            .setContentTitle(getString(R.string.notification_title))
+            .setContentText(getString(R.string.notification_text))
+            .getNotification();
+		
+		if(prefTransparentIcon){
+			notificationBuilder.setSmallIcon(R.drawable.transparent);
+		}
+		else{
+			notificationBuilder.setSmallIcon(R.drawable.s_notification);
+		}
+		
+		Notification notification=notificationBuilder.getNotification();
+		notification.when=Integer.MAX_VALUE;
 		startForeground(317, notification);
-
 
 		mButton = new Button(this);
 		boolean isDebuggable =  ( 0 != ( getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE ) );
@@ -65,10 +83,6 @@ public class SwipeService extends Service implements OnGestureListener{
 			mButton.setVisibility(View.VISIBLE);
 			mButton.setBackgroundColor(Color.TRANSPARENT);  
 		}
-		
-		
-		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-		prefSwipeNotification=sharedPrefs.getBoolean("prefSwipeNotification", false);
 	}
 
 	@Override
@@ -122,29 +136,10 @@ public class SwipeService extends Service implements OnGestureListener{
 		Float relativeX=Math.abs(arg0.getX()-arg1.getX());
 		Float relativeY=Math.abs(arg0.getY()-arg1.getY());
 		Double angle=Math.atan(relativeX/relativeY)/Math.PI*180;
-//		Toast.makeText(this, velocityX+":"+velocityY, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(this, "relativeY:"+relativeY+" velocityY:"+velocityY, Toast.LENGTH_SHORT).show();
 		
 		
-		if(relativeY>dp2px(15)||velocityY<-50){
-			if(prefSwipeNotification&&angle>ANGLE&&(relativeY>dp2px(XYThreshold)||relativeX>dp2px(XYThreshold))){
-				try{
-					Object service = this.getSystemService("statusbar");
-					Class<?> statusbarManager = Class.forName("android.app.StatusBarManager");
-					Method expand = statusbarManager.getMethod("expand");
-					expand.invoke(service);
-				}
-				catch(Exception e){
-					Log.e("swipe", e.getMessage());
-				}
-			}
-			else{
-				Intent i = new Intent(Intent.ACTION_MAIN);
-				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				i.addCategory(Intent.CATEGORY_HOME);
-				startActivity(i);
-			}
-		}
-		else{
+		if(relativeY<dp2px(20)||(relativeY<dp2px(40)&&velocityY>200)){
 			try{
 				Class<?> ServiceManagerClass = Class.forName("android.os.ServiceManager");
 				Class<?> ServiceManagerNativeClass = Class.forName("android.os.ServiceManagerNative");
@@ -158,6 +153,31 @@ public class SwipeService extends Service implements OnGestureListener{
 			}
 			catch(Exception e){
 				Log.e("swipe", e.getMessage());
+			}
+		}
+		else{
+			if(prefSwipeNotification&&angle>ANGLE&&(relativeY>dp2px(XYThreshold)||relativeX>dp2px(XYThreshold))){
+				try{
+					Object sbservice = getSystemService( "statusbar" );
+					Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
+					Method showsb;
+					if (Build.VERSION.SDK_INT >= 17) {
+					    showsb = statusbarManager.getMethod("expandNotificationsPanel");
+					}
+					else {
+					    showsb = statusbarManager.getMethod("expand");
+					}
+					showsb.invoke( sbservice );
+				}
+				catch(Exception e){
+					Log.e("swipe", e.getMessage());
+				}
+			}
+			else{
+				Intent i = new Intent(Intent.ACTION_MAIN);
+				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				i.addCategory(Intent.CATEGORY_HOME);
+				startActivity(i);
 			}
 		}
 

@@ -4,8 +4,8 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     
-    <string name="service_running">Swipe Home Button Started</string>
-    <string name="service_not_running">Swipe Home Button Stopped</string>
+    <string name="service_running">Swipe Service Started</string>
+    <string name="service_not_running">Swipe Service Stopped</string>
     
     <string name="notification_title">Swipe Home Button</string>
     <string name="notification_text">Replacing your home button</string>
@@ -24,6 +24,9 @@
     
     <string name="pref_swipe_autostart">Start at Boot</string>
     <string name="pref_swipe_autostart_summary">Start Swipe Home service after phone boots</string>
+    
+    <string name="pref_transparenticon">Transparent Notification Icon</string>
+    <string name="pref_transparenticon_summary">Make the icon transparent and try to put notification icon right most</string>
     
     <string name="pref_swipe_notification">Swipe Notification</string>
     <string name="pref_swipe_notification_summary">Swipe far up right or up left to pull down notification</string>

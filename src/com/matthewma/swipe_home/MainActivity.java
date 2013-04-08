@@ -26,53 +26,32 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.activity_main);
 //		buttonStart=(Button)this.findViewById(R.id.button1);
 //		buttonStop=(Button)this.findViewById(R.id.button2);
-		textView=(TextView)this.findViewById(R.id.textView1);
-		ActionBar actionBar = getActionBar();
-		actionBar.show();
-
-		
-//		final Intent intent = new Intent(this, SwipeService.class);		
-				
-//		buttonStart.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				if(!isMyServiceRunning()){
-//					MainActivity.this.startService(intent);
-//					update(isMyServiceRunning());
-//				}
-//			}
-//		});
-//		
-//		buttonStop.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				if(isMyServiceRunning()){
-//					MainActivity.this.stopService(intent);
-//					update(isMyServiceRunning());
-//				}
-//			}
-//		});
+//		textView=(TextView)this.findViewById(R.id.textView1);
+//		ActionBar actionBar = getActionBar();
+//		actionBar.show();
 	}
 	
 
 	@Override
 	protected void onResume(){
 		super.onResume();
-		final Intent intent = new Intent(this, SwipeService.class);
-    	this.stopService(intent);
-    	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-    	Boolean prefEnable=sharedPrefs.getBoolean("prefEnable", true);
-		if(prefEnable){
-			this.startService(intent);
-		}
-		update(isMyServiceRunning());
+		Intent i = new Intent(this, SettingsActivity.class);
+		startActivityForResult(i, 1);
+//		final Intent intent = new Intent(this, SwipeService.class);
+//    	this.stopService(intent);
+//    	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+//    	Boolean prefEnable=sharedPrefs.getBoolean("prefEnable", true);
+//		if(prefEnable){
+//			this.startService(intent);
+//		}
+//		update(isMyServiceRunning());
 	}
 	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main, menu);
+//		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
 	
@@ -80,50 +59,54 @@ public class MainActivity extends Activity{
 	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
 //		_wasServiceRunning=isMyServiceRunning();
-		switch (item.getItemId()) 
-		{
-			case R.id.menu_settings:case R.id.menu_settings_menubutton:
-				Intent i = new Intent(this, SettingsActivity.class);
-				startActivityForResult(i, 1);
-				break;
-		}
+//		switch (item.getItemId()) 
+//		{
+//			case R.id.menu_settings:case R.id.menu_settings_menubutton:
+//				Intent i = new Intent(this, SettingsActivity.class);
+//				startActivityForResult(i, 1);
+//				break;
+//		}
 		return false;
 	}
 	
-//	@Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 //        switch (requestCode) {
 //        case 1:
 //        	final Intent intent = new Intent(this, SwipeService.class);
 //        	this.stopService(intent);
 //        	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-//    		Boolean prefSwipeNotification=sharedPrefs.getBoolean("prefSwipeNotification", false);
-//			this.startService(intent);
+//        	Boolean prefEnable=sharedPrefs.getBoolean("prefEnable", true);
+//    		if(prefEnable){
+//    			this.startService(intent);
+//    		}
+//    		update(isMyServiceRunning());
 //            break;
 //        }
-//    }
+        finish();
+    }
 	
-	private void update(Boolean isServiceRunning){
-//		buttonStart.setEnabled(!isServiceRunning);
-//		buttonStop.setEnabled(isServiceRunning);
-		if(isServiceRunning){
-			textView.setText(R.string.service_running);
-			textView.setTextColor(Color.argb(255, 93, 168, 32));
-		}
-		else{
-			textView.setText(R.string.service_not_running);
-			textView.setTextColor(Color.argb(255, 199, 0, 0));
-		}
-	}
+//	private void update(Boolean isServiceRunning){
+////		buttonStart.setEnabled(!isServiceRunning);
+////		buttonStop.setEnabled(isServiceRunning);
+//		if(isServiceRunning){
+//			textView.setText(R.string.service_running);
+//			textView.setTextColor(Color.argb(255, 93, 168, 32));
+//		}
+//		else{
+//			textView.setText(R.string.service_not_running);
+//			textView.setTextColor(Color.argb(255, 199, 0, 0));
+//		}
+//	}
 
-	private boolean isMyServiceRunning() {
-	    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-	    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-	        if (SwipeService.class.getName().equals(service.service.getClassName())) {
-	            return true;
-	        }
-	    }
-	    return false;
-	}
+//	private boolean isMyServiceRunning() {
+//	    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+//	    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+//	        if (SwipeService.class.getName().equals(service.service.getClassName())) {
+//	            return true;
+//	        }
+//	    }
+//	    return false;
+//	}
 }

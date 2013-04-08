@@ -1,11 +1,14 @@
 Do you find physical Home Button is hard to press? Do you feel notification bar is too far to reach?
 
-Swipe Home Button is a tool that replaces your Home Button with bezel swipe gestures!
-Swipe Home Button doesn't require complex configuration or installation.
+Swipe Home Button is a revolutionary tool that replaces your Home Button with bezel swipe gestures!
+No more complex configuration! 
+No more physical home button! 
+No more reaching to the status bar!
+
+Swipe Home Button is compatible with any launcher and any 4.0+ devices.
 Check out the video to feel the easy and clean swipe gestures!
 
-
-Three simple and amazing swipe gestures,
+Three amazing simple swipe gestures,
 1. Go back to home screen
 ----Swipe up into the screen from the outside of bottom center screen
 
