@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 
 
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -41,13 +42,16 @@ public class SwipeService extends Service implements OnGestureListener{
 	final int ANGLE=25;
 	final int XYThreshold=55;
 	final int buttonWidth=120;
-	final int buttonHeight=22;
+	int buttonHeight=17;
 
+	@SuppressLint("NewApi")
 	@Override
 	public void onCreate() {
 		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		prefSwipeNotification=sharedPrefs.getBoolean("prefSwipeNotification", true);
-		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", false);
+		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
+		Boolean prefIncreaseSensibility=sharedPrefs.getBoolean("prefIncreaseSensibility", false);
+		buttonHeight+=prefIncreaseSensibility?5:0;
 		
 		Intent notificationIntent = new Intent(this, MainActivity.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(this,
@@ -58,22 +62,30 @@ public class SwipeService extends Service implements OnGestureListener{
 		Notification.Builder notificationBuilder=new Notification.Builder(this);
 		
 		notificationBuilder
-			.setContentIntent(contentIntent)
-            .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.s_notification))
+			.setContentIntent(contentIntent)            
             .setWhen(0)
             .setAutoCancel(false)
             .setContentTitle(getString(R.string.notification_title))
             .setContentText(getString(R.string.notification_text))
-            .getNotification();
-		
+        ;
 		if(prefTransparentIcon){
-			notificationBuilder.setSmallIcon(R.drawable.transparent);
+			notificationBuilder
+				.setSmallIcon(R.drawable.transparent)
+				.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.s_notification))
+			;
 		}
 		else{
 			notificationBuilder.setSmallIcon(R.drawable.s_notification);
 		}
 		
+		@SuppressWarnings("deprecation")
 		Notification notification=notificationBuilder.getNotification();
+		
+		if(prefTransparentIcon){
+			if (Build.VERSION.SDK_INT >= 16) {
+				notification.priority=Notification.PRIORITY_MIN;
+			}
+		}
 		notification.when=Integer.MAX_VALUE;
 		startForeground(317, notification);
 
@@ -107,7 +119,8 @@ public class SwipeService extends Service implements OnGestureListener{
 			public boolean onTouch(View v, MotionEvent event) {
 				//Log.e("swipe","onTouch");
 				//Toast.makeText(ConnectMeService.this, "onTouch", Toast.LENGTH_SHORT).show();
-				return myGesture.onTouchEvent(event);
+				myGesture.onTouchEvent(event);
+				return true;
 				//return false;
 			}
 		});

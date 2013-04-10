@@ -41,7 +41,8 @@
         <service android:name="com.matthewma.swipe_home.SwipeService" />
 
 		<activity
-            android:name=".SettingsActivity" />
+            android:name=".SettingsActivity"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

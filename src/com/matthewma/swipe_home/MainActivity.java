@@ -1,16 +1,9 @@
 package com.matthewma.swipe_home;
 
 
-import android.app.ActionBar;
 import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.ActivityManager.RunningServiceInfo;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -36,6 +29,7 @@ public class MainActivity extends Activity{
 	protected void onResume(){
 		super.onResume();
 		Intent i = new Intent(this, SettingsActivity.class);
+		i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivityForResult(i, 1);
 //		final Intent intent = new Intent(this, SwipeService.class);
 //    	this.stopService(intent);

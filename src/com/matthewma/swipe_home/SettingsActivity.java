@@ -6,13 +6,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
+import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.util.Log;
-import android.widget.Toast;
 
 public class SettingsActivity extends PreferenceActivity implements
-		SharedPreferences.OnSharedPreferenceChangeListener {
+		SharedPreferences.OnSharedPreferenceChangeListener,OnPreferenceClickListener {
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -31,18 +31,22 @@ public class SettingsActivity extends PreferenceActivity implements
 		if (prefEnable) {
 			this.startService(intent);
 		}
+		
+		findPreference("prefShare").setOnPreferenceClickListener (this);
 	}
 
 	@Override
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
 			String key) {
-		final Intent intent = new Intent(this, SwipeService.class);
-		this.stopService(intent);
-		SharedPreferences sharedPrefs = PreferenceManager
-				.getDefaultSharedPreferences(this);
-		Boolean prefEnable = sharedPrefs.getBoolean("prefEnable", true);
-		if (prefEnable) {
-			this.startService(intent);
+		if(!key.equals("prefAutoStart")){
+			final Intent intent = new Intent(this, SwipeService.class);
+			this.stopService(intent);
+			SharedPreferences sharedPrefs = PreferenceManager
+					.getDefaultSharedPreferences(this);
+			Boolean prefEnable = sharedPrefs.getBoolean("prefEnable", true);
+			if (prefEnable) {
+				this.startService(intent);
+			}
 		}
 	}
 
@@ -55,6 +59,17 @@ public class SettingsActivity extends PreferenceActivity implements
 				return true;
 			}
 		}
+		return false;
+	}
+
+	@Override
+	public boolean onPreferenceClick(Preference preference) {
+		Intent sendIntent = new Intent();
+		sendIntent.setAction(Intent.ACTION_SEND);
+		sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Do you think you home button is hard to press and notification bar is far to reach? check out this app");
+		sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.matthewma.swipe_home");
+		sendIntent.setType("text/plain");
+		startActivity(sendIntent);
 		return false;
 	}
 }

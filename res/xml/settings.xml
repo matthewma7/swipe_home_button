@@ -33,10 +33,17 @@
         </CheckBoxPreference>
         
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="prefTransparentIcon"
             android:summary="@string/pref_transparenticon_summary"
             android:title="@string/pref_transparenticon" >
+        </CheckBoxPreference>
+        
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefIncreaseSensibility"
+            android:summary="@string/pref_sensibility_summary"
+            android:title="@string/pref_sensibility" >
         </CheckBoxPreference>
         
 <!--          <DialogPreference -->
@@ -61,7 +68,13 @@
         
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_category_about" >
-    	<Preference android:title="@string/pref_author" 
+		<Preference android:key="prefShare"
+    	    android:title="@string/pref_share" 
+            android:summary="@string/pref_share_summary">		   
+		</Preference>
+		
+    	<Preference android:key="prefAbout"
+    	    android:title="@string/pref_author" 
             android:summary="@string/pref_author_summary">
 		    <intent android:action="android.intent.action.VIEW"
 		            android:data="mailto:matthew.ma.7@gmail.com" >
