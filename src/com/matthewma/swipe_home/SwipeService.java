@@ -78,7 +78,6 @@ public class SwipeService extends Service implements OnGestureListener{
 			notificationBuilder.setSmallIcon(R.drawable.s_notification);
 		}
 		
-		@SuppressWarnings("deprecation")
 		Notification notification=notificationBuilder.getNotification();
 		
 		if(prefTransparentIcon){
