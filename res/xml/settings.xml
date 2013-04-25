@@ -65,8 +65,31 @@
 <!--                 android:key="ApiPassword" /> -->
 <!--         </DialogPreference> -->
          
+         
         
     </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/pref_category_help" >
+		<PreferenceScreen
+                android:title="@string/pref_instruction"
+                android:summary="@string/pref_instruction_summary">
+
+           <Preference 
+	    	    android:title="@string/pref_backhomescreen" 
+	            android:summary="@string/pref_backhomescreen_summary">		   
+			</Preference>
+			<Preference 
+	    	    android:title="@string/pref_showrecentapp" 
+	            android:summary="@string/pref_showrecentapp_summary">		   
+			</Preference>
+			<Preference 
+	    	    android:title="@string/pref_pullnotification" 
+	            android:summary="@string/pref_pullnotification_summary">		   
+			</Preference>
+
+        </PreferenceScreen>
+ 	</PreferenceCategory>
+    
     <PreferenceCategory android:title="@string/pref_category_about" >
 		<Preference android:key="prefShare"
     	    android:title="@string/pref_share" 
@@ -83,6 +106,8 @@
             </intent>
 		</Preference>
  	</PreferenceCategory>
+    
+    
     
 <!--     <PreferenceCategory android:title="@string/pref_category_upgrade" > -->
 <!--     	<Preference android:title="@string/pref_upgrade"  -->

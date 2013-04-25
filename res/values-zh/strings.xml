@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    
+    <string name="service_running">滑动服务已启动</string>
+    <string name="service_not_running">滑动服务已停止</string>
+    
+    <string name="notification_title">滑动Home键</string>
+    <string name="notification_text">轻松掌握你的手机</string>
+    
+    <string name="app_name">滑动Home键</string>
+    <string name="menu_settings">设置</string>
+
+    
+    <string name="pref_category_enable">启动</string>
+    <string name="pref_category_settings">设置</string>
+    <string name="pref_category_upgrade">升级</string>
+    <string name="pref_category_help">帮助</string>
+    <string name="pref_category_about">关于</string>
+    
+    <string name="pref_enable">开启手势</string>
+    <string name="pref_enable_summary">开启滑动手势服务</string>
+    
+    <string name="pref_swipe_autostart">开机启动</string>
+    <string name="pref_swipe_autostart_summary">开机后自动启动滑动Home键</string>
+    
+    <string name="pref_swipe_notification">启用通知栏滑动</string>
+    <string name="pref_swipe_notification_summary">向左上或右上划入屏幕</string>
+    
+    <string name="pref_transparenticon">透明通知栏图标</string>
+    <string name="pref_transparenticon_summary">隐藏通知栏图标</string>
+    
+    <string name="pref_sensibility">提高灵敏度</string>
+    <string name="pref_sensibility_summary">增强手势检测的灵敏度</string>
+    
+    <string name="pref_instruction">使用说明</string>
+    <string name="pref_instruction_summary">三个滑动手势的使用说明</string>
+    
+    <string name="pref_backhomescreen">返回主屏</string>
+    <string name="pref_backhomescreen_summary">从屏幕底端外正中处向上滑入屏幕</string>
+    
+    <string name="pref_showrecentapp">显示最近使用的应用</string>
+    <string name="pref_showrecentapp_summary">从屏幕底端外正中处向上滑入屏幕，再继续向下滑出屏幕</string>
+    
+    <string name="pref_pullnotification">下拉通知栏</string>
+    <string name="pref_pullnotification_summary">从屏幕底端外正中处向左上或右上滑入屏幕</string>
+    
+    <string name="pref_share">分享</string>
+    <string name="pref_share_summary">分享滑动Home键给你的好友</string>
+    
+    <string name="pref_author">作者</string>
+    <string name="pref_author_summary">马一川</string>
+    <string name="pref_author_email_subject">关于滑动Home键</string>
+    
+    
+    <string name="pref_upgrade">Start at boot</string>
+    <string name="pref_upgrade_summary">Upgrade to full version</string>
+</resources>

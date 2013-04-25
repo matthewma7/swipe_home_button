@@ -8,10 +8,6 @@
 package com.matthewma.swipe_home;
 
 public final class R {
-    public static final class array {
-        public static final int syncFrequency=0x7f050000;
-        public static final int syncFrequencyValues=0x7f050001;
-    }
     public static final class attr {
     }
     public static final class drawable {
@@ -23,45 +19,54 @@ public final class R {
         public static final int transparent=0x7f020005;
     }
     public static final class id {
-        public static final int menu_settings=0x7f090000;
-        public static final int menu_settings_menubutton=0x7f090001;
+        public static final int menu_settings=0x7f080000;
+        public static final int menu_settings_menubutton=0x7f080001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }
     public static final class menu {
-        public static final int activity_main=0x7f080000;
+        public static final int activity_main=0x7f070000;
     }
     public static final class string {
-        public static final int app_name=0x7f060006;
-        public static final int menu_settings=0x7f060007;
-        public static final int notification_text=0x7f060005;
-        public static final int notification_title=0x7f060004;
-        public static final int pref_author=0x7f060018;
-        public static final int pref_author_email_subject=0x7f06001a;
-        public static final int pref_author_summary=0x7f060019;
-        public static final int pref_category_about=0x7f06000b;
-        public static final int pref_category_enable=0x7f060008;
-        public static final int pref_category_settings=0x7f060009;
-        public static final int pref_category_upgrade=0x7f06000a;
-        public static final int pref_enable=0x7f06000c;
-        public static final int pref_enable_summary=0x7f06000d;
-        public static final int pref_sensibility=0x7f060014;
-        public static final int pref_sensibility_summary=0x7f060015;
-        public static final int pref_share=0x7f060016;
-        public static final int pref_share_summary=0x7f060017;
-        public static final int pref_swipe_autostart=0x7f06000e;
-        public static final int pref_swipe_autostart_summary=0x7f06000f;
-        public static final int pref_swipe_notification=0x7f060010;
-        public static final int pref_swipe_notification_summary=0x7f060011;
-        public static final int pref_transparenticon=0x7f060012;
-        public static final int pref_transparenticon_summary=0x7f060013;
-        public static final int pref_upgrade=0x7f06001b;
-        public static final int pref_upgrade_summary=0x7f06001c;
-        public static final int service_not_running=0x7f060003;
-        public static final int service_running=0x7f060002;
-        public static final int start=0x7f060000;
-        public static final int stop=0x7f060001;
+        public static final int app_name=0x7f050006;
+        public static final int menu_settings=0x7f050007;
+        public static final int notification_text=0x7f050005;
+        public static final int notification_title=0x7f050004;
+        public static final int pref_author=0x7f050021;
+        public static final int pref_author_email_subject=0x7f050023;
+        public static final int pref_author_summary=0x7f050022;
+        public static final int pref_backhomescreen=0x7f050019;
+        public static final int pref_backhomescreen_summary=0x7f05001a;
+        public static final int pref_category_about=0x7f05000c;
+        public static final int pref_category_enable=0x7f050008;
+        public static final int pref_category_help=0x7f05000b;
+        public static final int pref_category_settings=0x7f050009;
+        public static final int pref_category_upgrade=0x7f05000a;
+        public static final int pref_enable=0x7f05000d;
+        public static final int pref_enable_summary=0x7f05000e;
+        public static final int pref_instruction=0x7f050017;
+        public static final int pref_instruction_summary=0x7f050018;
+        public static final int pref_pullnotification=0x7f05001d;
+        public static final int pref_pullnotification_summary=0x7f05001e;
+        public static final int pref_sensibility=0x7f050015;
+        public static final int pref_sensibility_summary=0x7f050016;
+        public static final int pref_share=0x7f05001f;
+        public static final int pref_share_summary=0x7f050020;
+        public static final int pref_showrecentapp=0x7f05001b;
+        public static final int pref_showrecentapp_summary=0x7f05001c;
+        public static final int pref_swipe_autostart=0x7f05000f;
+        public static final int pref_swipe_autostart_summary=0x7f050010;
+        public static final int pref_swipe_notification=0x7f050011;
+        public static final int pref_swipe_notification_summary=0x7f050012;
+        public static final int pref_transparenticon=0x7f050013;
+        public static final int pref_transparenticon_summary=0x7f050014;
+        public static final int pref_upgrade=0x7f050024;
+        public static final int pref_upgrade_summary=0x7f050025;
+        public static final int service_not_running=0x7f050003;
+        public static final int service_running=0x7f050002;
+        public static final int start=0x7f050000;
+        public static final int stop=0x7f050001;
     }
     public static final class style {
         /** 
@@ -74,11 +79,11 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f060001;
     }
     public static final class xml {
         public static final int settings=0x7f040000;
