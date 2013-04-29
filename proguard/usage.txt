@@ -1,0 +1,12 @@
+com.matthewma.swipe_home.BuildConfig
+com.matthewma.swipe_home.R
+com.matthewma.swipe_home.R$attr
+com.matthewma.swipe_home.R$drawable
+com.matthewma.swipe_home.R$id
+com.matthewma.swipe_home.R$layout
+com.matthewma.swipe_home.R$menu
+com.matthewma.swipe_home.R$string
+com.matthewma.swipe_home.R$style
+com.matthewma.swipe_home.R$xml
+com.matthewma.swipe_home.SwipeService:
+    android.os.HandlerThread thread

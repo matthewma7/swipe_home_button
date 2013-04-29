@@ -1,4 +1,4 @@
-Do you find physical Home Button is hard to press? Do you feel notification bar is too far to reach?
+﻿Do you find physical Home Button is hard to press? Do you feel notification bar is too far to reach?
 
 Swipe Home Button is a revolution to the three most frequently used operation on your Android.
 
@@ -29,14 +29,14 @@ Any feedback through email is appreciated.
 
 滑动Home键是对你最常使用的三个Android操作的革命。
 
-不必再使用难按的Home键。
+不必再用难按的Home键。
 不必再去下拉遥远通知栏。
 让单手操作你的大屏幕手机成为可能！
 滑动Home键兼容任何Android4.0以上的设备！
 
-快通过的视频感受一下那简单干净的滑动手势。
+快点击的视频感受一下那简单干净的滑动手势。
 
-三个精巧简单的滑动手势：
+三个简单精巧的滑动手势：
 1. 返回主屏
 ——从屏幕底端外正中处向上滑入屏幕
 

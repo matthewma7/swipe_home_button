@@ -66,7 +66,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	public boolean onPreferenceClick(Preference preference) {
 		Intent sendIntent = new Intent();
 		sendIntent.setAction(Intent.ACTION_SEND);
-		sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Do you think you home button is hard to press and notification bar is far to reach? check out this app");
+		sendIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.pref_share_description));
 		sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.matthewma.swipe_home");
 		sendIntent.setType("text/plain");
 		startActivity(sendIntent);

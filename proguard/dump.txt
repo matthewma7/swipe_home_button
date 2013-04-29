@@ -1,0 +1,1870 @@
+_____________________________________________________________________
+- Program class: com/matthewma/swipe_home/IntentReceiver
+  Superclass:    android/content/BroadcastReceiver
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.matthewma.swipe_home.IntentReceiver extends android.content.BroadcastReceiver
+
+Interfaces (count = 0):
+
+Constant Pool (count = 52):
+  - String [prefAutoStart]
+  - String [prefEnable]
+  - Class [android/content/BroadcastReceiver]
+  - Class [android/content/Context]
+  - Class [android/content/Intent]
+  - Class [android/content/SharedPreferences]
+  - Class [android/preference/PreferenceManager]
+  - Class [com/matthewma/swipe_home/IntentReceiver]
+  - Class [com/matthewma/swipe_home/SwipeService]
+  - Class [java/lang/Boolean]
+  - Methodref [android/content/BroadcastReceiver.<init> ()V]
+  - Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - Methodref [java/lang/Boolean.booleanValue ()Z]
+  - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+  - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - NameAndType [booleanValue ()Z]
+  - NameAndType [getBoolean (Ljava/lang/String;Z)Z]
+  - NameAndType [getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - NameAndType [startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - NameAndType [valueOf (Z)Ljava/lang/Boolean;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [(Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - Utf8 [(Landroid/content/Context;Landroid/content/Intent;)V]
+  - Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  - Utf8 [(Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - Utf8 [(Ljava/lang/String;Z)Z]
+  - Utf8 [(Z)Ljava/lang/Boolean;]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [StackMapTable]
+  - Utf8 [android/content/BroadcastReceiver]
+  - Utf8 [android/content/Context]
+  - Utf8 [android/content/Intent]
+  - Utf8 [android/content/SharedPreferences]
+  - Utf8 [android/preference/PreferenceManager]
+  - Utf8 [booleanValue]
+  - Utf8 [com/matthewma/swipe_home/IntentReceiver]
+  - Utf8 [com/matthewma/swipe_home/SwipeService]
+  - Utf8 [getBoolean]
+  - Utf8 [getDefaultSharedPreferences]
+  - Utf8 [java/lang/Boolean]
+  - Utf8 [onReceive]
+  - Utf8 [prefAutoStart]
+  - Utf8 [prefEnable]
+  - Utf8 [startService]
+  - Utf8 [valueOf]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public IntentReceiver()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #11
+        - Methodref [android/content/BroadcastReceiver.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    Access flags: 0x1
+      = public void onReceive(android.content.Context,android.content.Intent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 63, locals = 4, stack = 4):
+      [0] aload_1 v1
+      [1] invokestatic #14
+        - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+      [4] dup
+      [5] astore_2 v2
+      [6] ldc #1
+        - String [prefAutoStart]
+      [8] iconst_1
+      [9] invokeinterface #17
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [14] invokestatic #16
+        - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+      [17] astore_3 v3
+      [18] aload_2 v2
+      [19] ldc #2
+        - String [prefEnable]
+      [21] iconst_1
+      [22] invokeinterface #17
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [27] invokestatic #16
+        - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+      [30] astore_2 v2
+      [31] aload_3 v3
+      [32] invokevirtual #15
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [35] ifeq +27 (target=62)
+      [38] aload_2 v2
+      [39] invokevirtual #15
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [42] ifeq +20 (target=62)
+      [45] new #5
+        - Class [android/content/Intent]
+      [48] dup
+      [49] aload_1 v1
+      [50] ldc #9
+        - Class [com/matthewma/swipe_home/SwipeService]
+      [52] invokespecial #13
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [55] astore_2 v2
+      [56] aload_1 v1
+      [57] aload_2 v2
+      [58] invokevirtual #12
+        - Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [61] pop
+      [62] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 1):
+        - [62] Var: -3, Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/matthewma/swipe_home/MainActivity
+  Superclass:    android/app/Activity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.matthewma.swipe_home.MainActivity extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 45):
+  - Integer [67108864]
+  - Integer [2130903040]
+  - Class [android/app/Activity]
+  - Class [android/content/Intent]
+  - Class [com/matthewma/swipe_home/MainActivity]
+  - Class [com/matthewma/swipe_home/SettingsActivity]
+  - Methodref [android/app/Activity.<init> ()V]
+  - Methodref [android/app/Activity.onActivityResult (IILandroid/content/Intent;)V]
+  - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/app/Activity.onResume ()V]
+  - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - Methodref [android/content/Intent.setFlags (I)Landroid/content/Intent;]
+  - Methodref [com/matthewma/swipe_home/MainActivity.finish ()V]
+  - Methodref [com/matthewma/swipe_home/MainActivity.setContentView (I)V]
+  - Methodref [com/matthewma/swipe_home/MainActivity.startActivityForResult (Landroid/content/Intent;I)V]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - NameAndType [finish ()V]
+  - NameAndType [onActivityResult (IILandroid/content/Intent;)V]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [onResume ()V]
+  - NameAndType [setContentView (I)V]
+  - NameAndType [setFlags (I)Landroid/content/Intent;]
+  - NameAndType [startActivityForResult (Landroid/content/Intent;I)V]
+  - Utf8 [()V]
+  - Utf8 [(I)Landroid/content/Intent;]
+  - Utf8 [(I)V]
+  - Utf8 [(IILandroid/content/Intent;)V]
+  - Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  - Utf8 [(Landroid/content/Intent;I)V]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [android/app/Activity]
+  - Utf8 [android/content/Intent]
+  - Utf8 [com/matthewma/swipe_home/MainActivity]
+  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
+  - Utf8 [finish]
+  - Utf8 [onActivityResult]
+  - Utf8 [onCreate]
+  - Utf8 [onResume]
+  - Utf8 [setContentView]
+  - Utf8 [setFlags]
+  - Utf8 [startActivityForResult]
+
+Fields (count = 0):
+
+Methods (count = 4):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public MainActivity()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #7
+        - Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #9
+        - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #2
+        - Integer [2130903040]
+      [8] invokevirtual #14
+        - Methodref [com/matthewma/swipe_home/MainActivity.setContentView (I)V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onResume()V
+    Access flags: 0x4
+      = protected void onResume()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 29, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] invokespecial #10
+        - Methodref [android/app/Activity.onResume ()V]
+      [4] new #4
+        - Class [android/content/Intent]
+      [7] dup
+      [8] aload_0 v0
+      [9] ldc #6
+        - Class [com/matthewma/swipe_home/SettingsActivity]
+      [11] invokespecial #11
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [14] dup
+      [15] astore_1 v1
+      [16] ldc #1
+        - Integer [67108864]
+      [18] invokevirtual #12
+        - Methodref [android/content/Intent.setFlags (I)Landroid/content/Intent;]
+      [21] pop
+      [22] aload_0 v0
+      [23] aload_1 v1
+      [24] iconst_1
+      [25] invokevirtual #15
+        - Methodref [com/matthewma/swipe_home/MainActivity.startActivityForResult (Landroid/content/Intent;I)V]
+      [28] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onActivityResult(IILandroid/content/Intent;)V
+    Access flags: 0x4
+      = protected void onActivityResult(int,int,android.content.Intent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 12, locals = 4, stack = 4):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] iload_2 v2
+      [3] aload_3 v3
+      [4] invokespecial #8
+        - Methodref [android/app/Activity.onActivityResult (IILandroid/content/Intent;)V]
+      [7] aload_0 v0
+      [8] invokevirtual #13
+        - Methodref [com/matthewma/swipe_home/MainActivity.finish ()V]
+      [11] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/matthewma/swipe_home/SettingsActivity
+  Superclass:    android/preference/PreferenceActivity
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.matthewma.swipe_home.SettingsActivity extends android.preference.PreferenceActivity
+
+Interfaces (count = 2):
+  - Class [android/content/SharedPreferences$OnSharedPreferenceChangeListener]
+  - Class [android/preference/Preference$OnPreferenceClickListener]
+
+Constant Pool (count = 172):
+  - Integer [2130968576]
+  - Integer [2131034141]
+  - Integer [2147483647]
+  - String [activity]
+  - String [android.intent.action.SEND]
+  - String [android.intent.extra.SUBJECT]
+  - String [android.intent.extra.TEXT]
+  - String [https://play.google.com/store/apps/details?id=com.matthewma.swipe_home]
+  - String [prefAutoStart]
+  - String [prefEnable]
+  - String [prefShare]
+  - String [text/plain]
+  - Class [android/app/ActivityManager]
+  - Class [android/app/ActivityManager$RunningServiceInfo]
+  - Class [android/content/ComponentName]
+  - Class [android/content/Intent]
+  - Class [android/content/SharedPreferences]
+  - Class [android/content/SharedPreferences$OnSharedPreferenceChangeListener]
+  - Class [android/os/Bundle]
+  - Class [android/preference/Preference]
+  - Class [android/preference/Preference$OnPreferenceClickListener]
+  - Class [android/preference/PreferenceActivity]
+  - Class [android/preference/PreferenceManager]
+  - Class [com/matthewma/swipe_home/SettingsActivity]
+  - Class [com/matthewma/swipe_home/SwipeService]
+  - Class [java/lang/Boolean]
+  - Class [java/lang/Class]
+  - Class [java/lang/String]
+  - Class [java/util/Iterator]
+  - Class [java/util/List]
+  - Fieldref [android/app/ActivityManager$RunningServiceInfo.service Landroid/content/ComponentName;]
+  - Methodref [android/app/ActivityManager.getRunningServices (I)Ljava/util/List;]
+  - Methodref [android/content/ComponentName.getClassName ()Ljava/lang/String;]
+  - Methodref [android/content/Intent.<init> ()V]
+  - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/preference/Preference.setOnPreferenceClickListener (Landroid/preference/Preference$OnPreferenceClickListener;)V]
+  - Methodref [android/preference/PreferenceActivity.<init> ()V]
+  - Methodref [android/preference/PreferenceActivity.onCreate (Landroid/os/Bundle;)V]
+  - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.a ()Z]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.addPreferencesFromResource (I)V]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivity (Landroid/content/Intent;)V]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - Methodref [com/matthewma/swipe_home/SettingsActivity.stopService (Landroid/content/Intent;)Z]
+  - Methodref [java/lang/Boolean.booleanValue ()Z]
+  - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+  - Methodref [java/lang/Class.getName ()Ljava/lang/String;]
+  - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+  - InterfaceMethodref [android/content/SharedPreferences.registerOnSharedPreferenceChangeListener (Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V]
+  - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+  - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+  - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - NameAndType [a ()Z]
+  - NameAndType [addPreferencesFromResource (I)V]
+  - NameAndType [booleanValue ()Z]
+  - NameAndType [equals (Ljava/lang/Object;)Z]
+  - NameAndType [findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+  - NameAndType [getBoolean (Ljava/lang/String;Z)Z]
+  - NameAndType [getClassName ()Ljava/lang/String;]
+  - NameAndType [getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - NameAndType [getName ()Ljava/lang/String;]
+  - NameAndType [getRunningServices (I)Ljava/util/List;]
+  - NameAndType [getString (I)Ljava/lang/String;]
+  - NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - NameAndType [hasNext ()Z]
+  - NameAndType [iterator ()Ljava/util/Iterator;]
+  - NameAndType [next ()Ljava/lang/Object;]
+  - NameAndType [onCreate (Landroid/os/Bundle;)V]
+  - NameAndType [putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  - NameAndType [registerOnSharedPreferenceChangeListener (Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V]
+  - NameAndType [service Landroid/content/ComponentName;]
+  - NameAndType [setAction (Ljava/lang/String;)Landroid/content/Intent;]
+  - NameAndType [setOnPreferenceClickListener (Landroid/preference/Preference$OnPreferenceClickListener;)V]
+  - NameAndType [setType (Ljava/lang/String;)Landroid/content/Intent;]
+  - NameAndType [startActivity (Landroid/content/Intent;)V]
+  - NameAndType [startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - NameAndType [stopService (Landroid/content/Intent;)Z]
+  - NameAndType [valueOf (Z)Ljava/lang/Boolean;]
+  - Utf8 [()Ljava/lang/Object;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()Ljava/util/Iterator;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [(I)Ljava/lang/String;]
+  - Utf8 [(I)Ljava/util/List;]
+  - Utf8 [(I)V]
+  - Utf8 [(Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  - Utf8 [(Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - Utf8 [(Landroid/content/Intent;)V]
+  - Utf8 [(Landroid/content/Intent;)Z]
+  - Utf8 [(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V]
+  - Utf8 [(Landroid/content/SharedPreferences;Ljava/lang/String;)V]
+  - Utf8 [(Landroid/os/Bundle;)V]
+  - Utf8 [(Landroid/preference/Preference$OnPreferenceClickListener;)V]
+  - Utf8 [(Landroid/preference/Preference;)Z]
+  - Utf8 [(Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+  - Utf8 [(Ljava/lang/Object;)Z]
+  - Utf8 [(Ljava/lang/String;)Landroid/content/Intent;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+  - Utf8 [(Ljava/lang/String;Z)Z]
+  - Utf8 [(Z)Ljava/lang/Boolean;]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Landroid/content/ComponentName;]
+  - Utf8 [StackMapTable]
+  - Utf8 [a]
+  - Utf8 [activity]
+  - Utf8 [addPreferencesFromResource]
+  - Utf8 [android.intent.action.SEND]
+  - Utf8 [android.intent.extra.SUBJECT]
+  - Utf8 [android.intent.extra.TEXT]
+  - Utf8 [android/app/ActivityManager]
+  - Utf8 [android/app/ActivityManager$RunningServiceInfo]
+  - Utf8 [android/content/ComponentName]
+  - Utf8 [android/content/Intent]
+  - Utf8 [android/content/SharedPreferences]
+  - Utf8 [android/content/SharedPreferences$OnSharedPreferenceChangeListener]
+  - Utf8 [android/os/Bundle]
+  - Utf8 [android/preference/Preference]
+  - Utf8 [android/preference/Preference$OnPreferenceClickListener]
+  - Utf8 [android/preference/PreferenceActivity]
+  - Utf8 [android/preference/PreferenceManager]
+  - Utf8 [booleanValue]
+  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
+  - Utf8 [com/matthewma/swipe_home/SwipeService]
+  - Utf8 [equals]
+  - Utf8 [findPreference]
+  - Utf8 [getBoolean]
+  - Utf8 [getClassName]
+  - Utf8 [getDefaultSharedPreferences]
+  - Utf8 [getName]
+  - Utf8 [getRunningServices]
+  - Utf8 [getString]
+  - Utf8 [getSystemService]
+  - Utf8 [hasNext]
+  - Utf8 [https://play.google.com/store/apps/details?id=com.matthewma.swipe_home]
+  - Utf8 [iterator]
+  - Utf8 [java/lang/Boolean]
+  - Utf8 [java/lang/Class]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/util/Iterator]
+  - Utf8 [java/util/List]
+  - Utf8 [next]
+  - Utf8 [onCreate]
+  - Utf8 [onPreferenceClick]
+  - Utf8 [onSharedPreferenceChanged]
+  - Utf8 [prefAutoStart]
+  - Utf8 [prefEnable]
+  - Utf8 [prefShare]
+  - Utf8 [putExtra]
+  - Utf8 [registerOnSharedPreferenceChangeListener]
+  - Utf8 [service]
+  - Utf8 [setAction]
+  - Utf8 [setOnPreferenceClickListener]
+  - Utf8 [setType]
+  - Utf8 [startActivity]
+  - Utf8 [startService]
+  - Utf8 [stopService]
+  - Utf8 [text/plain]
+  - Utf8 [valueOf]
+
+Fields (count = 0):
+
+Methods (count = 5):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public SettingsActivity()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #40
+        - Methodref [android/preference/PreferenceActivity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 87, locals = 3, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #41
+        - Methodref [android/preference/PreferenceActivity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        - Integer [2130968576]
+      [8] invokevirtual #44
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.addPreferencesFromResource (I)V]
+      [11] aload_0 v0
+      [12] invokestatic #42
+        - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+      [15] aload_0 v0
+      [16] invokeinterface #56
+        - InterfaceMethodref [android/content/SharedPreferences.registerOnSharedPreferenceChangeListener (Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V]
+      [21] new #16
+        - Class [android/content/Intent]
+      [24] dup
+      [25] aload_0 v0
+      [26] ldc #25
+        - Class [com/matthewma/swipe_home/SwipeService]
+      [28] invokespecial #35
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [31] astore_1 v1
+      [32] aload_0 v0
+      [33] invokespecial #43
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.a ()Z]
+      [36] ifeq +9 (target=45)
+      [39] aload_0 v0
+      [40] aload_1 v1
+      [41] invokevirtual #50
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.stopService (Landroid/content/Intent;)Z]
+      [44] pop
+      [45] aload_0 v0
+      [46] invokestatic #42
+        - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+      [49] dup
+      [50] astore_2 v2
+      [51] ldc #10
+        - String [prefEnable]
+      [53] iconst_1
+      [54] invokeinterface #55
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [59] invokestatic #52
+        - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+      [62] dup
+      [63] astore_2 v2
+      [64] invokevirtual #51
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [67] ifeq +9 (target=76)
+      [70] aload_0 v0
+      [71] aload_1 v1
+      [72] invokevirtual #49
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [75] pop
+      [76] aload_0 v0
+      [77] ldc #11
+        - String [prefShare]
+      [79] invokevirtual #45
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+      [82] aload_0 v0
+      [83] invokevirtual #39
+        - Methodref [android/preference/Preference.setOnPreferenceClickListener (Landroid/preference/Preference$OnPreferenceClickListener;)V]
+      [86] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 2):
+        - [45] Var: [a:com/matthewma/swipe_home/SettingsActivity][a:android/content/Intent], Stack: 
+        - [76] Var: -1, Stack: (empty)
+  - Method:       onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    Access flags: 0x1
+      = public void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 58, locals = 3, stack = 4):
+      [0] aload_2 v2
+      [1] ldc #9
+        - String [prefAutoStart]
+      [3] invokevirtual #54
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [6] ifne +51 (target=57)
+      [9] new #16
+        - Class [android/content/Intent]
+      [12] dup
+      [13] aload_0 v0
+      [14] ldc #25
+        - Class [com/matthewma/swipe_home/SwipeService]
+      [16] invokespecial #35
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [19] astore_1 v1
+      [20] aload_0 v0
+      [21] aload_1 v1
+      [22] invokevirtual #50
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.stopService (Landroid/content/Intent;)Z]
+      [25] pop
+      [26] aload_0 v0
+      [27] invokestatic #42
+        - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+      [30] dup
+      [31] astore_2 v2
+      [32] ldc #10
+        - String [prefEnable]
+      [34] iconst_1
+      [35] invokeinterface #55
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [40] invokestatic #52
+        - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+      [43] dup
+      [44] astore_2 v2
+      [45] invokevirtual #51
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [48] ifeq +9 (target=57)
+      [51] aload_0 v0
+      [52] aload_1 v1
+      [53] invokevirtual #49
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+      [56] pop
+      [57] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 1):
+        - [57] Var: -3, Stack: (empty)
+  - Method:       a()Z
+    Access flags: 0x2
+      = private boolean a()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 66, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] ldc #4
+        - String [activity]
+      [3] invokevirtual #47
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [6] checkcast #13
+        - Class [android/app/ActivityManager]
+      [9] dup
+      [10] astore_1 v1
+      [11] ldc #3
+        - Integer [2147483647]
+      [13] invokevirtual #32
+        - Methodref [android/app/ActivityManager.getRunningServices (I)Ljava/util/List;]
+      [16] invokeinterface #59
+        - InterfaceMethodref [java/util/List.iterator ()Ljava/util/Iterator;]
+      [21] astore_2 v2
+      [22] goto +33 (target=55)
+      [25] aload_2 v2
+      [26] invokeinterface #58
+        - InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
+      [31] checkcast #14
+        - Class [android/app/ActivityManager$RunningServiceInfo]
+      [34] astore_1 v1
+      [35] ldc #25
+        - Class [com/matthewma/swipe_home/SwipeService]
+      [37] invokevirtual #53
+        - Methodref [java/lang/Class.getName ()Ljava/lang/String;]
+      [40] aload_1 v1
+      [41] getfield #31
+        - Fieldref [android/app/ActivityManager$RunningServiceInfo.service Landroid/content/ComponentName;]
+      [44] invokevirtual #33
+        - Methodref [android/content/ComponentName.getClassName ()Ljava/lang/String;]
+      [47] invokevirtual #54
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [50] ifeq +5 (target=55)
+      [53] iconst_1
+      [54] ireturn
+      [55] aload_2 v2
+      [56] invokeinterface #57
+        - InterfaceMethodref [java/util/Iterator.hasNext ()Z]
+      [61] ifne -36 (target=25)
+      [64] iconst_0
+      [65] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 2):
+        - [25] Var: [T][T][a:java/util/Iterator], Stack: 
+        - [55] Var: ..., Stack: (empty)
+  - Method:       onPreferenceClick(Landroid/preference/Preference;)Z
+    Access flags: 0x1
+      = public boolean onPreferenceClick(android.preference.Preference)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 51, locals = 2, stack = 4):
+      [0] new #16
+        - Class [android/content/Intent]
+      [3] dup
+      [4] invokespecial #34
+        - Methodref [android/content/Intent.<init> ()V]
+      [7] dup
+      [8] astore_1 v1
+      [9] ldc #5
+        - String [android.intent.action.SEND]
+      [11] invokevirtual #37
+        - Methodref [android/content/Intent.setAction (Ljava/lang/String;)Landroid/content/Intent;]
+      [14] pop
+      [15] aload_1 v1
+      [16] ldc #6
+        - String [android.intent.extra.SUBJECT]
+      [18] aload_0 v0
+      [19] ldc #2
+        - Integer [2131034141]
+      [21] invokevirtual #46
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+      [24] invokevirtual #36
+        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [27] pop
+      [28] aload_1 v1
+      [29] ldc #7
+        - String [android.intent.extra.TEXT]
+      [31] ldc #8
+        - String [https://play.google.com/store/apps/details?id=com.matthewma.swipe_home]
+      [33] invokevirtual #36
+        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
+      [36] pop
+      [37] aload_1 v1
+      [38] ldc #12
+        - String [text/plain]
+      [40] invokevirtual #38
+        - Methodref [android/content/Intent.setType (Ljava/lang/String;)Landroid/content/Intent;]
+      [43] pop
+      [44] aload_0 v0
+      [45] aload_1 v1
+      [46] invokevirtual #48
+        - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivity (Landroid/content/Intent;)V]
+      [49] iconst_0
+      [50] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/matthewma/swipe_home/SwipeService
+  Superclass:    android/app/Service
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.matthewma.swipe_home.SwipeService extends android.app.Service
+
+Interfaces (count = 1):
+  - Class [android/view/GestureDetector$OnGestureListener]
+
+Constant Pool (count = 362):
+  - Integer [262440]
+  - Integer [268435456]
+  - Integer [2130837508]
+  - Integer [2130837509]
+  - Integer [2131034112]
+  - Integer [2131034113]
+  - Float [200.0]
+  - String [android.app.StatusBarManager]
+  - String [android.intent.action.MAIN]
+  - String [android.intent.category.HOME]
+  - String [android.os.ServiceManager]
+  - String [android.os.ServiceManagerNative]
+  - String [asInterface]
+  - String [com.android.internal.statusbar.IStatusBarService]
+  - String [expand]
+  - String [expandNotificationsPanel]
+  - String [getService]
+  - String [prefIncreaseSensibility]
+  - String [prefSwipeNotification]
+  - String [prefTransparentIcon]
+  - String [statusbar]
+  - String [swipe]
+  - String [toggleRecentApps]
+  - String [window]
+  - Class [android/app/Notification]
+  - Class [android/app/Notification$Builder]
+  - Class [android/app/PendingIntent]
+  - Class [android/app/Service]
+  - Class [android/content/Intent]
+  - Class [android/content/SharedPreferences]
+  - Class [android/content/pm/ApplicationInfo]
+  - Class [android/content/res/Resources]
+  - Class [android/graphics/BitmapFactory]
+  - Class [android/os/Build$VERSION]
+  - Class [android/os/IBinder]
+  - Class [android/preference/PreferenceManager]
+  - Class [android/util/Log]
+  - Class [android/util/TypedValue]
+  - Class [android/view/GestureDetector]
+  - Class [android/view/GestureDetector$OnGestureListener]
+  - Class [android/view/MotionEvent]
+  - Class [android/view/WindowManager]
+  - Class [android/view/WindowManager$LayoutParams]
+  - Class [android/widget/Button]
+  - Class [com/matthewma/swipe_home/MainActivity]
+  - Class [com/matthewma/swipe_home/SwipeService]
+  - Class [com/matthewma/swipe_home/a]
+  - Class [java/lang/Boolean]
+  - Class [java/lang/Class]
+  - Class [java/lang/Double]
+  - Class [java/lang/Exception]
+  - Class [java/lang/Float]
+  - Class [java/lang/Math]
+  - Class [java/lang/Object]
+  - Class [java/lang/String]
+  - Class [java/lang/reflect/Method]
+  - Long [2147483647]
+  - Double [3.141592653589793]
+  - Double [25.0]
+  - Double [180.0]
+  - Fieldref [android/app/Notification.priority I]
+  - Fieldref [android/app/Notification.when J]
+  - Fieldref [android/content/pm/ApplicationInfo.flags I]
+  - Fieldref [android/os/Build$VERSION.SDK_INT I]
+  - Fieldref [android/view/WindowManager$LayoutParams.gravity I]
+  - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/view/GestureDetector;]
+  - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+  - Fieldref [com/matthewma/swipe_home/SwipeService.c Landroid/view/WindowManager;]
+  - Fieldref [com/matthewma/swipe_home/SwipeService.d Ljava/lang/Boolean;]
+  - Fieldref [com/matthewma/swipe_home/SwipeService.e I]
+  - Methodref [android/app/Notification$Builder.<init> (Landroid/content/Context;)V]
+  - Methodref [android/app/Notification$Builder.getNotification ()Landroid/app/Notification;]
+  - Methodref [android/app/Notification$Builder.setAutoCancel (Z)Landroid/app/Notification$Builder;]
+  - Methodref [android/app/Notification$Builder.setContentIntent (Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;]
+  - Methodref [android/app/Notification$Builder.setContentText (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
+  - Methodref [android/app/Notification$Builder.setContentTitle (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
+  - Methodref [android/app/Notification$Builder.setLargeIcon (Landroid/graphics/Bitmap;)Landroid/app/Notification$Builder;]
+  - Methodref [android/app/Notification$Builder.setSmallIcon (I)Landroid/app/Notification$Builder;]
+  - Methodref [android/app/Notification$Builder.setWhen (J)Landroid/app/Notification$Builder;]
+  - Methodref [android/app/PendingIntent.getActivity (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
+  - Methodref [android/app/Service.<init> ()V]
+  - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+  - Methodref [android/content/Intent.addCategory (Ljava/lang/String;)Landroid/content/Intent;]
+  - Methodref [android/content/Intent.setFlags (I)Landroid/content/Intent;]
+  - Methodref [android/content/res/Resources.getDisplayMetrics ()Landroid/util/DisplayMetrics;]
+  - Methodref [android/graphics/BitmapFactory.decodeResource (Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;]
+  - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  - Methodref [android/util/TypedValue.applyDimension (IFLandroid/util/DisplayMetrics;)F]
+  - Methodref [android/view/GestureDetector.<init> (Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V]
+  - Methodref [android/view/MotionEvent.getX ()F]
+  - Methodref [android/view/MotionEvent.getY ()F]
+  - Methodref [android/view/WindowManager$LayoutParams.<init> (IIIII)V]
+  - Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
+  - Methodref [android/widget/Button.getContext ()Landroid/content/Context;]
+  - Methodref [android/widget/Button.setBackgroundColor (I)V]
+  - Methodref [android/widget/Button.setOnTouchListener (Landroid/view/View$OnTouchListener;)V]
+  - Methodref [android/widget/Button.setVisibility (I)V]
+  - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+  - Methodref [com/matthewma/swipe_home/SwipeService.getApplicationInfo ()Landroid/content/pm/ApplicationInfo;]
+  - Methodref [com/matthewma/swipe_home/SwipeService.getResources ()Landroid/content/res/Resources;]
+  - Methodref [com/matthewma/swipe_home/SwipeService.getString (I)Ljava/lang/String;]
+  - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [com/matthewma/swipe_home/SwipeService.startActivity (Landroid/content/Intent;)V]
+  - Methodref [com/matthewma/swipe_home/SwipeService.startForeground (ILandroid/app/Notification;)V]
+  - Methodref [com/matthewma/swipe_home/a.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Methodref [java/lang/Boolean.booleanValue ()Z]
+  - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+  - Methodref [java/lang/Class.forName (Ljava/lang/String;)Ljava/lang/Class;]
+  - Methodref [java/lang/Class.getClasses ()[Ljava/lang/Class;]
+  - Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  - Methodref [java/lang/Double.doubleValue ()D]
+  - Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
+  - Methodref [java/lang/Exception.getMessage ()Ljava/lang/String;]
+  - Methodref [java/lang/Float.floatValue ()F]
+  - Methodref [java/lang/Float.valueOf (F)Ljava/lang/Float;]
+  - Methodref [java/lang/Math.abs (F)F]
+  - Methodref [java/lang/Math.atan (D)D]
+  - Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
+  - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+  - InterfaceMethodref [android/view/WindowManager.addView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
+  - InterfaceMethodref [android/view/WindowManager.removeView (Landroid/view/View;)V]
+  - NameAndType [<init> ()V]
+  - NameAndType [<init> (IIIII)V]
+  - NameAndType [<init> (Landroid/content/Context;)V]
+  - NameAndType [<init> (Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V]
+  - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  - NameAndType [<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+  - NameAndType [<init> (Ljava/lang/String;)V]
+  - NameAndType [SDK_INT I]
+  - NameAndType [a (I)I]
+  - NameAndType [a Landroid/view/GestureDetector;]
+  - NameAndType [abs (F)F]
+  - NameAndType [addCategory (Ljava/lang/String;)Landroid/content/Intent;]
+  - NameAndType [addView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
+  - NameAndType [applyDimension (IFLandroid/util/DisplayMetrics;)F]
+  - NameAndType [atan (D)D]
+  - NameAndType [b Landroid/widget/Button;]
+  - NameAndType [booleanValue ()Z]
+  - NameAndType [c Landroid/view/WindowManager;]
+  - NameAndType [d Ljava/lang/Boolean;]
+  - NameAndType [decodeResource (Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;]
+  - NameAndType [doubleValue ()D]
+  - NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  - NameAndType [e I]
+  - NameAndType [flags I]
+  - NameAndType [floatValue ()F]
+  - NameAndType [forName (Ljava/lang/String;)Ljava/lang/Class;]
+  - NameAndType [getActivity (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
+  - NameAndType [getApplicationInfo ()Landroid/content/pm/ApplicationInfo;]
+  - NameAndType [getBoolean (Ljava/lang/String;Z)Z]
+  - NameAndType [getClasses ()[Ljava/lang/Class;]
+  - NameAndType [getContext ()Landroid/content/Context;]
+  - NameAndType [getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - NameAndType [getDisplayMetrics ()Landroid/util/DisplayMetrics;]
+  - NameAndType [getMessage ()Ljava/lang/String;]
+  - NameAndType [getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  - NameAndType [getNotification ()Landroid/app/Notification;]
+  - NameAndType [getResources ()Landroid/content/res/Resources;]
+  - NameAndType [getString (I)Ljava/lang/String;]
+  - NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - NameAndType [getX ()F]
+  - NameAndType [getY ()F]
+  - NameAndType [gravity I]
+  - NameAndType [invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
+  - NameAndType [priority I]
+  - NameAndType [removeView (Landroid/view/View;)V]
+  - NameAndType [setAutoCancel (Z)Landroid/app/Notification$Builder;]
+  - NameAndType [setBackgroundColor (I)V]
+  - NameAndType [setContentIntent (Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;]
+  - NameAndType [setContentText (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
+  - NameAndType [setContentTitle (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
+  - NameAndType [setFlags (I)Landroid/content/Intent;]
+  - NameAndType [setLargeIcon (Landroid/graphics/Bitmap;)Landroid/app/Notification$Builder;]
+  - NameAndType [setOnTouchListener (Landroid/view/View$OnTouchListener;)V]
+  - NameAndType [setSmallIcon (I)Landroid/app/Notification$Builder;]
+  - NameAndType [setVisibility (I)V]
+  - NameAndType [setWhen (J)Landroid/app/Notification$Builder;]
+  - NameAndType [startActivity (Landroid/content/Intent;)V]
+  - NameAndType [startForeground (ILandroid/app/Notification;)V]
+  - NameAndType [valueOf (D)Ljava/lang/Double;]
+  - NameAndType [valueOf (F)Ljava/lang/Float;]
+  - NameAndType [valueOf (Z)Ljava/lang/Boolean;]
+  - NameAndType [when J]
+  - Utf8 [()D]
+  - Utf8 [()F]
+  - Utf8 [()Landroid/app/Notification;]
+  - Utf8 [()Landroid/content/Context;]
+  - Utf8 [()Landroid/content/pm/ApplicationInfo;]
+  - Utf8 [()Landroid/content/res/Resources;]
+  - Utf8 [()Landroid/util/DisplayMetrics;]
+  - Utf8 [()Ljava/lang/String;]
+  - Utf8 [()V]
+  - Utf8 [()Z]
+  - Utf8 [()[Ljava/lang/Class;]
+  - Utf8 [(D)D]
+  - Utf8 [(D)Ljava/lang/Double;]
+  - Utf8 [(F)F]
+  - Utf8 [(F)Ljava/lang/Float;]
+  - Utf8 [(I)I]
+  - Utf8 [(I)Landroid/app/Notification$Builder;]
+  - Utf8 [(I)Landroid/content/Intent;]
+  - Utf8 [(I)Ljava/lang/String;]
+  - Utf8 [(I)V]
+  - Utf8 [(IFLandroid/util/DisplayMetrics;)F]
+  - Utf8 [(IIIII)V]
+  - Utf8 [(ILandroid/app/Notification;)V]
+  - Utf8 [(J)Landroid/app/Notification$Builder;]
+  - Utf8 [(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;]
+  - Utf8 [(Landroid/content/Context;)Landroid/content/SharedPreferences;]
+  - Utf8 [(Landroid/content/Context;)V]
+  - Utf8 [(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
+  - Utf8 [(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V]
+  - Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  - Utf8 [(Landroid/content/Intent;)Landroid/os/IBinder;]
+  - Utf8 [(Landroid/content/Intent;)V]
+  - Utf8 [(Landroid/content/Intent;II)I]
+  - Utf8 [(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;]
+  - Utf8 [(Landroid/graphics/Bitmap;)Landroid/app/Notification$Builder;]
+  - Utf8 [(Landroid/view/MotionEvent;)V]
+  - Utf8 [(Landroid/view/MotionEvent;)Z]
+  - Utf8 [(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z]
+  - Utf8 [(Landroid/view/View$OnTouchListener;)V]
+  - Utf8 [(Landroid/view/View;)V]
+  - Utf8 [(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
+  - Utf8 [(Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Utf8 [(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
+  - Utf8 [(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/String;)Landroid/content/Intent;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/Class;]
+  - Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  - Utf8 [(Ljava/lang/String;)V]
+  - Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  - Utf8 [(Ljava/lang/String;Z)Z]
+  - Utf8 [(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+  - Utf8 [(Z)Landroid/app/Notification$Builder;]
+  - Utf8 [(Z)Ljava/lang/Boolean;]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [I]
+  - Utf8 [J]
+  - Utf8 [Landroid/view/GestureDetector;]
+  - Utf8 [Landroid/view/WindowManager;]
+  - Utf8 [Landroid/widget/Button;]
+  - Utf8 [Ljava/lang/Boolean;]
+  - Utf8 [SDK_INT]
+  - Utf8 [StackMapTable]
+  - Utf8 [a]
+  - Utf8 [abs]
+  - Utf8 [addCategory]
+  - Utf8 [addView]
+  - Utf8 [android.app.StatusBarManager]
+  - Utf8 [android.intent.action.MAIN]
+  - Utf8 [android.intent.category.HOME]
+  - Utf8 [android.os.ServiceManager]
+  - Utf8 [android.os.ServiceManagerNative]
+  - Utf8 [android/app/Notification]
+  - Utf8 [android/app/Notification$Builder]
+  - Utf8 [android/app/PendingIntent]
+  - Utf8 [android/app/Service]
+  - Utf8 [android/content/Intent]
+  - Utf8 [android/content/SharedPreferences]
+  - Utf8 [android/content/pm/ApplicationInfo]
+  - Utf8 [android/content/res/Resources]
+  - Utf8 [android/graphics/BitmapFactory]
+  - Utf8 [android/os/Build$VERSION]
+  - Utf8 [android/os/IBinder]
+  - Utf8 [android/preference/PreferenceManager]
+  - Utf8 [android/util/Log]
+  - Utf8 [android/util/TypedValue]
+  - Utf8 [android/view/GestureDetector]
+  - Utf8 [android/view/GestureDetector$OnGestureListener]
+  - Utf8 [android/view/MotionEvent]
+  - Utf8 [android/view/WindowManager]
+  - Utf8 [android/view/WindowManager$LayoutParams]
+  - Utf8 [android/widget/Button]
+  - Utf8 [applyDimension]
+  - Utf8 [asInterface]
+  - Utf8 [atan]
+  - Utf8 [b]
+  - Utf8 [booleanValue]
+  - Utf8 [c]
+  - Utf8 [com.android.internal.statusbar.IStatusBarService]
+  - Utf8 [com/matthewma/swipe_home/MainActivity]
+  - Utf8 [com/matthewma/swipe_home/SwipeService]
+  - Utf8 [com/matthewma/swipe_home/a]
+  - Utf8 [d]
+  - Utf8 [decodeResource]
+  - Utf8 [doubleValue]
+  - Utf8 [e]
+  - Utf8 [expand]
+  - Utf8 [expandNotificationsPanel]
+  - Utf8 [flags]
+  - Utf8 [floatValue]
+  - Utf8 [forName]
+  - Utf8 [getActivity]
+  - Utf8 [getApplicationInfo]
+  - Utf8 [getBoolean]
+  - Utf8 [getClasses]
+  - Utf8 [getContext]
+  - Utf8 [getDefaultSharedPreferences]
+  - Utf8 [getDisplayMetrics]
+  - Utf8 [getMessage]
+  - Utf8 [getMethod]
+  - Utf8 [getNotification]
+  - Utf8 [getResources]
+  - Utf8 [getService]
+  - Utf8 [getString]
+  - Utf8 [getSystemService]
+  - Utf8 [getX]
+  - Utf8 [getY]
+  - Utf8 [gravity]
+  - Utf8 [invoke]
+  - Utf8 [java/lang/Boolean]
+  - Utf8 [java/lang/Class]
+  - Utf8 [java/lang/Double]
+  - Utf8 [java/lang/Exception]
+  - Utf8 [java/lang/Float]
+  - Utf8 [java/lang/Math]
+  - Utf8 [java/lang/Object]
+  - Utf8 [java/lang/String]
+  - Utf8 [java/lang/reflect/Method]
+  - Utf8 [onBind]
+  - Utf8 [onCreate]
+  - Utf8 [onDestroy]
+  - Utf8 [onDown]
+  - Utf8 [onFling]
+  - Utf8 [onLongPress]
+  - Utf8 [onScroll]
+  - Utf8 [onShowPress]
+  - Utf8 [onSingleTapUp]
+  - Utf8 [onStartCommand]
+  - Utf8 [prefIncreaseSensibility]
+  - Utf8 [prefSwipeNotification]
+  - Utf8 [prefTransparentIcon]
+  - Utf8 [priority]
+  - Utf8 [removeView]
+  - Utf8 [setAutoCancel]
+  - Utf8 [setBackgroundColor]
+  - Utf8 [setContentIntent]
+  - Utf8 [setContentText]
+  - Utf8 [setContentTitle]
+  - Utf8 [setFlags]
+  - Utf8 [setLargeIcon]
+  - Utf8 [setOnTouchListener]
+  - Utf8 [setSmallIcon]
+  - Utf8 [setVisibility]
+  - Utf8 [setWhen]
+  - Utf8 [startActivity]
+  - Utf8 [startForeground]
+  - Utf8 [statusbar]
+  - Utf8 [swipe]
+  - Utf8 [toggleRecentApps]
+  - Utf8 [valueOf]
+  - Utf8 [when]
+  - Utf8 [window]
+
+Fields (count = 5):
+  - Field:        b Landroid/widget/Button;
+    Access flags: 0x2
+      = private android.widget.Button b
+  - Field:        a Landroid/view/GestureDetector;
+    Access flags: 0x0
+      = android.view.GestureDetector a
+  - Field:        c Landroid/view/WindowManager;
+    Access flags: 0x2
+      = private android.view.WindowManager c
+  - Field:        d Ljava/lang/Boolean;
+    Access flags: 0x2
+      = private java.lang.Boolean d
+  - Field:        e I
+    Access flags: 0x2
+      = private int e
+
+Methods (count = 12):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public SwipeService()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 11, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #85
+        - Methodref [android/app/Service.<init> ()V]
+      [4] aload_0 v0
+      [5] bipush 17
+      [7] putfield #74
+        - Fieldref [com/matthewma/swipe_home/SwipeService.e I]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onCreate()V
+    Access flags: 0x1
+      = public void onCreate()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 262, locals = 4, stack = 4):
+      [0] aload_0 v0
+      [1] invokestatic #92
+        - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
+      [4] astore_1 v1
+      [5] aload_0 v0
+      [6] aload_1 v1
+      [7] ldc #19
+        - String [prefSwipeNotification]
+      [9] iconst_1
+      [10] invokeinterface #125
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [15] invokestatic #113
+        - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+      [18] putfield #73
+        - Fieldref [com/matthewma/swipe_home/SwipeService.d Ljava/lang/Boolean;]
+      [21] aload_1 v1
+      [22] ldc #20
+        - String [prefTransparentIcon]
+      [24] iconst_1
+      [25] invokeinterface #125
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [30] invokestatic #113
+        - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+      [33] astore_2 v2
+      [34] aload_1 v1
+      [35] ldc #18
+        - String [prefIncreaseSensibility]
+      [37] iconst_0
+      [38] invokeinterface #125
+        - InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
+      [43] invokestatic #113
+        - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
+      [46] astore_1 v1
+      [47] aload_0 v0
+      [48] dup
+      [49] getfield #74
+        - Fieldref [com/matthewma/swipe_home/SwipeService.e I]
+      [52] aload_1 v1
+      [53] invokevirtual #112
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [56] ifeq +7 (target=63)
+      [59] iconst_5
+      [60] goto +4 (target=64)
+      [63] iconst_0
+      [64] iadd
+      [65] putfield #74
+        - Fieldref [com/matthewma/swipe_home/SwipeService.e I]
+      [68] new #29
+        - Class [android/content/Intent]
+      [71] dup
+      [72] aload_0 v0
+      [73] ldc #45
+        - Class [com/matthewma/swipe_home/MainActivity]
+      [75] invokespecial #86
+        - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [78] astore_1 v1
+      [79] aload_0 v0
+      [80] iconst_m1
+      [81] aload_1 v1
+      [82] ldc #2
+        - Integer [268435456]
+      [84] invokestatic #84
+        - Methodref [android/app/PendingIntent.getActivity (Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;]
+      [87] astore_1 v1
+      [88] new #26
+        - Class [android/app/Notification$Builder]
+      [91] dup
+      [92] aload_0 v0
+      [93] invokespecial #75
+        - Methodref [android/app/Notification$Builder.<init> (Landroid/content/Context;)V]
+      [96] dup
+      [97] astore_3 v3
+      [98] aload_1 v1
+      [99] invokevirtual #78
+        - Methodref [android/app/Notification$Builder.setContentIntent (Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;]
+      [102] lconst_0
+      [103] invokevirtual #83
+        - Methodref [android/app/Notification$Builder.setWhen (J)Landroid/app/Notification$Builder;]
+      [106] iconst_0
+      [107] invokevirtual #77
+        - Methodref [android/app/Notification$Builder.setAutoCancel (Z)Landroid/app/Notification$Builder;]
+      [110] aload_0 v0
+      [111] ldc #5
+        - Integer [2131034112]
+      [113] invokevirtual #107
+        - Methodref [com/matthewma/swipe_home/SwipeService.getString (I)Ljava/lang/String;]
+      [116] invokevirtual #80
+        - Methodref [android/app/Notification$Builder.setContentTitle (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
+      [119] aload_0 v0
+      [120] ldc #6
+        - Integer [2131034113]
+      [122] invokevirtual #107
+        - Methodref [com/matthewma/swipe_home/SwipeService.getString (I)Ljava/lang/String;]
+      [125] invokevirtual #79
+        - Methodref [android/app/Notification$Builder.setContentText (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
+      [128] pop
+      [129] aload_2 v2
+      [130] invokevirtual #112
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [133] ifeq +25 (target=158)
+      [136] aload_3 v3
+      [137] ldc #4
+        - Integer [2130837509]
+      [139] invokevirtual #82
+        - Methodref [android/app/Notification$Builder.setSmallIcon (I)Landroid/app/Notification$Builder;]
+      [142] aload_0 v0
+      [143] invokevirtual #106
+        - Methodref [com/matthewma/swipe_home/SwipeService.getResources ()Landroid/content/res/Resources;]
+      [146] ldc #3
+        - Integer [2130837508]
+      [148] invokestatic #91
+        - Methodref [android/graphics/BitmapFactory.decodeResource (Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;]
+      [151] invokevirtual #81
+        - Methodref [android/app/Notification$Builder.setLargeIcon (Landroid/graphics/Bitmap;)Landroid/app/Notification$Builder;]
+      [154] pop
+      [155] goto +10 (target=165)
+      [158] aload_3 v3
+      [159] ldc #3
+        - Integer [2130837508]
+      [161] invokevirtual #82
+        - Methodref [android/app/Notification$Builder.setSmallIcon (I)Landroid/app/Notification$Builder;]
+      [164] pop
+      [165] aload_3 v3
+      [166] invokevirtual #76
+        - Methodref [android/app/Notification$Builder.getNotification ()Landroid/app/Notification;]
+      [169] astore_1 v1
+      [170] aload_2 v2
+      [171] invokevirtual #112
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [174] ifeq +17 (target=191)
+      [177] getstatic #68
+        - Fieldref [android/os/Build$VERSION.SDK_INT I]
+      [180] bipush 16
+      [182] ificmplt +9 (target=191)
+      [185] aload_1 v1
+      [186] bipush -2
+      [188] putfield #65
+        - Fieldref [android/app/Notification.priority I]
+      [191] aload_1 v1
+      [192] ldc2_w #57
+        - Long [2147483647]
+      [195] putfield #66
+        - Fieldref [android/app/Notification.when J]
+      [198] aload_0 v0
+      [199] sipush 317
+      [202] aload_1 v1
+      [203] invokevirtual #110
+        - Methodref [com/matthewma/swipe_home/SwipeService.startForeground (ILandroid/app/Notification;)V]
+      [206] aload_0 v0
+      [207] new #44
+        - Class [android/widget/Button]
+      [210] dup
+      [211] aload_0 v0
+      [212] invokespecial #99
+        - Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
+      [215] putfield #71
+        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+      [218] aload_0 v0
+      [219] invokevirtual #105
+        - Methodref [com/matthewma/swipe_home/SwipeService.getApplicationInfo ()Landroid/content/pm/ApplicationInfo;]
+      [222] dup
+      [223] getfield #67
+        - Fieldref [android/content/pm/ApplicationInfo.flags I]
+      [226] iconst_2
+      [227] iand
+      [228] dup_x1
+      [229] putfield #67
+        - Fieldref [android/content/pm/ApplicationInfo.flags I]
+      [232] ifeq +7 (target=239)
+      [235] iconst_1
+      [236] goto +4 (target=240)
+      [239] iconst_0
+      [240] dup
+      [241] istore_1 v1
+      [242] ifne +19 (target=261)
+      [245] aload_0 v0
+      [246] getfield #71
+        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+      [249] iconst_0
+      [250] invokevirtual #103
+        - Methodref [android/widget/Button.setVisibility (I)V]
+      [253] aload_0 v0
+      [254] getfield #71
+        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+      [257] iconst_0
+      [258] invokevirtual #101
+        - Methodref [android/widget/Button.setBackgroundColor (I)V]
+      [261] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 8):
+        - [63] Var: [a:com/matthewma/swipe_home/SwipeService][T][a:java/lang/Boolean], Stack: [a:com/matthewma/swipe_home/SwipeService][i]
+        - [64] Var: [a:com/matthewma/swipe_home/SwipeService][T][a:java/lang/Boolean], Stack: [a:com/matthewma/swipe_home/SwipeService][i][i]
+        - [158] Var: ...[a:android/app/Notification$Builder], Stack: (empty)
+        - [165] Var: ..., Stack: (empty)
+        - [191] Var: [a:com/matthewma/swipe_home/SwipeService][a:android/app/Notification], Stack: 
+        - [239] Var: -1, Stack: (empty)
+        - [240] Var: ..., Stack: [i]
+        - [261] Var: -1, Stack: (empty)
+  - Method:       onStartCommand(Landroid/content/Intent;II)I
+    Access flags: 0x1
+      = public int onStartCommand(android.content.Intent,int,int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 102, locals = 4, stack = 7):
+      [0] aload_0 v0
+      [1] aload_0 v0
+      [2] getfield #74
+        - Fieldref [com/matthewma/swipe_home/SwipeService.e I]
+      [5] invokespecial #104
+        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+      [8] istore_1 v1
+      [9] aload_0 v0
+      [10] bipush 120
+      [12] invokespecial #104
+        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+      [15] istore_2 v2
+      [16] new #43
+        - Class [android/view/WindowManager$LayoutParams]
+      [19] dup
+      [20] iload_2 v2
+      [21] iload_1 v1
+      [22] sipush 2003
+      [25] ldc #1
+        - Integer [262440]
+      [27] bipush -3
+      [29] invokespecial #98
+        - Methodref [android/view/WindowManager$LayoutParams.<init> (IIIII)V]
+      [32] dup
+      [33] astore_1 v1
+      [34] bipush 81
+      [36] putfield #69
+        - Fieldref [android/view/WindowManager$LayoutParams.gravity I]
+      [39] aload_0 v0
+      [40] new #39
+        - Class [android/view/GestureDetector]
+      [43] dup
+      [44] aload_0 v0
+      [45] getfield #71
+        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+      [48] invokevirtual #100
+        - Methodref [android/widget/Button.getContext ()Landroid/content/Context;]
+      [51] aload_0 v0
+      [52] invokespecial #95
+        - Methodref [android/view/GestureDetector.<init> (Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V]
+      [55] putfield #70
+        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/view/GestureDetector;]
+      [58] aload_0 v0
+      [59] getfield #71
+        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+      [62] new #47
+        - Class [com/matthewma/swipe_home/a]
+      [65] dup
+      [66] aload_0 v0
+      [67] invokespecial #111
+        - Methodref [com/matthewma/swipe_home/a.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+      [70] invokevirtual #102
+        - Methodref [android/widget/Button.setOnTouchListener (Landroid/view/View$OnTouchListener;)V]
+      [73] aload_0 v0
+      [74] aload_0 v0
+      [75] ldc #24
+        - String [window]
+      [77] invokevirtual #108
+        - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [80] checkcast #42
+        - Class [android/view/WindowManager]
+      [83] putfield #72
+        - Fieldref [com/matthewma/swipe_home/SwipeService.c Landroid/view/WindowManager;]
+      [86] aload_0 v0
+      [87] getfield #72
+        - Fieldref [com/matthewma/swipe_home/SwipeService.c Landroid/view/WindowManager;]
+      [90] aload_0 v0
+      [91] getfield #71
+        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+      [94] aload_1 v1
+      [95] invokeinterface #126
+        - InterfaceMethodref [android/view/WindowManager.addView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
+      [100] iconst_1
+      [101] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    Access flags: 0x1
+      = public android.os.IBinder onBind(android.content.Intent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 2, locals = 2, stack = 1):
+      [0] aconst_null
+      [1] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onDestroy()V
+    Access flags: 0x1
+      = public void onDestroy()
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 14, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #72
+        - Fieldref [com/matthewma/swipe_home/SwipeService.c Landroid/view/WindowManager;]
+      [4] aload_0 v0
+      [5] getfield #71
+        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/widget/Button;]
+      [8] invokeinterface #127
+        - InterfaceMethodref [android/view/WindowManager.removeView (Landroid/view/View;)V]
+      [13] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    Access flags: 0x1
+      = public boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 375, locals = 5, stack = 6):
+      [0] aload_1 v1
+      [1] invokevirtual #96
+        - Methodref [android/view/MotionEvent.getX ()F]
+      [4] aload_2 v2
+      [5] invokevirtual #96
+        - Methodref [android/view/MotionEvent.getX ()F]
+      [8] fsub
+      [9] invokestatic #122
+        - Methodref [java/lang/Math.abs (F)F]
+      [12] invokestatic #121
+        - Methodref [java/lang/Float.valueOf (F)Ljava/lang/Float;]
+      [15] astore_3 v3
+      [16] aload_1 v1
+      [17] invokevirtual #97
+        - Methodref [android/view/MotionEvent.getY ()F]
+      [20] aload_2 v2
+      [21] invokevirtual #97
+        - Methodref [android/view/MotionEvent.getY ()F]
+      [24] fsub
+      [25] invokestatic #122
+        - Methodref [java/lang/Math.abs (F)F]
+      [28] invokestatic #121
+        - Methodref [java/lang/Float.valueOf (F)Ljava/lang/Float;]
+      [31] astore_1 v1
+      [32] aload_3 v3
+      [33] invokevirtual #120
+        - Methodref [java/lang/Float.floatValue ()F]
+      [36] aload_1 v1
+      [37] invokevirtual #120
+        - Methodref [java/lang/Float.floatValue ()F]
+      [40] fdiv
+      [41] f2d
+      [42] invokestatic #123
+        - Methodref [java/lang/Math.atan (D)D]
+      [45] ldc2_w #59
+        - Double [3.141592653589793]
+      [48] ddiv
+      [49] ldc2_w #63
+        - Double [180.0]
+      [52] dmul
+      [53] invokestatic #118
+        - Methodref [java/lang/Double.valueOf (D)Ljava/lang/Double;]
+      [56] astore_2 v2
+      [57] aload_1 v1
+      [58] invokevirtual #120
+        - Methodref [java/lang/Float.floatValue ()F]
+      [61] aload_0 v0
+      [62] bipush 20
+      [64] invokespecial #104
+        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+      [67] i2f
+      [68] fcmpg
+      [69] iflt +26 (target=95)
+      [72] aload_1 v1
+      [73] invokevirtual #120
+        - Methodref [java/lang/Float.floatValue ()F]
+      [76] aload_0 v0
+      [77] bipush 40
+      [79] invokespecial #104
+        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+      [82] i2f
+      [83] fcmpg
+      [84] ifge +136 (target=220)
+      [87] fload v4
+      [89] ldc #7
+        - Float [200.0]
+      [91] fcmpl
+      [92] ifle +128 (target=220)
+      [95] ldc #11
+        - String [android.os.ServiceManager]
+      [97] invokestatic #114
+        - Methodref [java/lang/Class.forName (Ljava/lang/String;)Ljava/lang/Class;]
+      [100] astore_1 v1
+      [101] ldc #12
+        - String [android.os.ServiceManagerNative]
+      [103] invokestatic #114
+        - Methodref [java/lang/Class.forName (Ljava/lang/String;)Ljava/lang/Class;]
+      [106] astore_2 v2
+      [107] aload_1 v1
+      [108] ldc #17
+        - String [getService]
+      [110] iconst_1
+      [111] anewarray #49
+        - Class [java/lang/Class]
+      [114] dup
+      [115] iconst_0
+      [116] ldc #55
+        - Class [java/lang/String]
+      [118] aastore
+      [119] invokevirtual #116
+        - Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+      [122] dup
+      [123] astore_3 v3
+      [124] aload_2 v2
+      [125] iconst_1
+      [126] anewarray #54
+        - Class [java/lang/Object]
+      [129] dup
+      [130] iconst_0
+      [131] ldc #21
+        - String [statusbar]
+      [133] aastore
+      [134] invokevirtual #124
+        - Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
+      [137] checkcast #35
+        - Class [android/os/IBinder]
+      [140] astore_1 v1
+      [141] ldc #14
+        - String [com.android.internal.statusbar.IStatusBarService]
+      [143] invokestatic #114
+        - Methodref [java/lang/Class.forName (Ljava/lang/String;)Ljava/lang/Class;]
+      [146] invokevirtual #115
+        - Methodref [java/lang/Class.getClasses ()[Ljava/lang/Class;]
+      [149] iconst_0
+      [150] aaload
+      [151] dup
+      [152] astore_2 v2
+      [153] ldc #13
+        - String [asInterface]
+      [155] iconst_1
+      [156] anewarray #49
+        - Class [java/lang/Class]
+      [159] dup
+      [160] iconst_0
+      [161] ldc #35
+        - Class [android/os/IBinder]
+      [163] aastore
+      [164] invokevirtual #116
+        - Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+      [167] dup
+      [168] astore_3 v3
+      [169] aconst_null
+      [170] iconst_1
+      [171] anewarray #54
+        - Class [java/lang/Object]
+      [174] dup
+      [175] iconst_0
+      [176] aload_1 v1
+      [177] aastore
+      [178] invokevirtual #124
+        - Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
+      [181] astore_1 v1
+      [182] aload_2 v2
+      [183] ldc #23
+        - String [toggleRecentApps]
+      [185] iconst_0
+      [186] anewarray #49
+        - Class [java/lang/Class]
+      [189] invokevirtual #116
+        - Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+      [192] dup
+      [193] astore_2 v2
+      [194] aload_1 v1
+      [195] iconst_0
+      [196] anewarray #54
+        - Class [java/lang/Object]
+      [199] invokevirtual #124
+        - Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
+      [202] pop
+      [203] goto +170 (target=373)
+      [206] astore_1 v1
+      [207] ldc #22
+        - String [swipe]
+      [209] aload_1 v1
+      [210] invokevirtual #119
+        - Methodref [java/lang/Exception.getMessage ()Ljava/lang/String;]
+      [213] invokestatic #93
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [216] pop
+      [217] goto +156 (target=373)
+      [220] aload_0 v0
+      [221] getfield #73
+        - Fieldref [com/matthewma/swipe_home/SwipeService.d Ljava/lang/Boolean;]
+      [224] invokevirtual #112
+        - Methodref [java/lang/Boolean.booleanValue ()Z]
+      [227] ifeq +117 (target=344)
+      [230] aload_2 v2
+      [231] invokevirtual #117
+        - Methodref [java/lang/Double.doubleValue ()D]
+      [234] ldc2_w #61
+        - Double [25.0]
+      [237] dcmpl
+      [238] ifle +106 (target=344)
+      [241] aload_1 v1
+      [242] invokevirtual #120
+        - Methodref [java/lang/Float.floatValue ()F]
+      [245] aload_0 v0
+      [246] bipush 55
+      [248] invokespecial #104
+        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+      [251] i2f
+      [252] fcmpl
+      [253] ifgt +18 (target=271)
+      [256] aload_3 v3
+      [257] invokevirtual #120
+        - Methodref [java/lang/Float.floatValue ()F]
+      [260] aload_0 v0
+      [261] bipush 55
+      [263] invokespecial #104
+        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+      [266] i2f
+      [267] fcmpl
+      [268] ifle +76 (target=344)
+      [271] aload_0 v0
+      [272] ldc #21
+        - String [statusbar]
+      [274] invokevirtual #108
+        - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [277] astore_1 v1
+      [278] ldc #8
+        - String [android.app.StatusBarManager]
+      [280] invokestatic #114
+        - Methodref [java/lang/Class.forName (Ljava/lang/String;)Ljava/lang/Class;]
+      [283] astore_2 v2
+      [284] getstatic #68
+        - Fieldref [android/os/Build$VERSION.SDK_INT I]
+      [287] bipush 17
+      [289] ificmplt +17 (target=306)
+      [292] aload_2 v2
+      [293] ldc #16
+        - String [expandNotificationsPanel]
+      [295] iconst_0
+      [296] anewarray #49
+        - Class [java/lang/Class]
+      [299] invokevirtual #116
+        - Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+      [302] astore_3 v3
+      [303] goto +14 (target=317)
+      [306] aload_2 v2
+      [307] ldc #15
+        - String [expand]
+      [309] iconst_0
+      [310] anewarray #49
+        - Class [java/lang/Class]
+      [313] invokevirtual #116
+        - Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
+      [316] astore_3 v3
+      [317] aload_3 v3
+      [318] aload_1 v1
+      [319] iconst_0
+      [320] anewarray #54
+        - Class [java/lang/Object]
+      [323] invokevirtual #124
+        - Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
+      [326] pop
+      [327] goto +46 (target=373)
+      [330] astore_1 v1
+      [331] ldc #22
+        - String [swipe]
+      [333] aload_1 v1
+      [334] invokevirtual #119
+        - Methodref [java/lang/Exception.getMessage ()Ljava/lang/String;]
+      [337] invokestatic #93
+        - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [340] pop
+      [341] goto +32 (target=373)
+      [344] new #29
+        - Class [android/content/Intent]
+      [347] dup
+      [348] ldc #9
+        - String [android.intent.action.MAIN]
+      [350] invokespecial #87
+        - Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+      [353] dup
+      [354] astore_1 v1
+      [355] ldc #2
+        - Integer [268435456]
+      [357] invokevirtual #89
+        - Methodref [android/content/Intent.setFlags (I)Landroid/content/Intent;]
+      [360] pop
+      [361] aload_1 v1
+      [362] ldc #10
+        - String [android.intent.category.HOME]
+      [364] invokevirtual #88
+        - Methodref [android/content/Intent.addCategory (Ljava/lang/String;)Landroid/content/Intent;]
+      [367] pop
+      [368] aload_0 v0
+      [369] aload_1 v1
+      [370] invokevirtual #109
+        - Methodref [com/matthewma/swipe_home/SwipeService.startActivity (Landroid/content/Intent;)V]
+      [373] iconst_0
+      [374] ireturn
+      Code attribute exceptions (count = 2):
+      - ExceptionInfo (95 -> 203: 206):
+      - Class [java/lang/Exception]
+      - ExceptionInfo (271 -> 327: 330):
+      - Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      - Stack map table attribute (count = 9):
+        - [95] Var: , Stack: 
+        - [206] Var: ..., Stack: [a:java/lang/Exception]
+        - [220] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/Float][a:java/lang/Double][a:java/lang/Float], Stack: 
+        - [271] Var: -3, Stack: (empty)
+        - [306] Var: [T][a:java/lang/Object][a:java/lang/Class], Stack: 
+        - [317] Var: [T][a:java/lang/Object][T][a:java/lang/reflect/Method], Stack: 
+        - [330] Var: , Stack: [a:java/lang/Exception]
+        - [344] Var: ...[a:com/matthewma/swipe_home/SwipeService], Stack: (empty)
+        - [373] Var: -1, Stack: (empty)
+  - Method:       onDown(Landroid/view/MotionEvent;)Z
+    Access flags: 0x1
+      = public boolean onDown(android.view.MotionEvent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 2, locals = 2, stack = 1):
+      [0] iconst_0
+      [1] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onLongPress(Landroid/view/MotionEvent;)V
+    Access flags: 0x1
+      = public void onLongPress(android.view.MotionEvent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 1, locals = 2, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    Access flags: 0x1
+      = public boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 2, locals = 5, stack = 1):
+      [0] iconst_0
+      [1] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onShowPress(Landroid/view/MotionEvent;)V
+    Access flags: 0x1
+      = public void onShowPress(android.view.MotionEvent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 1, locals = 2, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onSingleTapUp(Landroid/view/MotionEvent;)Z
+    Access flags: 0x1
+      = public boolean onSingleTapUp(android.view.MotionEvent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 2, locals = 2, stack = 1):
+      [0] iconst_0
+      [1] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       a(I)I
+    Access flags: 0x2
+      = private int a(int)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 17, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #106
+        - Methodref [com/matthewma/swipe_home/SwipeService.getResources ()Landroid/content/res/Resources;]
+      [4] astore_2 v2
+      [5] iconst_1
+      [6] iload_1 v1
+      [7] i2f
+      [8] aload_2 v2
+      [9] invokevirtual #90
+        - Methodref [android/content/res/Resources.getDisplayMetrics ()Landroid/util/DisplayMetrics;]
+      [12] invokestatic #94
+        - Methodref [android/util/TypedValue.applyDimension (IFLandroid/util/DisplayMetrics;)F]
+      [15] f2i
+      [16] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
+- Program class: com/matthewma/swipe_home/a
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+  Access flags:  0x30
+    = final class com.matthewma.swipe_home.a extends java.lang.Object
+
+Interfaces (count = 1):
+  - Class [android/view/View$OnTouchListener]
+
+Constant Pool (count = 30):
+  - Class [android/view/GestureDetector]
+  - Class [android/view/View$OnTouchListener]
+  - Class [com/matthewma/swipe_home/SwipeService]
+  - Class [com/matthewma/swipe_home/a]
+  - Class [java/lang/Object]
+  - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/view/GestureDetector;]
+  - Fieldref [com/matthewma/swipe_home/a.a Lcom/matthewma/swipe_home/SwipeService;]
+  - Methodref [android/view/GestureDetector.onTouchEvent (Landroid/view/MotionEvent;)Z]
+  - Methodref [java/lang/Object.<init> ()V]
+  - NameAndType [<init> ()V]
+  - NameAndType [a Landroid/view/GestureDetector;]
+  - NameAndType [a Lcom/matthewma/swipe_home/SwipeService;]
+  - NameAndType [onTouchEvent (Landroid/view/MotionEvent;)Z]
+  - Utf8 [()V]
+  - Utf8 [(Landroid/view/MotionEvent;)Z]
+  - Utf8 [(Landroid/view/View;Landroid/view/MotionEvent;)Z]
+  - Utf8 [(Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Utf8 [<init>]
+  - Utf8 [Code]
+  - Utf8 [Landroid/view/GestureDetector;]
+  - Utf8 [Lcom/matthewma/swipe_home/SwipeService;]
+  - Utf8 [a]
+  - Utf8 [android/view/GestureDetector]
+  - Utf8 [android/view/View$OnTouchListener]
+  - Utf8 [com/matthewma/swipe_home/SwipeService]
+  - Utf8 [com/matthewma/swipe_home/a]
+  - Utf8 [java/lang/Object]
+  - Utf8 [onTouch]
+  - Utf8 [onTouchEvent]
+
+Fields (count = 1):
+  - Field:        a Lcom/matthewma/swipe_home/SwipeService;
+    Access flags: 0x1002
+      = private synthetic com.matthewma.swipe_home.SwipeService a
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/matthewma/swipe_home/SwipeService;)V
+    Access flags: 0x0
+      = a(com.matthewma.swipe_home.SwipeService)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #7
+        - Fieldref [com/matthewma/swipe_home/a.a Lcom/matthewma/swipe_home/SwipeService;]
+      [5] aload_0 v0
+      [6] invokespecial #9
+        - Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    Access flags: 0x11
+      = public final boolean onTouch(android.view.View,android.view.MotionEvent)
+    Class member attributes (count = 1):
+    - Code attribute instructions (code length = 14, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #7
+        - Fieldref [com/matthewma/swipe_home/a.a Lcom/matthewma/swipe_home/SwipeService;]
+      [4] getfield #6
+        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/view/GestureDetector;]
+      [7] aload_2 v2
+      [8] invokevirtual #8
+        - Methodref [android/view/GestureDetector.onTouchEvent (Landroid/view/MotionEvent;)Z]
+      [11] pop
+      [12] iconst_1
+      [13] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+

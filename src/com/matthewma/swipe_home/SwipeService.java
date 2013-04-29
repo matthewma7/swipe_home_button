@@ -34,7 +34,6 @@ import android.widget.Button;
 public class SwipeService extends Service implements OnGestureListener{
 	HandlerThread thread;
 
-	// Handler that receives messages from the thread
 	Button mButton;
 	GestureDetector myGesture;
 	WindowManager wm;
