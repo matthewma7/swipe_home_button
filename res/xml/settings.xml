@@ -7,6 +7,22 @@
 <!--                 android:summary="@string/pref_user_name_summary" -->
 <!--                 android:key="prefUsername"/> -->
 <!--     </PreferenceCategory> -->
+
+	<PreferenceCategory android:title="@string/pref_category_binding" >
+		<Preference android:key="prefSwipeup"
+    	    android:title="Swipe Up">		   
+		</Preference>
+		<Preference android:key="prefSwipeupdown"
+    	    android:title="Swipe Up then Down">		   
+		</Preference>
+		<Preference android:key="prefSwipeupleft"
+    	    android:title="Swipe Up Left">		   
+		</Preference>
+		<Preference android:key="prefSwipeupright"
+    	    android:title="Swipe Up Right">		   
+		</Preference>
+ 	</PreferenceCategory>
+
     <PreferenceCategory android:title="@string/pref_category_enable" >
     	<CheckBoxPreference
             android:defaultValue="true"
@@ -67,6 +83,17 @@
          
          
         
+    </PreferenceCategory>
+    
+     <PreferenceCategory android:title="@string/pref_category_settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="prefAutoStart"
+            android:summary="@string/pref_swipe_autostart_summary"
+            android:title="@string/pref_swipe_autostart" >
+        </CheckBoxPreference>
+      
+
     </PreferenceCategory>
     
     <PreferenceCategory android:title="@string/pref_category_help" >
