@@ -11,6 +11,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -33,7 +34,7 @@ import android.widget.Button;
 
 public class SwipeService extends Service implements OnGestureListener{
 	HandlerThread thread;
-
+	SharedPreferences sharedPrefs;
 	Button mButton;
 	GestureDetector myGesture;
 	WindowManager wm;
@@ -46,7 +47,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	@SuppressLint("NewApi")
 	@Override
 	public void onCreate() {
-		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+		sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		prefSwipeNotification=sharedPrefs.getBoolean("prefSwipeNotification", true);
 		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
 		Boolean prefIncreaseSensibility=sharedPrefs.getBoolean("prefIncreaseSensibility", false);
@@ -146,50 +147,26 @@ public class SwipeService extends Service implements OnGestureListener{
 		//Toast.makeText(this, "onFling", Toast.LENGTH_SHORT).show();
 		//Log.e("swipe","onFling");
 		Float relativeX=Math.abs(arg0.getX()-arg1.getX());
+		Float absoluteX=arg0.getX()-arg1.getX();
 		Float relativeY=Math.abs(arg0.getY()-arg1.getY());
 		Double angle=Math.atan(relativeX/relativeY)/Math.PI*180;
 //		Toast.makeText(this, "relativeY:"+relativeY+" velocityY:"+velocityY, Toast.LENGTH_SHORT).show();
 		
 		
 		if(relativeY<dp2px(20)||(relativeY<dp2px(40)&&velocityY>200)){
-			try{
-				Class<?> ServiceManagerClass = Class.forName("android.os.ServiceManager");
-				Class<?> ServiceManagerNativeClass = Class.forName("android.os.ServiceManagerNative");
-				Method getService = ServiceManagerClass.getMethod("getService", new Class[]{String.class});
-				IBinder localIBinder = (IBinder)getService.invoke(ServiceManagerNativeClass, "statusbar");
-				Class<?> IStatusBarServiceClass = Class.forName("com.android.internal.statusbar.IStatusBarService").getClasses()[0];
-				Method asInterface = IStatusBarServiceClass.getMethod("asInterface", new Class[]{IBinder.class});
-				Object d = asInterface.invoke(null, new Object[]{localIBinder});
-				Method toggleRecentApps = IStatusBarServiceClass.getMethod("toggleRecentApps", new Class[0]);
-				toggleRecentApps.invoke(d);
-			}
-			catch(Exception e){
-				Log.e("swipe", e.getMessage());
-			}
+			action(sharedPrefs.getString("prefSwipeupdown", "2"));
 		}
 		else{
 			if(prefSwipeNotification&&angle>ANGLE&&(relativeY>dp2px(XYThreshold)||relativeX>dp2px(XYThreshold))){
-				try{
-					Object sbservice = getSystemService( "statusbar" );
-					Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
-					Method showsb;
-					if (Build.VERSION.SDK_INT >= 17) {
-					    showsb = statusbarManager.getMethod("expandNotificationsPanel");
-					}
-					else {
-					    showsb = statusbarManager.getMethod("expand");
-					}
-					showsb.invoke( sbservice );
+				if(absoluteX<0){
+					action(sharedPrefs.getString("prefSwipeupright", "3"));
 				}
-				catch(Exception e){
-					Log.e("swipe", e.getMessage());
+				else{
+					action(sharedPrefs.getString("prefSwipeupleft", "3"));
 				}
 			}
 			else{
-				Intent i = new Intent(Intent.ACTION_MAIN);
-				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				i.addCategory(Intent.CATEGORY_HOME);
-				startActivity(i);
+				action(sharedPrefs.getString("prefSwipeup", "1"));
 			}
 		}
 
@@ -224,6 +201,67 @@ public class SwipeService extends Service implements OnGestureListener{
 	public int dp2px(int dp){
 		Resources r = getResources();
 	    return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics());
+	}
+	
+	public void action(String action){
+		if(action.equals("0")){
+			return;
+		}
+		if(action.equals("1")){
+			Intent i = new Intent(Intent.ACTION_MAIN);
+			i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			i.addCategory(Intent.CATEGORY_HOME);
+			startActivity(i);
+		}
+		if(action.equals("2")){
+			try{
+				Class<?> ServiceManagerClass = Class.forName("android.os.ServiceManager");
+				Class<?> ServiceManagerNativeClass = Class.forName("android.os.ServiceManagerNative");
+				Method getService = ServiceManagerClass.getMethod("getService", new Class[]{String.class});
+				IBinder localIBinder = (IBinder)getService.invoke(ServiceManagerNativeClass, "statusbar");
+				Class<?> IStatusBarServiceClass = Class.forName("com.android.internal.statusbar.IStatusBarService").getClasses()[0];
+				Method asInterface = IStatusBarServiceClass.getMethod("asInterface", new Class[]{IBinder.class});
+				Object d = asInterface.invoke(null, new Object[]{localIBinder});
+				Method toggleRecentApps = IStatusBarServiceClass.getMethod("toggleRecentApps", new Class[0]);
+				toggleRecentApps.invoke(d);
+			}
+			catch(Exception e){
+				Log.e("swipe", e.getMessage());
+			}
+		}
+		if(action.equals("3")){
+			try{
+				Object sbservice = getSystemService( "statusbar" );
+				Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
+				Method showsb;
+				if (Build.VERSION.SDK_INT >= 17) {
+				    showsb = statusbarManager.getMethod("expandNotificationsPanel");
+				}
+				else {
+				    showsb = statusbarManager.getMethod("expand");
+				}
+				showsb.invoke( sbservice );
+			}
+			catch(Exception e){
+				Log.e("swipe", e.getMessage());
+			}
+		}
+		if(action.length()>1 && action.substring(0, 1).equals("4")){
+			try{
+				Intent intent = new Intent();
+			    PackageManager manager = getPackageManager();
+			    intent = manager.getLaunchIntentForPackage(action.substring(1,action.length()));
+			    intent.addCategory(Intent.CATEGORY_LAUNCHER);
+			    startActivity(intent);
+			}
+			catch(Exception e){}
+		}
+//		if(action.equals("5")){
+//			return getString(R.string.dialog0_backbutton);
+//		}
+//		if(key.equals("6")){
+//			return getString(R.string.dialog0_backbutton);
+//		}
 	}
 
 }

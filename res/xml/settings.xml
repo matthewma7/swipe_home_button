@@ -9,18 +9,22 @@
 <!--     </PreferenceCategory> -->
 
 	<PreferenceCategory android:title="@string/pref_category_binding" >
-		<Preference android:key="prefSwipeup"
-    	    android:title="Swipe Up">		   
-		</Preference>
-		<Preference android:key="prefSwipeupdown"
-    	    android:title="Swipe Up then Down">		   
-		</Preference>
-		<Preference android:key="prefSwipeupleft"
-    	    android:title="Swipe Up Left">		   
-		</Preference>
-		<Preference android:key="prefSwipeupright"
-    	    android:title="Swipe Up Right">		   
-		</Preference>
+	    <PreferenceScreen
+                android:title="Binding"
+                android:summary="Binding Summary">
+			<Preference android:key="prefSwipeup"
+	    	    android:title="Swipe Up">
+			</Preference>
+			<Preference android:key="prefSwipeupdown"
+	    	    android:title="Swipe Up then Down">		   
+			</Preference>
+			<Preference android:key="prefSwipeupleft"
+	    	    android:title="Swipe Up Left">		   
+			</Preference>
+			<Preference android:key="prefSwipeupright"
+	    	    android:title="Swipe Up Right">		   
+			</Preference>
+		</PreferenceScreen>
  	</PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_category_enable" >
@@ -41,12 +45,12 @@
             android:title="@string/pref_swipe_autostart" >
         </CheckBoxPreference>
         
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="prefSwipeNotification"
-            android:summary="@string/pref_swipe_notification_summary"
-            android:title="@string/pref_swipe_notification" >
-        </CheckBoxPreference>
+<!--         <CheckBoxPreference -->
+<!--             android:defaultValue="true" -->
+<!--             android:key="prefSwipeNotification" -->
+<!--             android:summary="@string/pref_swipe_notification_summary" -->
+<!--             android:title="@string/pref_swipe_notification" > -->
+<!--         </CheckBoxPreference> -->
         
         <CheckBoxPreference
             android:defaultValue="true"
@@ -84,17 +88,7 @@
          
         
     </PreferenceCategory>
-    
-     <PreferenceCategory android:title="@string/pref_category_settings" >
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="prefAutoStart"
-            android:summary="@string/pref_swipe_autostart_summary"
-            android:title="@string/pref_swipe_autostart" >
-        </CheckBoxPreference>
-      
-
-    </PreferenceCategory>
+   
     
     <PreferenceCategory android:title="@string/pref_category_help" >
 		<PreferenceScreen

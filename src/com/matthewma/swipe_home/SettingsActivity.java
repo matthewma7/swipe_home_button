@@ -1,44 +1,69 @@
 package com.matthewma.swipe_home;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.widget.Toast;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+//import android.widget.Toast;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 
 public class SettingsActivity extends PreferenceActivity implements
 		SharedPreferences.OnSharedPreferenceChangeListener,OnPreferenceClickListener {
+	
+	private SharedPreferences sharedPrefs;
+	
+	public static final String [] swipes={"prefSwipeup","prefSwipeupdown","prefSwipeupleft","prefSwipeupright"};
+	public String currentPref; 
+	
+	private Dialog dialog1;
 
 	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.settings);
-		PreferenceManager.getDefaultSharedPreferences(this)
-				.registerOnSharedPreferenceChangeListener(this);
+		sharedPrefs.registerOnSharedPreferenceChangeListener(this);
 
 		final Intent intent = new Intent(this, SwipeService.class);
 		if (isMyServiceRunning()) {
 			this.stopService(intent);
 		}
-		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		Boolean prefEnable = sharedPrefs.getBoolean("prefEnable", true);
 		if (prefEnable) {
 			this.startService(intent);
+			
 		}
 		
 		findPreference("prefShare").setOnPreferenceClickListener (this);
-		findPreference("prefSwipeup").setOnPreferenceClickListener (this);
+		for(int i=0;i<swipes.length;i++){
+			Preference pref=findPreference(swipes[i]);
+			pref.setOnPreferenceClickListener(this);
+			String action = sharedPrefs.getString(swipes[i], Util.getDefaultAction(swipes[i]));
+			pref.setSummary(GetActionDescription(action));
+		}
+		
+		getPackages();
 	}
 
 	@Override
@@ -47,8 +72,6 @@ public class SettingsActivity extends PreferenceActivity implements
 		if(!key.equals("prefAutoStart")){
 			final Intent intent = new Intent(this, SwipeService.class);
 			this.stopService(intent);
-			SharedPreferences sharedPrefs = PreferenceManager
-					.getDefaultSharedPreferences(this);
 			Boolean prefEnable = sharedPrefs.getBoolean("prefEnable", true);
 			if (prefEnable) {
 				this.startService(intent);
@@ -80,78 +103,162 @@ public class SettingsActivity extends PreferenceActivity implements
 			sendIntent.setType("text/plain");
 			startActivity(sendIntent);
 		}
-		if(key.equals("prefSwipeup")){
-			showDialog(ACTION_SELECT_DIALOG);
+		for(int i=0;i<swipes.length;i++){
+			if(swipes[i].equals(key)){
+				currentPref=key;
+				showDialog(ACTION_SELECT_DIALOG);
+				return false;
+			}
 		}
 		return false;
 	}
 	
 	private final int ACTION_SELECT_DIALOG=1;
-//	private final int APP_SELECT_DIALOG=2;
+	private final int APP_SELECT_DIALOG=2;
 	
 	@SuppressWarnings("deprecation")
 	@Override
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
+		
+		
 		case ACTION_SELECT_DIALOG:
 			final CharSequence[] items = { 
 				getString(R.string.dialog0_none), getString(R.string.dialog0_homebutton),
 				getString(R.string.dialog0_recentapp), getString(R.string.dialog0_pullnotification),
-				getString(R.string.dialog0_homebutton),getString(R.string.dialog0_backbutton)
+				getString(R.string.dialog0_customapp)
 			};
 			Builder builder0 = new AlertDialog.Builder(this);
 			builder0.setTitle(getString(R.string.dialog0_title));
 			builder0.setCancelable(true);
-//			builder0.setPositiveButton("I agree", new OkOnClickListener());
-//			builder0.setNegativeButton("No, no", new CancelOnClickListener());
-			builder0.setSingleChoiceItems(items, -1,
+			String action=sharedPrefs.getString(currentPref, Util.getDefaultAction(currentPref));
+			int index=Integer.parseInt(action.substring(0, 1));
+			builder0.setSingleChoiceItems(items, index,
                     new DialogInterface.OnClickListener() {
 		                public void onClick(DialogInterface dialog, int item) {
-		                    Toast.makeText(getApplicationContext(),
-		                            items[item], Toast.LENGTH_SHORT).show();
-//		                    if(item==5){
-//		                    	showDialog(APP_SELECT_DIALOG);
-//		                    }
-		                    dialog.cancel();  
+//		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
+		                	Editor editor = sharedPrefs.edit();
+		                	editor.putString(currentPref, Integer.toString(item));
+		                	editor.commit();
+		                	findPreference(currentPref).setSummary(GetActionDescription(Integer.toString(item)));
+		                    if(item==4){
+		                    	showDialog(APP_SELECT_DIALOG);
+		                    }
+		                    dialog.dismiss();  
 		                }
 		            });
 			AlertDialog dialog0 = builder0.create();
 			dialog0.show();
 			break;
-//		case APP_SELECT_DIALOG:
-//			final CharSequence[] apps = { "A", "B",
-//                    "C"};
-//			Builder builder1 = new AlertDialog.Builder(this);
-//			builder1.setTitle("Pick a color");
-//			builder1.setCancelable(true);
-////			builder1.setPositiveButton("I agree", new OkOnClickListener());
-////			builder1.setNegativeButton("No, no", new CancelOnClickListener());
-//			builder1.setSingleChoiceItems(apps, -1,
-//                    new DialogInterface.OnClickListener() {
-//		                public void onClick(DialogInterface dialog, int item) {
-//		                    Toast.makeText(getApplicationContext(),
-//		                    		apps[item], Toast.LENGTH_SHORT).show();
-//		                    dialog.cancel();  
-//		                }
-//		            });
-//			AlertDialog dialog1 = builder1.create();
-//			dialog1.show();
-//			break;
+			
+			
+		case APP_SELECT_DIALOG:
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setTitle(getString(R.string.dialog1_title));
+			ListView appList = new ListView(this);
+			ArrayList<PInfo> pInfos=getPackages();
+			AppListAdapter appListAdapter = new AppListAdapter(this, appList.getId(),pInfos.toArray(new PInfo[pInfos.size()]));
+			appList.setAdapter(appListAdapter);
+			appList.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1,
+						int arg2, long arg3) {
+					ListView listView=(ListView)arg0;
+//					Toast.makeText(getApplicationContext(),listView.getItemAtPosition(arg2).getClass().toString(), Toast.LENGTH_SHORT).show();
+					Editor editor = sharedPrefs.edit();
+					PInfo pInfo=(PInfo)(listView.getItemAtPosition(arg2));
+                	editor.putString(currentPref, sharedPrefs.getString(currentPref, "4")+pInfo.packageName);
+                	editor.commit();
+                	dialog1.dismiss();
+                	findPreference(currentPref).setSummary(pInfo.appName);
+				}
+			});
+			builder.setView(appList);
+			dialog1 = builder.create();
+			dialog1.show();
+			break;
 		}
 		return super.onCreateDialog(id);
 	}
 
-//	private final class CancelOnClickListener implements
-//			DialogInterface.OnClickListener {
-//		public void onClick(DialogInterface dialog, int which) {
-//			Toast.makeText(getApplicationContext(), "Activity will continue",
-//					Toast.LENGTH_LONG).show();
+
+	public String GetActionDescription(String key){
+		if(key.equals("0")){
+			return getString(R.string.dialog0_none);
+		}
+		if(key.equals("1")){
+			return getString(R.string.dialog0_homebutton);
+		}
+		if(key.equals("2")){
+			return getString(R.string.dialog0_recentapp);
+		}
+		if(key.equals("3")){
+			return getString(R.string.dialog0_pullnotification);
+		}
+		if(key.length()>=1 && key.substring(0, 1).equals("4")){
+			return getString(R.string.dialog0_customapp);
+		}
+//		if(key.equals("5")){
+//			return getString(R.string.dialog0_backbutton);
 //		}
-//	}
-//
-//	private final class OkOnClickListener implements
-//			DialogInterface.OnClickListener {
-//		public void onClick(DialogInterface dialog, int which) {
+//		if(key.equals("6")){
+//			return getString(R.string.dialog0_backbutton);
 //		}
-//	}
+		return "";
+	}
+	
+	
+	class PInfo {
+	    public String appName = "";
+	    public String packageName = "";
+	    public String versionName = "";
+	    public int versionCode = 0;
+	    public Drawable icon;
+	    public void prettyPrint() {
+	        Log.i("swipehome",appName + " " + packageName + " " + versionName + " " + versionCode);
+	    }
+	}
+
+	private ArrayList<PInfo> getPackages() {
+	    ArrayList<PInfo> apps = getInstalledApps(false); /* false = no system packages */
+	    final int max = apps.size();
+	    for (int i=0; i<max; i++) {
+	        apps.get(i).prettyPrint();
+	    }
+	    return apps;
+	}
+
+	private ArrayList<PInfo> getInstalledApps(boolean getSysPackages) {
+	    ArrayList<PInfo> res = new ArrayList<PInfo>();        
+	    List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
+	    for(int i=0;i<packs.size();i++) {
+	        PackageInfo p = packs.get(i);
+	        if ((!getSysPackages) && (p.versionName == null)) {
+	            continue ;
+	        }
+	        PInfo newInfo = new PInfo();
+	        newInfo.appName = p.applicationInfo.loadLabel(getPackageManager()).toString();
+	        newInfo.packageName = p.packageName;
+	        newInfo.versionName = p.versionName;
+	        newInfo.versionCode = p.versionCode;
+	        newInfo.icon = p.applicationInfo.loadIcon(getPackageManager());
+	        res.add(newInfo);
+	    }
+	    return res; 
+	}
+	
+	
+	//	private final class CancelOnClickListener implements
+	//	DialogInterface.OnClickListener {
+	//public void onClick(DialogInterface dialog, int which) {
+	//	Toast.makeText(getApplicationContext(), "Activity will continue",
+	//			Toast.LENGTH_LONG).show();
+	//}
+	//}
+	//
+	//private final class OkOnClickListener implements
+	//	DialogInterface.OnClickListener {
+	//public void onClick(DialogInterface dialog, int which) {
+	//}
+	//}
 }

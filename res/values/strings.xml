@@ -37,6 +37,8 @@
     <string name="dialog0_backbutton">Menu Button</string>
     <string name="dialog0_customapp">Custom App</string>
     
+    <string name="dialog1_title">Choose an App</string>
+    
     <string name="pref_swipeup">Swipe up</string>
     <string name="pref_swipeupdown">Swipe up then down</string>
     <string name="pref_swipeupleft">Swipe up left</string>
