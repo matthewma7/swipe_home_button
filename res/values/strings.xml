@@ -19,9 +19,6 @@
     <string name="pref_swipe_autostart">Start at Boot</string>
     <string name="pref_swipe_autostart_summary">Start swipe gesture service after phone boots</string>
     
-<!--     <string name="pref_swipe_notification">Notification Swipe</string>
-    <string name="pref_swipe_notification_summary">Swipe far up right or up left to pull down notification</string> -->
-    
     <string name="pref_transparenticon">Transparent Notification Icon</string>
     <string name="pref_transparenticon_summary">Make the icon in notification bar transparent</string>
     
@@ -45,17 +42,17 @@
     <string name="pref_swipeupright">Swipe up right</string>
     
     <string name="pref_instruction">Instructions</string>
-    <string name="pref_instruction_summary">Instructions for the three swipe gestures</string>
+    <string name="pref_instruction_summary">Instructions for swipe gestures</string>
     
-    <string name="pref_backhomescreen">Go back home screen</string>
-    <string name="pref_backhomescreen_summary">Swipe up into the screen from the outside of bottom center screen</string>
+    <string name="pref_binding">Binding</string>
+    <string name="pref_binding_summary">Customize actions of swipe gestures</string>
     
-    <string name="pref_showrecentapp">Show recent apps</string>
-    <string name="pref_showrecentapp_summary">Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen</string>
+    <string name="pref_swipeup_summary">Swipe up into the screen from the outside of bottom center screen</string>
+    <string name="pref_swipeupdown_summary">Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen</string>
+    <string name="pref_swipeupleft_summary">Swipe far up left into the screen from outside of bottom center screen</string>
+    <string name="pref_swipeupright_summary">Swipe far up right into the screen from outside of bottom center screen</string>
     
-    <string name="pref_pullnotification">Pull down notification bar</string>
-    <string name="pref_pullnotification_summary">Swipe far up right or up left into the screen from outside of bottom center screen</string>
-    
+   
     <string name="pref_share">Share</string>
     <string name="pref_share_summary">Tell your friend about Swipe Home Button</string>
     <string name="pref_share_description">Do you think you home button is hard to press and notification bar is far to reach? check out this app</string>

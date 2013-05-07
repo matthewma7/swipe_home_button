@@ -247,14 +247,17 @@ public class SwipeService extends Service implements OnGestureListener{
 			}
 		}
 		if(action.length()>1 && action.substring(0, 1).equals("4")){
-			try{
-				Intent intent = new Intent();
-			    PackageManager manager = getPackageManager();
-			    intent = manager.getLaunchIntentForPackage(action.substring(1,action.length()));
-			    intent.addCategory(Intent.CATEGORY_LAUNCHER);
-			    startActivity(intent);
+			String [] splits=action.split("\\|");
+			if(splits.length==3){
+				try{
+					Intent intent = new Intent();
+				    PackageManager manager = getPackageManager();
+				    intent = manager.getLaunchIntentForPackage(splits[2]);
+				    intent.addCategory(Intent.CATEGORY_LAUNCHER);
+				    startActivity(intent);
+				}
+				catch(Exception e){}
 			}
-			catch(Exception e){}
 		}
 //		if(action.equals("5")){
 //			return getString(R.string.dialog0_backbutton);

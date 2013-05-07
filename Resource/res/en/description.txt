@@ -2,27 +2,27 @@ Swipe Home Button
 
 --------
 
-Instructions of three gestures.
+Customizable swipe actions.
 
-Transparent notification icon.
+Now, you could open your own app with gestures!
 
 --------
 
 
 Do you find physical Home Button is hard to press? Do you feel notification bar is too far to reach?
 
-Swipe Home Button is a revolution to the three most frequently used operation on your Android.
+Swipe Home Button replace three most frequently used operation on Android with bezel swipe gestures.
 
 No more hard Home Button.
 No more reaching to the status bar.
 And, now it is possible to use your big phone with only one hand!
 Swipe Home Button is compatible with any 4.0+ devices! Including your Galaxy S3, Galaxy S2, HTC One.
 
-Now, you could hide notification bar icon. You could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
+Now, you could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
 
 Check out the video to feel the easy and clean swipe gestures.
 
-Three amazing simple swipe gestures,
+Amazing simple swipe gestures,
 1. Go back to home screen
 ----Swipe up into the screen from the outside of bottom center screen
 
@@ -32,8 +32,10 @@ Three amazing simple swipe gestures,
 3. Pull down notification bar
 ----Swipe far up right or up left into the screen from outside of bottom center screen
 
+4. Open custom app
+----You could define one of the gesture to open your other app! 
+
+This app has the smallest footprint. Not a single unnecessary permission is asked.
 Remember, every swipe should start from outside of the screen.
 
 Free your Home Button with gestures!
-
-Any feedback through email is appreciated.

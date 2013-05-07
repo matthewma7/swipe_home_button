@@ -8,6 +8,7 @@
     
     <string name="pref_category_enable">啟動</string>
     <string name="pref_category_settings">設置</string>
+    <string name="pref_category_binding">手勢綁定</string>
     <string name="pref_category_upgrade">升級</string>
     <string name="pref_category_help">幫助</string>
     <string name="pref_category_about">關於</string>
@@ -18,26 +19,39 @@
     <string name="pref_swipe_autostart">開機啟動</string>
     <string name="pref_swipe_autostart_summary">開機後自動啟動滑動Home鍵</string>
     
-    <string name="pref_swipe_notification">啟用通知欄滑動</string>
-    <string name="pref_swipe_notification_summary">向左上或右上劃入屏幕</string>
-    
+     
     <string name="pref_transparenticon">透明通知欄圖標</string>
     <string name="pref_transparenticon_summary">隱藏通知欄圖標</string>
     
     <string name="pref_sensibility">提高靈敏度</string>
     <string name="pref_sensibility_summary">增強手勢檢測的靈敏度</string>
     
+    <string name="dialog0_title">選擇操作</string>
+    <string name="dialog0_none">無操作</string>
+    <string name="dialog0_homebutton">Home鍵</string>
+    <string name="dialog0_recentapp">最近使用應用</string>
+    <string name="dialog0_pullnotification">下拉通知欄</string>
+    <string name="dialog0_menubutton">Back Button</string>
+    <string name="dialog0_backbutton">Menu Button</string>
+    <string name="dialog0_customapp">自定義程序</string>
+    
+     <string name="dialog1_title">選擇一個程序</string>
+     
+    <string name="pref_swipeup">向上滑</string>
+    <string name="pref_swipeupdown">向上後滑後向下滑</string>
+    <string name="pref_swipeupleft">向左上滑</string>
+    <string name="pref_swipeupright">向右上滑</string>
+    
     <string name="pref_instruction">使用說明</string>
-    <string name="pref_instruction_summary">三個滑動手勢的使用說明</string>
+    <string name="pref_instruction_summary">滑動手勢的使用說明</string>
     
-    <string name="pref_backhomescreen">返回主屏</string>
-    <string name="pref_backhomescreen_summary">從屏幕底端外正中處向上滑入屏幕</string>
+    <string name="pref_binding">手勢綁定</string>
+    <string name="pref_binding_summary">自定義滑動手勢的動作</string>
     
-    <string name="pref_showrecentapp">顯示最近使用的應用</string>
-    <string name="pref_showrecentapp_summary">從屏幕底端外正中處向上滑入屏幕，再繼續向下滑出屏幕</string>
-    
-    <string name="pref_pullnotification">下拉通知欄</string>
-    <string name="pref_pullnotification_summary">從屏幕底端外正中處向左上或右上滑入屏幕</string>
+    <string name="pref_swipeup_summary">從屏幕底端外正中處向上滑入屏幕</string>
+    <string name="pref_swipeupdown_summary">從屏幕底端外正中處向上滑入屏幕，再繼續向下滑出屏幕</string>
+    <string name="pref_swipeupleft_summary">從屏幕底端外正中處向左上滑入屏幕</string>
+    <string name="pref_swipeupright_summary">從屏幕底端外正中處向右上滑入屏幕</string>  
     
     <string name="pref_share">分享</string>
     <string name="pref_share_summary">分享滑動Home鍵給你的好友</string>

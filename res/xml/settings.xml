@@ -1,57 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
- 
-<!--     <PreferenceCategory android:title="@string/pref_user_profile" > -->
-<!--         <EditTextPreference -->
-<!--                 android:title="@string/pref_user_name" -->
-<!--                 android:summary="@string/pref_user_name_summary" -->
-<!--                 android:key="prefUsername"/> -->
-<!--     </PreferenceCategory> -->
 
-	<PreferenceCategory android:title="@string/pref_category_binding" >
-	    <PreferenceScreen
-                android:title="Binding"
-                android:summary="Binding Summary">
-			<Preference android:key="prefSwipeup"
-	    	    android:title="Swipe Up">
-			</Preference>
-			<Preference android:key="prefSwipeupdown"
-	    	    android:title="Swipe Up then Down">		   
-			</Preference>
-			<Preference android:key="prefSwipeupleft"
-	    	    android:title="Swipe Up Left">		   
-			</Preference>
-			<Preference android:key="prefSwipeupright"
-	    	    android:title="Swipe Up Right">		   
-			</Preference>
-		</PreferenceScreen>
- 	</PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/pref_category_enable" >
-    	<CheckBoxPreference
+<!--     <PreferenceCategory android:title="@string/pref_category_enable" > -->
+    	
+<!--  	</PreferenceCategory>  -->
+     
+     
+    <PreferenceCategory android:title="@string/pref_category_settings" >
+        <CheckBoxPreference
             android:defaultValue="true"
             android:key="prefEnable"
             android:summary="@string/pref_enable_summary"
             android:title="@string/pref_enable" >
         </CheckBoxPreference>
- 	</PreferenceCategory> 
-     
-     
-    <PreferenceCategory android:title="@string/pref_category_settings" >
+        
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="prefAutoStart"
             android:summary="@string/pref_swipe_autostart_summary"
             android:title="@string/pref_swipe_autostart" >
         </CheckBoxPreference>
-        
-<!--         <CheckBoxPreference -->
-<!--             android:defaultValue="true" -->
-<!--             android:key="prefSwipeNotification" -->
-<!--             android:summary="@string/pref_swipe_notification_summary" -->
-<!--             android:title="@string/pref_swipe_notification" > -->
-<!--         </CheckBoxPreference> -->
-        
+              
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="prefTransparentIcon"
@@ -66,50 +35,55 @@
             android:title="@string/pref_sensibility" >
         </CheckBoxPreference>
         
-<!--          <DialogPreference -->
-<!--             android:dialogIcon="@android:drawable/ic_dialog_alert"       -->
-<!--             android:dialogTitle="Second PreferenceScreen" -->
-<!--             android:dialogMessage="This is a second PreferenceScreen" -->
-<!--             android:positiveButtonText="OK" -->
-<!--             android:negativeButtonText="Cancel"> -->
- 
-<!--             <EditTextPreference -->
-<!--                 android:name="Username Preference" -->
-<!--                 android:summary="Username from System" -->
-<!--                 android:title="Username" -->
-<!--                 android:key="ApiUsername" /> -->
-<!--             <EditTextPreference -->
-<!--                 android:name="Password Preference" -->
-<!--                 android:summary="Remote Password from System" -->
-<!--                 android:title="Password" -->
-<!--                 android:key="ApiPassword" /> -->
-<!--         </DialogPreference> -->
-         
-         
-        
+       
     </PreferenceCategory>
    
-    
-    <PreferenceCategory android:title="@string/pref_category_help" >
-		<PreferenceScreen
+    <PreferenceCategory android:title="@string/pref_category_binding" >
+	    <PreferenceScreen
+                android:title="@string/pref_binding"
+                android:summary="@string/pref_binding_summary">
+			<Preference android:key="prefSwipeup"
+	    	    android:title="@string/pref_swipeup">
+			</Preference>
+			<Preference android:key="prefSwipeupdown"
+	    	    android:title="@string/pref_swipeupdown">		   
+			</Preference>
+			<Preference android:key="prefSwipeupleft"
+	    	    android:title="@string/pref_swipeupleft">		   
+			</Preference>
+			<Preference android:key="prefSwipeupright"
+	    	    android:title="@string/pref_swipeupright">		   
+			</Preference>
+		</PreferenceScreen>
+		
+	    <PreferenceScreen
                 android:title="@string/pref_instruction"
                 android:summary="@string/pref_instruction_summary">
-
+			
+	       <Preference 
+	    	    android:title="@string/pref_swipeup" 
+	            android:summary="@string/pref_swipeup_summary">		   
+			</Preference>
+			 
            <Preference 
-	    	    android:title="@string/pref_backhomescreen" 
-	            android:summary="@string/pref_backhomescreen_summary">		   
+	    	    android:title="@string/pref_swipeupdown" 
+	            android:summary="@string/pref_swipeupdown_summary">		   
 			</Preference>
 			<Preference 
-	    	    android:title="@string/pref_showrecentapp" 
-	            android:summary="@string/pref_showrecentapp_summary">		   
+	    	    android:title="@string/pref_swipeupleft" 
+	            android:summary="@string/pref_swipeupleft_summary">		   
 			</Preference>
 			<Preference 
-	    	    android:title="@string/pref_pullnotification" 
-	            android:summary="@string/pref_pullnotification_summary">		   
+	    	    android:title="@string/pref_swipeupright" 
+	            android:summary="@string/pref_swipeupright_summary">		   
 			</Preference>
 
         </PreferenceScreen>
  	</PreferenceCategory>
+    
+<!--     <PreferenceCategory android:title="@string/pref_category_help" > -->
+		
+<!--  	</PreferenceCategory> -->
     
     <PreferenceCategory android:title="@string/pref_category_about" >
 		<Preference android:key="prefShare"

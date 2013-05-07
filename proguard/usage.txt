@@ -10,3 +10,5 @@ com.matthewma.swipe_home.R$style
 com.matthewma.swipe_home.R$xml
 com.matthewma.swipe_home.SwipeService:
     android.os.HandlerThread thread
+com.matthewma.swipe_home.Util:
+    3:3:public Util()

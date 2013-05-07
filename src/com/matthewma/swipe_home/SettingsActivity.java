@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -21,7 +22,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-//import android.widget.Toast;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
@@ -137,10 +137,12 @@ public class SettingsActivity extends PreferenceActivity implements
                     new DialogInterface.OnClickListener() {
 		                public void onClick(DialogInterface dialog, int item) {
 //		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
-		                	Editor editor = sharedPrefs.edit();
-		                	editor.putString(currentPref, Integer.toString(item));
-		                	editor.commit();
-		                	findPreference(currentPref).setSummary(GetActionDescription(Integer.toString(item)));
+		                	if(item<4){
+		                		Editor editor = sharedPrefs.edit();
+			                	editor.putString(currentPref, Integer.toString(item));
+			                	editor.commit();
+			                	findPreference(currentPref).setSummary(GetActionDescription(Integer.toString(item)));
+		                	}
 		                    if(item==4){
 		                    	showDialog(APP_SELECT_DIALOG);
 		                    }
@@ -167,7 +169,7 @@ public class SettingsActivity extends PreferenceActivity implements
 //					Toast.makeText(getApplicationContext(),listView.getItemAtPosition(arg2).getClass().toString(), Toast.LENGTH_SHORT).show();
 					Editor editor = sharedPrefs.edit();
 					PInfo pInfo=(PInfo)(listView.getItemAtPosition(arg2));
-                	editor.putString(currentPref, sharedPrefs.getString(currentPref, "4")+pInfo.packageName);
+                	editor.putString(currentPref, "4|"+pInfo.appName+"|"+pInfo.packageName);
                 	editor.commit();
                 	dialog1.dismiss();
                 	findPreference(currentPref).setSummary(pInfo.appName);
@@ -182,21 +184,24 @@ public class SettingsActivity extends PreferenceActivity implements
 	}
 
 
-	public String GetActionDescription(String key){
-		if(key.equals("0")){
+	public String GetActionDescription(String action){
+		if(action.equals("0")){
 			return getString(R.string.dialog0_none);
 		}
-		if(key.equals("1")){
+		if(action.equals("1")){
 			return getString(R.string.dialog0_homebutton);
 		}
-		if(key.equals("2")){
+		if(action.equals("2")){
 			return getString(R.string.dialog0_recentapp);
 		}
-		if(key.equals("3")){
+		if(action.equals("3")){
 			return getString(R.string.dialog0_pullnotification);
 		}
-		if(key.length()>=1 && key.substring(0, 1).equals("4")){
-			return getString(R.string.dialog0_customapp);
+		if(action.length()>=1 && action.substring(0, 1).equals("4")){
+			String [] splits=action.split("\\|");
+			if(splits.length==3){
+				return splits[1];
+			}
 		}
 //		if(key.equals("5")){
 //			return getString(R.string.dialog0_backbutton);
@@ -233,7 +238,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	    List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
 	    for(int i=0;i<packs.size();i++) {
 	        PackageInfo p = packs.get(i);
-	        if ((!getSysPackages) && (p.versionName == null)) {
+	        if (isSystemPackage(p)) {
 	            continue ;
 	        }
 	        PInfo newInfo = new PInfo();
@@ -247,18 +252,8 @@ public class SettingsActivity extends PreferenceActivity implements
 	    return res; 
 	}
 	
-	
-	//	private final class CancelOnClickListener implements
-	//	DialogInterface.OnClickListener {
-	//public void onClick(DialogInterface dialog, int which) {
-	//	Toast.makeText(getApplicationContext(), "Activity will continue",
-	//			Toast.LENGTH_LONG).show();
-	//}
-	//}
-	//
-	//private final class OkOnClickListener implements
-	//	DialogInterface.OnClickListener {
-	//public void onClick(DialogInterface dialog, int which) {
-	//}
-	//}
+	private boolean isSystemPackage(PackageInfo pkgInfo) {
+	    return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true
+	            : false;
+	}
 }

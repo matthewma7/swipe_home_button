@@ -48,8 +48,8 @@ public final class R {
         public static final int pref_author=0x7f05002a;
         public static final int pref_author_email_subject=0x7f05002c;
         public static final int pref_author_summary=0x7f05002b;
-        public static final int pref_backhomescreen=0x7f050021;
-        public static final int pref_backhomescreen_summary=0x7f050022;
+        public static final int pref_binding=0x7f050021;
+        public static final int pref_binding_summary=0x7f050022;
         public static final int pref_category_about=0x7f050009;
         public static final int pref_category_binding=0x7f050006;
         public static final int pref_category_enable=0x7f050004;
@@ -60,26 +60,21 @@ public final class R {
         public static final int pref_enable_summary=0x7f05000b;
         public static final int pref_instruction=0x7f05001f;
         public static final int pref_instruction_summary=0x7f050020;
-        public static final int pref_pullnotification=0x7f050025;
-        public static final int pref_pullnotification_summary=0x7f050026;
         public static final int pref_sensibility=0x7f050010;
         public static final int pref_sensibility_summary=0x7f050011;
         public static final int pref_share=0x7f050027;
         public static final int pref_share_description=0x7f050029;
         public static final int pref_share_summary=0x7f050028;
-        public static final int pref_showrecentapp=0x7f050023;
-        public static final int pref_showrecentapp_summary=0x7f050024;
         public static final int pref_swipe_autostart=0x7f05000c;
         public static final int pref_swipe_autostart_summary=0x7f05000d;
-        public static final int pref_swipe_notification=0x7f05002d;
-        public static final int pref_swipe_notification_summary=0x7f05002e;
         public static final int pref_swipeup=0x7f05001b;
+        public static final int pref_swipeup_summary=0x7f050023;
         public static final int pref_swipeupdown=0x7f05001c;
+        public static final int pref_swipeupdown_summary=0x7f050024;
         public static final int pref_swipeupleft=0x7f05001d;
+        public static final int pref_swipeupleft_summary=0x7f050025;
         public static final int pref_swipeupright=0x7f05001e;
-        /**      <string name="pref_swipe_notification">Notification Swipe</string>
-    <string name="pref_swipe_notification_summary">Swipe far up right or up left to pull down notification</string> 
-         */
+        public static final int pref_swipeupright_summary=0x7f050026;
         public static final int pref_transparenticon=0x7f05000e;
         public static final int pref_transparenticon_summary=0x7f05000f;
     }
