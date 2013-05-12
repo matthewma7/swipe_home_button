@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_title">golpe fuerte botón de inicio</string>
+    <string name="notification_text">El cambio de su botón de inicio</string>
+    
+    <string name="app_name">golpe fuerte botón de inicio</string>
+    <string name="menu_settings">Configuración</string>
+    
+    <string name="pref_category_enable">permitir</string>
+    <string name="pref_category_settings">ajuste</string>
+    <string name="pref_category_binding">encuadernación</string>
+    <string name="pref_category_upgrade">Upgrade</string>
+    <string name="pref_category_help">ayudar</string>
+    <string name="pref_category_about">acerca de</string>
+    
+    <string name="pref_enable">Habilitar gestos</string>
+    <string name="pref_enable_summary">Iniciar servicio gesto de deslizar</string>
+    
+    <string name="pref_swipe_autostart">Iniciar en el arranque</string>
+    <string name="pref_swipe_autostart_summary">Iniciar servicio gesto de deslizar después inicia el teléfono</string>
+    
+    <string name="pref_transparenticon">Icono de notificación transparente</string>
+    <string name="pref_transparenticon_summary">Hacer que el icono en la barra de notificación transparente</string>
+    
+    <string name="pref_sensibility">Aumentar la sensibilidad</string>
+    <string name="pref_sensibility_summary">Detección de las posturas imporve</string>
+    
+    <string name="dialog0_title">Elija una acción</string>
+    <string name="dialog0_none">ninguno</string>
+    <string name="dialog0_homebutton">botón de Inicio</string>
+    <string name="dialog0_recentapp">Mostrar aplicación reciente</string>
+    <string name="dialog0_pullnotification">Baje la notificación</string>
+    <string name="dialog0_menubutton">Back button</string>
+    <string name="dialog0_backbutton">Menu button</string>
+    <string name="dialog0_customapp">aplicación personalizada</string>
+    
+    <string name="dialog1_title">Elija una aplicación</string>
+    
+    <string name="pref_swipeup">Pase hacia arriba</string>
+    <string name="pref_swipefarup">Swipe muy arriba</string>
+    <string name="pref_swipeupdown">Pase hacia arriba y luego hacia abajo</string>
+    <string name="pref_swipeupleft">Pase a la izquierda</string>
+    <string name="pref_swipeupright">Pase hacia arriba a la derecha</string>
+    
+    <string name="pref_instruction">instrucciones</string>
+    <string name="pref_instruction_summary">Instrucciones de gestos swipe</string>
+    
+    <string name="pref_binding">encuadernación</string>
+    <string name="pref_binding_summary">Personalizar acciones de gesto de deslizar</string>
+    
+    <string name="pref_swipeup_summary">Pase hacia arriba en la pantalla desde la parte exterior de la pantalla inferior central</string>
+    <string name="pref_swipefarup_summary">Pase hacia arriba en la pantalla desde la parte exterior de la pantalla inferior central e ir más de 2/5 Altura de la pantalla</string>
+    <string name="pref_swipeupdown_summary">Pase hacia arriba en la pantalla desde la parte exterior de la pantalla inferior central y continuar deslizar hacia abajo fuera de la pantalla</string>
+    <string name="pref_swipeupleft_summary">Pase ahora a la izquierda en la pantalla de fuera de la pantalla inferior central</string>
+    <string name="pref_swipeupright_summary">Pase ahora a la derecha en la pantalla de fuera de la pantalla inferior central</string>
+    
+   
+    <string name="pref_share">participación</string>
+    <string name="pref_share_summary">Dile a tus amigos acerca de esta aplicación</string>
+    <string name="pref_share_description">¿Crees que botón de inicio es difícil de presionar y barra de notificaciones es mucho para llegar? echa un vistazo a esta aplicación</string>
+    
+    <string name="pref_author">autor</string>
+    <string name="pref_author_summary">Matthew Ma</string>
+    <string name="pref_author_email_subject">Respecto Swipe Inicio</string>
+</resources>

@@ -31,9 +31,7 @@ com.matthewma.swipe_home.SettingsActivity$2 -> com.matthewma.swipe_home.c:
 com.matthewma.swipe_home.SettingsActivity$PInfo -> com.matthewma.swipe_home.d:
     java.lang.String appName -> a
     java.lang.String packageName -> b
-    java.lang.String versionName -> c
-    int versionCode -> d
-    android.graphics.drawable.Drawable icon -> e
+    android.graphics.drawable.Drawable icon -> c
     java.lang.String getDefaultAction(java.lang.String) -> a
 com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
     android.content.SharedPreferences sharedPrefs -> b
@@ -42,6 +40,7 @@ com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
     android.view.WindowManager wm -> d
     java.lang.Boolean prefSwipeNotification -> e
     int buttonHeight -> f
+    int screenHeight -> g
     void onCreate() -> onCreate
     int onStartCommand(android.content.Intent,int,int) -> onStartCommand
     android.os.IBinder onBind(android.content.Intent) -> onBind

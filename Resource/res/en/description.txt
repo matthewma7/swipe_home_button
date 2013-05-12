@@ -1,8 +1,9 @@
 Swipe Home Button
 
 --------
+Add "swipe far up" gesture.
 
-Customizable swipe actions.
+Add customizable swipe actions.
 
 Now, you could open your own app with gestures!
 
@@ -16,7 +17,7 @@ Swipe Home Button replace three most frequently used operation on Android with b
 No more hard Home Button.
 No more reaching to the status bar.
 And, now it is possible to use your big phone with only one hand!
-Swipe Home Button is compatible with any 4.0+ devices! Including your Galaxy S3, Galaxy S2, HTC One.
+Swipe Home Button is compatible with any 4.0+ devices! Including your Galaxy S4, Galaxy S3, Galaxy S2, HTC One.
 
 Now, you could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
 

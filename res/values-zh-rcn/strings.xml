@@ -38,6 +38,7 @@
      <string name="dialog1_title">选择一个程序</string>
      
     <string name="pref_swipeup">向上滑</string>
+    <string name="pref_swipefarup">向上长距离滑</string>	
     <string name="pref_swipeupdown">向上后滑后向下滑</string>
     <string name="pref_swipeupleft">向左上滑</string>
     <string name="pref_swipeupright">向右上滑</string>
@@ -49,6 +50,7 @@
     <string name="pref_binding_summary">自定义滑动手势的动作</string>
     
     <string name="pref_swipeup_summary">从屏幕底端外正中处向上滑入屏幕</string>
+    <string name="pref_swipefarup_summary">从屏幕底端外正中处向上滑入屏幕并继续画超过屏幕高度2/5</string>
     <string name="pref_swipeupdown_summary">从屏幕底端外正中处向上滑入屏幕，再继续向下滑出屏幕</string>
     <string name="pref_swipeupleft_summary">从屏幕底端外正中处向左上滑入屏幕</string>
     <string name="pref_swipeupright_summary">从屏幕底端外正中处向右上滑入屏幕</string>  

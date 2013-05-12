@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
@@ -16,12 +17,14 @@ import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
+import android.graphics.Point;
 import android.os.Build;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -43,6 +46,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	final int XYThreshold=55;
 	final int buttonWidth=120;
 	int buttonHeight=17;
+	int screenHeight;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -89,6 +93,12 @@ public class SwipeService extends Service implements OnGestureListener{
 		notification.when=Integer.MAX_VALUE;
 		startForeground(317, notification);
 
+		WindowManager wm = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
+		Display display = wm.getDefaultDisplay();
+		Point size = new Point();
+		display.getSize(size);
+		screenHeight = size.y;
+		
 		mButton = new Button(this);
 		boolean isDebuggable =  ( 0 != ( getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE ) );
 		if(!isDebuggable){
@@ -166,7 +176,12 @@ public class SwipeService extends Service implements OnGestureListener{
 				}
 			}
 			else{
-				action(sharedPrefs.getString("prefSwipeup", "1"));
+				if(relativeY<screenHeight/5*2){
+					action(sharedPrefs.getString("prefSwipeup", "1"));
+				}
+				else{
+					action(sharedPrefs.getString("prefSwipefarup", "1"));
+				}
 			}
 		}
 

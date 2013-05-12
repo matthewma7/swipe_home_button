@@ -42,8 +42,12 @@
 	    <PreferenceScreen
                 android:title="@string/pref_binding"
                 android:summary="@string/pref_binding_summary">
+                
 			<Preference android:key="prefSwipeup"
 	    	    android:title="@string/pref_swipeup">
+			</Preference>
+			<Preference android:key="prefSwipefarup"
+	    	    android:title="@string/pref_swipefarup">
 			</Preference>
 			<Preference android:key="prefSwipeupdown"
 	    	    android:title="@string/pref_swipeupdown">		   
@@ -64,7 +68,10 @@
 	    	    android:title="@string/pref_swipeup" 
 	            android:summary="@string/pref_swipeup_summary">		   
 			</Preference>
-			 
+			<Preference 
+	    	    android:title="@string/pref_swipefarup" 
+	            android:summary="@string/pref_swipefarup_summary">		   
+			</Preference>
            <Preference 
 	    	    android:title="@string/pref_swipeupdown" 
 	            android:summary="@string/pref_swipeupdown_summary">		   

@@ -17,7 +17,6 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -32,7 +31,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	
 	private SharedPreferences sharedPrefs;
 	
-	public static final String [] swipes={"prefSwipeup","prefSwipeupdown","prefSwipeupleft","prefSwipeupright"};
+	public static final String [] swipes={"prefSwipeup","prefSwipeupdown","prefSwipeupleft","prefSwipeupright","prefSwipefarup"};
 	public String currentPref; 
 	
 	private Dialog dialog1;
@@ -219,17 +218,17 @@ public class SettingsActivity extends PreferenceActivity implements
 	    public String versionName = "";
 	    public int versionCode = 0;
 	    public Drawable icon;
-	    public void prettyPrint() {
-	        Log.i("swipehome",appName + " " + packageName + " " + versionName + " " + versionCode);
-	    }
+//	    public void prettyPrint() {
+//	        Log.i("swipehome",appName + " " + packageName + " " + versionName + " " + versionCode);
+//	    }
 	}
 
 	private ArrayList<PInfo> getPackages() {
 	    ArrayList<PInfo> apps = getInstalledApps(false); /* false = no system packages */
-	    final int max = apps.size();
-	    for (int i=0; i<max; i++) {
-	        apps.get(i).prettyPrint();
-	    }
+//	    final int max = apps.size();
+//	    for (int i=0; i<max; i++) {
+//	        apps.get(i).prettyPrint();
+//	    }
 	    return apps;
 	}
 
