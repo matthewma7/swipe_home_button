@@ -27,6 +27,7 @@ import android.util.TypedValue;
 import android.view.Display;
 import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.GestureDetector.OnGestureListener;
@@ -219,15 +220,18 @@ public class SwipeService extends Service implements OnGestureListener{
 	}
 	
 	public void action(String action){
+		
 		if(action.equals("0")){
 			return;
 		}
+		
 		if(action.equals("1")){
 			Intent i = new Intent(Intent.ACTION_MAIN);
 			i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			i.addCategory(Intent.CATEGORY_HOME);
 			startActivity(i);
 		}
+		
 		if(action.equals("2")){
 			try{
 				Class<?> ServiceManagerClass = Class.forName("android.os.ServiceManager");
@@ -244,6 +248,7 @@ public class SwipeService extends Service implements OnGestureListener{
 				Log.e("swipe", e.getMessage());
 			}
 		}
+		
 		if(action.equals("3")){
 			try{
 				Object sbservice = getSystemService( "statusbar" );
@@ -261,7 +266,9 @@ public class SwipeService extends Service implements OnGestureListener{
 				Log.e("swipe", e.getMessage());
 			}
 		}
-		if(action.length()>1 && action.substring(0, 1).equals("4")){
+		
+		///////
+		if(action.length()>1 && action.substring(0, 1).equals("5")){
 			String [] splits=action.split("\\|");
 			if(splits.length==3){
 				try{
@@ -274,9 +281,23 @@ public class SwipeService extends Service implements OnGestureListener{
 				catch(Exception e){}
 			}
 		}
-//		if(action.equals("5")){
-//			return getString(R.string.dialog0_backbutton);
-//		}
+		
+		if(action.equals("4")){
+			Intent i = new Intent(Intent.ACTION_MEDIA_BUTTON);
+			synchronized (this) {
+	            i.putExtra(Intent.EXTRA_KEY_EVENT, new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_MEDIA_NEXT));
+	            sendOrderedBroadcast(i, null);
+
+	            i.putExtra(Intent.EXTRA_KEY_EVENT, new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_NEXT));
+	            sendOrderedBroadcast(i, null);
+	            
+//				i.putExtra(Intent.EXTRA_KEY_EVENT, new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_MEDIA_PLAY));
+//	            sendOrderedBroadcast(i, null);
+//	            
+//	            i.putExtra(Intent.EXTRA_KEY_EVENT, new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_PLAY));
+//	            sendOrderedBroadcast(i, null);
+			 }
+		}
 //		if(key.equals("6")){
 //			return getString(R.string.dialog0_backbutton);
 //		}

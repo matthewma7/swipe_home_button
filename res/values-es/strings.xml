@@ -32,7 +32,8 @@
     <string name="dialog0_pullnotification">Baje la notificación</string>
     <string name="dialog0_menubutton">Back button</string>
     <string name="dialog0_backbutton">Menu button</string>
-    <string name="dialog0_customapp">aplicación personalizada</string>
+    <string name="dialog0_customapp">Custom app</string>
+    <string name="dialog0_nexttrack">Reproducir la pista siguiente</string>
     
     <string name="dialog1_title">Elija una aplicación</string>
     

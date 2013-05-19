@@ -10,8 +10,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
@@ -125,8 +125,9 @@ public class SettingsActivity extends PreferenceActivity implements
 			final CharSequence[] items = { 
 				getString(R.string.dialog0_none), getString(R.string.dialog0_homebutton),
 				getString(R.string.dialog0_recentapp), getString(R.string.dialog0_pullnotification),
-				getString(R.string.dialog0_customapp)
+				getString(R.string.dialog0_nexttrack), getString(R.string.dialog0_customapp)
 			};
+			
 			Builder builder0 = new AlertDialog.Builder(this);
 			builder0.setTitle(getString(R.string.dialog0_title));
 			builder0.setCancelable(true);
@@ -136,13 +137,13 @@ public class SettingsActivity extends PreferenceActivity implements
                     new DialogInterface.OnClickListener() {
 		                public void onClick(DialogInterface dialog, int item) {
 //		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
-		                	if(item<4){
+		                	if(item!=5){
 		                		Editor editor = sharedPrefs.edit();
 			                	editor.putString(currentPref, Integer.toString(item));
 			                	editor.commit();
 			                	findPreference(currentPref).setSummary(GetActionDescription(Integer.toString(item)));
 		                	}
-		                    if(item==4){
+		                    if(item==5){
 		                    	showDialog(APP_SELECT_DIALOG);
 		                    }
 		                    dialog.dismiss();  
@@ -196,15 +197,15 @@ public class SettingsActivity extends PreferenceActivity implements
 		if(action.equals("3")){
 			return getString(R.string.dialog0_pullnotification);
 		}
-		if(action.length()>=1 && action.substring(0, 1).equals("4")){
+		if(action.length()>=1 && action.substring(0, 1).equals("5")){
 			String [] splits=action.split("\\|");
 			if(splits.length==3){
 				return splits[1];
 			}
 		}
-//		if(key.equals("5")){
-//			return getString(R.string.dialog0_backbutton);
-//		}
+		if(action.equals("4")){
+			return getString(R.string.dialog0_nexttrack);
+		}
 //		if(key.equals("6")){
 //			return getString(R.string.dialog0_backbutton);
 //		}
@@ -231,28 +232,44 @@ public class SettingsActivity extends PreferenceActivity implements
 //	    }
 	    return apps;
 	}
-
+	
 	private ArrayList<PInfo> getInstalledApps(boolean getSysPackages) {
-	    ArrayList<PInfo> res = new ArrayList<PInfo>();        
-	    List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
-	    for(int i=0;i<packs.size();i++) {
-	        PackageInfo p = packs.get(i);
-	        if (isSystemPackage(p)) {
-	            continue ;
-	        }
-	        PInfo newInfo = new PInfo();
-	        newInfo.appName = p.applicationInfo.loadLabel(getPackageManager()).toString();
-	        newInfo.packageName = p.packageName;
-	        newInfo.versionName = p.versionName;
-	        newInfo.versionCode = p.versionCode;
-	        newInfo.icon = p.applicationInfo.loadIcon(getPackageManager());
+	    ArrayList<PInfo> res = new ArrayList<PInfo>(); 
+	    Intent main=new Intent(Intent.ACTION_MAIN, null);
+	    main.addCategory(Intent.CATEGORY_LAUNCHER);
+	    PackageManager pm=getPackageManager();
+	    List<ResolveInfo> launchables=pm.queryIntentActivities(main, 0);
+	    for(int i=0;i<launchables.size();i++){
+	    	PInfo newInfo = new PInfo();
+	        newInfo.appName = launchables.get(i).loadLabel(pm).toString();
+	        newInfo.packageName = launchables.get(i).activityInfo.packageName;
+	        newInfo.icon = launchables.get(i).loadIcon(pm);
 	        res.add(newInfo);
 	    }
 	    return res; 
 	}
-	
-	private boolean isSystemPackage(PackageInfo pkgInfo) {
-	    return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true
-	            : false;
-	}
+
+//	private ArrayList<PInfo> getInstalledApps(boolean getSysPackages) {
+//	    ArrayList<PInfo> res = new ArrayList<PInfo>();        
+//	    List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
+//	    for(int i=0;i<packs.size();i++) {
+//	        PackageInfo p = packs.get(i);
+////	        if (isSystemPackage(p)) {
+////	            continue ;
+////	        }
+//	        PInfo newInfo = new PInfo();
+//	        newInfo.appName = p.applicationInfo.loadLabel(getPackageManager()).toString();
+//	        newInfo.packageName = p.packageName;
+//	        newInfo.versionName = p.versionName;
+//	        newInfo.versionCode = p.versionCode;
+//	        newInfo.icon = p.applicationInfo.loadIcon(getPackageManager());
+//	        res.add(newInfo);
+//	    }
+//	    return res; 
+//	}
+//	
+//	private boolean isSystemPackage(PackageInfo pkgInfo) {
+//	    return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true
+//	            : false;
+//	}
 }

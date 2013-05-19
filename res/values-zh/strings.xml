@@ -34,6 +34,7 @@
     <string name="dialog0_menubutton">Back Button</string>
     <string name="dialog0_backbutton">Menu Button</string>
     <string name="dialog0_customapp">自定義程序</string>
+    <string name="dialog0_nexttrack">播放下一曲</string>
     
      <string name="dialog1_title">選擇一個程序</string>
      

@@ -1,11 +1,11 @@
 Swipe Home Button
 
 --------
-Add "swipe far up" gesture.
+Add “Play next track” swipe.
+Support of this feature depends on different music play. Has been tested with Poweramp and Galaxy S3 stock music player. Multi music play may interfere with each other regarding "Play next track" feature.
 
 Add customizable swipe actions.
-
-Now, you could open your own app with gestures!
+Now, you could open your own app with gestures! Combine with lock screen app to lock your screen.
 
 --------
 
@@ -19,7 +19,7 @@ No more reaching to the status bar.
 And, now it is possible to use your big phone with only one hand!
 Swipe Home Button is compatible with any 4.0+ devices! Including your Galaxy S4, Galaxy S3, Galaxy S2, HTC One.
 
-Now, you could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
+You could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
 
 Check out the video to feel the easy and clean swipe gestures.
 
@@ -33,6 +33,9 @@ Amazing simple swipe gestures,
 3. Pull down notification bar
 ----Swipe far up right or up left into the screen from outside of bottom center screen
 
+4. Play next track
+----One swipe to play next track even if you are playing a full screen game.
+
 4. Open custom app
 ----You could define one of the gesture to open your other app! 
 
@@ -40,3 +43,6 @@ This app has the smallest footprint. Not a single unnecessary permission is aske
 Remember, every swipe should start from outside of the screen.
 
 Free your Home Button with gestures!
+
+Important hint : You could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
+I currently didn't find a way to support back button and menu button without root permission required. So, no Back button and Menu button.
