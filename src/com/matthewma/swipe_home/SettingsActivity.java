@@ -137,7 +137,7 @@ public class SettingsActivity extends PreferenceActivity implements
                     new DialogInterface.OnClickListener() {
 		                public void onClick(DialogInterface dialog, int item) {
 //		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
-		                	if(item!=5){
+		                	if(item<5){
 		                		Editor editor = sharedPrefs.edit();
 			                	editor.putString(currentPref, Integer.toString(item));
 			                	editor.commit();
@@ -169,7 +169,9 @@ public class SettingsActivity extends PreferenceActivity implements
 //					Toast.makeText(getApplicationContext(),listView.getItemAtPosition(arg2).getClass().toString(), Toast.LENGTH_SHORT).show();
 					Editor editor = sharedPrefs.edit();
 					PInfo pInfo=(PInfo)(listView.getItemAtPosition(arg2));
-                	editor.putString(currentPref, "4|"+pInfo.appName+"|"+pInfo.packageName);
+					/////////////
+                	editor.putString(currentPref,        "5|"+pInfo.appName+"|"+pInfo.packageName);
+                	/////////////
                 	editor.commit();
                 	dialog1.dismiss();
                 	findPreference(currentPref).setSummary(pInfo.appName);
@@ -197,14 +199,14 @@ public class SettingsActivity extends PreferenceActivity implements
 		if(action.equals("3")){
 			return getString(R.string.dialog0_pullnotification);
 		}
-		if(action.length()>=1 && action.substring(0, 1).equals("5")){
+		if(action.equals("4")){
+			return getString(R.string.dialog0_nexttrack);
+		}
+		if(action.length()>=1 && action.substring(0, 1).equals(   "5"   )){
 			String [] splits=action.split("\\|");
 			if(splits.length==3){
 				return splits[1];
 			}
-		}
-		if(action.equals("4")){
-			return getString(R.string.dialog0_nexttrack);
 		}
 //		if(key.equals("6")){
 //			return getString(R.string.dialog0_backbutton);
@@ -248,28 +250,4 @@ public class SettingsActivity extends PreferenceActivity implements
 	    }
 	    return res; 
 	}
-
-//	private ArrayList<PInfo> getInstalledApps(boolean getSysPackages) {
-//	    ArrayList<PInfo> res = new ArrayList<PInfo>();        
-//	    List<PackageInfo> packs = getPackageManager().getInstalledPackages(0);
-//	    for(int i=0;i<packs.size();i++) {
-//	        PackageInfo p = packs.get(i);
-////	        if (isSystemPackage(p)) {
-////	            continue ;
-////	        }
-//	        PInfo newInfo = new PInfo();
-//	        newInfo.appName = p.applicationInfo.loadLabel(getPackageManager()).toString();
-//	        newInfo.packageName = p.packageName;
-//	        newInfo.versionName = p.versionName;
-//	        newInfo.versionCode = p.versionCode;
-//	        newInfo.icon = p.applicationInfo.loadIcon(getPackageManager());
-//	        res.add(newInfo);
-//	    }
-//	    return res; 
-//	}
-//	
-//	private boolean isSystemPackage(PackageInfo pkgInfo) {
-//	    return ((pkgInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0) ? true
-//	            : false;
-//	}
 }

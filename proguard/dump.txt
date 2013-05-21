@@ -1458,7 +1458,7 @@ Methods (count = 11):
     Access flags: 0x11
       = public final java.lang.String a(java.lang.String)
     Class member attributes (count = 1):
-    - Code attribute instructions (code length = 121, locals = 3, stack = 3):
+    - Code attribute instructions (code length = 121, locals = 2, stack = 3):
       [0] aload_1 v1
       [1] ldc #13
         - String [0]
@@ -1508,44 +1508,44 @@ Methods (count = 11):
         - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
       [63] areturn
       [64] aload_1 v1
-      [65] invokevirtual #132
-        - Methodref [java/lang/String.length ()I]
-      [68] ifle +34 (target=102)
-      [71] aload_1 v1
-      [72] iconst_0
-      [73] iconst_1
-      [74] invokevirtual #134
-        - Methodref [java/lang/String.substring (II)Ljava/lang/String;]
-      [77] ldc #18
-        - String [5]
-      [79] invokevirtual #131
-        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [82] ifeq +20 (target=102)
-      [85] aload_1 v1
-      [86] ldc #19
-        - String [\|]
-      [88] invokevirtual #133
-        - Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
-      [91] dup
-      [92] astore_2 v2
-      [93] arraylength
-      [94] iconst_3
-      [95] ificmpne +7 (target=102)
-      [98] aload_2 v2
-      [99] iconst_1
-      [100] aaload
-      [101] areturn
-      [102] aload_1 v1
-      [103] ldc #17
+      [65] ldc #17
         - String [4]
-      [105] invokevirtual #131
+      [67] invokevirtual #131
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [108] ifeq +10 (target=118)
-      [111] aload_0 v0
-      [112] ldc #8
+      [70] ifeq +10 (target=80)
+      [73] aload_0 v0
+      [74] ldc #8
         - Integer [2131034138]
-      [114] invokevirtual #116
+      [76] invokevirtual #116
         - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+      [79] areturn
+      [80] aload_1 v1
+      [81] invokevirtual #132
+        - Methodref [java/lang/String.length ()I]
+      [84] ifle +34 (target=118)
+      [87] aload_1 v1
+      [88] iconst_0
+      [89] iconst_1
+      [90] invokevirtual #134
+        - Methodref [java/lang/String.substring (II)Ljava/lang/String;]
+      [93] ldc #18
+        - String [5]
+      [95] invokevirtual #131
+        - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [98] ifeq +20 (target=118)
+      [101] aload_1 v1
+      [102] ldc #19
+        - String [\|]
+      [104] invokevirtual #133
+        - Methodref [java/lang/String.split (Ljava/lang/String;)[Ljava/lang/String;]
+      [107] dup
+      [108] astore_1 v1
+      [109] arraylength
+      [110] iconst_3
+      [111] ificmpne +7 (target=118)
+      [114] aload_1 v1
+      [115] iconst_1
+      [116] aaload
       [117] areturn
       [118] ldc #12
         - String []
@@ -1557,7 +1557,7 @@ Methods (count = 11):
         - [32] Var: ..., Stack: (empty)
         - [48] Var: ..., Stack: (empty)
         - [64] Var: ..., Stack: (empty)
-        - [102] Var: ..., Stack: (empty)
+        - [80] Var: [T][a:java/lang/String], Stack: 
         - [118] Var: -2, Stack: (empty)
   - Method:       b()Ljava/util/ArrayList;
     Access flags: 0x2
@@ -1803,7 +1803,7 @@ Methods (count = 2):
     - Code attribute instructions (code length = 91, locals = 4, stack = 3):
       [0] iload_2 v2
       [1] iconst_5
-      [2] ificmpeq +69 (target=71)
+      [2] ificmpge +69 (target=71)
       [5] aload_0 v0
       [6] getfield #11
         - Fieldref [com/matthewma/swipe_home/b.a Lcom/matthewma/swipe_home/SettingsActivity;]
@@ -1881,7 +1881,7 @@ Interfaces (count = 1):
   - Class [android/widget/AdapterView$OnItemClickListener]
 
 Constant Pool (count = 90):
-  - String [4|]
+  - String [5|]
   - String [|]
   - Class [android/app/Dialog]
   - Class [android/content/SharedPreferences]
@@ -1941,7 +1941,7 @@ Constant Pool (count = 90):
   - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
   - Utf8 [(Ljava/lang/String;)V]
   - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
-  - Utf8 [4|]
+  - Utf8 [5|]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [Lcom/matthewma/swipe_home/SettingsActivity;]
@@ -2026,7 +2026,7 @@ Methods (count = 2):
         - Class [java/lang/StringBuilder]
       [38] dup
       [39] ldc #1
-        - String [4|]
+        - String [5|]
       [41] invokespecial #25
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [44] aload_1 v1
