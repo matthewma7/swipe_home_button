@@ -11,6 +11,7 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -34,6 +35,7 @@ import android.view.GestureDetector.OnGestureListener;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class SwipeService extends Service implements OnGestureListener{
@@ -162,8 +164,12 @@ public class SwipeService extends Service implements OnGestureListener{
 		Float relativeY=Math.abs(arg0.getY()-arg1.getY());
 		Double angle=Math.atan(relativeX/relativeY)/Math.PI*180;
 //		Toast.makeText(this, "relativeY:"+relativeY+" velocityY:"+velocityY, Toast.LENGTH_SHORT).show();
-		
-		
+		int count= sharedPrefs.getInt("prefCount", 0);
+		Editor editor = sharedPrefs.edit();
+    	editor.putInt("prefCount", ++count);
+    	editor.commit();
+//    	Toast.makeText(this, "Count:"+count, Toast.LENGTH_SHORT).show();
+    	
 		if(relativeY<dp2px(20)||(relativeY<dp2px(40)&&velocityY>200)){
 			action(sharedPrefs.getString("prefSwipeupdown", "2"));
 		}
@@ -233,37 +239,41 @@ public class SwipeService extends Service implements OnGestureListener{
 		}
 		
 		if(action.equals("2")){
-			try{
-				Class<?> ServiceManagerClass = Class.forName("android.os.ServiceManager");
-				Class<?> ServiceManagerNativeClass = Class.forName("android.os.ServiceManagerNative");
-				Method getService = ServiceManagerClass.getMethod("getService", new Class[]{String.class});
-				IBinder localIBinder = (IBinder)getService.invoke(ServiceManagerNativeClass, "statusbar");
-				Class<?> IStatusBarServiceClass = Class.forName("com.android.internal.statusbar.IStatusBarService").getClasses()[0];
-				Method asInterface = IStatusBarServiceClass.getMethod("asInterface", new Class[]{IBinder.class});
-				Object d = asInterface.invoke(null, new Object[]{localIBinder});
-				Method toggleRecentApps = IStatusBarServiceClass.getMethod("toggleRecentApps", new Class[0]);
-				toggleRecentApps.invoke(d);
-			}
-			catch(Exception e){
-				Log.e("swipe", e.getMessage());
+			synchronized(this){
+				try{
+					Class<?> ServiceManagerClass = Class.forName("android.os.ServiceManager");
+					Class<?> ServiceManagerNativeClass = Class.forName("android.os.ServiceManagerNative");
+					Method getService = ServiceManagerClass.getMethod("getService", new Class[]{String.class});
+					IBinder localIBinder = (IBinder)getService.invoke(ServiceManagerNativeClass, "statusbar");
+					Class<?> IStatusBarServiceClass = Class.forName("com.android.internal.statusbar.IStatusBarService").getClasses()[0];
+					Method asInterface = IStatusBarServiceClass.getMethod("asInterface", new Class[]{IBinder.class});
+					Object d = asInterface.invoke(null, new Object[]{localIBinder});
+					Method toggleRecentApps = IStatusBarServiceClass.getMethod("toggleRecentApps", new Class[0]);
+					toggleRecentApps.invoke(d);
+				}
+				catch(Exception e){
+					Log.e("swipe", "recent apps");
+				}
 			}
 		}
 		
 		if(action.equals("3")){
-			try{
-				Object sbservice = getSystemService( "statusbar" );
-				Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
-				Method showsb;
-				if (Build.VERSION.SDK_INT >= 17) {
-				    showsb = statusbarManager.getMethod("expandNotificationsPanel");
+			synchronized(this){
+				try{
+					Object sbservice = getSystemService( "statusbar" );
+					Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
+					Method showsb;
+					if (Build.VERSION.SDK_INT >= 17) {
+					    showsb = statusbarManager.getMethod("expandNotificationsPanel");
+					}
+					else {
+					    showsb = statusbarManager.getMethod("expand");
+					}
+					showsb.invoke( sbservice );
 				}
-				else {
-				    showsb = statusbarManager.getMethod("expand");
+				catch(Exception e){
+					Log.e("swipe", "pull down notification exception");
 				}
-				showsb.invoke( sbservice );
-			}
-			catch(Exception e){
-				Log.e("swipe", e.getMessage());
 			}
 		}
 		

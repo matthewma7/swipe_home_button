@@ -8,7 +8,7 @@
     
     <string name="pref_category_enable">啟動</string>
     <string name="pref_category_settings">設置</string>
-    <string name="pref_category_binding">手勢綁定</string>
+    <string name="pref_category_binding">手勢</string>
     <string name="pref_category_upgrade">升級</string>
     <string name="pref_category_help">幫助</string>
     <string name="pref_category_about">關於</string>
@@ -23,8 +23,17 @@
     <string name="pref_transparenticon">透明通知欄圖標</string>
     <string name="pref_transparenticon_summary">隱藏通知欄圖標</string>
     
+    <string name="dialog_transparenticon_title">提示:</string>
+    <string name="dialog_transparenticon_summary">僅可以在Android 4.1+的系統中通過反勾選應用程序管理器中滑動解鎖的“顯示通知”來去掉下拉通知欄内的圖標。否則則需要下拉通知欄圖標保持程序運行</string>
+    <string name="dialog_transparenticon_okbutton">我明白了</string>
+    
     <string name="pref_sensibility">提高靈敏度</string>
-    <string name="pref_sensibility_summary">增強手勢檢測的靈敏度</string>
+    <string name="pref_sensibility_summary">增強手機檢測</string>
+    
+    <string name="dialog_sensibility">>提示:</string>
+    <string name="dialog_sensibility_summary">僅當此選項禁用無法正常使用滑動手勢時，才有必要啟用這個選項</string>
+    <string name="dialog_sensibility_okbutton">我明白了</string>
+
     
     <string name="dialog0_title">選擇操作</string>
     <string name="dialog0_none">無操作</string>
@@ -55,6 +64,9 @@
     <string name="pref_swipeupdown_summary">從屏幕底端外正中處向上滑入屏幕，再繼續向下滑出屏幕</string>
     <string name="pref_swipeupleft_summary">從屏幕底端外正中處向左上滑入屏幕</string>
     <string name="pref_swipeupright_summary">從屏幕底端外正中處向右上滑入屏幕</string>  
+    
+    <string name="pref_rating">給我一個五星評價</string>
+    <string name="pref_rating_summary">如果你喜歡這程式</string>
     
     <string name="pref_share">分享</string>
     <string name="pref_share_summary">分享滑動Home鍵給你的好友</string>

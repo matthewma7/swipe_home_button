@@ -12,13 +12,16 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.app.AlertDialog;
@@ -32,13 +35,15 @@ public class SettingsActivity extends PreferenceActivity implements
 	private SharedPreferences sharedPrefs;
 	
 	public static final String [] swipes={"prefSwipeup","prefSwipeupdown","prefSwipeupleft","prefSwipeupright","prefSwipefarup"};
-	public String currentPref; 
+	public static final int PrefRatingThreshold=150;
 	
+	public String currentPref; 
 	private Dialog dialog1;
 
 	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
 		sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.settings);
@@ -51,18 +56,34 @@ public class SettingsActivity extends PreferenceActivity implements
 		Boolean prefEnable = sharedPrefs.getBoolean("prefEnable", true);
 		if (prefEnable) {
 			this.startService(intent);
-			
 		}
 		
 		findPreference("prefShare").setOnPreferenceClickListener (this);
+		findPreference("prefTransparentIcon").setOnPreferenceClickListener(this);
+		findPreference("prefIncreaseSensibility").setOnPreferenceClickListener(this);
 		for(int i=0;i<swipes.length;i++){
 			Preference pref=findPreference(swipes[i]);
 			pref.setOnPreferenceClickListener(this);
 			String action = sharedPrefs.getString(swipes[i], Util.getDefaultAction(swipes[i]));
 			pref.setSummary(GetActionDescription(action));
 		}
-		
-		getPackages();
+	}
+	
+	@Override
+	protected void onResume() {
+		sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
+		if(sharedPrefs.getInt("prefCount", 0)>PrefRatingThreshold&&findPreference("prefRating")==null){
+			PreferenceCategory prefCategoryAbout = (PreferenceCategory)findPreference("prefCategoryAbout");
+			Preference prefRating = new Preference(this);
+			prefRating.setKey("prefRating");
+			prefRating.setTitle(getString(R.string.pref_rating));
+			prefRating.setSummary(getString(R.string.pref_rating_summary));
+			prefRating.setOnPreferenceClickListener(this);
+			prefCategoryAbout.addPreference(prefRating);
+			prefRating.setOrder(-1);
+			getPackages();
+		}
+		super.onResume();
 	}
 
 	@Override
@@ -101,6 +122,7 @@ public class SettingsActivity extends PreferenceActivity implements
 			sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.matthewma.swipe_home");
 			sendIntent.setType("text/plain");
 			startActivity(sendIntent);
+			return false;
 		}
 		for(int i=0;i<swipes.length;i++){
 			if(swipes[i].equals(key)){
@@ -109,79 +131,125 @@ public class SettingsActivity extends PreferenceActivity implements
 				return false;
 			}
 		}
+		if("prefTransparentIcon".equals(key)){
+			showDialog(TRANSPARENT_NOTICE_DIALOG);
+			return false;
+		}
+		if("prefRating".equals(key)){
+			Intent intent = new Intent(Intent.ACTION_VIEW); 
+			intent.setData(Uri.parse("market://details?id=com.matthewma.swipe_home")); 
+			startActivity(intent);
+			return false;
+		}
+		if("prefIncreaseSensibility".equals(key)){
+			showDialog(SENSIBILITY_DIALOG);
+			return false;
+		}
 		return false;
 	}
 	
 	private final int ACTION_SELECT_DIALOG=1;
 	private final int APP_SELECT_DIALOG=2;
+	private final int TRANSPARENT_NOTICE_DIALOG=3;
+	private final int SENSIBILITY_DIALOG=4;
 	
 	@SuppressWarnings("deprecation")
 	@Override
 	protected Dialog onCreateDialog(int id) {
 		switch (id) {
+			case ACTION_SELECT_DIALOG:
+				final CharSequence[] items = { 
+					getString(R.string.dialog0_none), getString(R.string.dialog0_homebutton),
+					getString(R.string.dialog0_recentapp), getString(R.string.dialog0_pullnotification),
+					getString(R.string.dialog0_nexttrack), getString(R.string.dialog0_customapp)
+				};
+				
+				Builder builder0 = new AlertDialog.Builder(this);
+				builder0.setTitle(getString(R.string.dialog0_title));
+				builder0.setCancelable(true);
+				String action=sharedPrefs.getString(currentPref, Util.getDefaultAction(currentPref));
+				int index=Integer.parseInt(action.substring(0, 1));
+				builder0.setSingleChoiceItems(items, index,
+	                    new DialogInterface.OnClickListener() {
+			                public void onClick(DialogInterface dialog, int item) {
+	//		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
+			                	if(item<5){
+			                		Editor editor = sharedPrefs.edit();
+				                	editor.putString(currentPref, Integer.toString(item));
+				                	editor.commit();
+				                	findPreference(currentPref).setSummary(GetActionDescription(Integer.toString(item)));
+			                	}
+			                    if(item==5){
+			                    	showDialog(APP_SELECT_DIALOG);
+			                    }
+			                    dialog.dismiss();  
+			                }
+			            });
+				AlertDialog dialog0 = builder0.create();
+				dialog0.show();
+				break;
+				
+				
+			case APP_SELECT_DIALOG:
+				AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+				builder1.setTitle(getString(R.string.dialog1_title));
+				ListView appList = new ListView(this);
+				ArrayList<PInfo> pInfos=getPackages();
+				AppListAdapter appListAdapter = new AppListAdapter(this, appList.getId(),pInfos.toArray(new PInfo[pInfos.size()]));
+				appList.setAdapter(appListAdapter);
+				appList.setOnItemClickListener(new OnItemClickListener() {
+					@Override
+					public void onItemClick(AdapterView<?> arg0, View arg1,
+							int arg2, long arg3) {
+						ListView listView=(ListView)arg0;
+	//					Toast.makeText(getApplicationContext(),listView.getItemAtPosition(arg2).getClass().toString(), Toast.LENGTH_SHORT).show();
+						Editor editor = sharedPrefs.edit();
+						PInfo pInfo=(PInfo)(listView.getItemAtPosition(arg2));
+						/////////////
+	                	editor.putString(currentPref,        "5|"+pInfo.appName+"|"+pInfo.packageName);
+	                	/////////////
+	                	editor.commit();
+	                	dialog1.dismiss();
+	                	findPreference(currentPref).setSummary(pInfo.appName);
+					}
+				});
+				builder1.setView(appList);
+				dialog1 = builder1.create();
+				dialog1.show();
+				break;
+			
 		
-		
-		case ACTION_SELECT_DIALOG:
-			final CharSequence[] items = { 
-				getString(R.string.dialog0_none), getString(R.string.dialog0_homebutton),
-				getString(R.string.dialog0_recentapp), getString(R.string.dialog0_pullnotification),
-				getString(R.string.dialog0_nexttrack), getString(R.string.dialog0_customapp)
-			};
-			
-			Builder builder0 = new AlertDialog.Builder(this);
-			builder0.setTitle(getString(R.string.dialog0_title));
-			builder0.setCancelable(true);
-			String action=sharedPrefs.getString(currentPref, Util.getDefaultAction(currentPref));
-			int index=Integer.parseInt(action.substring(0, 1));
-			builder0.setSingleChoiceItems(items, index,
-                    new DialogInterface.OnClickListener() {
-		                public void onClick(DialogInterface dialog, int item) {
-//		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
-		                	if(item<5){
-		                		Editor editor = sharedPrefs.edit();
-			                	editor.putString(currentPref, Integer.toString(item));
-			                	editor.commit();
-			                	findPreference(currentPref).setSummary(GetActionDescription(Integer.toString(item)));
-		                	}
-		                    if(item==5){
-		                    	showDialog(APP_SELECT_DIALOG);
-		                    }
-		                    dialog.dismiss();  
-		                }
-		            });
-			AlertDialog dialog0 = builder0.create();
-			dialog0.show();
-			break;
-			
-			
-		case APP_SELECT_DIALOG:
-			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setTitle(getString(R.string.dialog1_title));
-			ListView appList = new ListView(this);
-			ArrayList<PInfo> pInfos=getPackages();
-			AppListAdapter appListAdapter = new AppListAdapter(this, appList.getId(),pInfos.toArray(new PInfo[pInfos.size()]));
-			appList.setAdapter(appListAdapter);
-			appList.setOnItemClickListener(new OnItemClickListener() {
-				@Override
-				public void onItemClick(AdapterView<?> arg0, View arg1,
-						int arg2, long arg3) {
-					ListView listView=(ListView)arg0;
-//					Toast.makeText(getApplicationContext(),listView.getItemAtPosition(arg2).getClass().toString(), Toast.LENGTH_SHORT).show();
-					Editor editor = sharedPrefs.edit();
-					PInfo pInfo=(PInfo)(listView.getItemAtPosition(arg2));
-					/////////////
-                	editor.putString(currentPref,        "5|"+pInfo.appName+"|"+pInfo.packageName);
-                	/////////////
-                	editor.commit();
-                	dialog1.dismiss();
-                	findPreference(currentPref).setSummary(pInfo.appName);
-				}
-			});
-			builder.setView(appList);
-			dialog1 = builder.create();
-			dialog1.show();
-			break;
+			case TRANSPARENT_NOTICE_DIALOG:
+				AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
+		        builder2.setMessage(R.string.dialog_transparenticon_summary)
+		        		.setTitle(R.string.dialog_transparenticon_title)
+		                .setPositiveButton(R.string.dialog_transparenticon_okbutton, new DialogInterface.OnClickListener() {
+		                   public void onClick(DialogInterface dialog, int id) {
+		                       dialog.dismiss();
+		                   }
+		                })
+		                ;
+		        // Create the AlertDialog object and return it
+		        AlertDialog dialog2=builder2.create();
+		        dialog2.show();
+				break;
+				
+			case SENSIBILITY_DIALOG:
+				AlertDialog.Builder builder_sensibility = new AlertDialog.Builder(this);
+				builder_sensibility.setMessage(R.string.dialog_sensibility_summary)
+		        		.setTitle(R.string.dialog_sensibility)
+		                .setPositiveButton(R.string.dialog_sensibility_okbutton, new DialogInterface.OnClickListener() {
+		                   public void onClick(DialogInterface dialog, int id) {
+		                       dialog.dismiss();
+		                   }
+		                })
+		                ;
+		        // Create the AlertDialog object and return it
+		        AlertDialog dialog_sensibility=builder_sensibility.create();
+		        dialog_sensibility.show();
+				break;
 		}
+		
 		return super.onCreateDialog(id);
 	}
 

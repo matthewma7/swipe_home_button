@@ -22,9 +22,16 @@
     <string name="pref_transparenticon">Icono de notificación transparente</string>
     <string name="pref_transparenticon_summary">Hacer que el icono en la barra de notificación transparente</string>
     
+    <string name="dialog_transparenticon_title">Aviso:</string>
+    <string name="dialog_transparenticon_summary">Sólo en Android 4.1 + dispositivos, es posible ocultar el icono de notificación desplegable, desmarcando \ "notificación espectáculo \" botón de inicio golpe en el Administrador de aplicaciones de. De lo contrario, se requiere el icono para mantener golpes trabajo.</string>
+    <string name="dialog_transparenticon_okbutton">entiendo</string>
+    
     <string name="pref_sensibility">Aumentar la sensibilidad</string>
     <string name="pref_sensibility_summary">Detección de las posturas imporve</string>
     
+    <string name="dialog_sensibility">Aviso:</string>
+    <string name="dialog_sensibility_summary">Esta opción debe ser habilitada sólo cuando tiene problemas para deslizar cuando esta opción está desactivada</string>
+    <string name="dialog_sensibility_okbutton">entiendo</string>
     <string name="dialog0_title">Elija una acción</string>
     <string name="dialog0_none">ninguno</string>
     <string name="dialog0_homebutton">botón de Inicio</string>
@@ -32,7 +39,7 @@
     <string name="dialog0_pullnotification">Baje la notificación</string>
     <string name="dialog0_menubutton">Back button</string>
     <string name="dialog0_backbutton">Menu button</string>
-    <string name="dialog0_customapp">Custom app</string>
+    <string name="dialog0_customapp">aplicación personalizada</string>
     <string name="dialog0_nexttrack">Reproducir la pista siguiente</string>
     
     <string name="dialog1_title">Elija una aplicación</string>
@@ -55,6 +62,8 @@
     <string name="pref_swipeupleft_summary">Pase ahora a la izquierda en la pantalla de fuera de la pantalla inferior central</string>
     <string name="pref_swipeupright_summary">Pase ahora a la derecha en la pantalla de fuera de la pantalla inferior central</string>
     
+    <string name="pref_rating">Dame una calificación de cinco estrellas</string>
+    <string name="pref_rating_summary">Si te gusta esta aplicación</string>
    
     <string name="pref_share">participación</string>
     <string name="pref_share_summary">Dile a tus amigos acerca de esta aplicación</string>

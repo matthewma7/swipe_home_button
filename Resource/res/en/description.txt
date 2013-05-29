@@ -1,48 +1,51 @@
-Swipe Home Button
+Do you find physical Home Button is hard to press? Do you worry your home button will be broken soon? Do you feel your notification bar is too far to reach?
 
---------
-Add “Play next track” swipe.
-Support of this feature depends on different music play. Has been tested with Poweramp and Galaxy S3 stock music player. Multi music play may interfere with each other regarding "Play next track" feature.
+Swipe Home Button is a revolutionary tool that changes the way you control your android.
+It provide five most useful actions on Android with bezel swipe gestures.
 
-Add customizable swipe actions.
-Now, you could open your own app with gestures! Combine with lock screen app to lock your screen.
-
---------
-
-
-Do you find physical Home Button is hard to press? Do you feel notification bar is too far to reach?
-
-Swipe Home Button replace three most frequently used operation on Android with bezel swipe gestures.
-
-No more hard Home Button.
-No more reaching to the status bar.
+No more Home Button. No more reaching to the status bar.
 And, now it is possible to use your big phone with only one hand!
-Swipe Home Button is compatible with any 4.0+ devices! Including your Galaxy S4, Galaxy S3, Galaxy S2, HTC One.
 
-You could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
 
-Check out the video to feel the easy and clean swipe gestures.
+Five most useful actions!
+1, Go back to home screen
+    ----Save your weary fragile home button.
+2, Show recent apps
+    ----Save one second wasted on long press.
+3, Pull down notification
+    ----No more reaching to the far notification bar.
+4, Play next track. 
+    ----One swipe to play next track even if you are in a full screen game.
+5, Open any other app
+    ----You could open you most used app in one action!
 
-Amazing simple swipe gestures,
-1. Go back to home screen
-----Swipe up into the screen from the outside of bottom center screen
 
-2. Show recent apps
-----Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen
+Five Amazing customizable swipe gestures!
+1, Swipe up
+    ----Swipe up into the screen from the outside of bottom center screen.
+2, Swipe far up
+    ----Swipe up into the screen from the outside of bottom center screen and go over 2/5 height of the screen.
+3, Swipe up down
+    ----Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen.
+4, Swipe up left
+    ----Swipe far up left into the screen from outside of bottom center screen.
+5, Swipe up right
+   ----Swipe far up right into the screen from outside of bottom center screen.
 
-3. Pull down notification bar
-----Swipe far up right or up left into the screen from outside of bottom center screen
 
-4. Play next track
-----One swipe to play next track even if you are playing a full screen game.
+Check out the video to feel the easy and clean swipe gestures!
 
-4. Open custom app
-----You could define one of the gesture to open your other app! 
+Swipe Home Button is compatible with any 4.0+ devices! Including your Galaxy S4, Galaxy S3, Galaxy S2, HTC One. However, this app is not suitable for device with virtual buttons.
 
-This app has the smallest footprint. Not a single unnecessary permission is asked.
-Remember, every swipe should start from outside of the screen.
+In addition, This app has a tiny footprint. Not a single unnecessary permission is required.
 
 Free your Home Button with gestures!
 
-Important hint : You could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager.
-I currently didn't find a way to support back button and menu button without root permission required. So, no Back button and Menu button.
+
+##Important hints: 
+1, You could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager. Otherwise it is required to have a notification icon to keep the swipes work.
+2, Every swipe should start from outside of the screen. The swipe don't need to be fast.
+
+To HTC One user: 
+Dear HTC one users, I am aware of the problem of the black bar. I currently don't have a good solution. I will try to hide the black bar and then add menu button as a swipe gesture. However, I currently have no idea if it is possible to achieve that.
+Here is a possible workaround. A dear user told me that when the black bar presents, try to use the black bar as the bottom of the screen and do the swipe. It could work but may not be so well. I am glad this app could be helpful for you guys.

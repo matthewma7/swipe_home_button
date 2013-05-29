@@ -92,7 +92,8 @@
 		
 <!--  	</PreferenceCategory> -->
     
-    <PreferenceCategory android:title="@string/pref_category_about" >
+    <PreferenceCategory android:title="@string/pref_category_about" 
+        android:key="prefCategoryAbout">
 		<Preference android:key="prefShare"
     	    android:title="@string/pref_share" 
             android:summary="@string/pref_share_summary">		   

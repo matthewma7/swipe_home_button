@@ -14,6 +14,7 @@ com.matthewma.swipe_home.SettingsActivity -> com.matthewma.swipe_home.SettingsAc
     java.lang.String currentPref -> a
     android.app.Dialog dialog1 -> d
     void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
     void onSharedPreferenceChanged(android.content.SharedPreferences,java.lang.String) -> onSharedPreferenceChanged
     boolean isMyServiceRunning() -> a
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
@@ -28,7 +29,11 @@ com.matthewma.swipe_home.SettingsActivity$1 -> com.matthewma.swipe_home.b:
 com.matthewma.swipe_home.SettingsActivity$2 -> com.matthewma.swipe_home.c:
     com.matthewma.swipe_home.SettingsActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.matthewma.swipe_home.SettingsActivity$PInfo -> com.matthewma.swipe_home.d:
+com.matthewma.swipe_home.SettingsActivity$3 -> com.matthewma.swipe_home.d:
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.matthewma.swipe_home.SettingsActivity$4 -> com.matthewma.swipe_home.e:
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.matthewma.swipe_home.SettingsActivity$PInfo -> com.matthewma.swipe_home.f:
     java.lang.String appName -> a
     java.lang.String packageName -> b
     android.graphics.drawable.Drawable icon -> c
@@ -53,6 +58,6 @@ com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
     boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
     int dp2px(int) -> a
     void action(java.lang.String) -> a
-com.matthewma.swipe_home.SwipeService$1 -> com.matthewma.swipe_home.e:
+com.matthewma.swipe_home.SwipeService$1 -> com.matthewma.swipe_home.g:
     com.matthewma.swipe_home.SwipeService this$0 -> a
     boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
