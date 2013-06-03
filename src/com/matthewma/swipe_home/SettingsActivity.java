@@ -2,10 +2,10 @@ package com.matthewma.swipe_home;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,14 +14,13 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
-import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.app.AlertDialog;
@@ -29,13 +28,13 @@ import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 
+
 public class SettingsActivity extends PreferenceActivity implements
 		SharedPreferences.OnSharedPreferenceChangeListener,OnPreferenceClickListener {
 	
 	private SharedPreferences sharedPrefs;
 	
 	public static final String [] swipes={"prefSwipeup","prefSwipeupdown","prefSwipeupleft","prefSwipeupright","prefSwipefarup"};
-	public static final int PrefRatingThreshold=150;
 	
 	public String currentPref; 
 	private Dialog dialog1;
@@ -69,20 +68,20 @@ public class SettingsActivity extends PreferenceActivity implements
 		}
 	}
 	
+//	@SuppressWarnings("deprecation")
 	@Override
 	protected void onResume() {
-		sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
-		if(sharedPrefs.getInt("prefCount", 0)>PrefRatingThreshold&&findPreference("prefRating")==null){
-			PreferenceCategory prefCategoryAbout = (PreferenceCategory)findPreference("prefCategoryAbout");
-			Preference prefRating = new Preference(this);
-			prefRating.setKey("prefRating");
-			prefRating.setTitle(getString(R.string.pref_rating));
-			prefRating.setSummary(getString(R.string.pref_rating_summary));
-			prefRating.setOnPreferenceClickListener(this);
-			prefCategoryAbout.addPreference(prefRating);
-			prefRating.setOrder(-1);
-			getPackages();
-		}
+//		sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
+//		if(sharedPrefs.getInt("prefCount", 0)>Util.PrefRatingThreshold&&findPreference("prefRating")==null){
+//			PreferenceCategory prefCategoryAbout = (PreferenceCategory)findPreference("prefCategoryAbout");
+//			Preference prefRating = new Preference(this);
+//			prefRating.setKey("prefRating");
+//			prefRating.setTitle(getString(R.string.pref_rating));
+//			prefRating.setSummary(getString(R.string.pref_rating_summary));
+//			prefRating.setOnPreferenceClickListener(this);
+//			prefCategoryAbout.addPreference(prefRating);
+//			prefRating.setOrder(-1);
+//		}
 		super.onResume();
 	}
 
@@ -121,7 +120,12 @@ public class SettingsActivity extends PreferenceActivity implements
 			sendIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.pref_share_description));
 			sendIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=com.matthewma.swipe_home");
 			sendIntent.setType("text/plain");
-			startActivity(sendIntent);
+			try{
+				startActivity(sendIntent);
+			}
+			catch(ActivityNotFoundException e){
+				
+			}
 			return false;
 		}
 		for(int i=0;i<swipes.length;i++){
@@ -131,18 +135,23 @@ public class SettingsActivity extends PreferenceActivity implements
 				return false;
 			}
 		}
-		if("prefTransparentIcon".equals(key)){
+		if("prefTransparentIcon".equals(key)&&((CheckBoxPreference)preference).isChecked()){
 			showDialog(TRANSPARENT_NOTICE_DIALOG);
+			return false;
+		}
+		if("prefIncreaseSensibility".equals(key)&&((CheckBoxPreference)preference).isChecked()){
+			showDialog(SENSIBILITY_DIALOG);
 			return false;
 		}
 		if("prefRating".equals(key)){
 			Intent intent = new Intent(Intent.ACTION_VIEW); 
 			intent.setData(Uri.parse("market://details?id=com.matthewma.swipe_home")); 
-			startActivity(intent);
-			return false;
-		}
-		if("prefIncreaseSensibility".equals(key)){
-			showDialog(SENSIBILITY_DIALOG);
+			try{
+				startActivity(intent);
+			}
+			catch(ActivityNotFoundException e){
+				
+			}
 			return false;
 		}
 		return false;
@@ -165,15 +174,15 @@ public class SettingsActivity extends PreferenceActivity implements
 				};
 				
 				Builder builder0 = new AlertDialog.Builder(this);
-				builder0.setTitle(getString(R.string.dialog0_title));
-				builder0.setCancelable(true);
+				builder0.setTitle(getString(R.string.dialog0_title))
+					.setCancelable(true);
 				String action=sharedPrefs.getString(currentPref, Util.getDefaultAction(currentPref));
 				int index=Integer.parseInt(action.substring(0, 1));
 				builder0.setSingleChoiceItems(items, index,
 	                    new DialogInterface.OnClickListener() {
 			                public void onClick(DialogInterface dialog, int item) {
 	//		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
-			                	if(item<5){
+			                	if(item==0||item==1||item==2||item==3|item==4){
 			                		Editor editor = sharedPrefs.edit();
 				                	editor.putString(currentPref, Integer.toString(item));
 				                	editor.commit();
@@ -206,7 +215,7 @@ public class SettingsActivity extends PreferenceActivity implements
 						Editor editor = sharedPrefs.edit();
 						PInfo pInfo=(PInfo)(listView.getItemAtPosition(arg2));
 						/////////////
-	                	editor.putString(currentPref,        "5|"+pInfo.appName+"|"+pInfo.packageName);
+	                	editor.putString(currentPref,"5|"+pInfo.appName+"|"+pInfo.packageName);
 	                	/////////////
 	                	editor.commit();
 	                	dialog1.dismiss();
@@ -222,6 +231,7 @@ public class SettingsActivity extends PreferenceActivity implements
 			case TRANSPARENT_NOTICE_DIALOG:
 				AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
 		        builder2.setMessage(R.string.dialog_transparenticon_summary)
+						.setIcon(android.R.drawable.ic_dialog_info)
 		        		.setTitle(R.string.dialog_transparenticon_title)
 		                .setPositiveButton(R.string.dialog_transparenticon_okbutton, new DialogInterface.OnClickListener() {
 		                   public void onClick(DialogInterface dialog, int id) {
@@ -237,6 +247,7 @@ public class SettingsActivity extends PreferenceActivity implements
 			case SENSIBILITY_DIALOG:
 				AlertDialog.Builder builder_sensibility = new AlertDialog.Builder(this);
 				builder_sensibility.setMessage(R.string.dialog_sensibility_summary)
+						.setIcon(android.R.drawable.ic_dialog_info)
 		        		.setTitle(R.string.dialog_sensibility)
 		                .setPositiveButton(R.string.dialog_sensibility_okbutton, new DialogInterface.OnClickListener() {
 		                   public void onClick(DialogInterface dialog, int id) {
@@ -276,9 +287,6 @@ public class SettingsActivity extends PreferenceActivity implements
 				return splits[1];
 			}
 		}
-//		if(key.equals("6")){
-//			return getString(R.string.dialog0_backbutton);
-//		}
 		return "";
 	}
 	

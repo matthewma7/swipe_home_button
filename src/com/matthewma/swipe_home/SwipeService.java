@@ -8,10 +8,10 @@ import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -35,7 +35,6 @@ import android.view.GestureDetector.OnGestureListener;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 
 public class SwipeService extends Service implements OnGestureListener{
@@ -54,6 +53,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	@SuppressLint("NewApi")
 	@Override
 	public void onCreate() {
+//		Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
 		sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		prefSwipeNotification=sharedPrefs.getBoolean("prefSwipeNotification", true);
 		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
@@ -164,10 +164,13 @@ public class SwipeService extends Service implements OnGestureListener{
 		Float relativeY=Math.abs(arg0.getY()-arg1.getY());
 		Double angle=Math.atan(relativeX/relativeY)/Math.PI*180;
 //		Toast.makeText(this, "relativeY:"+relativeY+" velocityY:"+velocityY, Toast.LENGTH_SHORT).show();
-		int count= sharedPrefs.getInt("prefCount", 0);
-		Editor editor = sharedPrefs.edit();
-    	editor.putInt("prefCount", ++count);
-    	editor.commit();
+//		int count= sharedPrefs.getInt("prefCount", 0);
+//		Editor editor = sharedPrefs.edit();
+//		if(count>=65535){
+//			count=1000;
+//		}
+//    	editor.putInt("prefCount", ++count);
+//    	editor.apply();
 //    	Toast.makeText(this, "Count:"+count, Toast.LENGTH_SHORT).show();
     	
 		if(relativeY<dp2px(20)||(relativeY<dp2px(40)&&velocityY>200)){
@@ -235,7 +238,12 @@ public class SwipeService extends Service implements OnGestureListener{
 			Intent i = new Intent(Intent.ACTION_MAIN);
 			i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			i.addCategory(Intent.CATEGORY_HOME);
-			startActivity(i);
+			try{
+				startActivity(i);
+			}
+			catch(ActivityNotFoundException e){
+				
+			}
 		}
 		
 		if(action.equals("2")){

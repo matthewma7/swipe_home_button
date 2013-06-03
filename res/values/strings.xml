@@ -26,11 +26,11 @@
     <string name="dialog_transparenticon_summary">Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.</string>
     <string name="dialog_transparenticon_okbutton">I understand</string>
     
-    <string name="pref_sensibility">Increase sensibility</string>
-    <string name="pref_sensibility_summary">Imporve gesture detection</string>
+    <string name="pref_sensibility">Increase sensitivity</string>
+    <string name="pref_sensibility_summary">Improve gesture detection</string>
     
     <string name="dialog_sensibility">Notice:</string>
-    <string name="dialog_sensibility_summary">This option should be enabled only when you have trouble swiping when this option is disabled</string>
+    <string name="dialog_sensibility_summary">This option should be enabled only when you have trouble swiping while this option is not enabled</string>
     <string name="dialog_sensibility_okbutton">I understand</string>
 
     

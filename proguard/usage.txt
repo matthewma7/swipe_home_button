@@ -8,9 +8,8 @@ com.matthewma.swipe_home.R$menu
 com.matthewma.swipe_home.R$string
 com.matthewma.swipe_home.R$style
 com.matthewma.swipe_home.R$xml
-com.matthewma.swipe_home.SettingsActivity:
-    public static final int PrefRatingThreshold
 com.matthewma.swipe_home.SwipeService:
     android.os.HandlerThread thread
 com.matthewma.swipe_home.Util:
+    public static final int PrefRatingThreshold
     3:3:public Util()

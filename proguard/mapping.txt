@@ -20,7 +20,7 @@ com.matthewma.swipe_home.SettingsActivity -> com.matthewma.swipe_home.SettingsAc
     boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
     java.lang.String GetActionDescription(java.lang.String) -> a
-    java.util.ArrayList getPackages() -> b
+    java.util.ArrayList getInstalledApps$2a667459() -> b
     android.content.SharedPreferences access$0(com.matthewma.swipe_home.SettingsActivity) -> a
     android.app.Dialog access$1(com.matthewma.swipe_home.SettingsActivity) -> b
 com.matthewma.swipe_home.SettingsActivity$1 -> com.matthewma.swipe_home.b:

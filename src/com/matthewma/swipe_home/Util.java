@@ -1,6 +1,8 @@
 package com.matthewma.swipe_home;
 
 public class Util {
+	public static final int PrefRatingThreshold=150;
+	
 	public static String getDefaultAction(String key){
 		if(key.equals("prefSwipeup")){
 			return "1";
