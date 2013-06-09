@@ -231,6 +231,9 @@ public class SwipeService extends Service implements OnGestureListener{
 	public void action(String action){
 		
 		if(action.equals("0")){
+			Intent dialogIntent = new Intent(getBaseContext(), HelperActivity.class);
+			dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			getApplication().startActivity(dialogIntent);
 			return;
 		}
 		

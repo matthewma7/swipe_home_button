@@ -19,11 +19,12 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.matthewma.swipe_home.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -39,9 +40,17 @@
 
         <service android:name="com.matthewma.swipe_home.SwipeService" />
 
-	<activity
-            android:name=".SettingsActivity"
+        <activity
+            android:name="com.matthewma.swipe_home.SettingsActivity"
             android:launchMode="singleTop" />
+        
+        <activity
+            android:name="com.matthewma.swipe_home.HelperActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:label="@string/title_activity_helper" 
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
     </application>
 
 </manifest>

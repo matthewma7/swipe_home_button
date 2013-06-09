@@ -10,6 +10,16 @@ package com.matthewma.swipe_home;
 public final class R {
     public static final class attr {
     }
+    public static final class dimen {
+        /**  Default screen margins, per the Android Design guidelines. 
+
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+         */
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+    }
     public static final class drawable {
         public static final int s=0x7f020000;
         public static final int s_launcher=0x7f020001;
@@ -17,75 +27,79 @@ public final class R {
         public static final int transparent=0x7f020003;
     }
     public static final class id {
-        public static final int app_icon=0x7f080000;
-        public static final int app_name=0x7f080001;
-        public static final int menu_settings=0x7f080002;
-        public static final int menu_settings_menubutton=0x7f080003;
+        public static final int app_icon=0x7f090000;
+        public static final int app_name=0x7f090001;
+        public static final int menu_settings=0x7f090002;
+        public static final int menu_settings_menubutton=0x7f090003;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int app_list_row=0x7f030001;
+        public static final int activity_helper=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int app_list_row=0x7f030002;
     }
     public static final class menu {
-        public static final int activity_main=0x7f070000;
+        public static final int activity_main=0x7f080000;
     }
     public static final class string {
-        public static final int app_name=0x7f050002;
-        public static final int dialog0_backbutton=0x7f05001e;
-        public static final int dialog0_customapp=0x7f05001f;
-        public static final int dialog0_homebutton=0x7f05001a;
-        public static final int dialog0_menubutton=0x7f05001d;
-        public static final int dialog0_nexttrack=0x7f050020;
-        public static final int dialog0_none=0x7f050019;
-        public static final int dialog0_pullnotification=0x7f05001c;
-        public static final int dialog0_recentapp=0x7f05001b;
-        public static final int dialog0_title=0x7f050018;
-        public static final int dialog1_title=0x7f050021;
-        public static final int dialog_sensibility=0x7f050015;
-        public static final int dialog_sensibility_okbutton=0x7f050017;
-        public static final int dialog_sensibility_summary=0x7f050016;
-        public static final int dialog_transparenticon_okbutton=0x7f050012;
-        public static final int dialog_transparenticon_summary=0x7f050011;
-        public static final int dialog_transparenticon_title=0x7f050010;
-        public static final int menu_settings=0x7f050003;
-        public static final int notification_text=0x7f050001;
-        public static final int notification_title=0x7f050000;
-        public static final int pref_author=0x7f050035;
-        public static final int pref_author_email_subject=0x7f050037;
-        public static final int pref_author_summary=0x7f050036;
-        public static final int pref_binding=0x7f050029;
-        public static final int pref_binding_summary=0x7f05002a;
-        public static final int pref_category_about=0x7f050009;
-        public static final int pref_category_binding=0x7f050006;
-        public static final int pref_category_enable=0x7f050004;
-        public static final int pref_category_help=0x7f050008;
-        public static final int pref_category_settings=0x7f050005;
-        public static final int pref_category_upgrade=0x7f050007;
-        public static final int pref_enable=0x7f05000a;
-        public static final int pref_enable_summary=0x7f05000b;
-        public static final int pref_instruction=0x7f050027;
-        public static final int pref_instruction_summary=0x7f050028;
-        public static final int pref_rating=0x7f050030;
-        public static final int pref_rating_summary=0x7f050031;
-        public static final int pref_sensibility=0x7f050013;
-        public static final int pref_sensibility_summary=0x7f050014;
-        public static final int pref_share=0x7f050032;
-        public static final int pref_share_description=0x7f050034;
-        public static final int pref_share_summary=0x7f050033;
-        public static final int pref_swipe_autostart=0x7f05000c;
-        public static final int pref_swipe_autostart_summary=0x7f05000d;
-        public static final int pref_swipefarup=0x7f050023;
-        public static final int pref_swipefarup_summary=0x7f05002c;
-        public static final int pref_swipeup=0x7f050022;
-        public static final int pref_swipeup_summary=0x7f05002b;
-        public static final int pref_swipeupdown=0x7f050024;
-        public static final int pref_swipeupdown_summary=0x7f05002d;
-        public static final int pref_swipeupleft=0x7f050025;
-        public static final int pref_swipeupleft_summary=0x7f05002e;
-        public static final int pref_swipeupright=0x7f050026;
-        public static final int pref_swipeupright_summary=0x7f05002f;
-        public static final int pref_transparenticon=0x7f05000e;
-        public static final int pref_transparenticon_summary=0x7f05000f;
+        public static final int action_settings=0x7f060039;
+        public static final int app_name=0x7f060002;
+        public static final int dialog0_backbutton=0x7f06001e;
+        public static final int dialog0_customapp=0x7f06001f;
+        public static final int dialog0_homebutton=0x7f06001a;
+        public static final int dialog0_menubutton=0x7f06001d;
+        public static final int dialog0_nexttrack=0x7f060020;
+        public static final int dialog0_none=0x7f060019;
+        public static final int dialog0_pullnotification=0x7f06001c;
+        public static final int dialog0_recentapp=0x7f06001b;
+        public static final int dialog0_title=0x7f060018;
+        public static final int dialog1_title=0x7f060021;
+        public static final int dialog_sensibility=0x7f060015;
+        public static final int dialog_sensibility_okbutton=0x7f060017;
+        public static final int dialog_sensibility_summary=0x7f060016;
+        public static final int dialog_transparenticon_okbutton=0x7f060012;
+        public static final int dialog_transparenticon_summary=0x7f060011;
+        public static final int dialog_transparenticon_title=0x7f060010;
+        public static final int hello_world=0x7f06003a;
+        public static final int menu_settings=0x7f060003;
+        public static final int notification_text=0x7f060001;
+        public static final int notification_title=0x7f060000;
+        public static final int pref_author=0x7f060035;
+        public static final int pref_author_email_subject=0x7f060037;
+        public static final int pref_author_summary=0x7f060036;
+        public static final int pref_binding=0x7f060029;
+        public static final int pref_binding_summary=0x7f06002a;
+        public static final int pref_category_about=0x7f060009;
+        public static final int pref_category_binding=0x7f060006;
+        public static final int pref_category_enable=0x7f060004;
+        public static final int pref_category_help=0x7f060008;
+        public static final int pref_category_settings=0x7f060005;
+        public static final int pref_category_upgrade=0x7f060007;
+        public static final int pref_enable=0x7f06000a;
+        public static final int pref_enable_summary=0x7f06000b;
+        public static final int pref_instruction=0x7f060027;
+        public static final int pref_instruction_summary=0x7f060028;
+        public static final int pref_rating=0x7f060030;
+        public static final int pref_rating_summary=0x7f060031;
+        public static final int pref_sensibility=0x7f060013;
+        public static final int pref_sensibility_summary=0x7f060014;
+        public static final int pref_share=0x7f060032;
+        public static final int pref_share_description=0x7f060034;
+        public static final int pref_share_summary=0x7f060033;
+        public static final int pref_swipe_autostart=0x7f06000c;
+        public static final int pref_swipe_autostart_summary=0x7f06000d;
+        public static final int pref_swipefarup=0x7f060023;
+        public static final int pref_swipefarup_summary=0x7f06002c;
+        public static final int pref_swipeup=0x7f060022;
+        public static final int pref_swipeup_summary=0x7f06002b;
+        public static final int pref_swipeupdown=0x7f060024;
+        public static final int pref_swipeupdown_summary=0x7f06002d;
+        public static final int pref_swipeupleft=0x7f060025;
+        public static final int pref_swipeupleft_summary=0x7f06002e;
+        public static final int pref_swipeupright=0x7f060026;
+        public static final int pref_swipeupright_summary=0x7f06002f;
+        public static final int pref_transparenticon=0x7f06000e;
+        public static final int pref_transparenticon_summary=0x7f06000f;
+        public static final int title_activity_helper=0x7f060038;
     }
     public static final class style {
         /** 
@@ -98,11 +112,11 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
     public static final class xml {
         public static final int settings=0x7f040000;

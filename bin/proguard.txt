@@ -1,12 +1,15 @@
-# view AndroidManifest.xml #generated:31
+# view AndroidManifest.xml #generated:47
+-keep class com.matthewma.swipe_home.HelperActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
 -keep class com.matthewma.swipe_home.IntentReceiver { <init>(...); }
 
 # view AndroidManifest.xml #generated:21
 -keep class com.matthewma.swipe_home.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:42
+# view AndroidManifest.xml #generated:43
 -keep class com.matthewma.swipe_home.SettingsActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:40
+# view AndroidManifest.xml #generated:41
 -keep class com.matthewma.swipe_home.SwipeService { <init>(...); }
 
