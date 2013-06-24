@@ -19,6 +19,12 @@ public class Util {
 		if(key.equals("prefSwipefarup")){
 			return "1";
 		}
+		if(key.equals("prefSwipelowleft")){
+			return "1";
+		}
+		if(key.equals("prefSwipelowright")){
+			return "1";
+		}
 		return "0";
 	}
 }

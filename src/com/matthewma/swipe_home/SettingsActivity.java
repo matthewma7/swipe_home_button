@@ -9,6 +9,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.Intent.ShortcutIconResource;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -34,7 +35,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	
 	private SharedPreferences sharedPrefs;
 	
-	public static final String [] swipes={"prefSwipeup","prefSwipeupdown","prefSwipeupleft","prefSwipeupright","prefSwipefarup"};
+	public static final String [] swipes={"prefSwipeup","prefSwipeupdown","prefSwipeupleft","prefSwipeupright","prefSwipefarup","prefSwipelowleft","prefSwipelowright"};
 	
 	public String currentPref; 
 	private Dialog dialog1;
@@ -57,7 +58,7 @@ public class SettingsActivity extends PreferenceActivity implements
 			this.startService(intent);
 		}
 		
-		findPreference("prefShare").setOnPreferenceClickListener (this);
+		findPreference("prefShare").setOnPreferenceClickListener(this);
 		findPreference("prefTransparentIcon").setOnPreferenceClickListener(this);
 		findPreference("prefIncreaseSensibility").setOnPreferenceClickListener(this);
 		for(int i=0;i<swipes.length;i++){
@@ -161,6 +162,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	private final int APP_SELECT_DIALOG=2;
 	private final int TRANSPARENT_NOTICE_DIALOG=3;
 	private final int SENSIBILITY_DIALOG=4;
+	private final int SHORTCUT_SELECT_DIALOG=5;
 	
 	@SuppressWarnings("deprecation")
 	@Override
@@ -170,7 +172,8 @@ public class SettingsActivity extends PreferenceActivity implements
 				final CharSequence[] items = { 
 					getString(R.string.dialog0_none), getString(R.string.dialog0_homebutton),
 					getString(R.string.dialog0_recentapp), getString(R.string.dialog0_pullnotification),
-					getString(R.string.dialog0_nexttrack), getString(R.string.dialog0_customapp)
+					getString(R.string.dialog0_nexttrack), getString(R.string.dialog0_customapp),
+					getString(R.string.dialog0_shortcut)
 				};
 				
 				Builder builder0 = new AlertDialog.Builder(this);
@@ -190,6 +193,9 @@ public class SettingsActivity extends PreferenceActivity implements
 			                	}
 			                    if(item==5){
 			                    	showDialog(APP_SELECT_DIALOG);
+			                    }
+			                    if(item==6){
+			                    	showDialog(SHORTCUT_SELECT_DIALOG);
 			                    }
 			                    dialog.dismiss();  
 			                }
@@ -214,9 +220,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	//					Toast.makeText(getApplicationContext(),listView.getItemAtPosition(arg2).getClass().toString(), Toast.LENGTH_SHORT).show();
 						Editor editor = sharedPrefs.edit();
 						PInfo pInfo=(PInfo)(listView.getItemAtPosition(arg2));
-						/////////////
 	                	editor.putString(currentPref,"5|"+pInfo.appName+"|"+pInfo.packageName);
-	                	/////////////
 	                	editor.commit();
 	                	dialog1.dismiss();
 	                	findPreference(currentPref).setSummary(pInfo.appName);
@@ -225,6 +229,11 @@ public class SettingsActivity extends PreferenceActivity implements
 				builder1.setView(appList);
 				dialog1 = builder1.create();
 				dialog1.show();
+//				Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+//				mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+//				Intent pickIntent0 = new Intent(Intent.ACTION_PICK_ACTIVITY);
+//				pickIntent0.putExtra(Intent.EXTRA_INTENT, mainIntent);
+//				startActivityForResult(pickIntent0, REQUEST_PICK_APPLICATION);
 				break;
 			
 		
@@ -259,6 +268,21 @@ public class SettingsActivity extends PreferenceActivity implements
 		        AlertDialog dialog_sensibility=builder_sensibility.create();
 		        dialog_sensibility.show();
 				break;
+				
+			case SHORTCUT_SELECT_DIALOG:
+				Bundle bundle = new Bundle();
+		        ArrayList<String> shortcutNames = new ArrayList<String>();
+		        bundle.putStringArrayList(Intent.EXTRA_SHORTCUT_NAME, shortcutNames);
+
+		        ArrayList<ShortcutIconResource> shortcutIcons = new ArrayList<ShortcutIconResource>();
+//		        shortcutIcons.add(ShortcutIconResource.fromContext(Launcher.this,R.drawable.ic_launcher_application));
+		        bundle.putParcelableArrayList(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, shortcutIcons);
+
+		        Intent pickIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);
+		        pickIntent.putExtra(Intent.EXTRA_INTENT, new Intent(Intent.ACTION_CREATE_SHORTCUT));
+		        pickIntent.putExtra(Intent.EXTRA_TITLE, "SELECT SHORTCUT");
+		        pickIntent.putExtras(bundle);
+		        startActivityForResult(pickIntent, REQUEST_PICK_SHORTCUT);
 		}
 		
 		return super.onCreateDialog(id);
@@ -281,7 +305,13 @@ public class SettingsActivity extends PreferenceActivity implements
 		if(action.equals("4")){
 			return getString(R.string.dialog0_nexttrack);
 		}
-		if(action.length()>=1 && action.substring(0, 1).equals(   "5"   )){
+		if(action.length()>=1 && action.substring(0, 1).equals("5")){
+			String [] splits=action.split("\\|");
+			if(splits.length==3){
+				return splits[1];
+			}
+		}
+		if(action.length()>=1 && action.substring(0, 1).equals("6")){
 			String [] splits=action.split("\\|");
 			if(splits.length==3){
 				return splits[1];
@@ -325,5 +355,35 @@ public class SettingsActivity extends PreferenceActivity implements
 	        res.add(newInfo);
 	    }
 	    return res; 
+	}
+	
+	private static final int REQUEST_PICK_SHORTCUT = 1;
+	private static final int REQUEST_CREATE_SHORTCUT =2;
+	
+	
+//	private String tempAppName;
+	@SuppressWarnings("deprecation")
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == RESULT_OK){
+			switch (requestCode){
+				case REQUEST_PICK_SHORTCUT:
+//					String tempAppName = data.resolveActivity (getPackageManager()).getShortClassName();
+					startActivityForResult(data, REQUEST_CREATE_SHORTCUT);
+					break;
+					
+				case REQUEST_CREATE_SHORTCUT:
+					Intent intent = data.getParcelableExtra(Intent.EXTRA_SHORTCUT_INTENT);
+					String name = data.getStringExtra(Intent.EXTRA_SHORTCUT_NAME);
+					String uri=intent.toUri(0);
+					Editor editor = sharedPrefs.edit();
+					editor.putString(currentPref,"6|"+name+"|"+uri);
+					editor.commit();
+					findPreference(currentPref).setSummary(name);
+			        break;
+			}
+		}
+		
+			
 	}
 }

@@ -28,13 +28,6 @@
             android:title="@string/pref_transparenticon" >
         </CheckBoxPreference>
         
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="prefIncreaseSensibility"
-            android:summary="@string/pref_sensibility_summary"
-            android:title="@string/pref_sensibility" >
-        </CheckBoxPreference>
-        
        
     </PreferenceCategory>
    
@@ -58,8 +51,15 @@
 			<Preference android:key="prefSwipeupright"
 	    	    android:title="@string/pref_swipeupright">		   
 			</Preference>
+			<Preference android:key="prefSwipelowleft"
+	    	    android:title="@string/pref_swipelowleft">		   
+			</Preference>
+			<Preference android:key="prefSwipelowright"
+	    	    android:title="@string/pref_swipelowright">		   
+			</Preference>
 		</PreferenceScreen>
 		
+	    	    
 	    <PreferenceScreen
                 android:title="@string/pref_instruction"
                 android:summary="@string/pref_instruction_summary">
@@ -84,8 +84,42 @@
 	    	    android:title="@string/pref_swipeupright" 
 	            android:summary="@string/pref_swipeupright_summary">		   
 			</Preference>
+			<Preference 
+	    	    android:title="@string/pref_swipelowleft" 
+	            android:summary="@string/pref_swipelowleft_summary">		   
+			</Preference>
+			<Preference 
+	    	    android:title="@string/pref_swipelowright" 
+	            android:summary="@string/pref_swipelowright_summary">		   
+			</Preference>
 
         </PreferenceScreen>
+        
+	    <PreferenceScreen
+                android:title="@string/pref_category_advanced_setting"
+                android:summary="@string/pref_category_advanced_setting_summary">
+			<CheckBoxPreference
+	            android:defaultValue="false"
+	            android:key="prefIncreaseSensibility"
+	            android:summary="@string/pref_sensibility_summary"
+	            android:title="@string/pref_sensibility" >
+	        </CheckBoxPreference>
+	        
+			<CheckBoxPreference
+	            android:defaultValue="false"
+	            android:key="prefForceNotification"
+	            android:summary="@string/pref_forcenotification_summary"
+	            android:title="@string/pref_forcenotification">
+	        </CheckBoxPreference>
+	        
+			<CheckBoxPreference
+	            android:defaultValue="true"
+	            android:key="prefTabNotice"
+	            android:title="@string/pref_tapnotice"
+	            android:summary="@string/pref_tapnotice_summary" >
+	        </CheckBoxPreference>
+		</PreferenceScreen>
+	    
  	</PreferenceCategory>
     
 <!--     <PreferenceCategory android:title="@string/pref_category_help" > -->
@@ -99,27 +133,14 @@
             android:summary="@string/pref_share_summary">		   
 		</Preference>
 		
-    	<Preference android:key="prefAbout"
-    	    android:title="@string/pref_author" 
-            android:summary="@string/pref_author_summary">
-		    <intent android:action="android.intent.action.VIEW"
-		            android:data="mailto:matthew.ma.7@gmail.com" >
-	             <extra android:name="android.intent.extra.SUBJECT" 
-	                 android:value="@string/pref_author_email_subject" />
-            </intent>
-		</Preference>
- 	</PreferenceCategory>
-    
-    
-    
-<!--     <PreferenceCategory android:title="@string/pref_category_upgrade" > -->
-<!--     	<Preference android:title="@string/pref_upgrade"  -->
-<!--             android:summary="@string/pref_upgrade_summary"> -->
+<!--     	<Preference android:key="prefAbout" -->
+<!--     	    android:title="@string/pref_author"  -->
+<!--             android:summary="@string/pref_author_summary"> -->
 <!-- 		    <intent android:action="android.intent.action.VIEW" -->
 <!-- 		            android:data="mailto:matthew.ma.7@gmail.com" > -->
 <!-- 	             <extra android:name="android.intent.extra.SUBJECT"  -->
 <!-- 	                 android:value="@string/pref_author_email_subject" /> -->
 <!--             </intent> -->
 <!-- 		</Preference> -->
-<!--  	</PreferenceCategory> -->
+ 	</PreferenceCategory>
 </PreferenceScreen>
