@@ -132,7 +132,12 @@ public class SettingsActivity extends PreferenceActivity implements
 		for(int i=0;i<swipes.length;i++){
 			if(swipes[i].equals(key)){
 				currentPref=key;
-				showDialog(ACTION_SELECT_DIALOG);
+				if(currentPref.equals("prefSwipelowleft")||currentPref.equals("prefSwipelowright")){
+					showDialog(LOWER_WARN_NOTICE);
+				}
+				else{
+					showDialog(ACTION_SELECT_DIALOG);
+				}
 				return false;
 			}
 		}
@@ -163,6 +168,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	private final int TRANSPARENT_NOTICE_DIALOG=3;
 	private final int SENSIBILITY_DIALOG=4;
 	private final int SHORTCUT_SELECT_DIALOG=5;
+	private final int LOWER_WARN_NOTICE=6;
 	
 	@SuppressWarnings("deprecation")
 	@Override
@@ -283,8 +289,25 @@ public class SettingsActivity extends PreferenceActivity implements
 		        pickIntent.putExtra(Intent.EXTRA_TITLE, "SELECT SHORTCUT");
 		        pickIntent.putExtras(bundle);
 		        startActivityForResult(pickIntent, REQUEST_PICK_SHORTCUT);
+		        break;
+		        
+			case LOWER_WARN_NOTICE:
+				Builder builder = new AlertDialog.Builder(this);
+				builder
+					.setMessage(R.string.dialog_low_warn_summary)
+					.setIcon(android.R.drawable.ic_dialog_info)
+	        		.setTitle(R.string.dialog_low_warn_title)
+					.setCancelable(false)
+					.setPositiveButton(getString(R.string.dialog_low_warn_okbutton),new DialogInterface.OnClickListener() {  
+		                @Override  
+		                public void onClick(DialogInterface dialog, int which) {  
+		                	showDialog(ACTION_SELECT_DIALOG);
+		                }
+					});
+				AlertDialog dialog = builder.create();
+				dialog.show();
+				break;
 		}
-		
 		return super.onCreateDialog(id);
 	}
 

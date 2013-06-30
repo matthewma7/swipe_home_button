@@ -4,10 +4,14 @@ com.matthewma.swipe_home.AppListAdapter -> com.matthewma.swipe_home.a:
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
 com.matthewma.swipe_home.IntentReceiver -> com.matthewma.swipe_home.IntentReceiver:
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.matthewma.swipe_home.MainActivity -> com.matthewma.swipe_home.MainActivity:
+com.matthewma.swipe_home.NotificationHelper -> com.matthewma.swipe_home.NotificationHelper:
+    android.os.Handler mHandler -> b
+    boolean opened -> a
     void onCreate(android.os.Bundle) -> onCreate
-    void onResume() -> onResume
-    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
+com.matthewma.swipe_home.NotificationHelper$1 -> com.matthewma.swipe_home.b:
+    com.matthewma.swipe_home.NotificationHelper this$0 -> a
+    void run() -> run
 com.matthewma.swipe_home.SettingsActivity -> com.matthewma.swipe_home.SettingsActivity:
     android.content.SharedPreferences sharedPrefs -> b
     java.lang.String[] swipes -> c
@@ -21,31 +25,40 @@ com.matthewma.swipe_home.SettingsActivity -> com.matthewma.swipe_home.SettingsAc
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
     java.lang.String GetActionDescription(java.lang.String) -> a
     java.util.ArrayList getInstalledApps$2a667459() -> b
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     android.content.SharedPreferences access$0(com.matthewma.swipe_home.SettingsActivity) -> a
     android.app.Dialog access$1(com.matthewma.swipe_home.SettingsActivity) -> b
-com.matthewma.swipe_home.SettingsActivity$1 -> com.matthewma.swipe_home.b:
+com.matthewma.swipe_home.SettingsActivity$1 -> com.matthewma.swipe_home.c:
     com.matthewma.swipe_home.SettingsActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.matthewma.swipe_home.SettingsActivity$2 -> com.matthewma.swipe_home.c:
+com.matthewma.swipe_home.SettingsActivity$2 -> com.matthewma.swipe_home.d:
     com.matthewma.swipe_home.SettingsActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.matthewma.swipe_home.SettingsActivity$3 -> com.matthewma.swipe_home.d:
+com.matthewma.swipe_home.SettingsActivity$3 -> com.matthewma.swipe_home.e:
     void onClick(android.content.DialogInterface,int) -> onClick
-com.matthewma.swipe_home.SettingsActivity$4 -> com.matthewma.swipe_home.e:
+com.matthewma.swipe_home.SettingsActivity$4 -> com.matthewma.swipe_home.f:
     void onClick(android.content.DialogInterface,int) -> onClick
-com.matthewma.swipe_home.SettingsActivity$PInfo -> com.matthewma.swipe_home.f:
+com.matthewma.swipe_home.SettingsActivity$5 -> com.matthewma.swipe_home.g:
+    com.matthewma.swipe_home.SettingsActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.matthewma.swipe_home.SettingsActivity$PInfo -> com.matthewma.swipe_home.h:
     java.lang.String appName -> a
     java.lang.String packageName -> b
     android.graphics.drawable.Drawable icon -> c
     java.lang.String getDefaultAction(java.lang.String) -> a
 com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
-    android.content.SharedPreferences sharedPrefs -> b
-    android.widget.Button mButton -> c
-    android.view.GestureDetector myGesture -> a
-    android.view.WindowManager wm -> d
-    java.lang.Boolean prefSwipeNotification -> e
-    int buttonHeight -> f
-    int screenHeight -> g
+    android.content.SharedPreferences sharedPrefs -> a
+    android.widget.Button mButton -> d
+    android.view.GestureDetector myGesture -> b
+    android.view.WindowManager wm -> e
+    java.lang.Boolean prefForceNotification -> f
+    java.lang.Boolean prefTabNotice -> c
+    int buttonHeight -> g
+    int screenHeight -> h
+    java.lang.Boolean firstTapNotice -> i
+    java.util.Date lastTapTime -> j
+    android.os.Vibrator vibrator -> k
+    java.lang.Boolean vibrate -> l
     void onCreate() -> onCreate
     int onStartCommand(android.content.Intent,int,int) -> onStartCommand
     android.os.IBinder onBind(android.content.Intent) -> onBind
@@ -58,6 +71,11 @@ com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
     boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
     int dp2px(int) -> a
     void action(java.lang.String) -> a
-com.matthewma.swipe_home.SwipeService$1 -> com.matthewma.swipe_home.g:
+com.matthewma.swipe_home.SwipeService$1 -> com.matthewma.swipe_home.i:
     com.matthewma.swipe_home.SwipeService this$0 -> a
     boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.matthewma.swipe_home.SwipeService$2 -> com.matthewma.swipe_home.j:
+    com.matthewma.swipe_home.SwipeService this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.matthewma.swipe_home.SwipeService$3 -> com.matthewma.swipe_home.k:
+    void onClick(android.content.DialogInterface,int) -> onClick

@@ -96,8 +96,8 @@
         </PreferenceScreen>
         
 	    <PreferenceScreen
-                android:title="@string/pref_category_advanced_setting"
-                android:summary="@string/pref_category_advanced_setting_summary">
+                android:title="@string/pref_advanced_setting"
+                android:summary="@string/pref_advanced_setting_summary">
 			<CheckBoxPreference
 	            android:defaultValue="false"
 	            android:key="prefIncreaseSensibility"
@@ -117,6 +117,13 @@
 	            android:key="prefTabNotice"
 	            android:title="@string/pref_tapnotice"
 	            android:summary="@string/pref_tapnotice_summary" >
+	        </CheckBoxPreference>
+	        
+			<CheckBoxPreference
+	            android:defaultValue="true"
+	            android:key="prefVibrate"
+	            android:title="@string/pref_vibrate"
+	            android:summary="@string/pref_vibrate_summary" >
 	        </CheckBoxPreference>
 		</PreferenceScreen>
 	    

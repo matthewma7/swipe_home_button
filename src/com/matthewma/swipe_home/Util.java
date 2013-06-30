@@ -20,10 +20,10 @@ public class Util {
 			return "1";
 		}
 		if(key.equals("prefSwipelowleft")){
-			return "1";
+			return "2";
 		}
 		if(key.equals("prefSwipelowright")){
-			return "1";
+			return "2";
 		}
 		return "0";
 	}

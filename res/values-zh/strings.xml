@@ -1,40 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>    
-    <string name="notification_title">滑動Home鍵</string>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:android="http://schemas.android.com/apk/res/android">
+  <string name="notification_title">滑動Home鍵</string>
     <string name="notification_text">輕松掌控你的手機</string>
-    
     <string name="app_name">滑動Home鍵</string>
+    <string name="app_name_free">滑動Home鍵(試用)</string>
     <string name="menu_settings">設置</string>
-    
     <string name="pref_category_enable">啟動</string>
     <string name="pref_category_settings">設置</string>
     <string name="pref_category_binding">手勢</string>
-    <string name="pref_category_upgrade">升級</string>
-    <string name="pref_category_help">幫助</string>
     <string name="pref_category_about">關於</string>
-    
     <string name="pref_enable">開啟手勢</string>
     <string name="pref_enable_summary">開啟滑動手勢服務</string>
-    
     <string name="pref_swipe_autostart">開機啟動</string>
     <string name="pref_swipe_autostart_summary">開機後自動啟動滑動Home鍵</string>
-    
-     
     <string name="pref_transparenticon">透明通知欄圖標</string>
     <string name="pref_transparenticon_summary">隱藏通知欄圖標</string>
-    
     <string name="dialog_transparenticon_title">提示:</string>
-    <string name="dialog_transparenticon_summary">僅可以在Android 4.1+的系統中通過反勾選應用程序管理器中滑動解鎖的“顯示通知”來去掉下拉通知欄内的圖標。否則則需要下拉通知欄圖標保持程序運行</string>
+    <string name="dialog_transparenticon_summary">僅可以在Android 4.1+的系統中通過反勾選應用程序管理器中滑動解鎖的“顯示通知”來去掉下拉通知欄内的圖標。否則則需要下拉通知欄圖標保持程序運行。</string>
     <string name="dialog_transparenticon_okbutton">我明白了</string>
-    
+    <string name="dialog_low_warn_title">提示：</string>
+    <string name="dialog_low_warn_summary">在某些機型上實現本手勢可能會比較困難</string>
+    <string name="dialog_low_warn_okbutton">我明白了</string>
     <string name="pref_sensibility">提高靈敏度</string>
     <string name="pref_sensibility_summary">增強手機檢測</string>
-    
-    <string name="dialog_sensibility">>提示:</string>
+    <string name="pref_forcenotification">強勢下拉任務欄</string>
+    <string name="pref_forcenotification_summary">強制顯示任務欄下拉菜單，即使在全屏應用中。可能會中斷遊戲。</string>
+    <string name="pref_tapnotice">誤觸提示</string>
+    <string name="pref_tapnotice_summary">在連續誤觸手勢檢測區域後，彈出提示</string>
+    <string name="pref_vibrate">滑動振動</string>
+    <string name="pref_vibrate_summary">在滑動手勢結束後請問振動手機</string>
+    <string name="dialog_sensibility">&gt;提示:</string>
     <string name="dialog_sensibility_summary">僅當此選項禁用無法正常使用滑動手勢時，才有必要啟用這個選項</string>
     <string name="dialog_sensibility_okbutton">我明白了</string>
-
-    
     <string name="dialog0_title">選擇操作</string>
     <string name="dialog0_none">無操作</string>
     <string name="dialog0_homebutton">Home鍵</string>
@@ -43,36 +40,44 @@
     <string name="dialog0_menubutton">Back Button</string>
     <string name="dialog0_backbutton">Menu Button</string>
     <string name="dialog0_customapp">自定義程序</string>
+    <string name="dialog0_customapp_free">自定義程序（需付費版）</string>
     <string name="dialog0_nexttrack">播放下一曲</string>
-    
-     <string name="dialog1_title">選擇一個程序</string>
-     
+    <string name="dialog0_shortcut">應用快捷方式</string>
+    <string name="dialog0_shortcut_free">應用快捷方式（需付費版）</string>
+    <string name="dialog1_title">選擇一個程序</string>
     <string name="pref_swipeup">向上滑</string>
-    <string name="pref_swipefarup">向上長距離滑</string>	
+    <string name="pref_swipefarup">向上長距離滑</string>
     <string name="pref_swipeupdown">向上後滑後向下滑</string>
     <string name="pref_swipeupleft">向左上滑</string>
     <string name="pref_swipeupright">向右上滑</string>
-    
+    <string name="pref_swipelowleft">左下滑動</string>
+    <string name="pref_swipelowright">右下滑動</string>
     <string name="pref_instruction">使用說明</string>
     <string name="pref_instruction_summary">滑動手勢的使用說明</string>
-    
+    <string name="pref_advanced_setting">高級設定</string>
+    <string name="pref_advanced_setting_summary">更多關於滑動手勢的設定</string>
     <string name="pref_binding">手勢綁定</string>
     <string name="pref_binding_summary">自定義滑動手勢的動作</string>
-    
     <string name="pref_swipeup_summary">從屏幕底端外正中處向上滑入屏幕</string>
     <string name="pref_swipefarup_summary">從屏幕底端外正中處向上滑入屏幕並繼續畫超過屏幕高度2/5</string>
     <string name="pref_swipeupdown_summary">從屏幕底端外正中處向上滑入屏幕，再繼續向下滑出屏幕</string>
     <string name="pref_swipeupleft_summary">從屏幕底端外正中處向左上滑入屏幕</string>
-    <string name="pref_swipeupright_summary">從屏幕底端外正中處向右上滑入屏幕</string>  
-    
+    <string name="pref_swipeupright_summary">從屏幕底端外正中處向右上滑入屏幕</string>
+    <string name="pref_swipelowleft_summary">向上滑入屏幕後轉後從左下滑出屏幕</string>
+    <string name="pref_swipelowright_summary">向上滑入屏幕後轉後從右下滑出屏幕</string>
+    <string name="dialog_tapnotice_title">誤觸提示</string>
+    <string name="dialog_tapnotice">已兩虛兩次誤觸手勢檢測區域，請嘗試點擊更高一些的區域</string>
+    <string name="dialog_tapnotice_checkbox">下次顯示這個提示</string>
+    <string name="pref_countdown">購買完整版</string>
+    <string name="pref_countdown_notexpired_summary">試用天數剩餘 :</string>
+    <string name="pref_countdown_expired_summary">試用已過期，請購買完整版獲得無限次滑動與開啟自定義應用功能</string>
     <string name="pref_rating">給我一個五星評價</string>
     <string name="pref_rating_summary">如果你喜歡這程式</string>
-    
+    <string name="dialog_annoy">滑動Home鍵</string>
+    <string name="dialog_annoy_summary">試用已過期。是否願意現在購買滑動Home鍵完整版來獲得無限次滑動與開啟自定義應用功能？</string>
+    <string name="dialog_annoy_positivebutton">好</string>
+    <string name="dialog_annoy_negativebutton">不</string>
     <string name="pref_share">分享</string>
     <string name="pref_share_summary">分享滑動Home鍵給你的好友</string>
     <string name="pref_share_description">有沒有覺得你的Home鍵難按？有沒有覺得通知欄太遠？快來看看“滑動Home鍵”</string>
-    
-    <string name="pref_author">作者</string>
-    <string name="pref_author_summary">馬一川</string>
-    <string name="pref_author_email_subject">關於滑動Home鍵</string>
-</resources>
+  </resources>

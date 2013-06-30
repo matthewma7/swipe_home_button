@@ -26,6 +26,7 @@ import android.graphics.Point;
 import android.os.Build;
 import android.os.HandlerThread;
 import android.os.IBinder;
+import android.os.Vibrator;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.TypedValue;
@@ -58,7 +59,10 @@ public class SwipeService extends Service implements OnGestureListener{
 	final int buttonWidth=120;
 	int buttonHeight=17;
 	int screenHeight;
+	Boolean firstTapNotice=true;
 	Date lastTapTime = new Date();
+	Vibrator vibrator;
+	Boolean vibrate;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -67,9 +71,13 @@ public class SwipeService extends Service implements OnGestureListener{
 		sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		prefForceNotification=sharedPrefs.getBoolean("prefForceNotification", false);
 		prefTabNotice=sharedPrefs.getBoolean("prefTabNotice", true);
+		vibrate=sharedPrefs.getBoolean("prefVibrate", true);
 		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
 		Boolean prefIncreaseSensibility=sharedPrefs.getBoolean("prefIncreaseSensibility", false);
 		buttonHeight+=prefIncreaseSensibility?5:0;
+		
+
+		vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 		
 		Intent notificationIntent = new Intent(this, SettingsActivity.class);
 		PendingIntent contentIntent = PendingIntent.getActivity(this,
@@ -185,7 +193,7 @@ public class SwipeService extends Service implements OnGestureListener{
 //    	Toast.makeText(this, "Count:"+count, Toast.LENGTH_SHORT).show();
     	
 		if(absoluteY<dp2px(20)||(absoluteY<dp2px(40)&&velocityY>200)){
-			if(absoluteX<dp2px(20)){
+			if(absoluteX<dp2px(50)){
 				action(sharedPrefs.getString("prefSwipeupdown", "2"));
 			}
 			else{
@@ -243,6 +251,7 @@ public class SwipeService extends Service implements OnGestureListener{
 
 	@Override
 	public boolean onSingleTapUp(MotionEvent arg0) {
+		vibrator.vibrate(35);
 		if(prefTabNotice){
 			long timeSpan=(new Date().getTime() - lastTapTime.getTime()) / 1000;
 			if(timeSpan<2){
@@ -264,14 +273,19 @@ public class SwipeService extends Service implements OnGestureListener{
 				builder
 	    		.setTitle(R.string.dialog_tapnotice_title)
 	    		.setIcon(R.drawable.s_launcher_48)
-	    		.setView(checkBoxView)
-	    		.setCancelable(false)
+//	    		.setCancelable(false)
 	    		.setMessage(R.string.dialog_tapnotice)
 	    		.setPositiveButton(getString(R.string.dialog_sensibility_okbutton),new DialogInterface.OnClickListener() {  
 	                @Override  
 	                public void onClick(DialogInterface dialog, int which) {  
 	                }
 	            });
+				if(!firstTapNotice){
+					builder.setView(checkBoxView);
+				}
+				else{
+					firstTapNotice=false;
+				}
 	    		AlertDialog dialog=builder.create();
 	            Window win=dialog.getWindow();
 	            win.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
@@ -291,6 +305,10 @@ public class SwipeService extends Service implements OnGestureListener{
 		
 		if(action.equals("0")){
 			return;
+		}
+		
+		if(vibrate){
+			vibrator.vibrate(10);
 		}
 		
 		if(action.equals("1")){
