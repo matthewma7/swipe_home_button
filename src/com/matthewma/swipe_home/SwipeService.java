@@ -56,8 +56,8 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean prefTabNotice;
 	final int ANGLE=25;
 	final int XYThreshold=65;
-	final int buttonWidth=120;
-	int buttonHeight=17;
+	final int buttonWidth=140;
+	int buttonHeight;
 	int screenHeight;
 	Boolean firstTapNotice=true;
 	Date lastTapTime = new Date();
@@ -73,8 +73,10 @@ public class SwipeService extends Service implements OnGestureListener{
 		prefTabNotice=sharedPrefs.getBoolean("prefTabNotice", true);
 		vibrate=sharedPrefs.getBoolean("prefVibrate", true);
 		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
-		Boolean prefIncreaseSensibility=sharedPrefs.getBoolean("prefIncreaseSensibility", false);
-		buttonHeight+=prefIncreaseSensibility?5:0;
+		int detectAreaHeight=sharedPrefs.getInt("prefDetectAreaHeight", 2);
+		AreaHeight areaHeight=new AreaHeight();
+		areaHeight.SetHeight(detectAreaHeight,this);
+		buttonHeight=areaHeight.Height;
 		
 
 		vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -275,7 +277,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	    		.setIcon(R.drawable.s_launcher_48)
 //	    		.setCancelable(false)
 	    		.setMessage(R.string.dialog_tapnotice)
-	    		.setPositiveButton(getString(R.string.dialog_sensibility_okbutton),new DialogInterface.OnClickListener() {  
+	    		.setPositiveButton(getString(R.string.notice_understand),new DialogInterface.OnClickListener() {  
 	                @Override  
 	                public void onClick(DialogInterface dialog, int which) {  
 	                }

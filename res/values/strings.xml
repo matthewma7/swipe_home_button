@@ -20,25 +20,24 @@
     <string name="pref_transparenticon">Transparent notification icon</string>
     <string name="pref_transparenticon_summary">Make the icon in notification bar transparent</string>
 
-    <string name="dialog_transparenticon_title">Notice:</string>
-    <string name="dialog_transparenticon_summary">Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.</string>
-    <string name="dialog_transparenticon_okbutton">I understand</string>
-    
-    <string name="dialog_low_warn_title">Notice:</string>
+    <string name="dialog_transparenticon_summary">Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.</string> 
     <string name="dialog_low_warn_summary">Please keep in mind this swipe gesture might be difficult to perform on certain devices</string>
-    <string name="dialog_low_warn_okbutton">I understand</string>
 
-    <string name="pref_sensibility">Increase sensitivity</string>
-    <string name="pref_sensibility_summary">Improve gesture detection</string>
+    <string name="pref_areaheight">Detection area height</string>
+    <string name="pref_areaheight_summary">The height has effect on sensitivity</string>
+    <string name="pref_areaheight_small">Small</string>
+    <string name="pref_areaheight_smaller">Smaller</string>
+    <string name="pref_areaheight_normal">Normal</string>
+    <string name="pref_areaheight_larger">Larger</string>
+    <string name="pref_areaheight_large">Large</string>
+    <string name="dialog_areaheight_notice">Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. </string>
     <string name="pref_forcenotification">Force notification</string>
-    <string name="pref_forcenotification_summary">Force to show notification pull-down even in full screen app. May interrupt games</string>
+    <string name="pref_forcenotification_summary">Force to pull-down notification even in full screen app.</string>
     <string name="pref_tapnotice">Tap notice</string>
     <string name="pref_tapnotice_summary">Pop up a notice after two concecutive tap on swipe detection area</string>
     <string name="pref_vibrate">Swipe vibrate</string>
     <string name="pref_vibrate_summary">Vibrate your device when detects a swipe gesture</string>
-    <string name="dialog_sensibility">Notice:</string>
-    <string name="dialog_sensibility_summary">This option should be enabled only when you have trouble swiping while this option is not enabled</string>
-    <string name="dialog_sensibility_okbutton">I understand</string>
+    
 
     <string name="dialog0_title">Choose an action</string>
     <string name="dialog0_none">None</string>
@@ -95,5 +94,7 @@
     <string name="pref_share_summary">Tell your friend about Swipe Home Button</string>
     <string name="pref_share_description">Do you think you home button is hard to press and notification bar is far to reach? check out this app</string>
 
-
+    <string name="notice_title">Notice:</string>
+    <string name="notice_understand">I understand</string>
+    <string name="notice_ok">OK</string>
 </resources>

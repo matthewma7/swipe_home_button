@@ -1,83 +1,186 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+          Copyright (C) 2009 The Android Open Source Project
+
+          Licensed under the Apache License, Version 2.0 (the "License");
+          you may not use this file except in compliance with the License.
+          You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+          Unless required by applicable law or agreed to in writing, software
+          distributed under the License is distributed on an "AS IS" BASIS,
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+          See the License for the specific language governing permissions and
+          limitations under the License.
+
+          Editor: 
+            ArtfulBits Inc. (c) 2005-2009 (http://www.artfulbits.com)
+            Android Localizer (aiLocalizer)
+        -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:android="http://schemas.android.com/apk/res/android">
+  <!--Original value: Swipe Home Button-->
   <string name="notification_title">golpe fuerte botón de inicio</string>
+  <!--Original value: Replacing your home button-->
   <string name="notification_text">El cambio de su botón de inicio</string>
+  <!--Original value: Swipe Home Button-->
   <string name="app_name">golpe fuerte botón de inicio</string>
+  <!--Original value: Swipe Home Button (Trial)-->
   <string name="app_name_free">golpe fuerte botón de inicio (ensayo)</string>
+  <!--Original value: Settings-->
   <string name="menu_settings">Configuración</string>
+  <!--Original value: Enable-->
   <string name="pref_category_enable">permitir</string>
+  <!--Original value: Setting-->
   <string name="pref_category_settings">ajuste</string>
+  <!--Original value: Swipe-->
   <string name="pref_category_binding">encuadernación</string>
+  <!--Original value: About-->
   <string name="pref_category_about">acerca de</string>
+  <!--Original value: Enable gestures-->
   <string name="pref_enable">Habilitar gestos</string>
+  <!--Original value: Start swipe gesture service-->
   <string name="pref_enable_summary">Iniciar servicio gesto de deslizar</string>
+  <!--Original value: Start at boot-->
   <string name="pref_swipe_autostart">Iniciar en el arranque</string>
+  <!--Original value: Start swipe gesture service after phone boots-->
   <string name="pref_swipe_autostart_summary">Iniciar servicio gesto de deslizar después inicia el teléfono</string>
+  <!--Original value: Transparent notification icon-->
   <string name="pref_transparenticon">Icono de notificación transparente</string>
+  <!--Original value: Make the icon in notification bar transparent-->
   <string name="pref_transparenticon_summary">Hacer que el icono en la barra de notificación transparente</string>
-  <string name="dialog_transparenticon_title">Aviso:</string>
+  <!--Original value: Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.-->
   <string name="dialog_transparenticon_summary">Sólo en Android 4.1 + dispositivos, es posible ocultar el icono de notificación desplegable, desmarcando \ "notificación espectáculo \" botón de inicio golpe en el Administrador de aplicaciones de. De lo contrario, se requiere el icono para mantener golpes trabajo.</string>
-  <string name="dialog_transparenticon_okbutton">entiendo</string>
-  <string name="dialog_low_warn_title">Aviso:</string>
+  <!--Original value: Please keep in mind this swipe gesture might be difficult to perform on certain devices-->
   <string name="dialog_low_warn_summary">Por favor, tenga en cuenta este gesto de golpe puede ser difícil de realizar en determinados dispositivos</string>
-  <string name="dialog_low_warn_okbutton">entiendo</string>
-  <string name="pref_sensibility">Aumentar la sensibilidad</string>
-  <string name="pref_sensibility_summary">Detección de las posturas imporve</string>
+  <!--Original value: Detection area height-->
+  <string name="pref_areaheight">Altura de la zona de detección</string>
+  <!--Original value: The height has effect on sensitivity-->
+  <string name="pref_areaheight_summary">La altura tiene efecto sobre la sensibilidad</string>
+  <!--Original value: Small-->
+  <string name="pref_areaheight_small">pequeño</string>
+  <!--Original value: Smaller-->
+  <string name="pref_areaheight_smaller">menor</string>
+  <!--Original value: Normal-->
+  <string name="pref_areaheight_normal">normal</string>
+  <!--Original value: Larger-->
+  <string name="pref_areaheight_larger">Ampliar</string>
+  <!--Original value: Large-->
+  <string name="pref_areaheight_large">grande</string>
+  <!--Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. -->
+  <string name="dialog_areaheight_notice">Altos bloques de altura más espacio. </string>
+  <!--Original value: Force notification-->
   <string name="pref_forcenotification">Force notification</string>
+  <!--Original value: Force to pull-down notification even in full screen app.-->
   <string name="pref_forcenotification_summary">Force to show notification pull-down even in full screen app. may interrupt games</string>
+  <!--Original value: Tap notice-->
   <string name="pref_tapnotice">Toque aviso</string>
+  <!--Original value: Pop up a notice after two concecutive tap on swipe detection area-->
   <string name="pref_tapnotice_summary">aparecerá un aviso después de tres tap concecutive en región de detección magnética</string>
+  <!--Original value: Swipe vibrate-->
   <string name="pref_vibrate">Swipe vibrar</string>
+  <!--Original value: Vibrate your device when detects a swipe gesture-->
   <string name="pref_vibrate_summary">Vibrar después de un gesto de deslizar con éxito</string>
-  <string name="dialog_sensibility">Aviso:</string>
-  <string name="dialog_sensibility_summary">Esta opción debe ser habilitada sólo cuando tiene problemas para deslizar cuando esta opción está desactivada</string>
-  <string name="dialog_sensibility_okbutton">entiendo</string>
+  <!--Original value: Choose an action-->
   <string name="dialog0_title">Elija una acción</string>
+  <!--Original value: None-->
   <string name="dialog0_none">ninguno</string>
+  <!--Original value: Home button-->
   <string name="dialog0_homebutton">botón de Inicio</string>
+  <!--Original value: Show recent app-->
   <string name="dialog0_recentapp">Mostrar aplicación reciente</string>
+  <!--Original value: Pull down notification-->
   <string name="dialog0_pullnotification">Baje la notificación</string>
+  <!--Original value: Back button-->
   <string name="dialog0_menubutton">Back button</string>
+  <!--Original value: Menu button-->
   <string name="dialog0_backbutton">Menu button</string>
+  <!--Original value: Custom app-->
   <string name="dialog0_customapp">aplicación personalizada</string>
+  <!--Original value: Custom app \n(full version only)-->
   <string name="dialog0_customapp_free">aplicación personalizada\n(sólo la versión completa)</string>
+  <!--Original value: Play next track-->
   <string name="dialog0_nexttrack">Reproducir la pista siguiente</string>
+  <!--Original value: App shortcut-->
   <string name="dialog0_shortcut">acceso directo App</string>
+  <!--Original value: App shortcut \n(full version only)-->
   <string name="dialog0_shortcut_free">acceso directo App</string>
+  <!--Original value: Choose an app-->
   <string name="dialog1_title">Elija una aplicación</string>
+  <!--Original value: Swipe up-->
   <string name="pref_swipeup">Pase hacia arriba</string>
+  <!--Original value: Swipe far up-->
   <string name="pref_swipefarup">Swipe muy arriba</string>
+  <!--Original value: Swipe up then down-->
   <string name="pref_swipeupdown">Pase hacia arriba y luego hacia abajo</string>
+  <!--Original value: Swipe up left-->
   <string name="pref_swipeupleft">Pase a la izquierda</string>
+  <!--Original value: Swipe up right-->
   <string name="pref_swipeupright">Pase hacia arriba a la derecha</string>
+  <!--Original value: Swipe left down-->
   <string name="pref_swipelowleft">Pase a la izquierda hacia abajo</string>
+  <!--Original value: Swipe right down-->
   <string name="pref_swipelowright">Pase a la izquierda hacia abajo</string>
+  <!--Original value: Instructions-->
   <string name="pref_instruction">instrucciones</string>
+  <!--Original value: Instructions for swipe gestures-->
   <string name="pref_instruction_summary">Instrucciones de gestos swipe</string>
+  <!--Original value: Advanced settings-->
   <string name="pref_advanced_setting">opciones avanzadas</string>
+  <!--Original value: More settings for swipe gestrues-->
   <string name="pref_advanced_setting_summary">Más ajustes para gestrues swipe</string>
+  <!--Original value: Binding-->
   <string name="pref_binding">encuadernación</string>
+  <!--Original value: Customize actions of swipe gestures-->
   <string name="pref_binding_summary">Personalizar acciones de gesto de deslizar</string>
+  <!--Original value: Swipe up into the screen from the outside of bottom center screen-->
   <string name="pref_swipeup_summary">Pase hacia arriba en la pantalla desde la parte exterior de la pantalla inferior central</string>
+  <!--Original value: Swipe up into the screen from the outside of bottom center screen and go over 2/5 height of the screen-->
   <string name="pref_swipefarup_summary">Pase hacia arriba en la pantalla desde la parte exterior de la pantalla inferior central e ir más de 2/5 Altura de la pantalla</string>
+  <!--Original value: Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen-->
   <string name="pref_swipeupdown_summary">Pase hacia arriba en la pantalla desde la parte exterior de la pantalla inferior central y continuar deslizar hacia abajo fuera de la pantalla</string>
+  <!--Original value: Swipe far up left into the screen from outside of bottom center screen-->
   <string name="pref_swipeupleft_summary">Pase ahora a la izquierda en la pantalla de fuera de la pantalla inferior central</string>
+  <!--Original value: Swipe far up right into the screen from outside of bottom center screen-->
   <string name="pref_swipeupright_summary">Pase ahora a la derecha en la pantalla de fuera de la pantalla inferior central</string>
+  <!--Original value: Swipe up into the screen then exit the screen from bottom left. Find your own style-->
   <string name="pref_swipelowleft_summary">Pase hacia arriba a la izquierda en la pantalla y hacer una pequeña curva hacia abajo y fuera de la pantalla. Encuentra tu propio estilo</string>
+  <!--Original value: Swipe up into the screen then exit the screen from bottom right. Find your own style-->
   <string name="pref_swipelowright_summary">Pase hacia arriba a la derecha en la pantalla a continuación, hacer una pequeña curva hacia abajo y fuera de la pantalla. Encuentra tu propio estilo</string>
+  <!--Original value: Tap Notice-->
   <string name="dialog_tapnotice_title">Toque Aviso</string>
+  <!--Original value: You have tap on the swipe detection area for two concecutive times, please try tapping an upper area.-->
   <string name="dialog_tapnotice">Has toque en el área de detección de golpe por dos veces, por favor, intente tocar área superior</string>
+  <!--Original value: Show this notice next time-->
   <string name="dialog_tapnotice_checkbox">Mostrar esta nota la próxima vez</string>
+  <!--Original value: Buy full version-->
   <string name="pref_countdown">Comprar versión completa</string>
+  <!--Original value: Trial days left :-->
   <string name="pref_countdown_notexpired_summary">Días de prueba fueron :</string>
+  <!--Original value: Trial has expired. Please buy full version to get unlimited swipes and use swipe to open other apps and shortcuts.-->
   <string name="pref_countdown_expired_summary">Prueba ha caducado. Por favor, comprar la versión completa para obtener y utilizar un número ilimitado de golpes deslizar para abrir otras aplicaciones.</string>
+  <!--Original value: Give me a five star rating-->
   <string name="pref_rating">Dame una calificación de cinco estrellas</string>
+  <!--Original value: If you like this app-->
   <string name="pref_rating_summary">Si te gusta esta aplicación</string>
+  <!--Original value: Swipe Home Button-->
   <string name="dialog_annoy">golpe fuerte botón de inicio</string>
+  <!--Original value: Trial has expired. Would you like to buy full version now to get unlimited swipes and use swipe to open other apps?-->
   <string name="dialog_annoy_summary">Prueba ha caducado. ¿Quieres comprar la versión completa ahora para obtener y utilizar un número ilimitado de golpes deslizar para abrir otras aplicaciones?</string>
+  <!--Original value: YES-->
   <string name="dialog_annoy_positivebutton">SÍ</string>
+  <!--Original value: No-->
   <string name="dialog_annoy_negativebutton">Not</string>
+  <!--Original value: Share-->
   <string name="pref_share">participación</string>
+  <!--Original value: Tell your friend about Swipe Home Button-->
   <string name="pref_share_summary">Dile a tus amigos acerca de esta aplicación</string>
+  <!--Original value: Do you think you home button is hard to press and notification bar is far to reach? check out this app-->
   <string name="pref_share_description">¿Crees que botón de inicio es difícil de presionar y barra de notificaciones es mucho para llegar? echa un vistazo a esta aplicación</string>
+  <!--Original value: Notice:-->
+  <string name="notice_title">Aviso:</string>
+  <!--Original value: I understand-->
+  <string name="notice_understand">entiendo</string>
+  <!--Original value: OK-->
+  <string name="notice_ok">bueno</string>
 </resources>

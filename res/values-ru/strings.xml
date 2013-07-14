@@ -1,5 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
+          Copyright (C) 2009 The Android Open Source Project
+
+          Licensed under the Apache License, Version 2.0 (the "License");
+          you may not use this file except in compliance with the License.
+          You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+          Unless required by applicable law or agreed to in writing, software
+          distributed under the License is distributed on an "AS IS" BASIS,
+          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+          See the License for the specific language governing permissions and
+          limitations under the License.
+
+          Editor: 
+            ArtfulBits Inc. (c) 2005-2009 (http://www.artfulbits.com)
+            Android Localizer (aiLocalizer)
         -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:android="http://schemas.android.com/apk/res/android">
   <!--Original value: Swipe Home Button-->
@@ -32,25 +49,29 @@
   <string name="pref_transparenticon">Прозрачный значок</string>
   <!--Original value: Make the icon in notification bar transparent-->
   <string name="pref_transparenticon_summary">Делает значок в панели уведомлений прозрачным</string>
-  <!--Original value: Notice:-->
-  <string name="dialog_transparenticon_title">Обратите внимание:</string>
   <!--Original value: Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.-->
   <string name="dialog_transparenticon_summary">Только на устройствах с Android 4.1 + можно полностью скрыть значок уведомления, сделать это можно стандартным способом в менеджере приложений, сняв галку \"Включить уведомления\".</string>
-  <!--Original value: I understand-->
-  <string name="dialog_transparenticon_okbutton">Понимаю</string>
-  <!--Original value: Notice:-->
-  <string name="dialog_low_warn_title">Примечание:</string>
   <!--Original value: Please keep in mind this swipe gesture might be difficult to perform on certain devices-->
   <string name="dialog_low_warn_summary">Пожалуйста, имейте в виду, что это салфетки жест может быть трудно выполнять на некоторых устройствах</string>
-  <!--Original value: I understand-->
-  <string name="dialog_low_warn_okbutton">я понимаю,</string>
-  <!--Original value: Increase sensitivity-->
-  <string name="pref_sensibility">Чувствительность</string>
-  <!--Original value: Improve gesture detection-->
-  <string name="pref_sensibility_summary">Улучшение обнаружения жестов</string>
+  <!--Original value: Detection area height-->
+  <string name="pref_areaheight">Высота зоны обнаружения</string>
+  <!--Original value: The height has effect on sensitivity-->
+  <string name="pref_areaheight_summary">Высота имеет влияние на чувствительность</string>
+  <!--Original value: Small-->
+  <string name="pref_areaheight_small">небольшой</string>
+  <!--Original value: Smaller-->
+  <string name="pref_areaheight_smaller">Меньшие</string>
+  <!--Original value: Normal-->
+  <string name="pref_areaheight_normal">нормальный</string>
+  <!--Original value: Larger-->
+  <string name="pref_areaheight_larger">больше</string>
+  <!--Original value: Large-->
+  <string name="pref_areaheight_large">большой</string>
+  <!--Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. -->
+  <string name="dialog_areaheight_notice">Высшее высота блоков больше пространства. </string>
   <!--Original value: Force notification-->
   <string name="pref_forcenotification">силы уведомления</string>
-  <!--Original value: Force to show notification pull-down even in full screen app. May interrupt games-->
+  <!--Original value: Force to pull-down notification even in full screen app.-->
   <string name="pref_forcenotification_summary">Силы , чтобы показать уведомление выпадающие даже в полной экран приложения . </string>
   <!--Original value: Tap notice-->
   <string name="pref_tapnotice">Нажмите уведомления</string>
@@ -60,12 +81,6 @@
   <string name="pref_vibrate">Проведите вибрировать</string>
   <!--Original value: Vibrate your device when detects a swipe gesture-->
   <string name="pref_vibrate_summary">Вибрация устройства при обнаружении салфетки жест</string>
-  <!--Original value: Notice:-->
-  <string name="dialog_sensibility">Обратите внимание:</string>
-  <!--Original value: This option should be enabled only when you have trouble swiping while this option is not enabled-->
-  <string name="dialog_sensibility_summary">Эта опция должна быть включена, только если у вас действительно наблюдаются какие либо проблемы с использованием.</string>
-  <!--Original value: I understand-->
-  <string name="dialog_sensibility_okbutton">Понимаю</string>
   <!--Original value: Choose an action-->
   <string name="dialog0_title">Выбор действия</string>
   <!--Original value: None-->
@@ -162,4 +177,10 @@
   <string name="pref_share_summary">Расскажите другу о Swipe Home Button</string>
   <!--Original value: Do you think you home button is hard to press and notification bar is far to reach? check out this app-->
   <string name="pref_share_description">Вам кажется, что кнопку \"Домой\" слишком утомительно нажимать, а до панели уведомлений слишком далеко тянуться? тогда испробуйте это приложение..</string>
+  <!--Original value: Notice:-->
+  <string name="notice_title">Примечание:</string>
+  <!--Original value: I understand-->
+  <string name="notice_understand">я понимаю,</string>
+  <!--Original value: OK-->
+  <string name="notice_ok">хорошо</string>
 </resources>

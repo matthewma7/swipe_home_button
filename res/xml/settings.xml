@@ -98,12 +98,11 @@
 	    <PreferenceScreen
                 android:title="@string/pref_advanced_setting"
                 android:summary="@string/pref_advanced_setting_summary">
-			<CheckBoxPreference
-	            android:defaultValue="false"
-	            android:key="prefIncreaseSensibility"
-	            android:summary="@string/pref_sensibility_summary"
-	            android:title="@string/pref_sensibility" >
-	        </CheckBoxPreference>
+			<Preference
+	            android:key="prefDetectAreaProgress"
+	            android:summary="@string/pref_areaheight_summary"
+	            android:title="@string/pref_areaheight" >
+	        </Preference>
 	        
 			<CheckBoxPreference
 	            android:defaultValue="false"

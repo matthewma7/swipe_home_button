@@ -24,6 +24,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
@@ -60,7 +63,7 @@ public class SettingsActivity extends PreferenceActivity implements
 		
 		findPreference("prefShare").setOnPreferenceClickListener(this);
 		findPreference("prefTransparentIcon").setOnPreferenceClickListener(this);
-		findPreference("prefIncreaseSensibility").setOnPreferenceClickListener(this);
+		findPreference("prefDetectAreaProgress").setOnPreferenceClickListener(this);
 		for(int i=0;i<swipes.length;i++){
 			Preference pref=findPreference(swipes[i]);
 			pref.setOnPreferenceClickListener(this);
@@ -145,10 +148,10 @@ public class SettingsActivity extends PreferenceActivity implements
 			showDialog(TRANSPARENT_NOTICE_DIALOG);
 			return false;
 		}
-		if("prefIncreaseSensibility".equals(key)&&((CheckBoxPreference)preference).isChecked()){
-			showDialog(SENSIBILITY_DIALOG);
-			return false;
-		}
+//		if("prefIncreaseSensibility".equals(key)&&((CheckBoxPreference)preference).isChecked()){
+//			showDialog(SENSIBILITY_DIALOG);
+//			return false;
+//		}
 		if("prefRating".equals(key)){
 			Intent intent = new Intent(Intent.ACTION_VIEW); 
 			intent.setData(Uri.parse("market://details?id=com.matthewma.swipe_home")); 
@@ -160,16 +163,24 @@ public class SettingsActivity extends PreferenceActivity implements
 			}
 			return false;
 		}
+		if("prefDetectAreaProgress".equals(key)){
+			showDialog(DETECT_AREA_HEIGHT);
+			return false;
+		}
 		return false;
 	}
 	
 	private final int ACTION_SELECT_DIALOG=1;
 	private final int APP_SELECT_DIALOG=2;
 	private final int TRANSPARENT_NOTICE_DIALOG=3;
-	private final int SENSIBILITY_DIALOG=4;
+//	private final int SENSIBILITY_DIALOG=4;
 	private final int SHORTCUT_SELECT_DIALOG=5;
 	private final int LOWER_WARN_NOTICE=6;
+	private final int DETECT_AREA_HEIGHT=7;
 	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateDialog(int)
+	 */
 	@SuppressWarnings("deprecation")
 	@Override
 	protected Dialog onCreateDialog(int id) {
@@ -235,11 +246,6 @@ public class SettingsActivity extends PreferenceActivity implements
 				builder1.setView(appList);
 				dialog1 = builder1.create();
 				dialog1.show();
-//				Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-//				mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-//				Intent pickIntent0 = new Intent(Intent.ACTION_PICK_ACTIVITY);
-//				pickIntent0.putExtra(Intent.EXTRA_INTENT, mainIntent);
-//				startActivityForResult(pickIntent0, REQUEST_PICK_APPLICATION);
 				break;
 			
 		
@@ -247,8 +253,8 @@ public class SettingsActivity extends PreferenceActivity implements
 				AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
 		        builder2.setMessage(R.string.dialog_transparenticon_summary)
 						.setIcon(android.R.drawable.ic_dialog_info)
-		        		.setTitle(R.string.dialog_transparenticon_title)
-		                .setPositiveButton(R.string.dialog_transparenticon_okbutton, new DialogInterface.OnClickListener() {
+		        		.setTitle(R.string.notice_title)
+		                .setPositiveButton(R.string.notice_understand, new DialogInterface.OnClickListener() {
 		                   public void onClick(DialogInterface dialog, int id) {
 		                       dialog.dismiss();
 		                   }
@@ -259,21 +265,21 @@ public class SettingsActivity extends PreferenceActivity implements
 		        dialog2.show();
 				break;
 				
-			case SENSIBILITY_DIALOG:
-				AlertDialog.Builder builder_sensibility = new AlertDialog.Builder(this);
-				builder_sensibility.setMessage(R.string.dialog_sensibility_summary)
-						.setIcon(android.R.drawable.ic_dialog_info)
-		        		.setTitle(R.string.dialog_sensibility)
-		                .setPositiveButton(R.string.dialog_sensibility_okbutton, new DialogInterface.OnClickListener() {
-		                   public void onClick(DialogInterface dialog, int id) {
-		                       dialog.dismiss();
-		                   }
-		                })
-		                ;
-		        // Create the AlertDialog object and return it
-		        AlertDialog dialog_sensibility=builder_sensibility.create();
-		        dialog_sensibility.show();
-				break;
+//			case SENSIBILITY_DIALOG:
+//				AlertDialog.Builder builder_sensibility = new AlertDialog.Builder(this);
+//				builder_sensibility.setMessage(R.string.dialog_sensibility_summary)
+//						.setIcon(android.R.drawable.ic_dialog_info)
+//		        		.setTitle(R.string.notice_title)
+//		                .setPositiveButton(R.string.notice_understand, new DialogInterface.OnClickListener() {
+//		                   public void onClick(DialogInterface dialog, int id) {
+//		                       dialog.dismiss();
+//		                   }
+//		                })
+//		                ;
+//		        // Create the AlertDialog object and return it
+//		        AlertDialog dialog_sensibility=builder_sensibility.create();
+//		        dialog_sensibility.show();
+//				break;
 				
 			case SHORTCUT_SELECT_DIALOG:
 				Bundle bundle = new Bundle();
@@ -292,19 +298,65 @@ public class SettingsActivity extends PreferenceActivity implements
 		        break;
 		        
 			case LOWER_WARN_NOTICE:
-				Builder builder = new AlertDialog.Builder(this);
-				builder
+				Builder lowNoticeBuilder = new AlertDialog.Builder(this);
+				lowNoticeBuilder
 					.setMessage(R.string.dialog_low_warn_summary)
 					.setIcon(android.R.drawable.ic_dialog_info)
-	        		.setTitle(R.string.dialog_low_warn_title)
+	        		.setTitle(R.string.notice_title)
 					.setCancelable(false)
-					.setPositiveButton(getString(R.string.dialog_low_warn_okbutton),new DialogInterface.OnClickListener() {  
+					.setPositiveButton(getString(R.string.notice_understand),new DialogInterface.OnClickListener() {  
 		                @Override  
 		                public void onClick(DialogInterface dialog, int which) {  
 		                	showDialog(ACTION_SELECT_DIALOG);
 		                }
 					});
-				AlertDialog dialog = builder.create();
+				AlertDialog lowNoticeDialog = lowNoticeBuilder.create();
+				lowNoticeDialog.show();
+				break;
+				
+			case DETECT_AREA_HEIGHT:
+				View detect_area_height = View.inflate(this, R.layout.detect_area_height, null);
+				SeekBar seekbar = (SeekBar) detect_area_height.findViewById(R.id.seekbar);
+				final TextView textview=(TextView) detect_area_height.findViewById(R.id.textview);
+				final AreaHeight areaHeight=new AreaHeight();
+				areaHeight.SetHeight(sharedPrefs.getInt("prefDetectAreaProgress", 2),this);
+				seekbar.setProgress(areaHeight.Progress);
+				textview.setText(areaHeight.Size);
+				seekbar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+					
+					@Override
+					public void onStopTrackingTouch(SeekBar seekBar) {
+						
+					}
+					
+					@Override
+					public void onStartTrackingTouch(SeekBar seekBar) {
+						// TODO Auto-generated method stub
+						
+					}
+					
+					@Override
+					public void onProgressChanged(SeekBar seekBar, int progress,
+							boolean fromUser) {
+						areaHeight.SetHeight(progress,SettingsActivity.this);
+						textview.setText(areaHeight.Size);						
+					}
+				});
+				Builder detectAreaBuilder = new AlertDialog.Builder(this);
+				detectAreaBuilder
+					.setMessage(R.string.dialog_areaheight_notice)
+					.setIcon(android.R.drawable.ic_dialog_info)
+	        		.setTitle(R.string.notice_title)
+					.setView(detect_area_height)
+					.setPositiveButton(getString(R.string.notice_ok),new DialogInterface.OnClickListener() {  
+		                @Override  
+		                public void onClick(DialogInterface dialog, int which) {  
+		                	Editor editor = sharedPrefs.edit();
+		                	editor.putInt("prefDetectAreaProgress",areaHeight.Progress);
+		                	editor.commit();
+		                }
+					});
+				AlertDialog dialog = detectAreaBuilder.create();
 				dialog.show();
 				break;
 		}
@@ -342,6 +394,8 @@ public class SettingsActivity extends PreferenceActivity implements
 		}
 		return "";
 	}
+	
+	
 	
 	
 	class PInfo {
