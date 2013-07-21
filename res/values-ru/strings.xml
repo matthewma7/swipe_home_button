@@ -1,186 +1,89 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!--
-          Copyright (C) 2009 The Android Open Source Project
-
-          Licensed under the Apache License, Version 2.0 (the "License");
-          you may not use this file except in compliance with the License.
-          You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-          Unless required by applicable law or agreed to in writing, software
-          distributed under the License is distributed on an "AS IS" BASIS,
-          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-          See the License for the specific language governing permissions and
-          limitations under the License.
-
-          Editor: 
-            ArtfulBits Inc. (c) 2005-2009 (http://www.artfulbits.com)
-            Android Localizer (aiLocalizer)
-        -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:android="http://schemas.android.com/apk/res/android">
-  <!--Original value: Swipe Home Button-->
-  <string name="notification_title">Проведите Home Button</string>
-  <!--Original value: Replacing your home button-->
-  <string name="notification_text">Замена кнопки \"Домой\"</string>
-  <!--Original value: Swipe Home Button-->
-  <string name="app_name">Проведите Home Button</string>
-  <!--Original value: Swipe Home Button (Trial)-->
-  <string name="app_name_free">Проведите Home Button (пробная версия)</string>
-  <!--Original value: Settings-->
-  <string name="menu_settings">Настройки</string>
-  <!--Original value: Enable-->
-  <string name="pref_category_enable">Включить</string>
-  <!--Original value: Setting-->
-  <string name="pref_category_settings">Настройка</string>
-  <!--Original value: Swipe-->
-  <string name="pref_category_binding">Привязка</string>
-  <!--Original value: About-->
-  <string name="pref_category_about">О программе</string>
-  <!--Original value: Enable gestures-->
-  <string name="pref_enable">Включить жесты</string>
-  <!--Original value: Start swipe gesture service-->
-  <string name="pref_enable_summary">Запуск службы жестов</string>
-  <!--Original value: Start at boot-->
-  <string name="pref_swipe_autostart">Автозапуск</string>
-  <!--Original value: Start swipe gesture service after phone boots-->
-  <string name="pref_swipe_autostart_summary">Запуск службы после перезагрузки</string>
-  <!--Original value: Transparent notification icon-->
-  <string name="pref_transparenticon">Прозрачный значок</string>
-  <!--Original value: Make the icon in notification bar transparent-->
-  <string name="pref_transparenticon_summary">Делает значок в панели уведомлений прозрачным</string>
-  <!--Original value: Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.-->
-  <string name="dialog_transparenticon_summary">Только на устройствах с Android 4.1 + можно полностью скрыть значок уведомления, сделать это можно стандартным способом в менеджере приложений, сняв галку \"Включить уведомления\".</string>
-  <!--Original value: Please keep in mind this swipe gesture might be difficult to perform on certain devices-->
-  <string name="dialog_low_warn_summary">Пожалуйста, имейте в виду, что это салфетки жест может быть трудно выполнять на некоторых устройствах</string>
-  <!--Original value: Detection area height-->
-  <string name="pref_areaheight">Высота зоны обнаружения</string>
-  <!--Original value: The height has effect on sensitivity-->
-  <string name="pref_areaheight_summary">Высота имеет влияние на чувствительность</string>
-  <!--Original value: Small-->
-  <string name="pref_areaheight_small">небольшой</string>
-  <!--Original value: Smaller-->
-  <string name="pref_areaheight_smaller">Меньшие</string>
-  <!--Original value: Normal-->
-  <string name="pref_areaheight_normal">нормальный</string>
-  <!--Original value: Larger-->
-  <string name="pref_areaheight_larger">больше</string>
-  <!--Original value: Large-->
-  <string name="pref_areaheight_large">большой</string>
-  <!--Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. -->
-  <string name="dialog_areaheight_notice">Высшее высота блоков больше пространства. </string>
-  <!--Original value: Force notification-->
-  <string name="pref_forcenotification">силы уведомления</string>
-  <!--Original value: Force to pull-down notification even in full screen app.-->
-  <string name="pref_forcenotification_summary">Силы , чтобы показать уведомление выпадающие даже в полной экран приложения . </string>
-  <!--Original value: Tap notice-->
-  <string name="pref_tapnotice">Нажмите уведомления</string>
-  <!--Original value: Pop up a notice after two concecutive tap on swipe detection area-->
-  <string name="pref_tapnotice_summary">Всплывающиеуведомления после двух concecutive кран на салфетки зоне обнаружения</string>
-  <!--Original value: Swipe vibrate-->
-  <string name="pref_vibrate">Проведите вибрировать</string>
-  <!--Original value: Vibrate your device when detects a swipe gesture-->
-  <string name="pref_vibrate_summary">Вибрация устройства при обнаружении салфетки жест</string>
-  <!--Original value: Choose an action-->
-  <string name="dialog0_title">Выбор действия</string>
-  <!--Original value: None-->
-  <string name="dialog0_none">Нет</string>
-  <!--Original value: Home button-->
-  <string name="dialog0_homebutton">Кнопка \"Домой\"</string>
-  <!--Original value: Show recent app-->
-  <string name="dialog0_recentapp">Показать последние запущенные</string>
-  <!--Original value: Pull down notification-->
-  <string name="dialog0_pullnotification">Сдвинуть шторку</string>
-  <!--Original value: Back button-->
-  <string name="dialog0_menubutton">Кнопка \"Назад\"</string>
-  <!--Original value: Menu button-->
-  <string name="dialog0_backbutton">Кнопка \"Меню\"</string>
-  <!--Original value: Custom app-->
-  <string name="dialog0_customapp">Мое приложение</string>
-  <!--Original value: Custom app \n(full version only)-->
-  <string name="dialog0_customapp_free">Пользовательские приложения \n ( полная версия)</string>
-  <!--Original value: Play next track-->
-  <string name="dialog0_nexttrack">Играть следующий трек</string>
-  <!--Original value: App shortcut-->
-  <string name="dialog0_shortcut">App ярлык</string>
-  <!--Original value: App shortcut \n(full version only)-->
-  <string name="dialog0_shortcut_free">App ярлык \n ( полная версия)</string>
-  <!--Original value: Choose an app-->
-  <string name="dialog1_title">Выбор приложения</string>
-  <!--Original value: Swipe up-->
-  <string name="pref_swipeup">Вверх</string>
-  <!--Original value: Swipe far up-->
-  <string name="pref_swipefarup">Высоко вверх</string>
-  <!--Original value: Swipe up then down-->
-  <string name="pref_swipeupdown">Вверх и вниз</string>
-  <!--Original value: Swipe up left-->
-  <string name="pref_swipeupleft">Вверх влево</string>
-  <!--Original value: Swipe up right-->
-  <string name="pref_swipeupright">Вверх вправо</string>
-  <!--Original value: Swipe left down-->
-  <string name="pref_swipelowleft">Проведите пальцем влево вниз</string>
-  <!--Original value: Swipe right down-->
-  <string name="pref_swipelowright">Размах право вниз</string>
-  <!--Original value: Instructions-->
-  <string name="pref_instruction">Инструкции</string>
-  <!--Original value: Instructions for swipe gestures-->
-  <string name="pref_instruction_summary">Инструкции по жестам</string>
-  <!--Original value: Advanced settings-->
-  <string name="pref_advanced_setting">Дополнительные настройки</string>
-  <!--Original value: More settings for swipe gestrues-->
-  <string name="pref_advanced_setting_summary">Дополнительные параметры, салфетки gestrues</string>
-  <!--Original value: Binding-->
-  <string name="pref_binding">Привязка</string>
-  <!--Original value: Customize actions of swipe gestures-->
-  <string name="pref_binding_summary">Действие в ответ на жест</string>
-  <!--Original value: Swipe up into the screen from the outside of bottom center screen-->
-  <string name="pref_swipeup_summary">Проведите вверх по экрану начиная из за края с нижней центральной его части</string>
-  <!--Original value: Swipe up into the screen from the outside of bottom center screen and go over 2/5 height of the screen-->
-  <string name="pref_swipefarup_summary">Проведите вверх по экрану начиная из за края с нижней центральной его части примерно на 2/5 высоты экрана</string>
-  <!--Original value: Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen-->
-  <string name="pref_swipeupdown_summary">Проведите вверх по экрану начиная из за края с нижней центральной его части и не отпуская пальца, также опуститесь вниз (за край экрана)</string>
-  <!--Original value: Swipe far up left into the screen from outside of bottom center screen-->
-  <string name="pref_swipeupleft_summary">Проведите чуть наискось вверх влево по экрану начиная из за края с нижней центральной его части</string>
-  <!--Original value: Swipe far up right into the screen from outside of bottom center screen-->
-  <string name="pref_swipeupright_summary">Проведите чуть наискось вверх вправо по экрану начиная из за края с нижней центральной его части</string>
-  <!--Original value: Swipe up into the screen then exit the screen from bottom left. Find your own style-->
-  <string name="pref_swipelowleft_summary">Проведите вверх в экран затем выйти из экрана снизу слева. </string>
-  <!--Original value: Swipe up into the screen then exit the screen from bottom right. Find your own style-->
-  <string name="pref_swipelowright_summary">Проведите вверх в экран затем выйти из экрана , начиная внизу справа . </string>
-  <!--Original value: Tap Notice-->
-  <string name="dialog_tapnotice_title">Нажмите Уведомление</string>
-  <!--Original value: You have tap on the swipe detection area for two concecutive times, please try tapping an upper area.-->
-  <string name="dialog_tapnotice">Вы должны нажать на зоне обнаружения салфетки для двух concecutive раз , попробуйте нажавверхнюю область .</string>
-  <!--Original value: Show this notice next time-->
-  <string name="dialog_tapnotice_checkbox">Показать это уведомление в следующий раз</string>
-  <!--Original value: Buy full version-->
-  <string name="pref_countdown">Купить полную версию</string>
-  <!--Original value: Trial days left :-->
-  <string name="pref_countdown_notexpired_summary">Судебная осталось:</string>
-  <!--Original value: Trial has expired. Please buy full version to get unlimited swipes and use swipe to open other apps and shortcuts.-->
-  <string name="pref_countdown_expired_summary">Действия пробной версии истек . </string>
-  <!--Original value: Give me a five star rating-->
-  <string name="pref_rating">Дайте мне пять звезд</string>
-  <!--Original value: If you like this app-->
-  <string name="pref_rating_summary">Если вам нравится это приложение</string>
-  <!--Original value: Swipe Home Button-->
-  <string name="dialog_annoy">Проведите Home Button</string>
-  <!--Original value: Trial has expired. Would you like to buy full version now to get unlimited swipes and use swipe to open other apps?-->
-  <string name="dialog_annoy_summary">Действия пробной версии истек . </string>
-  <!--Original value: YES-->
-  <string name="dialog_annoy_positivebutton">ДА</string>
-  <!--Original value: No-->
-  <string name="dialog_annoy_negativebutton">нет</string>
-  <!--Original value: Share-->
-  <string name="pref_share">Обмен</string>
-  <!--Original value: Tell your friend about Swipe Home Button-->
-  <string name="pref_share_summary">Расскажите другу о Swipe Home Button</string>
-  <!--Original value: Do you think you home button is hard to press and notification bar is far to reach? check out this app-->
-  <string name="pref_share_description">Вам кажется, что кнопку \"Домой\" слишком утомительно нажимать, а до панели уведомлений слишком далеко тянуться? тогда испробуйте это приложение..</string>
-  <!--Original value: Notice:-->
-  <string name="notice_title">Примечание:</string>
-  <!--Original value: I understand-->
-  <string name="notice_understand">я понимаю,</string>
-  <!--Original value: OK-->
-  <string name="notice_ok">хорошо</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="notification_title">Swipe Home Button</string>
+    <string name="notification_text">Замена кнопки \"Домой\"</string>
+    <string name="app_name">Swipe Home Button</string>
+    <string name="app_name_free">Swipe Home Button (пробная версия)</string>
+    <string name="menu_settings">Настройки</string>
+    <string name="pref_category_enable">Включить</string>
+    <string name="pref_category_settings">Настройка</string>
+    <string name="pref_category_binding">Привязка</string>
+    <string name="pref_category_about">О программе</string>
+    <string name="pref_enable">Включить жесты</string>
+    <string name="pref_enable_summary">Запуск службы жестов</string>
+    <string name="pref_swipe_autostart">Автозапуск</string>
+    <string name="pref_swipe_autostart_summary">Автоматический запуск службы при загрузке</string>
+    <string name="pref_transparenticon">Прозрачный значок</string>
+    <string name="pref_transparenticon_summary">Делает значок в панели уведомлений прозрачным</string>
+    <string name="dialog_transparenticon_summary">Только на устройствах с Android 4.1 + можно полностью скрыть значок уведомления, сделать это можно стандартным способом в менеджере приложений, сняв галку \"Включить уведомления\".</string>
+    <string name="dialog_low_warn_summary">Пожалуйста обратите внимание, что выполнение жеста может быть затруднено на некоторых устройствах</string>
+    <string name="pref_areaheight">Высота области обнаружения</string>
+    <string name="pref_areaheight_summary">Высота влияет на чувствительность</string>
+    <string name="pref_areaheight_small">Небольшая</string>
+    <string name="pref_areaheight_smaller">Меньше</string>
+    <string name="pref_areaheight_normal">Обычная</string>
+    <string name="pref_areaheight_larger">Больше</string>
+    <string name="pref_areaheight_large">Большая</string>
+    <string name="dialog_areaheight_notice">Большая высота блокирует больше пространства, а небольшая снижает чувствительность и требует устойчивого и медленного жеста</string>
+    <string name="pref_forcenotification">Принудительное уведомление</string>
+    <string name="pref_forcenotification_summary">Принудительно открывать панель уведомлений даже в полноэкранных приложениях.</string>
+    <string name="pref_tapnotice">Уведомление нажатия</string>
+    <string name="pref_tapnotice_summary">Всплывающее уведомление после двух последовательных нажатий в зоне обнаружения жеста</string>
+	<string name="pref_tapvibrate">Вибрация нажатия</string>
+    <string name="pref_tapvibrate_summary">Вибрировать при нажатии на область обнаружения</string>
+    <string name="pref_vibrate">Вибрация жеста</string>
+    <string name="pref_vibrate_summary">Вибрировать при обнаружении жеста</string>
+    <string name="dialog0_title">Выбор действия</string>
+    <string name="dialog0_none">Нет</string>
+    <string name="dialog0_homebutton">Кнопка \"Домой\"</string>
+    <string name="dialog0_recentapp">Последние запущенные</string>
+    <string name="dialog0_pullnotification">Сдвинуть шторку</string>
+    <string name="dialog0_menubutton">Кнопка \"Назад\"</string>
+    <string name="dialog0_backbutton">Кнопка \"Меню\"</string>
+    <string name="dialog0_customapp">Мое приложение</string>
+    <string name="dialog0_customapp_free">"Мое приложение 
+(только в полной версии)"</string>
+    <string name="dialog0_nexttrack">Играть следующий трек</string>
+    <string name="dialog0_shortcut">Ярлык приложения</string>
+    <string name="dialog0_shortcut_free">"Ярлык приложения
+(только в полной версии)"</string>
+    <string name="dialog1_title">Выбор приложения</string>
+    <string name="pref_swipeup">Вверх</string>
+    <string name="pref_swipefarup">Высоко вверх</string>
+    <string name="pref_swipeupdown">Вверх и вниз</string>
+    <string name="pref_swipeupleft">Вверх влево</string>
+    <string name="pref_swipeupright">Вверх вправо</string>
+    <string name="pref_swipelowleft">Вниз влево</string>
+    <string name="pref_swipelowright">Вниз вправо</string>
+    <string name="pref_instruction">Инструкции</string>
+    <string name="pref_instruction_summary">Инструкции по жестам</string>
+    <string name="pref_advanced_setting">Дополнительные настройки</string>
+    <string name="pref_advanced_setting_summary">Прочие настройки для жестов</string>
+    <string name="pref_binding">Привязка</string>
+    <string name="pref_binding_summary">Действие в ответ на жест</string>
+    <string name="pref_swipeup_summary">Проведите вверх по экрану начиная из за края с нижней центральной его части</string>
+    <string name="pref_swipefarup_summary">Проведите вверх по экрану начиная из за края с нижней центральной его части примерно на 2/5 высоты экрана</string>
+    <string name="pref_swipeupdown_summary">Проведите вверх по экрану начиная из за края с нижней центральной его части и не отпуская пальца опуститесь вниз (за край экрана)</string>
+    <string name="pref_swipeupleft_summary">Проведите чуть наискось вверх влево по экрану начиная из за края с нижней центральной его части</string>
+    <string name="pref_swipeupright_summary">Проведите чуть наискось вверх вправо по экрану начиная из за края с нижней центральной его части</string>
+    <string name="pref_swipelowleft_summary">Проведите вверх по экрану и не отпуская пальца опуститесь вниз влево. Найдите свой ​​собственный стиль</string>
+    <string name="pref_swipelowright_summary">Проведите вверх по экрану и не отпуская пальца опуститесь вниз вправо. Найдите свой ​​собственный стиль</string>
+    <string name="dialog_tapnotice_title">Уведомление нажатия</string>
+    <string name="dialog_tapnotice">Вы должны нажать в зоне обнаружения жеста два раза подряд, попробуйте нажатие верхней области.</string>
+    <string name="dialog_tapnotice_checkbox">Показать это сообщение еще раз</string>
+    <string name="pref_countdown">Купить полную версию</string>
+    <string name="pref_countdown_notexpired_summary">Пробный период, осталось:</string>
+    <string name="pref_countdown_expired_summary">Срок действия пробной версии истек. Пожалуйста купите полную версию чтобы получить неограниченные жесты, а также возможность открытия других приложений и ярлыков</string>
+    <string name="pref_rating">Дайте мне пятизвездочный рейтинг</string>
+    <string name="pref_rating_summary">Если вам понравилось это приложение</string>
+    <string name="dialog_annoy">Swipe Home Button</string>
+    <string name="dialog_annoy_summary">Срок действия пробной версии истек. Хотите купить полную версию сейчас, чтобы получить неограниченные жесты, а также возможность открытия других приложений?</string>
+    <string name="dialog_annoy_positivebutton">ДА</string>
+    <string name="dialog_annoy_negativebutton">Нет</string>
+    <string name="pref_share">Обмен</string>
+    <string name="pref_share_summary">Расскажите другу о Swipe Home Button</string>
+    <string name="pref_share_description">Вам кажется, что кнопку \"Домой\" слишком утомительно нажимать, а до панели уведомлений слишком далеко тянуться? тогда испробуйте это приложение..</string>
+    <string name="notice_title">Обратите внимание:</string>
+    <string name="notice_understand">Я понимаю</string>
+    <string name="notice_ok">OK</string>
 </resources>

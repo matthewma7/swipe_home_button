@@ -35,6 +35,8 @@
     <string name="pref_forcenotification_summary">Force to pull-down notification even in full screen app.</string>
     <string name="pref_tapnotice">Tap notice</string>
     <string name="pref_tapnotice_summary">Pop up a notice after two concecutive tap on swipe detection area</string>
+    <string name="pref_tapvibrate">Tap vibrate</string>
+    <string name="pref_tapvibrate_summary">Vibrate your phone when tapped on detection area</string>
     <string name="pref_vibrate">Swipe vibrate</string>
     <string name="pref_vibrate_summary">Vibrate your device when detects a swipe gesture</string>
     

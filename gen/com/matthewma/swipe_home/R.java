@@ -34,414 +34,340 @@ public final class R {
     public static final class string {
         /** Original value: Swipe Home Button
 Original value: Swipe Home Button
-Original value: Swipe Home Button
          */
         public static final int app_name=0x7f050002;
         /** Original value: Swipe Home Button (Trial)
-Original value: Swipe Home Button (Trial)
 Original value: Swipe Home Button (Trial)
          */
         public static final int app_name_free=0x7f050003;
         /** Original value: Menu button
 Original value: Menu button
-Original value: Menu button
          */
-        public static final int dialog0_backbutton=0x7f050025;
+        public static final int dialog0_backbutton=0x7f050027;
         /** Original value: Custom app
 Original value: Custom app
-Original value: Custom app
          */
-        public static final int dialog0_customapp=0x7f050026;
+        public static final int dialog0_customapp=0x7f050028;
         /** Original value: Custom app \n(full version only)
 Original value: Custom app \n(full version only)
-Original value: Custom app \n(full version only)
          */
-        public static final int dialog0_customapp_free=0x7f050027;
+        public static final int dialog0_customapp_free=0x7f050029;
         /** Original value: Home button
 Original value: Home button
-Original value: Home button
          */
-        public static final int dialog0_homebutton=0x7f050021;
+        public static final int dialog0_homebutton=0x7f050023;
         /** Original value: Back button
 Original value: Back button
-Original value: Back button
          */
-        public static final int dialog0_menubutton=0x7f050024;
+        public static final int dialog0_menubutton=0x7f050026;
         /** Original value: Play next track
 Original value: Play next track
-Original value: Play next track
          */
-        public static final int dialog0_nexttrack=0x7f050028;
+        public static final int dialog0_nexttrack=0x7f05002a;
         /** Original value: None
 Original value: None
-Original value: None
          */
-        public static final int dialog0_none=0x7f050020;
+        public static final int dialog0_none=0x7f050022;
         /** Original value: Pull down notification
 Original value: Pull down notification
-Original value: Pull down notification
          */
-        public static final int dialog0_pullnotification=0x7f050023;
+        public static final int dialog0_pullnotification=0x7f050025;
         /** Original value: Show recent app
 Original value: Show recent app
-Original value: Show recent app
          */
-        public static final int dialog0_recentapp=0x7f050022;
+        public static final int dialog0_recentapp=0x7f050024;
         /** Original value: App shortcut
 Original value: App shortcut
-Original value: App shortcut
          */
-        public static final int dialog0_shortcut=0x7f050029;
+        public static final int dialog0_shortcut=0x7f05002b;
         /** Original value: App shortcut \n(full version only)
 Original value: App shortcut \n(full version only)
-Original value: App shortcut \n(full version only)
          */
-        public static final int dialog0_shortcut_free=0x7f05002a;
+        public static final int dialog0_shortcut_free=0x7f05002c;
         /** Original value: Choose an action
 Original value: Choose an action
-Original value: Choose an action
          */
-        public static final int dialog0_title=0x7f05001f;
+        public static final int dialog0_title=0x7f050021;
         /** Original value: Choose an app
 Original value: Choose an app
-Original value: Choose an app
          */
-        public static final int dialog1_title=0x7f05002b;
+        public static final int dialog1_title=0x7f05002d;
         /** Original value: Swipe Home Button
 Original value: Swipe Home Button
-Original value: Swipe Home Button
          */
-        public static final int dialog_annoy=0x7f050048;
+        public static final int dialog_annoy=0x7f05004a;
         /** Original value: No
 Original value: No
-Original value: No
          */
-        public static final int dialog_annoy_negativebutton=0x7f05004b;
+        public static final int dialog_annoy_negativebutton=0x7f05004d;
         /** Original value: YES
 Original value: YES
-Original value: YES
          */
-        public static final int dialog_annoy_positivebutton=0x7f05004a;
+        public static final int dialog_annoy_positivebutton=0x7f05004c;
         /** Original value: Trial has expired. Would you like to buy full version now to get unlimited swipes and use swipe to open other apps?
 Original value: Trial has expired. Would you like to buy full version now to get unlimited swipes and use swipe to open other apps?
-Original value: Trial has expired. Would you like to buy full version now to get unlimited swipes and use swipe to open other apps?
          */
-        public static final int dialog_annoy_summary=0x7f050049;
+        public static final int dialog_annoy_summary=0x7f05004b;
         /** Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. 
-Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. 
 Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. 
          */
         public static final int dialog_areaheight_notice=0x7f050018;
         /** Original value: Please keep in mind this swipe gesture might be difficult to perform on certain devices
 Original value: Please keep in mind this swipe gesture might be difficult to perform on certain devices
-Original value: Please keep in mind this swipe gesture might be difficult to perform on certain devices
          */
         public static final int dialog_low_warn_summary=0x7f050010;
         /** Original value: You have tap on the swipe detection area for two concecutive times, please try tapping an upper area.
 Original value: You have tap on the swipe detection area for two concecutive times, please try tapping an upper area.
-Original value: You have tap on the swipe detection area for two concecutive times, please try tapping an upper area.
          */
-        public static final int dialog_tapnotice=0x7f050041;
+        public static final int dialog_tapnotice=0x7f050043;
         /** Original value: Show this notice next time
 Original value: Show this notice next time
-Original value: Show this notice next time
          */
-        public static final int dialog_tapnotice_checkbox=0x7f050042;
+        public static final int dialog_tapnotice_checkbox=0x7f050044;
         /** Original value: Tap Notice
 Original value: Tap Notice
-Original value: Tap Notice
          */
-        public static final int dialog_tapnotice_title=0x7f050040;
+        public static final int dialog_tapnotice_title=0x7f050042;
         /** Original value: Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.
-Original value: Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.
 Original value: Only on Android 4.1+ devices, it is possible to hide the icon in notification pull-down, by unchecking \"show notification\" for swipe home button in Application Manager. Otherwise, the icon is required to keep swipes working.
          */
         public static final int dialog_transparenticon_summary=0x7f05000f;
         /** Original value: Settings
 Original value: Settings
-Original value: Settings
          */
         public static final int menu_settings=0x7f050004;
         /** Original value: OK
 Original value: OK
-Original value: OK
          */
-        public static final int notice_ok=0x7f050051;
+        public static final int notice_ok=0x7f050053;
         /** Original value: Notice:
 Original value: Notice:
-Original value: Notice:
          */
-        public static final int notice_title=0x7f05004f;
+        public static final int notice_title=0x7f050051;
         /** Original value: I understand
 Original value: I understand
-Original value: I understand
          */
-        public static final int notice_understand=0x7f050050;
+        public static final int notice_understand=0x7f050052;
         /** Original value: Replacing your home button
-Original value: Replacing your home button
 Original value: Replacing your home button
          */
         public static final int notification_text=0x7f050001;
         /** Original value: Swipe Home Button
 Original value: Swipe Home Button
-Original value: Swipe Home Button
          */
         public static final int notification_title=0x7f050000;
         /** Original value: Advanced settings
 Original value: Advanced settings
-Original value: Advanced settings
          */
-        public static final int pref_advanced_setting=0x7f050035;
+        public static final int pref_advanced_setting=0x7f050037;
         /** Original value: More settings for swipe gestrues
 Original value: More settings for swipe gestrues
-Original value: More settings for swipe gestrues
          */
-        public static final int pref_advanced_setting_summary=0x7f050036;
+        public static final int pref_advanced_setting_summary=0x7f050038;
         /** Original value: Detection area height
-Original value: Detection area height
 Original value: Detection area height
          */
         public static final int pref_areaheight=0x7f050011;
         /** Original value: Large
 Original value: Large
-Original value: Large
          */
         public static final int pref_areaheight_large=0x7f050017;
         /** Original value: Larger
-Original value: Larger
 Original value: Larger
          */
         public static final int pref_areaheight_larger=0x7f050016;
         /** Original value: Normal
 Original value: Normal
-Original value: Normal
          */
         public static final int pref_areaheight_normal=0x7f050015;
         /** Original value: Small
-Original value: Small
 Original value: Small
          */
         public static final int pref_areaheight_small=0x7f050013;
         /** Original value: Smaller
 Original value: Smaller
-Original value: Smaller
          */
         public static final int pref_areaheight_smaller=0x7f050014;
         /** Original value: The height has effect on sensitivity
-Original value: The height has effect on sensitivity
 Original value: The height has effect on sensitivity
          */
         public static final int pref_areaheight_summary=0x7f050012;
         /** Original value: Binding
 Original value: Binding
-Original value: Binding
          */
-        public static final int pref_binding=0x7f050037;
+        public static final int pref_binding=0x7f050039;
         /** Original value: Customize actions of swipe gestures
 Original value: Customize actions of swipe gestures
-Original value: Customize actions of swipe gestures
          */
-        public static final int pref_binding_summary=0x7f050038;
+        public static final int pref_binding_summary=0x7f05003a;
         /** Original value: About
-Original value: About
 Original value: About
          */
         public static final int pref_category_about=0x7f050008;
         /** Original value: Swipe
 Original value: Swipe
-Original value: Swipe
          */
         public static final int pref_category_binding=0x7f050007;
         /** Original value: Enable
-Original value: Enable
 Original value: Enable
          */
         public static final int pref_category_enable=0x7f050005;
         /** Original value: Setting
 Original value: Setting
-Original value: Setting
          */
         public static final int pref_category_settings=0x7f050006;
         /** Original value: Buy full version
 Original value: Buy full version
-Original value: Buy full version
          */
-        public static final int pref_countdown=0x7f050043;
+        public static final int pref_countdown=0x7f050045;
         /** Original value: Trial has expired. Please buy full version to get unlimited swipes and use swipe to open other apps and shortcuts.
 Original value: Trial has expired. Please buy full version to get unlimited swipes and use swipe to open other apps and shortcuts.
-Original value: Trial has expired. Please buy full version to get unlimited swipes and use swipe to open other apps and shortcuts.
          */
-        public static final int pref_countdown_expired_summary=0x7f050045;
+        public static final int pref_countdown_expired_summary=0x7f050047;
         /** Original value: Trial days left :
 Original value: Trial days left :
-Original value: Trial days left :
          */
-        public static final int pref_countdown_notexpired_summary=0x7f050044;
+        public static final int pref_countdown_notexpired_summary=0x7f050046;
         /** Original value: Enable gestures
-Original value: Enable gestures
 Original value: Enable gestures
          */
         public static final int pref_enable=0x7f050009;
         /** Original value: Start swipe gesture service
 Original value: Start swipe gesture service
-Original value: Start swipe gesture service
          */
         public static final int pref_enable_summary=0x7f05000a;
         /** Original value: Force notification
-Original value: Force notification
 Original value: Force notification
          */
         public static final int pref_forcenotification=0x7f050019;
         /** Original value: Force to pull-down notification even in full screen app.
 Original value: Force to pull-down notification even in full screen app.
-Original value: Force to pull-down notification even in full screen app.
          */
         public static final int pref_forcenotification_summary=0x7f05001a;
         /** Original value: Instructions
 Original value: Instructions
-Original value: Instructions
          */
-        public static final int pref_instruction=0x7f050033;
+        public static final int pref_instruction=0x7f050035;
         /** Original value: Instructions for swipe gestures
 Original value: Instructions for swipe gestures
-Original value: Instructions for swipe gestures
          */
-        public static final int pref_instruction_summary=0x7f050034;
+        public static final int pref_instruction_summary=0x7f050036;
         /** Original value: Give me a five star rating
 Original value: Give me a five star rating
-Original value: Give me a five star rating
          */
-        public static final int pref_rating=0x7f050046;
+        public static final int pref_rating=0x7f050048;
         /** Original value: If you like this app
 Original value: If you like this app
-Original value: If you like this app
          */
-        public static final int pref_rating_summary=0x7f050047;
+        public static final int pref_rating_summary=0x7f050049;
         /** Original value: Share
 Original value: Share
-Original value: Share
          */
-        public static final int pref_share=0x7f05004c;
+        public static final int pref_share=0x7f05004e;
         /** Original value: Do you think you home button is hard to press and notification bar is far to reach? check out this app
 Original value: Do you think you home button is hard to press and notification bar is far to reach? check out this app
-Original value: Do you think you home button is hard to press and notification bar is far to reach? check out this app
          */
-        public static final int pref_share_description=0x7f05004e;
+        public static final int pref_share_description=0x7f050050;
         /** Original value: Tell your friend about Swipe Home Button
 Original value: Tell your friend about Swipe Home Button
-Original value: Tell your friend about Swipe Home Button
          */
-        public static final int pref_share_summary=0x7f05004d;
+        public static final int pref_share_summary=0x7f05004f;
         /** Original value: Start at boot
-Original value: Start at boot
 Original value: Start at boot
          */
         public static final int pref_swipe_autostart=0x7f05000b;
         /** Original value: Start swipe gesture service after phone boots
 Original value: Start swipe gesture service after phone boots
-Original value: Start swipe gesture service after phone boots
          */
         public static final int pref_swipe_autostart_summary=0x7f05000c;
         /** Original value: Swipe far up
 Original value: Swipe far up
-Original value: Swipe far up
          */
-        public static final int pref_swipefarup=0x7f05002d;
+        public static final int pref_swipefarup=0x7f05002f;
         /** Original value: Swipe up into the screen from the outside of bottom center screen and go over 2/5 height of the screen
 Original value: Swipe up into the screen from the outside of bottom center screen and go over 2/5 height of the screen
-Original value: Swipe up into the screen from the outside of bottom center screen and go over 2/5 height of the screen
          */
-        public static final int pref_swipefarup_summary=0x7f05003a;
+        public static final int pref_swipefarup_summary=0x7f05003c;
         /** Original value: Swipe left down
 Original value: Swipe left down
-Original value: Swipe left down
          */
-        public static final int pref_swipelowleft=0x7f050031;
+        public static final int pref_swipelowleft=0x7f050033;
         /** Original value: Swipe up into the screen then exit the screen from bottom left. Find your own style
 Original value: Swipe up into the screen then exit the screen from bottom left. Find your own style
-Original value: Swipe up into the screen then exit the screen from bottom left. Find your own style
          */
-        public static final int pref_swipelowleft_summary=0x7f05003e;
+        public static final int pref_swipelowleft_summary=0x7f050040;
         /** Original value: Swipe right down
 Original value: Swipe right down
-Original value: Swipe right down
          */
-        public static final int pref_swipelowright=0x7f050032;
+        public static final int pref_swipelowright=0x7f050034;
         /** Original value: Swipe up into the screen then exit the screen from bottom right. Find your own style
 Original value: Swipe up into the screen then exit the screen from bottom right. Find your own style
-Original value: Swipe up into the screen then exit the screen from bottom right. Find your own style
          */
-        public static final int pref_swipelowright_summary=0x7f05003f;
+        public static final int pref_swipelowright_summary=0x7f050041;
         /** Original value: Swipe up
 Original value: Swipe up
-Original value: Swipe up
          */
-        public static final int pref_swipeup=0x7f05002c;
+        public static final int pref_swipeup=0x7f05002e;
         /** Original value: Swipe up into the screen from the outside of bottom center screen
 Original value: Swipe up into the screen from the outside of bottom center screen
-Original value: Swipe up into the screen from the outside of bottom center screen
          */
-        public static final int pref_swipeup_summary=0x7f050039;
+        public static final int pref_swipeup_summary=0x7f05003b;
         /** Original value: Swipe up then down
 Original value: Swipe up then down
-Original value: Swipe up then down
          */
-        public static final int pref_swipeupdown=0x7f05002e;
+        public static final int pref_swipeupdown=0x7f050030;
         /** Original value: Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen
 Original value: Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen
-Original value: Swipe up into the screen from the outside of bottom center screen and continue swipe back down outside the screen
          */
-        public static final int pref_swipeupdown_summary=0x7f05003b;
+        public static final int pref_swipeupdown_summary=0x7f05003d;
         /** Original value: Swipe up left
 Original value: Swipe up left
-Original value: Swipe up left
          */
-        public static final int pref_swipeupleft=0x7f05002f;
+        public static final int pref_swipeupleft=0x7f050031;
         /** Original value: Swipe far up left into the screen from outside of bottom center screen
 Original value: Swipe far up left into the screen from outside of bottom center screen
-Original value: Swipe far up left into the screen from outside of bottom center screen
          */
-        public static final int pref_swipeupleft_summary=0x7f05003c;
+        public static final int pref_swipeupleft_summary=0x7f05003e;
         /** Original value: Swipe up right
 Original value: Swipe up right
-Original value: Swipe up right
          */
-        public static final int pref_swipeupright=0x7f050030;
+        public static final int pref_swipeupright=0x7f050032;
         /** Original value: Swipe far up right into the screen from outside of bottom center screen
 Original value: Swipe far up right into the screen from outside of bottom center screen
-Original value: Swipe far up right into the screen from outside of bottom center screen
          */
-        public static final int pref_swipeupright_summary=0x7f05003d;
+        public static final int pref_swipeupright_summary=0x7f05003f;
         /** Original value: Tap notice
-Original value: Tap notice
 Original value: Tap notice
          */
         public static final int pref_tapnotice=0x7f05001b;
         /** Original value: Pop up a notice after two concecutive tap on swipe detection area
 Original value: Pop up a notice after two concecutive tap on swipe detection area
-Original value: Pop up a notice after two concecutive tap on swipe detection area
          */
         public static final int pref_tapnotice_summary=0x7f05001c;
+        /** Original value: Tap vibrate
+Original value: Tap vibrate
+         */
+        public static final int pref_tapvibrate=0x7f05001d;
+        /** Original value: Vibrate your phone when tapped on detection area
+Original value: Vibrate your phone when tapped on detection area
+         */
+        public static final int pref_tapvibrate_summary=0x7f05001e;
         /** Original value: Transparent notification icon
-Original value: Transparent notification icon
 Original value: Transparent notification icon
          */
         public static final int pref_transparenticon=0x7f05000d;
         /** Original value: Make the icon in notification bar transparent
 Original value: Make the icon in notification bar transparent
-Original value: Make the icon in notification bar transparent
          */
         public static final int pref_transparenticon_summary=0x7f05000e;
         /** Original value: Swipe vibrate
 Original value: Swipe vibrate
-Original value: Swipe vibrate
          */
-        public static final int pref_vibrate=0x7f05001d;
+        public static final int pref_vibrate=0x7f05001f;
         /** Original value: Vibrate your device when detects a swipe gesture
 Original value: Vibrate your device when detects a swipe gesture
-Original value: Vibrate your device when detects a swipe gesture
          */
-        public static final int pref_vibrate_summary=0x7f05001e;
+        public static final int pref_vibrate_summary=0x7f050020;
     }
     public static final class style {
         /** 

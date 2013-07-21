@@ -287,7 +287,6 @@ public class SettingsActivity extends PreferenceActivity implements
 		        bundle.putStringArrayList(Intent.EXTRA_SHORTCUT_NAME, shortcutNames);
 
 		        ArrayList<ShortcutIconResource> shortcutIcons = new ArrayList<ShortcutIconResource>();
-//		        shortcutIcons.add(ShortcutIconResource.fromContext(Launcher.this,R.drawable.ic_launcher_application));
 		        bundle.putParcelableArrayList(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, shortcutIcons);
 
 		        Intent pickIntent = new Intent(Intent.ACTION_PICK_ACTIVITY);

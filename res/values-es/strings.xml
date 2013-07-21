@@ -77,6 +77,10 @@
   <string name="pref_tapnotice">Toque aviso</string>
   <!--Original value: Pop up a notice after two concecutive tap on swipe detection area-->
   <string name="pref_tapnotice_summary">aparecerá un aviso después de tres tap concecutive en región de detección magnética</string>
+  <!--Original value: Tap vibrate-->
+  <string name="pref_tapvibrate">Toque vibrar</string>
+  <!--Original value: Vibrate your phone when tapped on detection area-->
+  <string name="pref_tapvibrate_summary">Vibrar el teléfono cuando se le golpea en el área de detección</string>
   <!--Original value: Swipe vibrate-->
   <string name="pref_vibrate">Swipe vibrar</string>
   <!--Original value: Vibrate your device when detects a swipe gesture-->

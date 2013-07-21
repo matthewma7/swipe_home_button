@@ -77,6 +77,10 @@
   <string name="pref_tapnotice">誤觸提示</string>
   <!--Original value: Pop up a notice after two concecutive tap on swipe detection area-->
   <string name="pref_tapnotice_summary">在連續誤觸手勢檢測區域後，彈出提示</string>
+  <!--Original value: Tap vibrate-->
+  <string name="pref_tapvibrate">誤觸振動</string>
+  <!--Original value: Vibrate your phone when tapped on detection area-->
+  <string name="pref_tapvibrate_summary">當誤觸手勢監測區域時，震動手機</string>
   <!--Original value: Swipe vibrate-->
   <string name="pref_vibrate">滑動振動</string>
   <!--Original value: Vibrate your device when detects a swipe gesture-->

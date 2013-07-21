@@ -59,7 +59,6 @@
 			</Preference>
 		</PreferenceScreen>
 		
-	    	    
 	    <PreferenceScreen
                 android:title="@string/pref_instruction"
                 android:summary="@string/pref_instruction_summary">
@@ -120,12 +119,18 @@
 	        
 			<CheckBoxPreference
 	            android:defaultValue="true"
+	            android:key="prefTapVibrate"
+	            android:title="@string/pref_tapvibrate"
+	            android:summary="@string/pref_tapvibrate_summary" >
+	        </CheckBoxPreference>
+	        
+			<CheckBoxPreference
+	            android:defaultValue="true"
 	            android:key="prefVibrate"
 	            android:title="@string/pref_vibrate"
 	            android:summary="@string/pref_vibrate_summary" >
 	        </CheckBoxPreference>
 		</PreferenceScreen>
-	    
  	</PreferenceCategory>
     
 <!--     <PreferenceCategory android:title="@string/pref_category_help" > -->
@@ -138,15 +143,5 @@
     	    android:title="@string/pref_share" 
             android:summary="@string/pref_share_summary">		   
 		</Preference>
-		
-<!--     	<Preference android:key="prefAbout" -->
-<!--     	    android:title="@string/pref_author"  -->
-<!--             android:summary="@string/pref_author_summary"> -->
-<!-- 		    <intent android:action="android.intent.action.VIEW" -->
-<!-- 		            android:data="mailto:matthew.ma.7@gmail.com" > -->
-<!-- 	             <extra android:name="android.intent.extra.SUBJECT"  -->
-<!-- 	                 android:value="@string/pref_author_email_subject" /> -->
-<!--             </intent> -->
-<!-- 		</Preference> -->
- 	</PreferenceCategory>
+	</PreferenceCategory>
 </PreferenceScreen>

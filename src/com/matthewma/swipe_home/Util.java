@@ -3,7 +3,8 @@ package com.matthewma.swipe_home;
 import android.content.Context;
 
 public class Util {
-	public static final int PrefRatingThreshold=150;
+	//public static final int PrefRatingThreshold=150;
+	
 	
 	public static String getDefaultAction(String key){
 		if(key.equals("prefSwipeup")){

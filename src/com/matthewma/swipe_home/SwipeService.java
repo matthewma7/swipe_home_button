@@ -2,9 +2,6 @@ package com.matthewma.swipe_home;
 
 import java.lang.reflect.Method;
 import java.util.Date;
-
-
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Notification;
@@ -62,7 +59,8 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean firstTapNotice=true;
 	Date lastTapTime = new Date();
 	Vibrator vibrator;
-	Boolean vibrate;
+	Boolean swipeVibrate;
+	Boolean tapVibrate;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -71,7 +69,8 @@ public class SwipeService extends Service implements OnGestureListener{
 		sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 		prefForceNotification=sharedPrefs.getBoolean("prefForceNotification", false);
 		prefTabNotice=sharedPrefs.getBoolean("prefTabNotice", true);
-		vibrate=sharedPrefs.getBoolean("prefVibrate", true);
+		swipeVibrate=sharedPrefs.getBoolean("prefVibrate", true);
+		tapVibrate=sharedPrefs.getBoolean("prefTapVibrate", true);
 		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
 		int detectAreaHeight=sharedPrefs.getInt("prefDetectAreaHeight", 2);
 		AreaHeight areaHeight=new AreaHeight();
@@ -227,7 +226,6 @@ public class SwipeService extends Service implements OnGestureListener{
 				}
 			}
 		}
-
 		return false;
 	}
 	
@@ -253,7 +251,9 @@ public class SwipeService extends Service implements OnGestureListener{
 
 	@Override
 	public boolean onSingleTapUp(MotionEvent arg0) {
-		vibrator.vibrate(35);
+		if(tapVibrate){
+			vibrator.vibrate(35);
+		}
 		if(prefTabNotice){
 			long timeSpan=(new Date().getTime() - lastTapTime.getTime()) / 1000;
 			if(timeSpan<2){
@@ -309,7 +309,7 @@ public class SwipeService extends Service implements OnGestureListener{
 			return;
 		}
 		
-		if(vibrate){
+		if(swipeVibrate){
 			vibrator.vibrate(10);
 		}
 		

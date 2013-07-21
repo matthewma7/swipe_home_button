@@ -72,7 +72,8 @@ com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
     java.lang.Boolean firstTapNotice -> i
     java.util.Date lastTapTime -> j
     android.os.Vibrator vibrator -> k
-    java.lang.Boolean vibrate -> l
+    java.lang.Boolean swipeVibrate -> l
+    java.lang.Boolean tapVibrate -> m
     void onCreate() -> onCreate
     int onStartCommand(android.content.Intent,int,int) -> onStartCommand
     android.os.IBinder onBind(android.content.Intent) -> onBind
