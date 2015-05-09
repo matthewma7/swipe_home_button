@@ -1,4 +1,4 @@
-package com.matthewma.swipe_home;
+package com.matthewma.swipehomebuttonfree;
 
 import java.util.ArrayList;
 import java.util.List;

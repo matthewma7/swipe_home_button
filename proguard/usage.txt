@@ -1,16 +1,16 @@
-com.matthewma.swipe_home.BuildConfig
-com.matthewma.swipe_home.R
-com.matthewma.swipe_home.R$attr
-com.matthewma.swipe_home.R$drawable
-com.matthewma.swipe_home.R$id
-com.matthewma.swipe_home.R$layout
-com.matthewma.swipe_home.R$string
-com.matthewma.swipe_home.R$style
-com.matthewma.swipe_home.R$xml
-com.matthewma.swipe_home.SettingsActivity:
+com.matthewma.swipehomebuttonfree.BuildConfig
+com.matthewma.swipehomebuttonfree.R
+com.matthewma.swipehomebuttonfree.R$attr
+com.matthewma.swipehomebuttonfree.R$drawable
+com.matthewma.swipehomebuttonfree.R$id
+com.matthewma.swipehomebuttonfree.R$layout
+com.matthewma.swipehomebuttonfree.R$string
+com.matthewma.swipehomebuttonfree.R$style
+com.matthewma.swipehomebuttonfree.R$xml
+com.matthewma.swipehomebuttonfree.SettingsActivity:
     private static final int REQUEST_PICK_SHORTCUT
     private static final int REQUEST_CREATE_SHORTCUT
-com.matthewma.swipe_home.SwipeService:
+com.matthewma.swipehomebuttonfree.SwipeService:
     android.os.HandlerThread thread
-com.matthewma.swipe_home.Util:
+com.matthewma.swipehomebuttonfree.Util:
     5:5:public Util()

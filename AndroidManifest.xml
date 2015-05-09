@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.matthewma.swipe_home"
-    android:versionCode="19"
+    package="com.matthewma.swipehomebuttonfree"
+    android:versionCode="3"
     android:versionName="1.3.1" >
 
     <uses-sdk
@@ -21,7 +21,7 @@
         android:theme="@android:style/Theme.Holo" >
 
         <receiver
-            android:name=".IntentReceiver"
+            android:name="com.matthewma.swipehomebuttonfree.IntentReceiver"
             android:enabled="true"
             android:exported="false" >
             <intent-filter>
@@ -29,10 +29,10 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".SwipeService" />
+        <service android:name="com.matthewma.swipehomebuttonfree.SwipeService" />
 
         <activity
-            android:name=".SettingsActivity">
+            android:name="com.matthewma.swipehomebuttonfree.SettingsActivity">
         	<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,7 +41,7 @@
         </activity>
         
         <activity
-            android:name=".NotificationHelper"
+            android:name="com.matthewma.swipehomebuttonfree.NotificationHelper"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >

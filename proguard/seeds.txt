@@ -1,8 +1,8 @@
-com.matthewma.swipe_home.IntentReceiver
-com.matthewma.swipe_home.IntentReceiver: IntentReceiver()
-com.matthewma.swipe_home.NotificationHelper
-com.matthewma.swipe_home.NotificationHelper: NotificationHelper()
-com.matthewma.swipe_home.SettingsActivity
-com.matthewma.swipe_home.SettingsActivity: SettingsActivity()
-com.matthewma.swipe_home.SwipeService
-com.matthewma.swipe_home.SwipeService: SwipeService()
+com.matthewma.swipehomebuttonfree.IntentReceiver
+com.matthewma.swipehomebuttonfree.IntentReceiver: IntentReceiver()
+com.matthewma.swipehomebuttonfree.NotificationHelper
+com.matthewma.swipehomebuttonfree.NotificationHelper: NotificationHelper()
+com.matthewma.swipehomebuttonfree.SettingsActivity
+com.matthewma.swipehomebuttonfree.SettingsActivity: SettingsActivity()
+com.matthewma.swipehomebuttonfree.SwipeService
+com.matthewma.swipehomebuttonfree.SwipeService: SwipeService()

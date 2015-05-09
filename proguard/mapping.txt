@@ -1,24 +1,24 @@
-com.matthewma.swipe_home.AppListAdapter -> com.matthewma.swipe_home.a:
+com.matthewma.swipehomebuttonfree.AppListAdapter -> com.matthewma.swipehomebuttonfree.a:
     android.content.Context context -> a
-    com.matthewma.swipe_home.SettingsActivity$PInfo[] pinfos -> b
+    com.matthewma.swipehomebuttonfree.SettingsActivity$PInfo[] pinfos -> b
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.matthewma.swipe_home.AreaHeight -> com.matthewma.swipe_home.b:
+com.matthewma.swipehomebuttonfree.AreaHeight -> com.matthewma.swipehomebuttonfree.b:
     int Progress -> a
     java.lang.String Size -> b
     int Height -> c
     void SetHeight(int,android.content.Context) -> a
     java.lang.String getDefaultAction(java.lang.String) -> a
-com.matthewma.swipe_home.IntentReceiver -> com.matthewma.swipe_home.IntentReceiver:
+com.matthewma.swipehomebuttonfree.IntentReceiver -> com.matthewma.swipehomebuttonfree.IntentReceiver:
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.matthewma.swipe_home.NotificationHelper -> com.matthewma.swipe_home.NotificationHelper:
+com.matthewma.swipehomebuttonfree.NotificationHelper -> com.matthewma.swipehomebuttonfree.NotificationHelper:
     android.os.Handler mHandler -> b
     boolean opened -> a
     void onCreate(android.os.Bundle) -> onCreate
     void onWindowFocusChanged(boolean) -> onWindowFocusChanged
-com.matthewma.swipe_home.NotificationHelper$1 -> com.matthewma.swipe_home.c:
-    com.matthewma.swipe_home.NotificationHelper this$0 -> a
+com.matthewma.swipehomebuttonfree.NotificationHelper$1 -> com.matthewma.swipehomebuttonfree.c:
+    com.matthewma.swipehomebuttonfree.NotificationHelper this$0 -> a
     void run() -> run
-com.matthewma.swipe_home.SettingsActivity -> com.matthewma.swipe_home.SettingsActivity:
+com.matthewma.swipehomebuttonfree.SettingsActivity -> com.matthewma.swipehomebuttonfree.SettingsActivity:
     android.content.SharedPreferences sharedPrefs -> b
     java.lang.String[] swipes -> c
     java.lang.String currentPref -> a
@@ -32,35 +32,35 @@ com.matthewma.swipe_home.SettingsActivity -> com.matthewma.swipe_home.SettingsAc
     java.lang.String GetActionDescription(java.lang.String) -> a
     java.util.ArrayList getInstalledApps$2a667459() -> b
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
-    android.content.SharedPreferences access$0(com.matthewma.swipe_home.SettingsActivity) -> a
-    android.app.Dialog access$1(com.matthewma.swipe_home.SettingsActivity) -> b
-com.matthewma.swipe_home.SettingsActivity$1 -> com.matthewma.swipe_home.d:
-    com.matthewma.swipe_home.SettingsActivity this$0 -> a
+    android.content.SharedPreferences access$0(com.matthewma.swipehomebuttonfree.SettingsActivity) -> a
+    android.app.Dialog access$1(com.matthewma.swipehomebuttonfree.SettingsActivity) -> b
+com.matthewma.swipehomebuttonfree.SettingsActivity$1 -> com.matthewma.swipehomebuttonfree.d:
+    com.matthewma.swipehomebuttonfree.SettingsActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.matthewma.swipe_home.SettingsActivity$2 -> com.matthewma.swipe_home.e:
-    com.matthewma.swipe_home.SettingsActivity this$0 -> a
+com.matthewma.swipehomebuttonfree.SettingsActivity$2 -> com.matthewma.swipehomebuttonfree.e:
+    com.matthewma.swipehomebuttonfree.SettingsActivity this$0 -> a
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.matthewma.swipe_home.SettingsActivity$3 -> com.matthewma.swipe_home.f:
+com.matthewma.swipehomebuttonfree.SettingsActivity$3 -> com.matthewma.swipehomebuttonfree.f:
     void onClick(android.content.DialogInterface,int) -> onClick
-com.matthewma.swipe_home.SettingsActivity$4 -> com.matthewma.swipe_home.g:
-    com.matthewma.swipe_home.SettingsActivity this$0 -> a
+com.matthewma.swipehomebuttonfree.SettingsActivity$4 -> com.matthewma.swipehomebuttonfree.g:
+    com.matthewma.swipehomebuttonfree.SettingsActivity this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.matthewma.swipe_home.SettingsActivity$5 -> com.matthewma.swipe_home.h:
-    com.matthewma.swipe_home.SettingsActivity this$0 -> a
-    com.matthewma.swipe_home.AreaHeight val$areaHeight -> b
+com.matthewma.swipehomebuttonfree.SettingsActivity$5 -> com.matthewma.swipehomebuttonfree.h:
+    com.matthewma.swipehomebuttonfree.SettingsActivity this$0 -> a
+    com.matthewma.swipehomebuttonfree.AreaHeight val$areaHeight -> b
     android.widget.TextView val$textview -> c
     void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
     void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
     void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
-com.matthewma.swipe_home.SettingsActivity$6 -> com.matthewma.swipe_home.i:
-    com.matthewma.swipe_home.SettingsActivity this$0 -> a
-    com.matthewma.swipe_home.AreaHeight val$areaHeight -> b
+com.matthewma.swipehomebuttonfree.SettingsActivity$6 -> com.matthewma.swipehomebuttonfree.i:
+    com.matthewma.swipehomebuttonfree.SettingsActivity this$0 -> a
+    com.matthewma.swipehomebuttonfree.AreaHeight val$areaHeight -> b
     void onClick(android.content.DialogInterface,int) -> onClick
-com.matthewma.swipe_home.SettingsActivity$PInfo -> com.matthewma.swipe_home.j:
+com.matthewma.swipehomebuttonfree.SettingsActivity$PInfo -> com.matthewma.swipehomebuttonfree.j:
     java.lang.String appName -> a
     java.lang.String packageName -> b
     android.graphics.drawable.Drawable icon -> c
-com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
+com.matthewma.swipehomebuttonfree.SwipeService -> com.matthewma.swipehomebuttonfree.SwipeService:
     android.content.SharedPreferences sharedPrefs -> a
     android.widget.Button mButton -> d
     android.view.GestureDetector myGesture -> b
@@ -86,11 +86,11 @@ com.matthewma.swipe_home.SwipeService -> com.matthewma.swipe_home.SwipeService:
     boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
     int dp2px(int) -> a
     void action(java.lang.String) -> a
-com.matthewma.swipe_home.SwipeService$1 -> com.matthewma.swipe_home.k:
-    com.matthewma.swipe_home.SwipeService this$0 -> a
+com.matthewma.swipehomebuttonfree.SwipeService$1 -> com.matthewma.swipehomebuttonfree.k:
+    com.matthewma.swipehomebuttonfree.SwipeService this$0 -> a
     boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
-com.matthewma.swipe_home.SwipeService$2 -> com.matthewma.swipe_home.l:
-    com.matthewma.swipe_home.SwipeService this$0 -> a
+com.matthewma.swipehomebuttonfree.SwipeService$2 -> com.matthewma.swipehomebuttonfree.l:
+    com.matthewma.swipehomebuttonfree.SwipeService this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.matthewma.swipe_home.SwipeService$3 -> com.matthewma.swipe_home.m:
+com.matthewma.swipehomebuttonfree.SwipeService$3 -> com.matthewma.swipehomebuttonfree.m:
     void onClick(android.content.DialogInterface,int) -> onClick

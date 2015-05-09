@@ -1,4 +1,4 @@
-package com.matthewma.swipe_home;
+package com.matthewma.swipehomebuttonfree;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

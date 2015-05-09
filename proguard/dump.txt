@@ -1,10 +1,10 @@
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/a
+- Program class: com/matthewma/swipehomebuttonfree/a
   Superclass:    android/widget/ArrayAdapter
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x31
-    = public final class com.matthewma.swipe_home.a extends android.widget.ArrayAdapter
+    = public final class com.matthewma.swipehomebuttonfree.a extends android.widget.ArrayAdapter
 
 Interfaces (count = 0):
 
@@ -19,12 +19,12 @@ Constant Pool (count = 65):
   - Class [android/widget/ArrayAdapter]
   - Class [android/widget/ImageView]
   - Class [android/widget/TextView]
-  - Class [com/matthewma/swipe_home/a]
-  - Class [com/matthewma/swipe_home/j]
-  - Fieldref [com/matthewma/swipe_home/a.a Landroid/content/Context;]
-  - Fieldref [com/matthewma/swipe_home/a.b [Lcom/matthewma/swipe_home/j;]
-  - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/j.c Landroid/graphics/drawable/Drawable;]
+  - Class [com/matthewma/swipehomebuttonfree/a]
+  - Class [com/matthewma/swipehomebuttonfree/j]
+  - Fieldref [com/matthewma/swipehomebuttonfree/a.a Landroid/content/Context;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/a.b [Lcom/matthewma/swipehomebuttonfree/j;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.c Landroid/graphics/drawable/Drawable;]
   - Methodref [android/content/Context.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
   - Methodref [android/view/LayoutInflater.inflate (ILandroid/view/ViewGroup;Z)Landroid/view/View;]
   - Methodref [android/view/View.findViewById (I)Landroid/view/View;]
@@ -34,7 +34,7 @@ Constant Pool (count = 65):
   - NameAndType [<init> (Landroid/content/Context;I[Ljava/lang/Object;)V]
   - NameAndType [a Landroid/content/Context;]
   - NameAndType [a Ljava/lang/String;]
-  - NameAndType [b [Lcom/matthewma/swipe_home/j;]
+  - NameAndType [b [Lcom/matthewma/swipehomebuttonfree/j;]
   - NameAndType [c Landroid/graphics/drawable/Drawable;]
   - NameAndType [findViewById (I)Landroid/view/View;]
   - NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
@@ -44,7 +44,7 @@ Constant Pool (count = 65):
   - Utf8 [(I)Landroid/view/View;]
   - Utf8 [(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;]
   - Utf8 [(ILandroid/view/ViewGroup;Z)Landroid/view/View;]
-  - Utf8 [(Landroid/content/Context;I[Lcom/matthewma/swipe_home/j;)V]
+  - Utf8 [(Landroid/content/Context;I[Lcom/matthewma/swipehomebuttonfree/j;)V]
   - Utf8 [(Landroid/content/Context;I[Ljava/lang/Object;)V]
   - Utf8 [(Landroid/graphics/drawable/Drawable;)V]
   - Utf8 [(Ljava/lang/CharSequence;)V]
@@ -54,7 +54,7 @@ Constant Pool (count = 65):
   - Utf8 [Landroid/content/Context;]
   - Utf8 [Landroid/graphics/drawable/Drawable;]
   - Utf8 [Ljava/lang/String;]
-  - Utf8 [[Lcom/matthewma/swipe_home/j;]
+  - Utf8 [[Lcom/matthewma/swipehomebuttonfree/j;]
   - Utf8 [a]
   - Utf8 [android/content/Context]
   - Utf8 [android/view/LayoutInflater]
@@ -64,8 +64,8 @@ Constant Pool (count = 65):
   - Utf8 [android/widget/TextView]
   - Utf8 [b]
   - Utf8 [c]
-  - Utf8 [com/matthewma/swipe_home/a]
-  - Utf8 [com/matthewma/swipe_home/j]
+  - Utf8 [com/matthewma/swipehomebuttonfree/a]
+  - Utf8 [com/matthewma/swipehomebuttonfree/j]
   - Utf8 [findViewById]
   - Utf8 [getSystemService]
   - Utf8 [getView]
@@ -78,14 +78,14 @@ Fields (count = 2):
   - Field:        a Landroid/content/Context;
     Access flags: 0x2
       = private android.content.Context a
-  - Field:        b [Lcom/matthewma/swipe_home/j;
+  - Field:        b [Lcom/matthewma/swipehomebuttonfree/j;
     Access flags: 0x2
-      = private com.matthewma.swipe_home.j[] b
+      = private com.matthewma.swipehomebuttonfree.j[] b
 
 Methods (count = 2):
-  - Method:       <init>(Landroid/content/Context;I[Lcom/matthewma/swipe_home/j;)V
+  - Method:       <init>(Landroid/content/Context;I[Lcom/matthewma/swipehomebuttonfree/j;)V
     Access flags: 0x1
-      = public a(android.content.Context,int,com.matthewma.swipe_home.j[])
+      = public a(android.content.Context,int,com.matthewma.swipehomebuttonfree.j[])
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 18, locals = 4, stack = 4):
       [0] aload_0 v0
@@ -97,11 +97,11 @@ Methods (count = 2):
       [7] aload_0 v0
       [8] aload_1 v1
       [9] putfield #13
-        - Fieldref [com/matthewma/swipe_home/a.a Landroid/content/Context;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/a.a Landroid/content/Context;]
       [12] aload_0 v0
       [13] aload_3 v3
       [14] putfield #14
-        - Fieldref [com/matthewma/swipe_home/a.b [Lcom/matthewma/swipe_home/j;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/a.b [Lcom/matthewma/swipehomebuttonfree/j;]
       [17] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -112,7 +112,7 @@ Methods (count = 2):
     - Code attribute instructions (code length = 70, locals = 4, stack = 4):
       [0] aload_0 v0
       [1] getfield #13
-        - Fieldref [com/matthewma/swipe_home/a.a Landroid/content/Context;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/a.a Landroid/content/Context;]
       [4] ldc #4
         - String [layout_inflater]
       [6] invokevirtual #17
@@ -139,11 +139,11 @@ Methods (count = 2):
       [32] astore_3 v3
       [33] aload_0 v0
       [34] getfield #14
-        - Fieldref [com/matthewma/swipe_home/a.b [Lcom/matthewma/swipe_home/j;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/a.b [Lcom/matthewma/swipehomebuttonfree/j;]
       [37] iload_1 v1
       [38] aaload
       [39] getfield #15
-        - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
       [42] invokevirtual #22
         - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [45] aload_2 v2
@@ -157,11 +157,11 @@ Methods (count = 2):
       [55] astore_3 v3
       [56] aload_0 v0
       [57] getfield #14
-        - Fieldref [com/matthewma/swipe_home/a.b [Lcom/matthewma/swipe_home/j;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/a.b [Lcom/matthewma/swipehomebuttonfree/j;]
       [60] iload_1 v1
       [61] aaload
       [62] getfield #16
-        - Fieldref [com/matthewma/swipe_home/j.c Landroid/graphics/drawable/Drawable;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.c Landroid/graphics/drawable/Drawable;]
       [65] invokevirtual #21
         - Methodref [android/widget/ImageView.setImageDrawable (Landroid/graphics/drawable/Drawable;)V]
       [68] aload_2 v2
@@ -172,12 +172,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/b
+- Program class: com/matthewma/swipehomebuttonfree/b
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.matthewma.swipe_home.b extends java.lang.Object
+    = public class com.matthewma.swipehomebuttonfree.b extends java.lang.Object
 
 Interfaces (count = 0):
 
@@ -199,12 +199,12 @@ Constant Pool (count = 63):
   - String [prefSwipeupleft]
   - String [prefSwipeupright]
   - Class [android/content/Context]
-  - Class [com/matthewma/swipe_home/b]
+  - Class [com/matthewma/swipehomebuttonfree/b]
   - Class [java/lang/Object]
   - Class [java/lang/String]
-  - Fieldref [com/matthewma/swipe_home/b.a I]
-  - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/b.c I]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.a I]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
   - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
   - Methodref [java/lang/Object.<init> ()V]
   - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
@@ -232,7 +232,7 @@ Constant Pool (count = 63):
   - Utf8 [android/content/Context]
   - Utf8 [b]
   - Utf8 [c]
-  - Utf8 [com/matthewma/swipe_home/b]
+  - Utf8 [com/matthewma/swipehomebuttonfree/b]
   - Utf8 [equals]
   - Utf8 [getString]
   - Utf8 [java/lang/Object]
@@ -276,7 +276,7 @@ Methods (count = 3):
       [0] aload_0 v0
       [1] iload_1 v1
       [2] putfield #21
-        - Fieldref [com/matthewma/swipe_home/b.a I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.a I]
       [5] iload_1 v1
       [6] tableswitch (5 offsets, default=118) (target=124)
         0: offset = 34, target = 40
@@ -288,7 +288,7 @@ Methods (count = 3):
       [40] aload_0 v0
       [41] bipush 11
       [43] putfield #23
-        - Fieldref [com/matthewma/swipe_home/b.c I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
       [46] aload_0 v0
       [47] aload_2 v2
       [48] ldc #1
@@ -296,12 +296,12 @@ Methods (count = 3):
       [50] invokevirtual #24
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [53] putfield #22
-        - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
       [56] return
       [57] aload_0 v0
       [58] bipush 13
       [60] putfield #23
-        - Fieldref [com/matthewma/swipe_home/b.c I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
       [63] aload_0 v0
       [64] aload_2 v2
       [65] ldc #2
@@ -309,12 +309,12 @@ Methods (count = 3):
       [67] invokevirtual #24
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [70] putfield #22
-        - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
       [73] return
       [74] aload_0 v0
       [75] bipush 17
       [77] putfield #23
-        - Fieldref [com/matthewma/swipe_home/b.c I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
       [80] aload_0 v0
       [81] aload_2 v2
       [82] ldc #3
@@ -322,12 +322,12 @@ Methods (count = 3):
       [84] invokevirtual #24
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [87] putfield #22
-        - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
       [90] return
       [91] aload_0 v0
       [92] bipush 20
       [94] putfield #23
-        - Fieldref [com/matthewma/swipe_home/b.c I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
       [97] aload_0 v0
       [98] aload_2 v2
       [99] ldc #4
@@ -335,12 +335,12 @@ Methods (count = 3):
       [101] invokevirtual #24
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [104] putfield #22
-        - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
       [107] return
       [108] aload_0 v0
       [109] bipush 22
       [111] putfield #23
-        - Fieldref [com/matthewma/swipe_home/b.c I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
       [114] aload_0 v0
       [115] aload_2 v2
       [116] ldc #5
@@ -348,12 +348,12 @@ Methods (count = 3):
       [118] invokevirtual #24
         - Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [121] putfield #22
-        - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
       [124] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       - Stack map table attribute (count = 6):
-        - [40] Var: [a:com/matthewma/swipe_home/b][T][a:android/content/Context], Stack: 
+        - [40] Var: [a:com/matthewma/swipehomebuttonfree/b][T][a:android/content/Context], Stack: 
         - [57] Var: ..., Stack: (empty)
         - [74] Var: ..., Stack: (empty)
         - [91] Var: ..., Stack: (empty)
@@ -444,12 +444,12 @@ Methods (count = 3):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/IntentReceiver
+- Program class: com/matthewma/swipehomebuttonfree/IntentReceiver
   Superclass:    android/content/BroadcastReceiver
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.matthewma.swipe_home.IntentReceiver extends android.content.BroadcastReceiver
+    = public class com.matthewma.swipehomebuttonfree.IntentReceiver extends android.content.BroadcastReceiver
 
 Interfaces (count = 0):
 
@@ -461,8 +461,8 @@ Constant Pool (count = 52):
   - Class [android/content/Intent]
   - Class [android/content/SharedPreferences]
   - Class [android/preference/PreferenceManager]
-  - Class [com/matthewma/swipe_home/IntentReceiver]
-  - Class [com/matthewma/swipe_home/SwipeService]
+  - Class [com/matthewma/swipehomebuttonfree/IntentReceiver]
+  - Class [com/matthewma/swipehomebuttonfree/SwipeService]
   - Class [java/lang/Boolean]
   - Methodref [android/content/BroadcastReceiver.<init> ()V]
   - Methodref [android/content/Context.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
@@ -495,8 +495,8 @@ Constant Pool (count = 52):
   - Utf8 [android/content/SharedPreferences]
   - Utf8 [android/preference/PreferenceManager]
   - Utf8 [booleanValue]
-  - Utf8 [com/matthewma/swipe_home/IntentReceiver]
-  - Utf8 [com/matthewma/swipe_home/SwipeService]
+  - Utf8 [com/matthewma/swipehomebuttonfree/IntentReceiver]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SwipeService]
   - Utf8 [getBoolean]
   - Utf8 [getDefaultSharedPreferences]
   - Utf8 [java/lang/Boolean]
@@ -560,7 +560,7 @@ Methods (count = 2):
       [48] dup
       [49] aload_1 v1
       [50] ldc #9
-        - Class [com/matthewma/swipe_home/SwipeService]
+        - Class [com/matthewma/swipehomebuttonfree/SwipeService]
       [52] invokespecial #13
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [55] astore_2 v2
@@ -578,12 +578,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/NotificationHelper
+- Program class: com/matthewma/swipehomebuttonfree/NotificationHelper
   Superclass:    android/app/Activity
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.matthewma.swipe_home.NotificationHelper extends android.app.Activity
+    = public class com.matthewma.swipehomebuttonfree.NotificationHelper extends android.app.Activity
 
 Interfaces (count = 0):
 
@@ -591,21 +591,21 @@ Constant Pool (count = 49):
   - Integer [2130903044]
   - Class [android/app/Activity]
   - Class [android/os/Handler]
-  - Class [com/matthewma/swipe_home/NotificationHelper]
-  - Class [com/matthewma/swipe_home/c]
+  - Class [com/matthewma/swipehomebuttonfree/NotificationHelper]
+  - Class [com/matthewma/swipehomebuttonfree/c]
   - Long [100]
-  - Fieldref [com/matthewma/swipe_home/NotificationHelper.a Z]
-  - Fieldref [com/matthewma/swipe_home/NotificationHelper.b Landroid/os/Handler;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/NotificationHelper.a Z]
+  - Fieldref [com/matthewma/swipehomebuttonfree/NotificationHelper.b Landroid/os/Handler;]
   - Methodref [android/app/Activity.<init> ()V]
   - Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
   - Methodref [android/app/Activity.onWindowFocusChanged (Z)V]
   - Methodref [android/os/Handler.<init> ()V]
   - Methodref [android/os/Handler.postDelayed (Ljava/lang/Runnable;J)Z]
-  - Methodref [com/matthewma/swipe_home/NotificationHelper.finish ()V]
-  - Methodref [com/matthewma/swipe_home/NotificationHelper.setContentView (I)V]
-  - Methodref [com/matthewma/swipe_home/c.<init> (Lcom/matthewma/swipe_home/NotificationHelper;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/NotificationHelper.finish ()V]
+  - Methodref [com/matthewma/swipehomebuttonfree/NotificationHelper.setContentView (I)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/c.<init> (Lcom/matthewma/swipehomebuttonfree/NotificationHelper;)V]
   - NameAndType [<init> ()V]
-  - NameAndType [<init> (Lcom/matthewma/swipe_home/NotificationHelper;)V]
+  - NameAndType [<init> (Lcom/matthewma/swipehomebuttonfree/NotificationHelper;)V]
   - NameAndType [a Z]
   - NameAndType [b Landroid/os/Handler;]
   - NameAndType [finish ()V]
@@ -616,7 +616,7 @@ Constant Pool (count = 49):
   - Utf8 [()V]
   - Utf8 [(I)V]
   - Utf8 [(Landroid/os/Bundle;)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/NotificationHelper;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/NotificationHelper;)V]
   - Utf8 [(Ljava/lang/Runnable;J)Z]
   - Utf8 [(Z)V]
   - Utf8 [<init>]
@@ -628,8 +628,8 @@ Constant Pool (count = 49):
   - Utf8 [android/app/Activity]
   - Utf8 [android/os/Handler]
   - Utf8 [b]
-  - Utf8 [com/matthewma/swipe_home/NotificationHelper]
-  - Utf8 [com/matthewma/swipe_home/c]
+  - Utf8 [com/matthewma/swipehomebuttonfree/NotificationHelper]
+  - Utf8 [com/matthewma/swipehomebuttonfree/c]
   - Utf8 [finish]
   - Utf8 [onCreate]
   - Utf8 [onWindowFocusChanged]
@@ -660,7 +660,7 @@ Methods (count = 3):
       [9] invokespecial #13
         - Methodref [android/os/Handler.<init> ()V]
       [12] putfield #9
-        - Fieldref [com/matthewma/swipe_home/NotificationHelper.b Landroid/os/Handler;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/NotificationHelper.b Landroid/os/Handler;]
       [15] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -677,16 +677,16 @@ Methods (count = 3):
       [6] ldc #1
         - Integer [2130903044]
       [8] invokevirtual #16
-        - Methodref [com/matthewma/swipe_home/NotificationHelper.setContentView (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/NotificationHelper.setContentView (I)V]
       [11] aload_0 v0
       [12] getfield #9
-        - Fieldref [com/matthewma/swipe_home/NotificationHelper.b Landroid/os/Handler;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/NotificationHelper.b Landroid/os/Handler;]
       [15] new #5
-        - Class [com/matthewma/swipe_home/c]
+        - Class [com/matthewma/swipehomebuttonfree/c]
       [18] dup
       [19] aload_0 v0
       [20] invokespecial #17
-        - Methodref [com/matthewma/swipe_home/c.<init> (Lcom/matthewma/swipe_home/NotificationHelper;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/c.<init> (Lcom/matthewma/swipehomebuttonfree/NotificationHelper;)V]
       [23] ldc2_w #6
         - Long [100]
       [26] invokevirtual #14
@@ -708,11 +708,11 @@ Methods (count = 3):
       [6] ifeq +14 (target=20)
       [9] aload_0 v0
       [10] getfield #8
-        - Fieldref [com/matthewma/swipe_home/NotificationHelper.a Z]
+        - Fieldref [com/matthewma/swipehomebuttonfree/NotificationHelper.a Z]
       [13] ifeq +7 (target=20)
       [16] aload_0 v0
       [17] invokevirtual #15
-        - Methodref [com/matthewma/swipe_home/NotificationHelper.finish ()V]
+        - Methodref [com/matthewma/swipehomebuttonfree/NotificationHelper.finish ()V]
       [20] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
@@ -722,12 +722,12 @@ Methods (count = 3):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/c
+- Program class: com/matthewma/swipehomebuttonfree/c
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.c extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.c extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [java/lang/Runnable]
@@ -741,8 +741,8 @@ Constant Pool (count = 72):
   - String [swipe]
   - Class [android/os/Build$VERSION]
   - Class [android/util/Log]
-  - Class [com/matthewma/swipe_home/NotificationHelper]
-  - Class [com/matthewma/swipe_home/c]
+  - Class [com/matthewma/swipehomebuttonfree/NotificationHelper]
+  - Class [com/matthewma/swipehomebuttonfree/c]
   - Class [java/lang/Class]
   - Class [java/lang/Exception]
   - Class [java/lang/Object]
@@ -750,17 +750,17 @@ Constant Pool (count = 72):
   - Class [java/lang/Throwable]
   - Class [java/lang/reflect/Method]
   - Fieldref [android/os/Build$VERSION.SDK_INT I]
-  - Fieldref [com/matthewma/swipe_home/NotificationHelper.a Z]
-  - Fieldref [com/matthewma/swipe_home/c.a Lcom/matthewma/swipe_home/NotificationHelper;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/NotificationHelper.a Z]
+  - Fieldref [com/matthewma/swipehomebuttonfree/c.a Lcom/matthewma/swipehomebuttonfree/NotificationHelper;]
   - Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
-  - Methodref [com/matthewma/swipe_home/NotificationHelper.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [com/matthewma/swipehomebuttonfree/NotificationHelper.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
   - Methodref [java/lang/Class.forName (Ljava/lang/String;)Ljava/lang/Class;]
   - Methodref [java/lang/Class.getMethod (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;]
   - Methodref [java/lang/Object.<init> ()V]
   - Methodref [java/lang/reflect/Method.invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
   - NameAndType [<init> ()V]
   - NameAndType [SDK_INT I]
-  - NameAndType [a Lcom/matthewma/swipe_home/NotificationHelper;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/NotificationHelper;]
   - NameAndType [a Z]
   - NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
   - NameAndType [forName (Ljava/lang/String;)Ljava/lang/Class;]
@@ -768,7 +768,7 @@ Constant Pool (count = 72):
   - NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
   - NameAndType [invoke (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
   - Utf8 [()V]
-  - Utf8 [(Lcom/matthewma/swipe_home/NotificationHelper;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/NotificationHelper;)V]
   - Utf8 [(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;]
   - Utf8 [(Ljava/lang/String;)Ljava/lang/Class;]
   - Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
@@ -777,7 +777,7 @@ Constant Pool (count = 72):
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [I]
-  - Utf8 [Lcom/matthewma/swipe_home/NotificationHelper;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/NotificationHelper;]
   - Utf8 [SDK_INT]
   - Utf8 [StackMapTable]
   - Utf8 [Z]
@@ -785,8 +785,8 @@ Constant Pool (count = 72):
   - Utf8 [android.app.StatusBarManager]
   - Utf8 [android/os/Build$VERSION]
   - Utf8 [android/util/Log]
-  - Utf8 [com/matthewma/swipe_home/NotificationHelper]
-  - Utf8 [com/matthewma/swipe_home/c]
+  - Utf8 [com/matthewma/swipehomebuttonfree/NotificationHelper]
+  - Utf8 [com/matthewma/swipehomebuttonfree/c]
   - Utf8 [e]
   - Utf8 [expand]
   - Utf8 [expandNotificationsPanel]
@@ -806,20 +806,20 @@ Constant Pool (count = 72):
   - Utf8 [swipe]
 
 Fields (count = 1):
-  - Field:        a Lcom/matthewma/swipe_home/NotificationHelper;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/NotificationHelper;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.NotificationHelper a
+      = private synthetic com.matthewma.swipehomebuttonfree.NotificationHelper a
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/NotificationHelper;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/NotificationHelper;)V
     Access flags: 0x0
-      = c(com.matthewma.swipe_home.NotificationHelper)
+      = c(com.matthewma.swipehomebuttonfree.NotificationHelper)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #19
-        - Fieldref [com/matthewma/swipe_home/c.a Lcom/matthewma/swipe_home/NotificationHelper;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/c.a Lcom/matthewma/swipehomebuttonfree/NotificationHelper;]
       [5] aload_0 v0
       [6] invokespecial #24
         - Methodref [java/lang/Object.<init> ()V]
@@ -837,11 +837,11 @@ Methods (count = 2):
       [3] monitorenter
       [4] aload_0 v0
       [5] getfield #19
-        - Fieldref [com/matthewma/swipe_home/c.a Lcom/matthewma/swipe_home/NotificationHelper;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/c.a Lcom/matthewma/swipehomebuttonfree/NotificationHelper;]
       [8] ldc #5
         - String [statusbar]
       [10] invokevirtual #21
-        - Methodref [com/matthewma/swipe_home/NotificationHelper.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+        - Methodref [com/matthewma/swipehomebuttonfree/NotificationHelper.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
       [13] astore_2 v2
       [14] ldc #1
         - String [android.app.StatusBarManager]
@@ -881,10 +881,10 @@ Methods (count = 2):
       [62] pop
       [63] aload_0 v0
       [64] getfield #19
-        - Fieldref [com/matthewma/swipe_home/c.a Lcom/matthewma/swipe_home/NotificationHelper;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/c.a Lcom/matthewma/swipehomebuttonfree/NotificationHelper;]
       [67] iconst_1
       [68] putfield #18
-        - Fieldref [com/matthewma/swipe_home/NotificationHelper.a Z]
+        - Fieldref [com/matthewma/swipehomebuttonfree/NotificationHelper.a Z]
       [71] goto +12 (target=83)
       [74] astore_2 v2
       [75] ldc #6
@@ -906,21 +906,21 @@ Methods (count = 2):
       - ExceptionInfo (4 -> 85: 86):
       Code attribute attributes (attribute count = 1):
       - Stack map table attribute (count = 5):
-        - [42] Var: ...[a:com/matthewma/swipe_home/c][a:java/lang/Object][a:java/lang/Class], Stack: (empty)
-        - [53] Var: [a:com/matthewma/swipe_home/c][a:com/matthewma/swipe_home/c][a:java/lang/Object][a:java/lang/reflect/Method], Stack: 
-        - [74] Var: [T][a:com/matthewma/swipe_home/c], Stack: [a:java/lang/Exception]
+        - [42] Var: ...[a:com/matthewma/swipehomebuttonfree/c][a:java/lang/Object][a:java/lang/Class], Stack: (empty)
+        - [53] Var: [a:com/matthewma/swipehomebuttonfree/c][a:com/matthewma/swipehomebuttonfree/c][a:java/lang/Object][a:java/lang/reflect/Method], Stack: 
+        - [74] Var: [T][a:com/matthewma/swipehomebuttonfree/c], Stack: [a:java/lang/Exception]
         - [83] Var: ..., Stack: (empty)
         - [86] Var: ..., Stack: [a:java/lang/Throwable]
 
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/SettingsActivity
+- Program class: com/matthewma/swipehomebuttonfree/SettingsActivity
   Superclass:    android/preference/PreferenceActivity
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.matthewma.swipe_home.SettingsActivity extends android.preference.PreferenceActivity
+    = public class com.matthewma.swipehomebuttonfree.SettingsActivity extends android.preference.PreferenceActivity
 
 Interfaces (count = 2):
   - Class [android/content/SharedPreferences$OnSharedPreferenceChangeListener]
@@ -991,7 +991,7 @@ Constant Pool (count = 591):
   - String [prefTransparentIcon]
   - String [text/plain]
   - String [|]
-  - Class [[Lcom/matthewma/swipe_home/j;]
+  - Class [[Lcom/matthewma/swipehomebuttonfree/j;]
   - Class [android/app/ActivityManager]
   - Class [android/app/ActivityManager$RunningServiceInfo]
   - Class [android/app/AlertDialog]
@@ -1017,17 +1017,17 @@ Constant Pool (count = 591):
   - Class [android/widget/ListView]
   - Class [android/widget/SeekBar]
   - Class [android/widget/TextView]
-  - Class [com/matthewma/swipe_home/SettingsActivity]
-  - Class [com/matthewma/swipe_home/SwipeService]
-  - Class [com/matthewma/swipe_home/a]
-  - Class [com/matthewma/swipe_home/b]
-  - Class [com/matthewma/swipe_home/d]
-  - Class [com/matthewma/swipe_home/e]
-  - Class [com/matthewma/swipe_home/f]
-  - Class [com/matthewma/swipe_home/g]
-  - Class [com/matthewma/swipe_home/h]
-  - Class [com/matthewma/swipe_home/i]
-  - Class [com/matthewma/swipe_home/j]
+  - Class [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Class [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Class [com/matthewma/swipehomebuttonfree/a]
+  - Class [com/matthewma/swipehomebuttonfree/b]
+  - Class [com/matthewma/swipehomebuttonfree/d]
+  - Class [com/matthewma/swipehomebuttonfree/e]
+  - Class [com/matthewma/swipehomebuttonfree/f]
+  - Class [com/matthewma/swipehomebuttonfree/g]
+  - Class [com/matthewma/swipehomebuttonfree/h]
+  - Class [com/matthewma/swipehomebuttonfree/i]
+  - Class [com/matthewma/swipehomebuttonfree/j]
   - Class [java/lang/Boolean]
   - Class [java/lang/CharSequence]
   - Class [java/lang/Class]
@@ -1040,15 +1040,15 @@ Constant Pool (count = 591):
   - Fieldref [android/app/ActivityManager$RunningServiceInfo.service Landroid/content/ComponentName;]
   - Fieldref [android/content/pm/ActivityInfo.packageName Ljava/lang/String;]
   - Fieldref [android/content/pm/ResolveInfo.activityInfo Landroid/content/pm/ActivityInfo;]
-  - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
-  - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/SettingsActivity.d Landroid/app/Dialog;]
-  - Fieldref [com/matthewma/swipe_home/b.a I]
-  - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/j.b Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/j.c Landroid/graphics/drawable/Drawable;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.d Landroid/app/Dialog;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.a I]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.b Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.c Landroid/graphics/drawable/Drawable;]
   - Methodref [android/app/ActivityManager.getRunningServices (I)Ljava/util/List;]
   - Methodref [android/app/AlertDialog.show ()V]
   - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
@@ -1103,30 +1103,30 @@ Constant Pool (count = 591):
   - Methodref [android/widget/SeekBar.setOnSeekBarChangeListener (Landroid/widget/SeekBar$OnSeekBarChangeListener;)V]
   - Methodref [android/widget/SeekBar.setProgress (I)V]
   - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.a ()Z]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.addPreferencesFromResource (I)V]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.b ()Ljava/util/ArrayList;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.getPackageManager ()Landroid/content/pm/PackageManager;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivity (Landroid/content/Intent;)V]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivityForResult (Landroid/content/Intent;I)V]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.stopService (Landroid/content/Intent;)Z]
-  - Methodref [com/matthewma/swipe_home/a.<init> (Landroid/content/Context;I[Lcom/matthewma/swipe_home/j;)V]
-  - Methodref [com/matthewma/swipe_home/b.<init> ()V]
-  - Methodref [com/matthewma/swipe_home/b.a (ILandroid/content/Context;)V]
-  - Methodref [com/matthewma/swipe_home/b.a (Ljava/lang/String;)Ljava/lang/String;]
-  - Methodref [com/matthewma/swipe_home/d.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
-  - Methodref [com/matthewma/swipe_home/e.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
-  - Methodref [com/matthewma/swipe_home/f.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
-  - Methodref [com/matthewma/swipe_home/g.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
-  - Methodref [com/matthewma/swipe_home/h.<init> (Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;Landroid/widget/TextView;)V]
-  - Methodref [com/matthewma/swipe_home/i.<init> (Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;)V]
-  - Methodref [com/matthewma/swipe_home/j.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a ()Z]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.addPreferencesFromResource (I)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.b ()Ljava/util/ArrayList;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getPackageManager ()Landroid/content/pm/PackageManager;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startActivity (Landroid/content/Intent;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startActivityForResult (Landroid/content/Intent;I)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.stopService (Landroid/content/Intent;)Z]
+  - Methodref [com/matthewma/swipehomebuttonfree/a.<init> (Landroid/content/Context;I[Lcom/matthewma/swipehomebuttonfree/j;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/b.<init> ()V]
+  - Methodref [com/matthewma/swipehomebuttonfree/b.a (ILandroid/content/Context;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/b.a (Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [com/matthewma/swipehomebuttonfree/d.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/e.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/f.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/g.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/h.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;Landroid/widget/TextView;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/i.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/j.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
   - Methodref [java/lang/Boolean.booleanValue ()Z]
   - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
   - Methodref [java/lang/Class.getName ()Ljava/lang/String;]
@@ -1157,11 +1157,11 @@ Constant Pool (count = 591):
   - InterfaceMethodref [java/util/List.size ()I]
   - NameAndType [<init> ()V]
   - NameAndType [<init> (Landroid/content/Context;)V]
-  - NameAndType [<init> (Landroid/content/Context;I[Lcom/matthewma/swipe_home/j;)V]
+  - NameAndType [<init> (Landroid/content/Context;I[Lcom/matthewma/swipehomebuttonfree/j;)V]
   - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-  - NameAndType [<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
-  - NameAndType [<init> (Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;)V]
-  - NameAndType [<init> (Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;Landroid/widget/TextView;)V]
+  - NameAndType [<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
+  - NameAndType [<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;)V]
+  - NameAndType [<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;Landroid/widget/TextView;)V]
   - NameAndType [<init> (Ljava/lang/String;)V]
   - NameAndType [<init> (Ljava/lang/String;Landroid/net/Uri;)V]
   - NameAndType [a ()Z]
@@ -1282,7 +1282,7 @@ Constant Pool (count = 591):
   - Utf8 [(Landroid/content/Context;)Landroid/content/SharedPreferences;]
   - Utf8 [(Landroid/content/Context;)V]
   - Utf8 [(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;]
-  - Utf8 [(Landroid/content/Context;I[Lcom/matthewma/swipe_home/j;)V]
+  - Utf8 [(Landroid/content/Context;I[Lcom/matthewma/swipehomebuttonfree/j;)V]
   - Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
   - Utf8 [(Landroid/content/Intent;)Landroid/content/ComponentName;]
   - Utf8 [(Landroid/content/Intent;)V]
@@ -1302,11 +1302,11 @@ Constant Pool (count = 591):
   - Utf8 [(Landroid/widget/AdapterView$OnItemClickListener;)V]
   - Utf8 [(Landroid/widget/ListAdapter;)V]
   - Utf8 [(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/app/Dialog;]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;Landroid/widget/TextView;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/app/Dialog;]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;Landroid/widget/TextView;)V]
   - Utf8 [(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
   - Utf8 [(Ljava/lang/CharSequence;)Landroid/preference/Preference;]
   - Utf8 [(Ljava/lang/CharSequence;)V]
@@ -1353,7 +1353,7 @@ Constant Pool (count = 591):
   - Utf8 [Ljava/lang/String;]
   - Utf8 [SELECT SHORTCUT]
   - Utf8 [StackMapTable]
-  - Utf8 [[Lcom/matthewma/swipe_home/j;]
+  - Utf8 [[Lcom/matthewma/swipehomebuttonfree/j;]
   - Utf8 [[Ljava/lang/String;]
   - Utf8 [\|]
   - Utf8 [a]
@@ -1404,17 +1404,17 @@ Constant Pool (count = 591):
   - Utf8 [b]
   - Utf8 [booleanValue]
   - Utf8 [c]
-  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
-  - Utf8 [com/matthewma/swipe_home/SwipeService]
-  - Utf8 [com/matthewma/swipe_home/a]
-  - Utf8 [com/matthewma/swipe_home/b]
-  - Utf8 [com/matthewma/swipe_home/d]
-  - Utf8 [com/matthewma/swipe_home/e]
-  - Utf8 [com/matthewma/swipe_home/f]
-  - Utf8 [com/matthewma/swipe_home/g]
-  - Utf8 [com/matthewma/swipe_home/h]
-  - Utf8 [com/matthewma/swipe_home/i]
-  - Utf8 [com/matthewma/swipe_home/j]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Utf8 [com/matthewma/swipehomebuttonfree/a]
+  - Utf8 [com/matthewma/swipehomebuttonfree/b]
+  - Utf8 [com/matthewma/swipehomebuttonfree/d]
+  - Utf8 [com/matthewma/swipehomebuttonfree/e]
+  - Utf8 [com/matthewma/swipehomebuttonfree/f]
+  - Utf8 [com/matthewma/swipehomebuttonfree/g]
+  - Utf8 [com/matthewma/swipehomebuttonfree/h]
+  - Utf8 [com/matthewma/swipehomebuttonfree/i]
+  - Utf8 [com/matthewma/swipehomebuttonfree/j]
   - Utf8 [commit]
   - Utf8 [create]
   - Utf8 [d]
@@ -1577,7 +1577,7 @@ Methods (count = 13):
         - String [prefSwipelowright]
       [40] aastore
       [41] putstatic #116
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
       [44] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -1602,7 +1602,7 @@ Methods (count = 13):
       [2] invokestatic #167
         - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [5] putfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [8] aload_0 v0
       [9] aload_1 v1
       [10] invokespecial #164
@@ -1611,10 +1611,10 @@ Methods (count = 13):
       [14] ldc #3
         - Integer [2130968576]
       [16] invokevirtual #179
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.addPreferencesFromResource (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.addPreferencesFromResource (I)V]
       [19] aload_0 v0
       [20] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [23] aload_0 v0
       [24] invokeinterface #220
         - InterfaceMethodref [android/content/SharedPreferences.registerOnSharedPreferenceChangeListener (Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V]
@@ -1623,22 +1623,22 @@ Methods (count = 13):
       [32] dup
       [33] aload_0 v0
       [34] ldc #92
-        - Class [com/matthewma/swipe_home/SwipeService]
+        - Class [com/matthewma/swipehomebuttonfree/SwipeService]
       [36] invokespecial #139
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [39] astore_1 v1
       [40] aload_0 v0
       [41] invokespecial #177
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.a ()Z]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a ()Z]
       [44] ifeq +9 (target=53)
       [47] aload_0 v0
       [48] aload_1 v1
       [49] invokevirtual #189
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.stopService (Landroid/content/Intent;)Z]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.stopService (Landroid/content/Intent;)Z]
       [52] pop
       [53] aload_0 v0
       [54] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [57] ldc #52
         - String [prefEnable]
       [59] iconst_1
@@ -1654,13 +1654,13 @@ Methods (count = 13):
       [76] aload_0 v0
       [77] aload_1 v1
       [78] invokevirtual #188
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
       [81] pop
       [82] aload_0 v0
       [83] ldc #54
         - String [prefShare]
       [85] invokevirtual #181
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [88] aload_0 v0
       [89] invokevirtual #161
         - Methodref [android/preference/Preference.setOnPreferenceClickListener (Landroid/preference/Preference$OnPreferenceClickListener;)V]
@@ -1668,7 +1668,7 @@ Methods (count = 13):
       [93] ldc #62
         - String [prefTransparentIcon]
       [95] invokevirtual #181
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [98] aload_0 v0
       [99] invokevirtual #161
         - Methodref [android/preference/Preference.setOnPreferenceClickListener (Landroid/preference/Preference$OnPreferenceClickListener;)V]
@@ -1676,7 +1676,7 @@ Methods (count = 13):
       [103] ldc #51
         - String [prefDetectAreaProgress]
       [105] invokevirtual #181
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [108] aload_0 v0
       [109] invokevirtual #161
         - Methodref [android/preference/Preference.setOnPreferenceClickListener (Landroid/preference/Preference$OnPreferenceClickListener;)V]
@@ -1685,11 +1685,11 @@ Methods (count = 13):
       [114] goto +53 (target=167)
       [117] aload_0 v0
       [118] getstatic #116
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
       [121] iload_1 v1
       [122] aaload
       [123] invokevirtual #181
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [126] dup
       [127] astore_2 v2
       [128] aload_0 v0
@@ -1697,17 +1697,17 @@ Methods (count = 13):
         - Methodref [android/preference/Preference.setOnPreferenceClickListener (Landroid/preference/Preference$OnPreferenceClickListener;)V]
       [132] aload_0 v0
       [133] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [136] getstatic #116
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
       [139] iload_1 v1
       [140] aaload
       [141] getstatic #116
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
       [144] iload_1 v1
       [145] aaload
       [146] invokestatic #193
-        - Methodref [com/matthewma/swipe_home/b.a (Ljava/lang/String;)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/b.a (Ljava/lang/String;)Ljava/lang/String;]
       [149] invokeinterface #219
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [154] astore_3 v3
@@ -1715,20 +1715,20 @@ Methods (count = 13):
       [156] aload_0 v0
       [157] aload_3 v3
       [158] invokevirtual #178
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
       [161] invokevirtual #162
         - Methodref [android/preference/Preference.setSummary (Ljava/lang/CharSequence;)V]
       [164] iinc v1, 1
       [167] iload_1 v1
       [168] getstatic #116
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
       [171] arraylength
       [172] ificmplt -55 (target=117)
       [175] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       - Stack map table attribute (count = 4):
-        - [53] Var: [a:com/matthewma/swipe_home/SettingsActivity][a:android/content/Intent], Stack: 
+        - [53] Var: [a:com/matthewma/swipehomebuttonfree/SettingsActivity][a:android/content/Intent], Stack: 
         - [82] Var: -1, Stack: (empty)
         - [117] Var: ...[i], Stack: (empty)
         - [167] Var: ..., Stack: (empty)
@@ -1759,18 +1759,18 @@ Methods (count = 13):
       [12] dup
       [13] aload_0 v0
       [14] ldc #92
-        - Class [com/matthewma/swipe_home/SwipeService]
+        - Class [com/matthewma/swipehomebuttonfree/SwipeService]
       [16] invokespecial #139
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [19] astore_1 v1
       [20] aload_0 v0
       [21] aload_1 v1
       [22] invokevirtual #189
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.stopService (Landroid/content/Intent;)Z]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.stopService (Landroid/content/Intent;)Z]
       [25] pop
       [26] aload_0 v0
       [27] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [30] ldc #52
         - String [prefEnable]
       [32] iconst_1
@@ -1786,7 +1786,7 @@ Methods (count = 13):
       [49] aload_0 v0
       [50] aload_1 v1
       [51] invokevirtual #188
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startService (Landroid/content/Intent;)Landroid/content/ComponentName;]
       [54] pop
       [55] return
       Code attribute exceptions (count = 0):
@@ -1802,7 +1802,7 @@ Methods (count = 13):
       [1] ldc #34
         - String [activity]
       [3] invokevirtual #184
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
       [6] checkcast #66
         - Class [android/app/ActivityManager]
       [9] dup
@@ -1822,7 +1822,7 @@ Methods (count = 13):
         - Class [android/app/ActivityManager$RunningServiceInfo]
       [34] astore_1 v1
       [35] ldc #92
-        - Class [com/matthewma/swipe_home/SwipeService]
+        - Class [com/matthewma/swipehomebuttonfree/SwipeService]
       [37] invokevirtual #203
         - Methodref [java/lang/Class.getName ()Ljava/lang/String;]
       [40] aload_1 v1
@@ -1880,7 +1880,7 @@ Methods (count = 13):
       [33] ldc #16
         - Integer [2131034192]
       [35] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [38] invokevirtual #146
         - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
       [41] pop
@@ -1901,7 +1901,7 @@ Methods (count = 13):
       [58] aload_0 v0
       [59] aload_3 v3
       [60] invokevirtual #186
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivity (Landroid/content/Intent;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startActivity (Landroid/content/Intent;)V]
       [63] goto +4 (target=67)
       [66] pop
       [67] iconst_0
@@ -1910,7 +1910,7 @@ Methods (count = 13):
       [70] istore_3 v3
       [71] goto +63 (target=134)
       [74] getstatic #116
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
       [77] iload_3 v3
       [78] aaload
       [79] aload_2 v2
@@ -1920,10 +1920,10 @@ Methods (count = 13):
       [86] aload_0 v0
       [87] aload_2 v2
       [88] putfield #114
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [91] aload_0 v0
       [92] getfield #114
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [95] ldc #56
         - String [prefSwipelowleft]
       [97] invokevirtual #205
@@ -1931,7 +1931,7 @@ Methods (count = 13):
       [100] ifne +15 (target=115)
       [103] aload_0 v0
       [104] getfield #114
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [107] ldc #57
         - String [prefSwipelowright]
       [109] invokevirtual #205
@@ -1940,18 +1940,18 @@ Methods (count = 13):
       [115] aload_0 v0
       [116] bipush 6
       [118] invokevirtual #185
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
       [121] goto +8 (target=129)
       [124] aload_0 v0
       [125] iconst_1
       [126] invokevirtual #185
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
       [129] iconst_0
       [130] ireturn
       [131] iinc v3, 1
       [134] iload_3 v3
       [135] getstatic #116
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.c [Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.c [Ljava/lang/String;]
       [138] arraylength
       [139] ificmplt -65 (target=74)
       [142] ldc #62
@@ -1969,7 +1969,7 @@ Methods (count = 13):
       [161] aload_0 v0
       [162] iconst_3
       [163] invokevirtual #185
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
       [166] iconst_0
       [167] ireturn
       [168] ldc #53
@@ -1997,7 +1997,7 @@ Methods (count = 13):
       [197] aload_0 v0
       [198] aload_3 v3
       [199] invokevirtual #186
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivity (Landroid/content/Intent;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startActivity (Landroid/content/Intent;)V]
       [202] goto +4 (target=206)
       [205] pop
       [206] iconst_0
@@ -2011,7 +2011,7 @@ Methods (count = 13):
       [217] aload_0 v0
       [218] bipush 7
       [220] invokevirtual #185
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
       [223] iconst_0
       [224] ireturn
       [225] iconst_0
@@ -2025,17 +2025,17 @@ Methods (count = 13):
       - Stack map table attribute (count = 14):
         - [66] Var: , Stack: [a:android/content/ActivityNotFoundException]
         - [67] Var: ..., Stack: (empty)
-        - [69] Var: ...[a:com/matthewma/swipe_home/SettingsActivity][a:android/preference/Preference][a:java/lang/String], Stack: (empty)
+        - [69] Var: ...[a:com/matthewma/swipehomebuttonfree/SettingsActivity][a:android/preference/Preference][a:java/lang/String], Stack: (empty)
         - [74] Var: ...[i], Stack: (empty)
         - [115] Var: -3, Stack: (empty)
         - [124] Var: ..., Stack: (empty)
         - [129] Var: -1, Stack: (empty)
-        - [131] Var: [a:com/matthewma/swipe_home/SettingsActivity][a:android/preference/Preference][a:java/lang/String][i], Stack: 
+        - [131] Var: [a:com/matthewma/swipehomebuttonfree/SettingsActivity][a:android/preference/Preference][a:java/lang/String][i], Stack: 
         - [134] Var: ..., Stack: (empty)
-        - [168] Var: [a:com/matthewma/swipe_home/SettingsActivity][T][a:java/lang/String], Stack: 
+        - [168] Var: [a:com/matthewma/swipehomebuttonfree/SettingsActivity][T][a:java/lang/String], Stack: 
         - [205] Var: , Stack: [a:android/content/ActivityNotFoundException]
         - [206] Var: ..., Stack: (empty)
-        - [208] Var: ...[a:com/matthewma/swipe_home/SettingsActivity][T][a:java/lang/String], Stack: (empty)
+        - [208] Var: ...[a:com/matthewma/swipehomebuttonfree/SettingsActivity][T][a:java/lang/String], Stack: (empty)
         - [225] Var: -3, Stack: (empty)
   - Method:       onCreateDialog(I)Landroid/app/Dialog;
     Access flags: 0x4
@@ -2061,7 +2061,7 @@ Methods (count = 13):
       [52] ldc #8
         - Integer [2131034146]
       [54] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [57] aastore
       [58] dup
       [59] iconst_1
@@ -2069,7 +2069,7 @@ Methods (count = 13):
       [61] ldc #9
         - Integer [2131034147]
       [63] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [66] aastore
       [67] dup
       [68] iconst_2
@@ -2077,7 +2077,7 @@ Methods (count = 13):
       [70] ldc #10
         - Integer [2131034148]
       [72] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [75] aastore
       [76] dup
       [77] iconst_3
@@ -2085,7 +2085,7 @@ Methods (count = 13):
       [79] ldc #11
         - Integer [2131034149]
       [81] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [84] aastore
       [85] dup
       [86] iconst_4
@@ -2093,7 +2093,7 @@ Methods (count = 13):
       [88] ldc #13
         - Integer [2131034154]
       [90] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [93] aastore
       [94] dup
       [95] iconst_5
@@ -2101,7 +2101,7 @@ Methods (count = 13):
       [97] ldc #12
         - Integer [2131034152]
       [99] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [102] aastore
       [103] dup
       [104] bipush 6
@@ -2109,7 +2109,7 @@ Methods (count = 13):
       [107] ldc #14
         - Integer [2131034155]
       [109] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [112] aastore
       [113] astore_2 v2
       [114] new #69
@@ -2124,7 +2124,7 @@ Methods (count = 13):
       [125] ldc #7
         - Integer [2131034145]
       [127] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [130] invokevirtual #134
         - Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [133] iconst_1
@@ -2133,15 +2133,15 @@ Methods (count = 13):
       [137] pop
       [138] aload_0 v0
       [139] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [142] aload_0 v0
       [143] getfield #114
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [146] aload_0 v0
       [147] getfield #114
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [150] invokestatic #193
-        - Methodref [com/matthewma/swipe_home/b.a (Ljava/lang/String;)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/b.a (Ljava/lang/String;)Ljava/lang/String;]
       [153] invokeinterface #219
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [158] dup
@@ -2157,11 +2157,11 @@ Methods (count = 13):
       [172] aload_2 v2
       [173] iload v4
       [175] new #95
-        - Class [com/matthewma/swipe_home/d]
+        - Class [com/matthewma/swipehomebuttonfree/d]
       [178] dup
       [179] aload_0 v0
       [180] invokespecial #194
-        - Methodref [com/matthewma/swipe_home/d.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/d.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
       [183] invokevirtual #132
         - Methodref [android/app/AlertDialog$Builder.setSingleChoiceItems ([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [186] pop
@@ -2185,7 +2185,7 @@ Methods (count = 13):
       [210] ldc #15
         - Integer [2131034157]
       [212] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [215] invokevirtual #134
         - Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
       [218] pop
@@ -2200,12 +2200,12 @@ Methods (count = 13):
       [229] dup
       [230] astore v4
       [232] invokespecial #180
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.b ()Ljava/util/ArrayList;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.b ()Ljava/util/ArrayList;]
       [235] dup
       [236] astore v4
       [238] astore v4
       [240] new #93
-        - Class [com/matthewma/swipe_home/a]
+        - Class [com/matthewma/swipehomebuttonfree/a]
       [243] dup
       [244] aload_0 v0
       [245] aload_3 v3
@@ -2216,13 +2216,13 @@ Methods (count = 13):
       [253] invokevirtual #214
         - Methodref [java/util/ArrayList.size ()I]
       [256] anewarray #101
-        - Class [com/matthewma/swipe_home/j]
+        - Class [com/matthewma/swipehomebuttonfree/j]
       [259] invokevirtual #215
         - Methodref [java/util/ArrayList.toArray ([Ljava/lang/Object;)[Ljava/lang/Object;]
       [262] checkcast #65
-        - Class [[Lcom/matthewma/swipe_home/j;]
+        - Class [[Lcom/matthewma/swipehomebuttonfree/j;]
       [265] invokespecial #190
-        - Methodref [com/matthewma/swipe_home/a.<init> (Landroid/content/Context;I[Lcom/matthewma/swipe_home/j;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/a.<init> (Landroid/content/Context;I[Lcom/matthewma/swipehomebuttonfree/j;)V]
       [268] astore v4
       [270] aload_3 v3
       [271] aload v4
@@ -2230,11 +2230,11 @@ Methods (count = 13):
         - Methodref [android/widget/ListView.setAdapter (Landroid/widget/ListAdapter;)V]
       [276] aload_3 v3
       [277] new #96
-        - Class [com/matthewma/swipe_home/e]
+        - Class [com/matthewma/swipehomebuttonfree/e]
       [280] dup
       [281] aload_0 v0
       [282] invokespecial #195
-        - Methodref [com/matthewma/swipe_home/e.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/e.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
       [285] invokevirtual #173
         - Methodref [android/widget/ListView.setOnItemClickListener (Landroid/widget/AdapterView$OnItemClickListener;)V]
       [288] aload_2 v2
@@ -2247,10 +2247,10 @@ Methods (count = 13):
       [296] invokevirtual #126
         - Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
       [299] putfield #117
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.d Landroid/app/Dialog;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.d Landroid/app/Dialog;]
       [302] aload_0 v0
       [303] getfield #117
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.d Landroid/app/Dialog;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.d Landroid/app/Dialog;]
       [306] invokevirtual #136
         - Methodref [android/app/Dialog.show ()V]
       [309] goto +349 (target=658)
@@ -2277,11 +2277,11 @@ Methods (count = 13):
       [337] ldc #18
         - Integer [2131034194]
       [339] new #97
-        - Class [com/matthewma/swipe_home/f]
+        - Class [com/matthewma/swipehomebuttonfree/f]
       [342] dup
       [343] aload_0 v0
       [344] invokespecial #196
-        - Methodref [com/matthewma/swipe_home/f.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/f.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
       [347] invokevirtual #130
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [350] pop
@@ -2361,7 +2361,7 @@ Methods (count = 13):
       [443] aload_3 v3
       [444] iconst_1
       [445] invokevirtual #187
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivityForResult (Landroid/content/Intent;I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [448] goto +210 (target=658)
       [451] new #69
         - Class [android/app/AlertDialog$Builder]
@@ -2390,13 +2390,13 @@ Methods (count = 13):
       [481] ldc #18
         - Integer [2131034194]
       [483] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [486] new #98
-        - Class [com/matthewma/swipe_home/g]
+        - Class [com/matthewma/swipehomebuttonfree/g]
       [489] dup
       [490] aload_0 v0
       [491] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/g.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/g.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
       [494] invokevirtual #131
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [497] pop
@@ -2432,15 +2432,15 @@ Methods (count = 13):
         - Class [android/widget/TextView]
       [537] astore v4
       [539] new #94
-        - Class [com/matthewma/swipe_home/b]
+        - Class [com/matthewma/swipehomebuttonfree/b]
       [542] dup
       [543] invokespecial #191
-        - Methodref [com/matthewma/swipe_home/b.<init> ()V]
+        - Methodref [com/matthewma/swipehomebuttonfree/b.<init> ()V]
       [546] dup
       [547] astore v5
       [549] aload_0 v0
       [550] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [553] ldc #51
         - String [prefDetectAreaProgress]
       [555] iconst_2
@@ -2448,28 +2448,28 @@ Methods (count = 13):
         - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [561] aload_0 v0
       [562] invokevirtual #192
-        - Methodref [com/matthewma/swipe_home/b.a (ILandroid/content/Context;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/b.a (ILandroid/content/Context;)V]
       [565] aload_3 v3
       [566] aload v5
       [568] getfield #118
-        - Fieldref [com/matthewma/swipe_home/b.a I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.a I]
       [571] invokevirtual #175
         - Methodref [android/widget/SeekBar.setProgress (I)V]
       [574] aload v4
       [576] aload v5
       [578] getfield #119
-        - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
       [581] invokevirtual #176
         - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [584] aload_3 v3
       [585] new #99
-        - Class [com/matthewma/swipe_home/h]
+        - Class [com/matthewma/swipehomebuttonfree/h]
       [588] dup
       [589] aload_0 v0
       [590] aload v5
       [592] aload v4
       [594] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/h.<init> (Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;Landroid/widget/TextView;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/h.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;Landroid/widget/TextView;)V]
       [597] invokevirtual #174
         - Methodref [android/widget/SeekBar.setOnSeekBarChangeListener (Landroid/widget/SeekBar$OnSeekBarChangeListener;)V]
       [600] new #69
@@ -2499,14 +2499,14 @@ Methods (count = 13):
       [630] ldc #19
         - Integer [2131034195]
       [632] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [635] new #100
-        - Class [com/matthewma/swipe_home/i]
+        - Class [com/matthewma/swipehomebuttonfree/i]
       [638] dup
       [639] aload_0 v0
       [640] aload v5
       [642] invokespecial #199
-        - Methodref [com/matthewma/swipe_home/i.<init> (Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/i.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;)V]
       [645] invokevirtual #131
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [648] pop
@@ -2547,7 +2547,7 @@ Methods (count = 13):
       [10] ldc #8
         - Integer [2131034146]
       [12] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [15] areturn
       [16] aload_1 v1
       [17] ldc #25
@@ -2559,7 +2559,7 @@ Methods (count = 13):
       [26] ldc #9
         - Integer [2131034147]
       [28] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [31] areturn
       [32] aload_1 v1
       [33] ldc #26
@@ -2571,7 +2571,7 @@ Methods (count = 13):
       [42] ldc #10
         - Integer [2131034148]
       [44] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [47] areturn
       [48] aload_1 v1
       [49] ldc #27
@@ -2583,7 +2583,7 @@ Methods (count = 13):
       [58] ldc #11
         - Integer [2131034149]
       [60] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [63] areturn
       [64] aload_1 v1
       [65] ldc #28
@@ -2595,7 +2595,7 @@ Methods (count = 13):
       [74] ldc #13
         - Integer [2131034154]
       [76] invokevirtual #183
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getString (I)Ljava/lang/String;]
       [79] areturn
       [80] aload_1 v1
       [81] invokevirtual #206
@@ -2694,7 +2694,7 @@ Methods (count = 13):
       [25] pop
       [26] aload_0 v0
       [27] invokevirtual #182
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.getPackageManager ()Landroid/content/pm/PackageManager;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.getPackageManager ()Landroid/content/pm/PackageManager;]
       [30] dup
       [31] astore_3 v3
       [32] aload_2 v2
@@ -2706,11 +2706,11 @@ Methods (count = 13):
       [39] istore v4
       [41] goto +89 (target=130)
       [44] new #101
-        - Class [com/matthewma/swipe_home/j]
+        - Class [com/matthewma/swipehomebuttonfree/j]
       [47] dup
       [48] aload_0 v0
       [49] invokespecial #200
-        - Methodref [com/matthewma/swipe_home/j.<init> (Lcom/matthewma/swipe_home/SettingsActivity;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/j.<init> (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
       [52] dup
       [53] astore v5
       [55] aload_2 v2
@@ -2725,7 +2725,7 @@ Methods (count = 13):
       [70] invokeinterface #223
         - InterfaceMethodref [java/lang/CharSequence.toString ()Ljava/lang/String;]
       [75] putfield #120
-        - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
       [78] aload v5
       [80] aload_2 v2
       [81] iload v4
@@ -2738,7 +2738,7 @@ Methods (count = 13):
       [94] getfield #112
         - Fieldref [android/content/pm/ActivityInfo.packageName Ljava/lang/String;]
       [97] putfield #121
-        - Fieldref [com/matthewma/swipe_home/j.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.b Ljava/lang/String;]
       [100] aload v5
       [102] aload_2 v2
       [103] iload v4
@@ -2750,7 +2750,7 @@ Methods (count = 13):
       [114] invokevirtual #153
         - Methodref [android/content/pm/ResolveInfo.loadIcon (Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;]
       [117] putfield #122
-        - Fieldref [com/matthewma/swipe_home/j.c Landroid/graphics/drawable/Drawable;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.c Landroid/graphics/drawable/Drawable;]
       [120] aload_1 v1
       [121] aload v5
       [123] invokevirtual #213
@@ -2767,7 +2767,7 @@ Methods (count = 13):
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       - Stack map table attribute (count = 2):
-        - [44] Var: [a:com/matthewma/swipe_home/SettingsActivity][a:java/util/ArrayList][a:java/util/List][a:android/content/pm/PackageManager][i], Stack: 
+        - [44] Var: [a:com/matthewma/swipehomebuttonfree/SettingsActivity][a:java/util/ArrayList][a:java/util/List][a:android/content/pm/PackageManager][i], Stack: 
         - [130] Var: ..., Stack: (empty)
   - Method:       onActivityResult(IILandroid/content/Intent;)V
     Access flags: 0x4
@@ -2786,7 +2786,7 @@ Methods (count = 13):
       [29] aload_3 v3
       [30] iconst_2
       [31] invokevirtual #187
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.startActivityForResult (Landroid/content/Intent;I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [34] return
       [35] aload_3 v3
       [36] ldc #46
@@ -2809,14 +2809,14 @@ Methods (count = 13):
       [57] astore_1 v1
       [58] aload_0 v0
       [59] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [62] invokeinterface #216
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [67] dup
       [68] astore_3 v3
       [69] aload_0 v0
       [70] getfield #114
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [73] new #107
         - Class [java/lang/StringBuilder]
       [76] dup
@@ -2846,9 +2846,9 @@ Methods (count = 13):
       [111] aload_0 v0
       [112] aload_0 v0
       [113] getfield #114
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [116] invokevirtual #181
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [119] aload_2 v2
       [120] invokevirtual #162
         - Methodref [android/preference/Preference.setSummary (Ljava/lang/CharSequence;)V]
@@ -2856,28 +2856,28 @@ Methods (count = 13):
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       - Stack map table attribute (count = 3):
-        - [28] Var: [a:com/matthewma/swipe_home/SettingsActivity][T][T][a:android/content/Intent], Stack: 
+        - [28] Var: [a:com/matthewma/swipehomebuttonfree/SettingsActivity][T][T][a:android/content/Intent], Stack: 
         - [35] Var: ..., Stack: (empty)
         - [123] Var: , Stack: 
-  - Method:       a(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;
+  - Method:       a(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;
     Access flags: 0x1008
-      = static synthetic android.content.SharedPreferences a(com.matthewma.swipe_home.SettingsActivity)
+      = static synthetic android.content.SharedPreferences a(com.matthewma.swipehomebuttonfree.SettingsActivity)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #115
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.b Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.b Landroid/content/SharedPreferences;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  - Method:       b(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/app/Dialog;
+  - Method:       b(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/app/Dialog;
     Access flags: 0x1008
-      = static synthetic android.app.Dialog b(com.matthewma.swipe_home.SettingsActivity)
+      = static synthetic android.app.Dialog b(com.matthewma.swipehomebuttonfree.SettingsActivity)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #117
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.d Landroid/app/Dialog;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.d Landroid/app/Dialog;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -2885,12 +2885,12 @@ Methods (count = 13):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/d
+- Program class: com/matthewma/swipehomebuttonfree/d
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.d extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.d extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/content/DialogInterface$OnClickListener]
@@ -2901,17 +2901,17 @@ Constant Pool (count = 72):
   - Class [android/content/SharedPreferences]
   - Class [android/content/SharedPreferences$Editor]
   - Class [android/preference/Preference]
-  - Class [com/matthewma/swipe_home/SettingsActivity]
-  - Class [com/matthewma/swipe_home/d]
+  - Class [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Class [com/matthewma/swipehomebuttonfree/d]
   - Class [java/lang/Integer]
   - Class [java/lang/Object]
-  - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
   - Methodref [android/preference/Preference.setSummary (Ljava/lang/CharSequence;)V]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
   - Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
   - Methodref [java/lang/Object.<init> ()V]
   - InterfaceMethodref [android/content/DialogInterface.dismiss ()V]
@@ -2919,9 +2919,9 @@ Constant Pool (count = 72):
   - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
   - InterfaceMethodref [android/content/SharedPreferences$Editor.putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
   - NameAndType [<init> ()V]
-  - NameAndType [a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - NameAndType [a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
   - NameAndType [a (Ljava/lang/String;)Ljava/lang/String;]
-  - NameAndType [a Lcom/matthewma/swipe_home/SettingsActivity;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
   - NameAndType [a Ljava/lang/String;]
   - NameAndType [commit ()Z]
   - NameAndType [dismiss ()V]
@@ -2937,15 +2937,15 @@ Constant Pool (count = 72):
   - Utf8 [(I)Ljava/lang/String;]
   - Utf8 [(I)V]
   - Utf8 [(Landroid/content/DialogInterface;I)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
   - Utf8 [(Ljava/lang/CharSequence;)Landroid/preference/Preference;]
   - Utf8 [(Ljava/lang/CharSequence;)V]
   - Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
   - Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
   - Utf8 [<init>]
   - Utf8 [Code]
-  - Utf8 [Lcom/matthewma/swipe_home/SettingsActivity;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
   - Utf8 [Ljava/lang/String;]
   - Utf8 [StackMapTable]
   - Utf8 [a]
@@ -2954,8 +2954,8 @@ Constant Pool (count = 72):
   - Utf8 [android/content/SharedPreferences]
   - Utf8 [android/content/SharedPreferences$Editor]
   - Utf8 [android/preference/Preference]
-  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
-  - Utf8 [com/matthewma/swipe_home/d]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Utf8 [com/matthewma/swipehomebuttonfree/d]
   - Utf8 [commit]
   - Utf8 [dismiss]
   - Utf8 [edit]
@@ -2969,20 +2969,20 @@ Constant Pool (count = 72):
   - Utf8 [toString]
 
 Fields (count = 1):
-  - Field:        a Lcom/matthewma/swipe_home/SettingsActivity;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.SettingsActivity a
+      = private synthetic com.matthewma.swipehomebuttonfree.SettingsActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SettingsActivity;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V
     Access flags: 0x0
-      = d(com.matthewma.swipe_home.SettingsActivity)
+      = d(com.matthewma.swipehomebuttonfree.SettingsActivity)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [5] aload_0 v0
       [6] invokespecial #18
         - Methodref [java/lang/Object.<init> ()V]
@@ -3018,18 +3018,18 @@ Methods (count = 2):
       [35] ifeq +69 (target=104)
       [38] aload_0 v0
       [39] getfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [42] invokestatic #13
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
       [45] invokeinterface #20
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [50] dup
       [51] astore_3 v3
       [52] aload_0 v0
       [53] getfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [56] getfield #10
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [59] iload_2 v2
       [60] invokestatic #17
         - Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
@@ -3042,22 +3042,22 @@ Methods (count = 2):
       [75] pop
       [76] aload_0 v0
       [77] getfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [80] aload_0 v0
       [81] getfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [84] getfield #10
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [87] invokevirtual #15
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [90] aload_0 v0
       [91] getfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [94] iload_2 v2
       [95] invokestatic #17
         - Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
       [98] invokevirtual #14
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Ljava/lang/String;)Ljava/lang/String;]
       [101] invokevirtual #12
         - Methodref [android/preference/Preference.setSummary (Ljava/lang/CharSequence;)V]
       [104] iload_2 v2
@@ -3065,19 +3065,19 @@ Methods (count = 2):
       [106] ificmpne +11 (target=117)
       [109] aload_0 v0
       [110] getfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [113] iconst_2
       [114] invokevirtual #16
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
       [117] iload_2 v2
       [118] bipush 6
       [120] ificmpne +11 (target=131)
       [123] aload_0 v0
       [124] getfield #11
-        - Fieldref [com/matthewma/swipe_home/d.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/d.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [127] iconst_5
       [128] invokevirtual #16
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
       [131] aload_1 v1
       [132] invokeinterface #19
         - InterfaceMethodref [android/content/DialogInterface.dismiss ()V]
@@ -3088,7 +3088,7 @@ Methods (count = 2):
         - [23] Var: ..., Stack: (empty)
         - [24] Var: ..., Stack: [i]
         - [33] Var: ..., Stack: [i]
-        - [34] Var: [a:com/matthewma/swipe_home/d][a:android/content/DialogInterface][i], Stack: [i][i]
+        - [34] Var: [a:com/matthewma/swipehomebuttonfree/d][a:android/content/DialogInterface][i], Stack: [i][i]
         - [38] Var: ..., Stack: (empty)
         - [104] Var: ..., Stack: (empty)
         - [117] Var: ..., Stack: (empty)
@@ -3097,12 +3097,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/e
+- Program class: com/matthewma/swipehomebuttonfree/e
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.e extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.e extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/widget/AdapterView$OnItemClickListener]
@@ -3116,21 +3116,21 @@ Constant Pool (count = 90):
   - Class [android/preference/Preference]
   - Class [android/widget/AdapterView$OnItemClickListener]
   - Class [android/widget/ListView]
-  - Class [com/matthewma/swipe_home/SettingsActivity]
-  - Class [com/matthewma/swipe_home/e]
-  - Class [com/matthewma/swipe_home/j]
+  - Class [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Class [com/matthewma/swipehomebuttonfree/e]
+  - Class [com/matthewma/swipehomebuttonfree/j]
   - Class [java/lang/Object]
   - Class [java/lang/StringBuilder]
-  - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/e.a Lcom/matthewma/swipe_home/SettingsActivity;]
-  - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/j.b Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/e.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.b Ljava/lang/String;]
   - Methodref [android/app/Dialog.dismiss ()V]
   - Methodref [android/preference/Preference.setSummary (Ljava/lang/CharSequence;)V]
   - Methodref [android/widget/ListView.getItemAtPosition (I)Ljava/lang/Object;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.b (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/app/Dialog;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.b (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/app/Dialog;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
   - Methodref [java/lang/Object.<init> ()V]
   - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
@@ -3140,11 +3140,11 @@ Constant Pool (count = 90):
   - InterfaceMethodref [android/content/SharedPreferences$Editor.putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;]
   - NameAndType [<init> ()V]
   - NameAndType [<init> (Ljava/lang/String;)V]
-  - NameAndType [a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
-  - NameAndType [a Lcom/matthewma/swipe_home/SettingsActivity;]
+  - NameAndType [a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
   - NameAndType [a Ljava/lang/String;]
   - NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-  - NameAndType [b (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/app/Dialog;]
+  - NameAndType [b (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/app/Dialog;]
   - NameAndType [b Ljava/lang/String;]
   - NameAndType [commit ()Z]
   - NameAndType [dismiss ()V]
@@ -3160,9 +3160,9 @@ Constant Pool (count = 90):
   - Utf8 [()Z]
   - Utf8 [(I)Ljava/lang/Object;]
   - Utf8 [(Landroid/widget/AdapterView;Landroid/view/View;IJ)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/app/Dialog;]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/app/Dialog;]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
   - Utf8 [(Ljava/lang/CharSequence;)Landroid/preference/Preference;]
   - Utf8 [(Ljava/lang/CharSequence;)V]
   - Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
@@ -3171,7 +3171,7 @@ Constant Pool (count = 90):
   - Utf8 [5|]
   - Utf8 [<init>]
   - Utf8 [Code]
-  - Utf8 [Lcom/matthewma/swipe_home/SettingsActivity;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
   - Utf8 [Ljava/lang/String;]
   - Utf8 [a]
   - Utf8 [android/app/Dialog]
@@ -3182,9 +3182,9 @@ Constant Pool (count = 90):
   - Utf8 [android/widget/ListView]
   - Utf8 [append]
   - Utf8 [b]
-  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
-  - Utf8 [com/matthewma/swipe_home/e]
-  - Utf8 [com/matthewma/swipe_home/j]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Utf8 [com/matthewma/swipehomebuttonfree/e]
+  - Utf8 [com/matthewma/swipehomebuttonfree/j]
   - Utf8 [commit]
   - Utf8 [dismiss]
   - Utf8 [edit]
@@ -3199,20 +3199,20 @@ Constant Pool (count = 90):
   - Utf8 [|]
 
 Fields (count = 1):
-  - Field:        a Lcom/matthewma/swipe_home/SettingsActivity;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.SettingsActivity a
+      = private synthetic com.matthewma.swipehomebuttonfree.SettingsActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SettingsActivity;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V
     Access flags: 0x0
-      = e(com.matthewma.swipe_home.SettingsActivity)
+      = e(com.matthewma.swipehomebuttonfree.SettingsActivity)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #15
-        - Fieldref [com/matthewma/swipe_home/e.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/e.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [5] aload_0 v0
       [6] invokespecial #24
         - Methodref [java/lang/Object.<init> ()V]
@@ -3230,9 +3230,9 @@ Methods (count = 2):
       [4] astore_1 v1
       [5] aload_0 v0
       [6] getfield #15
-        - Fieldref [com/matthewma/swipe_home/e.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/e.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [9] invokestatic #21
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
       [12] invokeinterface #28
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [17] astore_2 v2
@@ -3241,14 +3241,14 @@ Methods (count = 2):
       [20] invokevirtual #20
         - Methodref [android/widget/ListView.getItemAtPosition (I)Ljava/lang/Object;]
       [23] checkcast #11
-        - Class [com/matthewma/swipe_home/j]
+        - Class [com/matthewma/swipehomebuttonfree/j]
       [26] astore_1 v1
       [27] aload_2 v2
       [28] aload_0 v0
       [29] getfield #15
-        - Fieldref [com/matthewma/swipe_home/e.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/e.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [32] getfield #14
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [35] new #13
         - Class [java/lang/StringBuilder]
       [38] dup
@@ -3258,7 +3258,7 @@ Methods (count = 2):
         - Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [44] aload_1 v1
       [45] getfield #16
-        - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
       [48] invokevirtual #26
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [51] ldc #2
@@ -3267,7 +3267,7 @@ Methods (count = 2):
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [56] aload_1 v1
       [57] getfield #17
-        - Fieldref [com/matthewma/swipe_home/j.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.b Ljava/lang/String;]
       [60] invokevirtual #26
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [63] invokevirtual #27
@@ -3281,24 +3281,24 @@ Methods (count = 2):
       [78] pop
       [79] aload_0 v0
       [80] getfield #15
-        - Fieldref [com/matthewma/swipe_home/e.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/e.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [83] invokestatic #22
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.b (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/app/Dialog;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.b (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/app/Dialog;]
       [86] invokevirtual #18
         - Methodref [android/app/Dialog.dismiss ()V]
       [89] aload_0 v0
       [90] getfield #15
-        - Fieldref [com/matthewma/swipe_home/e.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/e.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [93] aload_0 v0
       [94] getfield #15
-        - Fieldref [com/matthewma/swipe_home/e.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/e.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [97] getfield #14
-        - Fieldref [com/matthewma/swipe_home/SettingsActivity.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SettingsActivity.a Ljava/lang/String;]
       [100] invokevirtual #23
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [103] aload_1 v1
       [104] getfield #16
-        - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
       [107] invokevirtual #19
         - Methodref [android/preference/Preference.setSummary (Ljava/lang/CharSequence;)V]
       [110] return
@@ -3308,12 +3308,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/f
+- Program class: com/matthewma/swipehomebuttonfree/f
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.f extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.f extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/content/DialogInterface$OnClickListener]
@@ -3321,7 +3321,7 @@ Interfaces (count = 1):
 Constant Pool (count = 20):
   - Class [android/content/DialogInterface]
   - Class [android/content/DialogInterface$OnClickListener]
-  - Class [com/matthewma/swipe_home/f]
+  - Class [com/matthewma/swipehomebuttonfree/f]
   - Class [java/lang/Object]
   - Methodref [java/lang/Object.<init> ()V]
   - InterfaceMethodref [android/content/DialogInterface.dismiss ()V]
@@ -3329,12 +3329,12 @@ Constant Pool (count = 20):
   - NameAndType [dismiss ()V]
   - Utf8 [()V]
   - Utf8 [(Landroid/content/DialogInterface;I)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [android/content/DialogInterface]
   - Utf8 [android/content/DialogInterface$OnClickListener]
-  - Utf8 [com/matthewma/swipe_home/f]
+  - Utf8 [com/matthewma/swipehomebuttonfree/f]
   - Utf8 [dismiss]
   - Utf8 [java/lang/Object]
   - Utf8 [onClick]
@@ -3342,9 +3342,9 @@ Constant Pool (count = 20):
 Fields (count = 0):
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SettingsActivity;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V
     Access flags: 0x0
-      = f(com.matthewma.swipe_home.SettingsActivity)
+      = f(com.matthewma.swipehomebuttonfree.SettingsActivity)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 5, locals = 2, stack = 1):
       [0] aload_0 v0
@@ -3368,57 +3368,57 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/g
+- Program class: com/matthewma/swipehomebuttonfree/g
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.g extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.g extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/content/DialogInterface$OnClickListener]
 
 Constant Pool (count = 25):
   - Class [android/content/DialogInterface$OnClickListener]
-  - Class [com/matthewma/swipe_home/SettingsActivity]
-  - Class [com/matthewma/swipe_home/g]
+  - Class [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Class [com/matthewma/swipehomebuttonfree/g]
   - Class [java/lang/Object]
-  - Fieldref [com/matthewma/swipe_home/g.a Lcom/matthewma/swipe_home/SettingsActivity;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+  - Fieldref [com/matthewma/swipehomebuttonfree/g.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
   - Methodref [java/lang/Object.<init> ()V]
   - NameAndType [<init> ()V]
-  - NameAndType [a Lcom/matthewma/swipe_home/SettingsActivity;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
   - NameAndType [showDialog (I)V]
   - Utf8 [()V]
   - Utf8 [(I)V]
   - Utf8 [(Landroid/content/DialogInterface;I)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
   - Utf8 [<init>]
   - Utf8 [Code]
-  - Utf8 [Lcom/matthewma/swipe_home/SettingsActivity;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
   - Utf8 [a]
   - Utf8 [android/content/DialogInterface$OnClickListener]
-  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
-  - Utf8 [com/matthewma/swipe_home/g]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Utf8 [com/matthewma/swipehomebuttonfree/g]
   - Utf8 [java/lang/Object]
   - Utf8 [onClick]
   - Utf8 [showDialog]
 
 Fields (count = 1):
-  - Field:        a Lcom/matthewma/swipe_home/SettingsActivity;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.SettingsActivity a
+      = private synthetic com.matthewma.swipehomebuttonfree.SettingsActivity a
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SettingsActivity;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V
     Access flags: 0x0
-      = g(com.matthewma.swipe_home.SettingsActivity)
+      = g(com.matthewma.swipehomebuttonfree.SettingsActivity)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #5
-        - Fieldref [com/matthewma/swipe_home/g.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/g.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [5] aload_0 v0
       [6] invokespecial #7
         - Methodref [java/lang/Object.<init> ()V]
@@ -3432,10 +3432,10 @@ Methods (count = 2):
     - Code attribute instructions (code length = 9, locals = 3, stack = 2):
       [0] aload_0 v0
       [1] getfield #5
-        - Fieldref [com/matthewma/swipe_home/g.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/g.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [4] iconst_1
       [5] invokevirtual #6
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.showDialog (I)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.showDialog (I)V]
       [8] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -3443,12 +3443,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/h
+- Program class: com/matthewma/swipehomebuttonfree/h
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.h extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.h extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/widget/SeekBar$OnSeekBarChangeListener]
@@ -3456,20 +3456,20 @@ Interfaces (count = 1):
 Constant Pool (count = 44):
   - Class [android/widget/SeekBar$OnSeekBarChangeListener]
   - Class [android/widget/TextView]
-  - Class [com/matthewma/swipe_home/b]
-  - Class [com/matthewma/swipe_home/h]
+  - Class [com/matthewma/swipehomebuttonfree/b]
+  - Class [com/matthewma/swipehomebuttonfree/h]
   - Class [java/lang/Object]
-  - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/h.a Lcom/matthewma/swipe_home/SettingsActivity;]
-  - Fieldref [com/matthewma/swipe_home/h.b Lcom/matthewma/swipe_home/b;]
-  - Fieldref [com/matthewma/swipe_home/h.c Landroid/widget/TextView;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/h.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/h.b Lcom/matthewma/swipehomebuttonfree/b;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/h.c Landroid/widget/TextView;]
   - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-  - Methodref [com/matthewma/swipe_home/b.a (ILandroid/content/Context;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/b.a (ILandroid/content/Context;)V]
   - Methodref [java/lang/Object.<init> ()V]
   - NameAndType [<init> ()V]
   - NameAndType [a (ILandroid/content/Context;)V]
-  - NameAndType [a Lcom/matthewma/swipe_home/SettingsActivity;]
-  - NameAndType [b Lcom/matthewma/swipe_home/b;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - NameAndType [b Lcom/matthewma/swipehomebuttonfree/b;]
   - NameAndType [b Ljava/lang/String;]
   - NameAndType [c Landroid/widget/TextView;]
   - NameAndType [setText (Ljava/lang/CharSequence;)V]
@@ -3477,21 +3477,21 @@ Constant Pool (count = 44):
   - Utf8 [(ILandroid/content/Context;)V]
   - Utf8 [(Landroid/widget/SeekBar;)V]
   - Utf8 [(Landroid/widget/SeekBar;IZ)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;Landroid/widget/TextView;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;Landroid/widget/TextView;)V]
   - Utf8 [(Ljava/lang/CharSequence;)V]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [Landroid/widget/TextView;]
-  - Utf8 [Lcom/matthewma/swipe_home/SettingsActivity;]
-  - Utf8 [Lcom/matthewma/swipe_home/b;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/b;]
   - Utf8 [Ljava/lang/String;]
   - Utf8 [a]
   - Utf8 [android/widget/SeekBar$OnSeekBarChangeListener]
   - Utf8 [android/widget/TextView]
   - Utf8 [b]
   - Utf8 [c]
-  - Utf8 [com/matthewma/swipe_home/b]
-  - Utf8 [com/matthewma/swipe_home/h]
+  - Utf8 [com/matthewma/swipehomebuttonfree/b]
+  - Utf8 [com/matthewma/swipehomebuttonfree/h]
   - Utf8 [java/lang/Object]
   - Utf8 [onProgressChanged]
   - Utf8 [onStartTrackingTouch]
@@ -3499,34 +3499,34 @@ Constant Pool (count = 44):
   - Utf8 [setText]
 
 Fields (count = 3):
-  - Field:        a Lcom/matthewma/swipe_home/SettingsActivity;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.SettingsActivity a
-  - Field:        b Lcom/matthewma/swipe_home/b;
+      = private synthetic com.matthewma.swipehomebuttonfree.SettingsActivity a
+  - Field:        b Lcom/matthewma/swipehomebuttonfree/b;
     Access flags: 0x1012
-      = private final synthetic com.matthewma.swipe_home.b b
+      = private final synthetic com.matthewma.swipehomebuttonfree.b b
   - Field:        c Landroid/widget/TextView;
     Access flags: 0x1012
       = private final synthetic android.widget.TextView c
 
 Methods (count = 4):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;Landroid/widget/TextView;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;Landroid/widget/TextView;)V
     Access flags: 0x0
-      = h(com.matthewma.swipe_home.SettingsActivity,com.matthewma.swipe_home.b,android.widget.TextView)
+      = h(com.matthewma.swipehomebuttonfree.SettingsActivity,com.matthewma.swipehomebuttonfree.b,android.widget.TextView)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 20, locals = 4, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #7
-        - Fieldref [com/matthewma/swipe_home/h.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/h.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [5] aload_0 v0
       [6] aload_2 v2
       [7] putfield #8
-        - Fieldref [com/matthewma/swipe_home/h.b Lcom/matthewma/swipe_home/b;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/h.b Lcom/matthewma/swipehomebuttonfree/b;]
       [10] aload_0 v0
       [11] aload_3 v3
       [12] putfield #9
-        - Fieldref [com/matthewma/swipe_home/h.c Landroid/widget/TextView;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/h.c Landroid/widget/TextView;]
       [15] aload_0 v0
       [16] invokespecial #12
         - Methodref [java/lang/Object.<init> ()V]
@@ -3556,21 +3556,21 @@ Methods (count = 4):
     - Code attribute instructions (code length = 27, locals = 4, stack = 3):
       [0] aload_0 v0
       [1] getfield #8
-        - Fieldref [com/matthewma/swipe_home/h.b Lcom/matthewma/swipe_home/b;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/h.b Lcom/matthewma/swipehomebuttonfree/b;]
       [4] iload_2 v2
       [5] aload_0 v0
       [6] getfield #7
-        - Fieldref [com/matthewma/swipe_home/h.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/h.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [9] invokevirtual #11
-        - Methodref [com/matthewma/swipe_home/b.a (ILandroid/content/Context;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/b.a (ILandroid/content/Context;)V]
       [12] aload_0 v0
       [13] getfield #9
-        - Fieldref [com/matthewma/swipe_home/h.c Landroid/widget/TextView;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/h.c Landroid/widget/TextView;]
       [16] aload_0 v0
       [17] getfield #8
-        - Fieldref [com/matthewma/swipe_home/h.b Lcom/matthewma/swipe_home/b;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/h.b Lcom/matthewma/swipehomebuttonfree/b;]
       [20] getfield #6
-        - Fieldref [com/matthewma/swipe_home/b.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.b Ljava/lang/String;]
       [23] invokevirtual #10
         - Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [26] return
@@ -3580,12 +3580,12 @@ Methods (count = 4):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/i
+- Program class: com/matthewma/swipehomebuttonfree/i
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.i extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.i extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/content/DialogInterface$OnClickListener]
@@ -3595,23 +3595,23 @@ Constant Pool (count = 51):
   - Class [android/content/DialogInterface$OnClickListener]
   - Class [android/content/SharedPreferences]
   - Class [android/content/SharedPreferences$Editor]
-  - Class [com/matthewma/swipe_home/SettingsActivity]
-  - Class [com/matthewma/swipe_home/b]
-  - Class [com/matthewma/swipe_home/i]
+  - Class [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Class [com/matthewma/swipehomebuttonfree/b]
+  - Class [com/matthewma/swipehomebuttonfree/i]
   - Class [java/lang/Object]
-  - Fieldref [com/matthewma/swipe_home/b.a I]
-  - Fieldref [com/matthewma/swipe_home/i.a Lcom/matthewma/swipe_home/SettingsActivity;]
-  - Fieldref [com/matthewma/swipe_home/i.b Lcom/matthewma/swipe_home/b;]
-  - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.a I]
+  - Fieldref [com/matthewma/swipehomebuttonfree/i.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/i.b Lcom/matthewma/swipehomebuttonfree/b;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
   - Methodref [java/lang/Object.<init> ()V]
   - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
   - InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
   - InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
   - NameAndType [<init> ()V]
-  - NameAndType [a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - NameAndType [a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
   - NameAndType [a I]
-  - NameAndType [a Lcom/matthewma/swipe_home/SettingsActivity;]
-  - NameAndType [b Lcom/matthewma/swipe_home/b;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - NameAndType [b Lcom/matthewma/swipehomebuttonfree/b;]
   - NameAndType [commit ()Z]
   - NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
   - NameAndType [putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
@@ -3619,22 +3619,22 @@ Constant Pool (count = 51):
   - Utf8 [()V]
   - Utf8 [()Z]
   - Utf8 [(Landroid/content/DialogInterface;I)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;)V]
   - Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [I]
-  - Utf8 [Lcom/matthewma/swipe_home/SettingsActivity;]
-  - Utf8 [Lcom/matthewma/swipe_home/b;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/b;]
   - Utf8 [a]
   - Utf8 [android/content/DialogInterface$OnClickListener]
   - Utf8 [android/content/SharedPreferences]
   - Utf8 [android/content/SharedPreferences$Editor]
   - Utf8 [b]
-  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
-  - Utf8 [com/matthewma/swipe_home/b]
-  - Utf8 [com/matthewma/swipe_home/i]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Utf8 [com/matthewma/swipehomebuttonfree/b]
+  - Utf8 [com/matthewma/swipehomebuttonfree/i]
   - Utf8 [commit]
   - Utf8 [edit]
   - Utf8 [java/lang/Object]
@@ -3643,27 +3643,27 @@ Constant Pool (count = 51):
   - Utf8 [putInt]
 
 Fields (count = 2):
-  - Field:        a Lcom/matthewma/swipe_home/SettingsActivity;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.SettingsActivity a
-  - Field:        b Lcom/matthewma/swipe_home/b;
+      = private synthetic com.matthewma.swipehomebuttonfree.SettingsActivity a
+  - Field:        b Lcom/matthewma/swipehomebuttonfree/b;
     Access flags: 0x1012
-      = private final synthetic com.matthewma.swipe_home.b b
+      = private final synthetic com.matthewma.swipehomebuttonfree.b b
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SettingsActivity;Lcom/matthewma/swipe_home/b;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;Lcom/matthewma/swipehomebuttonfree/b;)V
     Access flags: 0x0
-      = i(com.matthewma.swipe_home.SettingsActivity,com.matthewma.swipe_home.b)
+      = i(com.matthewma.swipehomebuttonfree.SettingsActivity,com.matthewma.swipehomebuttonfree.b)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 15, locals = 3, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #10
-        - Fieldref [com/matthewma/swipe_home/i.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/i.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [5] aload_0 v0
       [6] aload_2 v2
       [7] putfield #11
-        - Fieldref [com/matthewma/swipe_home/i.b Lcom/matthewma/swipe_home/b;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/i.b Lcom/matthewma/swipehomebuttonfree/b;]
       [10] aload_0 v0
       [11] invokespecial #13
         - Methodref [java/lang/Object.<init> ()V]
@@ -3677,9 +3677,9 @@ Methods (count = 2):
     - Code attribute instructions (code length = 37, locals = 3, stack = 3):
       [0] aload_0 v0
       [1] getfield #10
-        - Fieldref [com/matthewma/swipe_home/i.a Lcom/matthewma/swipe_home/SettingsActivity;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/i.a Lcom/matthewma/swipehomebuttonfree/SettingsActivity;]
       [4] invokestatic #12
-        - Methodref [com/matthewma/swipe_home/SettingsActivity.a (Lcom/matthewma/swipe_home/SettingsActivity;)Landroid/content/SharedPreferences;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SettingsActivity.a (Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)Landroid/content/SharedPreferences;]
       [7] invokeinterface #14
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [12] dup
@@ -3688,9 +3688,9 @@ Methods (count = 2):
         - String [prefDetectAreaProgress]
       [16] aload_0 v0
       [17] getfield #11
-        - Fieldref [com/matthewma/swipe_home/i.b Lcom/matthewma/swipe_home/b;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/i.b Lcom/matthewma/swipehomebuttonfree/b;]
       [20] getfield #9
-        - Fieldref [com/matthewma/swipe_home/b.a I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.a I]
       [23] invokeinterface #16
         - InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
       [28] pop
@@ -3705,28 +3705,28 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/j
+- Program class: com/matthewma/swipehomebuttonfree/j
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.j extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.j extends java.lang.Object
 
 Interfaces (count = 0):
 
 Constant Pool (count = 22):
   - String []
-  - Class [com/matthewma/swipe_home/j]
+  - Class [com/matthewma/swipehomebuttonfree/j]
   - Class [java/lang/Object]
-  - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
-  - Fieldref [com/matthewma/swipe_home/j.b Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/j.b Ljava/lang/String;]
   - Methodref [java/lang/Object.<init> ()V]
   - NameAndType [<init> ()V]
   - NameAndType [a Ljava/lang/String;]
   - NameAndType [b Ljava/lang/String;]
   - Utf8 []
   - Utf8 [()V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SettingsActivity;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [Landroid/graphics/drawable/Drawable;]
@@ -3734,7 +3734,7 @@ Constant Pool (count = 22):
   - Utf8 [a]
   - Utf8 [b]
   - Utf8 [c]
-  - Utf8 [com/matthewma/swipe_home/j]
+  - Utf8 [com/matthewma/swipehomebuttonfree/j]
   - Utf8 [java/lang/Object]
 
 Fields (count = 3):
@@ -3749,9 +3749,9 @@ Fields (count = 3):
       = public android.graphics.drawable.Drawable c
 
 Methods (count = 1):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SettingsActivity;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SettingsActivity;)V
     Access flags: 0x0
-      = j(com.matthewma.swipe_home.SettingsActivity)
+      = j(com.matthewma.swipehomebuttonfree.SettingsActivity)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 17, locals = 2, stack = 2):
       [0] aload_0 v0
@@ -3761,12 +3761,12 @@ Methods (count = 1):
       [5] ldc #1
         - String []
       [7] putfield #4
-        - Fieldref [com/matthewma/swipe_home/j.a Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.a Ljava/lang/String;]
       [10] aload_0 v0
       [11] ldc #1
         - String []
       [13] putfield #5
-        - Fieldref [com/matthewma/swipe_home/j.b Ljava/lang/String;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/j.b Ljava/lang/String;]
       [16] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -3774,12 +3774,12 @@ Methods (count = 1):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/SwipeService
+- Program class: com/matthewma/swipehomebuttonfree/SwipeService
   Superclass:    android/app/Service
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x21
-    = public class com.matthewma.swipe_home.SwipeService extends android.app.Service
+    = public class com.matthewma.swipehomebuttonfree.SwipeService extends android.app.Service
 
 Interfaces (count = 1):
   - Class [android/view/GestureDetector$OnGestureListener]
@@ -3873,13 +3873,13 @@ Constant Pool (count = 625):
   - Class [android/view/WindowManager$LayoutParams]
   - Class [android/widget/Button]
   - Class [android/widget/CheckBox]
-  - Class [com/matthewma/swipe_home/NotificationHelper]
-  - Class [com/matthewma/swipe_home/SettingsActivity]
-  - Class [com/matthewma/swipe_home/SwipeService]
-  - Class [com/matthewma/swipe_home/b]
-  - Class [com/matthewma/swipe_home/k]
-  - Class [com/matthewma/swipe_home/l]
-  - Class [com/matthewma/swipe_home/m]
+  - Class [com/matthewma/swipehomebuttonfree/NotificationHelper]
+  - Class [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Class [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Class [com/matthewma/swipehomebuttonfree/b]
+  - Class [com/matthewma/swipehomebuttonfree/k]
+  - Class [com/matthewma/swipehomebuttonfree/l]
+  - Class [com/matthewma/swipehomebuttonfree/m]
   - Class [java/lang/Boolean]
   - Class [java/lang/Class]
   - Class [java/lang/Double]
@@ -3905,20 +3905,20 @@ Constant Pool (count = 625):
   - Fieldref [android/graphics/Point.y I]
   - Fieldref [android/os/Build$VERSION.SDK_INT I]
   - Fieldref [android/view/WindowManager$LayoutParams.gravity I]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/view/GestureDetector;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.c Ljava/lang/Boolean;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.e Landroid/view/WindowManager;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.f Ljava/lang/Boolean;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.g I]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.h I]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.i Ljava/lang/Boolean;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.j Ljava/util/Date;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.k Landroid/os/Vibrator;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.l Ljava/lang/Boolean;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.m Ljava/lang/Boolean;]
-  - Fieldref [com/matthewma/swipe_home/b.c I]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.b Landroid/view/GestureDetector;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.c Ljava/lang/Boolean;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.e Landroid/view/WindowManager;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.f Ljava/lang/Boolean;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.g I]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.h I]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.i Ljava/lang/Boolean;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.j Ljava/util/Date;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.k Landroid/os/Vibrator;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.l Ljava/lang/Boolean;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.m Ljava/lang/Boolean;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
   - Methodref [android/app/AlertDialog.getWindow ()Landroid/view/Window;]
   - Methodref [android/app/AlertDialog.show ()V]
   - Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
@@ -3973,23 +3973,23 @@ Constant Pool (count = 625):
   - Methodref [android/widget/CheckBox.setChecked (Z)V]
   - Methodref [android/widget/CheckBox.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
   - Methodref [android/widget/CheckBox.setText (I)V]
-  - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
-  - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
-  - Methodref [com/matthewma/swipe_home/SwipeService.getApplication ()Landroid/app/Application;]
-  - Methodref [com/matthewma/swipe_home/SwipeService.getApplicationInfo ()Landroid/content/pm/ApplicationInfo;]
-  - Methodref [com/matthewma/swipe_home/SwipeService.getBaseContext ()Landroid/content/Context;]
-  - Methodref [com/matthewma/swipe_home/SwipeService.getPackageManager ()Landroid/content/pm/PackageManager;]
-  - Methodref [com/matthewma/swipe_home/SwipeService.getResources ()Landroid/content/res/Resources;]
-  - Methodref [com/matthewma/swipe_home/SwipeService.getString (I)Ljava/lang/String;]
-  - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
-  - Methodref [com/matthewma/swipe_home/SwipeService.sendOrderedBroadcast (Landroid/content/Intent;Ljava/lang/String;)V]
-  - Methodref [com/matthewma/swipe_home/SwipeService.startActivity (Landroid/content/Intent;)V]
-  - Methodref [com/matthewma/swipe_home/SwipeService.startForeground (ILandroid/app/Notification;)V]
-  - Methodref [com/matthewma/swipe_home/b.<init> ()V]
-  - Methodref [com/matthewma/swipe_home/b.a (ILandroid/content/Context;)V]
-  - Methodref [com/matthewma/swipe_home/k.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
-  - Methodref [com/matthewma/swipe_home/l.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
-  - Methodref [com/matthewma/swipe_home/m.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getApplication ()Landroid/app/Application;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getApplicationInfo ()Landroid/content/pm/ApplicationInfo;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getBaseContext ()Landroid/content/Context;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getPackageManager ()Landroid/content/pm/PackageManager;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getResources ()Landroid/content/res/Resources;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getString (I)Ljava/lang/String;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.sendOrderedBroadcast (Landroid/content/Intent;Ljava/lang/String;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.startActivity (Landroid/content/Intent;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.startForeground (ILandroid/app/Notification;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/b.<init> ()V]
+  - Methodref [com/matthewma/swipehomebuttonfree/b.a (ILandroid/content/Context;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/k.<init> (Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/l.<init> (Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
+  - Methodref [com/matthewma/swipehomebuttonfree/m.<init> (Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
   - Methodref [java/lang/Boolean.booleanValue ()Z]
   - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
   - Methodref [java/lang/Class.forName (Ljava/lang/String;)Ljava/lang/Class;]
@@ -4020,7 +4020,7 @@ Constant Pool (count = 625):
   - NameAndType [<init> (Landroid/content/Context;)V]
   - NameAndType [<init> (Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V]
   - NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
-  - NameAndType [<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+  - NameAndType [<init> (Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
   - NameAndType [<init> (Ljava/lang/String;)V]
   - NameAndType [SDK_INT I]
   - NameAndType [a (I)I]
@@ -4178,7 +4178,7 @@ Constant Pool (count = 625):
   - Utf8 [(Landroid/view/View;)V]
   - Utf8 [(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
   - Utf8 [(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
   - Utf8 [(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
   - Utf8 [(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
   - Utf8 [(Ljava/lang/Object;)Z]
@@ -4271,13 +4271,13 @@ Constant Pool (count = 625):
   - Utf8 [booleanValue]
   - Utf8 [c]
   - Utf8 [com.android.internal.statusbar.IStatusBarService]
-  - Utf8 [com/matthewma/swipe_home/NotificationHelper]
-  - Utf8 [com/matthewma/swipe_home/SettingsActivity]
-  - Utf8 [com/matthewma/swipe_home/SwipeService]
-  - Utf8 [com/matthewma/swipe_home/b]
-  - Utf8 [com/matthewma/swipe_home/k]
-  - Utf8 [com/matthewma/swipe_home/l]
-  - Utf8 [com/matthewma/swipe_home/m]
+  - Utf8 [com/matthewma/swipehomebuttonfree/NotificationHelper]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SettingsActivity]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Utf8 [com/matthewma/swipehomebuttonfree/b]
+  - Utf8 [com/matthewma/swipehomebuttonfree/k]
+  - Utf8 [com/matthewma/swipehomebuttonfree/l]
+  - Utf8 [com/matthewma/swipehomebuttonfree/m]
   - Utf8 [create]
   - Utf8 [d]
   - Utf8 [decodeResource]
@@ -4457,7 +4457,7 @@ Methods (count = 13):
       [6] invokestatic #215
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
       [9] putfield #137
-        - Fieldref [com/matthewma/swipe_home/SwipeService.i Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.i Ljava/lang/Boolean;]
       [12] aload_0 v0
       [13] new #106
         - Class [java/util/Date]
@@ -4465,7 +4465,7 @@ Methods (count = 13):
       [17] invokespecial #230
         - Methodref [java/util/Date.<init> ()V]
       [20] putfield #138
-        - Fieldref [com/matthewma/swipe_home/SwipeService.j Ljava/util/Date;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.j Ljava/util/Date;]
       [23] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4479,11 +4479,11 @@ Methods (count = 13):
       [2] invokestatic #177
         - Methodref [android/preference/PreferenceManager.getDefaultSharedPreferences (Landroid/content/Context;)Landroid/content/SharedPreferences;]
       [5] putfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [8] aload_0 v0
       [9] aload_0 v0
       [10] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [13] ldc #37
         - String [prefForceNotification]
       [15] iconst_0
@@ -4492,11 +4492,11 @@ Methods (count = 13):
       [21] invokestatic #215
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
       [24] putfield #134
-        - Fieldref [com/matthewma/swipe_home/SwipeService.f Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.f Ljava/lang/Boolean;]
       [27] aload_0 v0
       [28] aload_0 v0
       [29] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [32] ldc #45
         - String [prefTabNotice]
       [34] iconst_1
@@ -4505,11 +4505,11 @@ Methods (count = 13):
       [40] invokestatic #215
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
       [43] putfield #131
-        - Fieldref [com/matthewma/swipe_home/SwipeService.c Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.c Ljava/lang/Boolean;]
       [46] aload_0 v0
       [47] aload_0 v0
       [48] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [51] ldc #48
         - String [prefVibrate]
       [53] iconst_1
@@ -4518,11 +4518,11 @@ Methods (count = 13):
       [59] invokestatic #215
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
       [62] putfield #140
-        - Fieldref [com/matthewma/swipe_home/SwipeService.l Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.l Ljava/lang/Boolean;]
       [65] aload_0 v0
       [66] aload_0 v0
       [67] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [70] ldc #46
         - String [prefTapVibrate]
       [72] iconst_1
@@ -4531,10 +4531,10 @@ Methods (count = 13):
       [78] invokestatic #215
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
       [81] putfield #141
-        - Fieldref [com/matthewma/swipe_home/SwipeService.m Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.m Ljava/lang/Boolean;]
       [84] aload_0 v0
       [85] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [88] ldc #47
         - String [prefTransparentIcon]
       [90] iconst_1
@@ -4545,7 +4545,7 @@ Methods (count = 13):
       [99] astore_1 v1
       [100] aload_0 v0
       [101] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [104] ldc #36
         - String [prefDetectAreaHeight]
       [106] iconst_2
@@ -4553,38 +4553,38 @@ Methods (count = 13):
         - InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
       [112] istore_2 v2
       [113] new #92
-        - Class [com/matthewma/swipe_home/b]
+        - Class [com/matthewma/swipehomebuttonfree/b]
       [116] dup
       [117] invokespecial #209
-        - Methodref [com/matthewma/swipe_home/b.<init> ()V]
+        - Methodref [com/matthewma/swipehomebuttonfree/b.<init> ()V]
       [120] dup
       [121] astore_3 v3
       [122] iload_2 v2
       [123] aload_0 v0
       [124] invokevirtual #210
-        - Methodref [com/matthewma/swipe_home/b.a (ILandroid/content/Context;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/b.a (ILandroid/content/Context;)V]
       [127] aload_0 v0
       [128] aload_3 v3
       [129] getfield #142
-        - Fieldref [com/matthewma/swipe_home/b.c I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/b.c I]
       [132] putfield #135
-        - Fieldref [com/matthewma/swipe_home/SwipeService.g I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.g I]
       [135] aload_0 v0
       [136] aload_0 v0
       [137] ldc #54
         - String [vibrator]
       [139] invokevirtual #205
-        - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
       [142] checkcast #74
         - Class [android/os/Vibrator]
       [145] putfield #139
-        - Fieldref [com/matthewma/swipe_home/SwipeService.k Landroid/os/Vibrator;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.k Landroid/os/Vibrator;]
       [148] new #65
         - Class [android/content/Intent]
       [151] dup
       [152] aload_0 v0
       [153] ldc #90
-        - Class [com/matthewma/swipe_home/SettingsActivity]
+        - Class [com/matthewma/swipehomebuttonfree/SettingsActivity]
       [155] invokespecial #165
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [158] astore_2 v2
@@ -4617,14 +4617,14 @@ Methods (count = 13):
       [191] ldc #8
         - Integer [2131034112]
       [193] invokevirtual #204
-        - Methodref [com/matthewma/swipe_home/SwipeService.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getString (I)Ljava/lang/String;]
       [196] invokevirtual #158
         - Methodref [android/app/Notification$Builder.setContentTitle (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
       [199] aload_0 v0
       [200] ldc #9
         - Integer [2131034113]
       [202] invokevirtual #204
-        - Methodref [com/matthewma/swipe_home/SwipeService.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getString (I)Ljava/lang/String;]
       [205] invokevirtual #157
         - Methodref [android/app/Notification$Builder.setContentText (Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;]
       [208] pop
@@ -4639,7 +4639,7 @@ Methods (count = 13):
         - Methodref [android/app/Notification$Builder.setSmallIcon (I)Landroid/app/Notification$Builder;]
       [222] aload_0 v0
       [223] invokevirtual #203
-        - Methodref [com/matthewma/swipe_home/SwipeService.getResources ()Landroid/content/res/Resources;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getResources ()Landroid/content/res/Resources;]
       [226] ldc #5
         - Integer [2130837507]
       [228] invokestatic #174
@@ -4679,12 +4679,12 @@ Methods (count = 13):
       [279] sipush 317
       [282] aload_2 v2
       [283] invokevirtual #208
-        - Methodref [com/matthewma/swipe_home/SwipeService.startForeground (ILandroid/app/Notification;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.startForeground (ILandroid/app/Notification;)V]
       [286] aload_0 v0
       [287] ldc #55
         - String [window]
       [289] invokevirtual #205
-        - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
       [292] checkcast #85
         - Class [android/view/WindowManager]
       [295] dup
@@ -4707,7 +4707,7 @@ Methods (count = 13):
       [318] getfield #126
         - Fieldref [android/graphics/Point.y I]
       [321] putfield #136
-        - Fieldref [com/matthewma/swipe_home/SwipeService.h I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.h I]
       [324] aload_0 v0
       [325] new #87
         - Class [android/widget/Button]
@@ -4716,10 +4716,10 @@ Methods (count = 13):
       [330] invokespecial #189
         - Methodref [android/widget/Button.<init> (Landroid/content/Context;)V]
       [333] putfield #132
-        - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
       [336] aload_0 v0
       [337] invokevirtual #200
-        - Methodref [com/matthewma/swipe_home/SwipeService.getApplicationInfo ()Landroid/content/pm/ApplicationInfo;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getApplicationInfo ()Landroid/content/pm/ApplicationInfo;]
       [340] dup
       [341] getfield #125
         - Fieldref [android/content/pm/ApplicationInfo.flags I]
@@ -4737,13 +4737,13 @@ Methods (count = 13):
       [360] ifne +19 (target=379)
       [363] aload_0 v0
       [364] getfield #132
-        - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
       [367] iconst_0
       [368] invokevirtual #193
         - Methodref [android/widget/Button.setVisibility (I)V]
       [371] aload_0 v0
       [372] getfield #132
-        - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
       [375] iconst_0
       [376] invokevirtual #191
         - Methodref [android/widget/Button.setBackgroundColor (I)V]
@@ -4753,7 +4753,7 @@ Methods (count = 13):
       - Stack map table attribute (count = 6):
         - [238] Var: ...[a:java/lang/Boolean][T][a:android/app/Notification$Builder], Stack: (empty)
         - [245] Var: ..., Stack: (empty)
-        - [271] Var: [a:com/matthewma/swipe_home/SwipeService][T][a:android/app/Notification], Stack: 
+        - [271] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][T][a:android/app/Notification], Stack: 
         - [357] Var: -2, Stack: (empty)
         - [358] Var: ..., Stack: [i]
         - [379] Var: -1, Stack: (empty)
@@ -4765,14 +4765,14 @@ Methods (count = 13):
       [0] aload_0 v0
       [1] aload_0 v0
       [2] getfield #135
-        - Fieldref [com/matthewma/swipe_home/SwipeService.g I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.g I]
       [5] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
       [8] istore_1 v1
       [9] aload_0 v0
       [10] sipush 140
       [13] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
       [16] istore_2 v2
       [17] new #86
         - Class [android/view/WindowManager$LayoutParams]
@@ -4796,23 +4796,23 @@ Methods (count = 13):
       [44] dup
       [45] aload_0 v0
       [46] getfield #132
-        - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
       [49] invokevirtual #190
         - Methodref [android/widget/Button.getContext ()Landroid/content/Context;]
       [52] aload_0 v0
       [53] invokespecial #181
         - Methodref [android/view/GestureDetector.<init> (Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V]
       [56] putfield #130
-        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/view/GestureDetector;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.b Landroid/view/GestureDetector;]
       [59] aload_0 v0
       [60] getfield #132
-        - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
       [63] new #93
-        - Class [com/matthewma/swipe_home/k]
+        - Class [com/matthewma/swipehomebuttonfree/k]
       [66] dup
       [67] aload_0 v0
       [68] invokespecial #211
-        - Methodref [com/matthewma/swipe_home/k.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/k.<init> (Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
       [71] invokevirtual #192
         - Methodref [android/widget/Button.setOnTouchListener (Landroid/view/View$OnTouchListener;)V]
       [74] aload_0 v0
@@ -4820,17 +4820,17 @@ Methods (count = 13):
       [76] ldc #55
         - String [window]
       [78] invokevirtual #205
-        - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
       [81] checkcast #85
         - Class [android/view/WindowManager]
       [84] putfield #133
-        - Fieldref [com/matthewma/swipe_home/SwipeService.e Landroid/view/WindowManager;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.e Landroid/view/WindowManager;]
       [87] aload_0 v0
       [88] getfield #133
-        - Fieldref [com/matthewma/swipe_home/SwipeService.e Landroid/view/WindowManager;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.e Landroid/view/WindowManager;]
       [91] aload_0 v0
       [92] getfield #132
-        - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
       [95] aload_1 v1
       [96] invokeinterface #235
         - InterfaceMethodref [android/view/WindowManager.addView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V]
@@ -4854,10 +4854,10 @@ Methods (count = 13):
     - Code attribute instructions (code length = 14, locals = 1, stack = 2):
       [0] aload_0 v0
       [1] getfield #133
-        - Fieldref [com/matthewma/swipe_home/SwipeService.e Landroid/view/WindowManager;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.e Landroid/view/WindowManager;]
       [4] aload_0 v0
       [5] getfield #132
-        - Fieldref [com/matthewma/swipe_home/SwipeService.d Landroid/widget/Button;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.d Landroid/widget/Button;]
       [8] invokeinterface #237
         - InterfaceMethodref [android/view/WindowManager.removeView (Landroid/view/View;)V]
       [13] return
@@ -4927,7 +4927,7 @@ Methods (count = 13):
       [75] aload_0 v0
       [76] bipush 20
       [78] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
       [81] i2f
       [82] fcmpg
       [83] iflt +26 (target=109)
@@ -4937,7 +4937,7 @@ Methods (count = 13):
       [90] aload_0 v0
       [91] bipush 40
       [93] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
       [96] i2f
       [97] fcmpg
       [98] ifge +96 (target=194)
@@ -4952,14 +4952,14 @@ Methods (count = 13):
       [113] aload_0 v0
       [114] bipush 50
       [116] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
       [119] i2f
       [120] fcmpg
       [121] ifge +23 (target=144)
       [124] aload_0 v0
       [125] aload_0 v0
       [126] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [129] ldc #42
         - String [prefSwipeupdown]
       [131] ldc #18
@@ -4967,7 +4967,7 @@ Methods (count = 13):
       [133] invokeinterface #234
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [138] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
       [141] goto +198 (target=339)
       [144] aload v5
       [146] invokevirtual #221
@@ -4978,7 +4978,7 @@ Methods (count = 13):
       [154] aload_0 v0
       [155] aload_0 v0
       [156] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [159] ldc #40
         - String [prefSwipelowright]
       [161] ldc #18
@@ -4986,12 +4986,12 @@ Methods (count = 13):
       [163] invokeinterface #234
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [168] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
       [171] goto +168 (target=339)
       [174] aload_0 v0
       [175] aload_0 v0
       [176] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [179] ldc #39
         - String [prefSwipelowleft]
       [181] ldc #18
@@ -4999,7 +4999,7 @@ Methods (count = 13):
       [183] invokeinterface #234
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [188] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
       [191] goto +148 (target=339)
       [194] aload_2 v2
       [195] invokevirtual #219
@@ -5014,7 +5014,7 @@ Methods (count = 13):
       [209] aload_0 v0
       [210] bipush 65
       [212] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
       [215] i2f
       [216] fcmpl
       [217] ifgt +18 (target=235)
@@ -5024,7 +5024,7 @@ Methods (count = 13):
       [224] aload_0 v0
       [225] bipush 65
       [227] invokespecial #197
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (I)I]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (I)I]
       [230] i2f
       [231] fcmpl
       [232] ifle +53 (target=285)
@@ -5037,7 +5037,7 @@ Methods (count = 13):
       [245] aload_0 v0
       [246] aload_0 v0
       [247] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [250] ldc #44
         - String [prefSwipeupright]
       [252] ldc #19
@@ -5045,12 +5045,12 @@ Methods (count = 13):
       [254] invokeinterface #234
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [259] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
       [262] goto +77 (target=339)
       [265] aload_0 v0
       [266] aload_0 v0
       [267] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [270] ldc #43
         - String [prefSwipeupleft]
       [272] ldc #19
@@ -5058,14 +5058,14 @@ Methods (count = 13):
       [274] invokeinterface #234
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [279] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
       [282] goto +57 (target=339)
       [285] aload_1 v1
       [286] invokevirtual #221
         - Methodref [java/lang/Float.floatValue ()F]
       [289] aload_0 v0
       [290] getfield #136
-        - Fieldref [com/matthewma/swipe_home/SwipeService.h I]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.h I]
       [293] iconst_5
       [294] idiv
       [295] iconst_1
@@ -5076,7 +5076,7 @@ Methods (count = 13):
       [302] aload_0 v0
       [303] aload_0 v0
       [304] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [307] ldc #41
         - String [prefSwipeup]
       [309] ldc #17
@@ -5084,12 +5084,12 @@ Methods (count = 13):
       [311] invokeinterface #234
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [316] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
       [319] goto +20 (target=339)
       [322] aload_0 v0
       [323] aload_0 v0
       [324] getfield #129
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [327] ldc #38
         - String [prefSwipefarup]
       [329] ldc #17
@@ -5097,18 +5097,18 @@ Methods (count = 13):
       [331] invokeinterface #234
         - InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
       [336] invokespecial #198
-        - Methodref [com/matthewma/swipe_home/SwipeService.a (Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.a (Ljava/lang/String;)V]
       [339] iconst_0
       [340] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       - Stack map table attribute (count = 9):
-        - [109] Var: [a:com/matthewma/swipe_home/SwipeService][T][T][a:java/lang/Float][T][a:java/lang/Float], Stack: 
-        - [144] Var: [a:com/matthewma/swipe_home/SwipeService][T][T][T][T][a:java/lang/Float], Stack: 
-        - [174] Var: [a:com/matthewma/swipe_home/SwipeService], Stack: 
-        - [194] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/Float][a:java/lang/Double][a:java/lang/Float][T][a:java/lang/Float], Stack: 
-        - [235] Var: [a:com/matthewma/swipe_home/SwipeService][T][T][T][T][a:java/lang/Float], Stack: 
-        - [265] Var: [a:com/matthewma/swipe_home/SwipeService], Stack: 
+        - [109] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][T][T][a:java/lang/Float][T][a:java/lang/Float], Stack: 
+        - [144] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][T][T][T][T][a:java/lang/Float], Stack: 
+        - [174] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService], Stack: 
+        - [194] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/Float][a:java/lang/Double][a:java/lang/Float][T][a:java/lang/Float], Stack: 
+        - [235] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][T][T][T][T][a:java/lang/Float], Stack: 
+        - [265] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService], Stack: 
         - [285] Var: ...[a:java/lang/Float], Stack: (empty)
         - [322] Var: -1, Stack: (empty)
         - [339] Var: -1, Stack: (empty)
@@ -5153,20 +5153,20 @@ Methods (count = 13):
     - Code attribute instructions (code length = 212, locals = 4, stack = 5):
       [0] aload_0 v0
       [1] getfield #141
-        - Fieldref [com/matthewma/swipe_home/SwipeService.m Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.m Ljava/lang/Boolean;]
       [4] invokevirtual #214
         - Methodref [java/lang/Boolean.booleanValue ()Z]
       [7] ifeq +13 (target=20)
       [10] aload_0 v0
       [11] getfield #139
-        - Fieldref [com/matthewma/swipe_home/SwipeService.k Landroid/os/Vibrator;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.k Landroid/os/Vibrator;]
       [14] ldc2_w #111
         - Long [35]
       [17] invokevirtual #176
         - Methodref [android/os/Vibrator.vibrate (J)V]
       [20] aload_0 v0
       [21] getfield #131
-        - Fieldref [com/matthewma/swipe_home/SwipeService.c Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.c Ljava/lang/Boolean;]
       [24] invokevirtual #214
         - Methodref [java/lang/Boolean.booleanValue ()Z]
       [27] ifeq +183 (target=210)
@@ -5179,7 +5179,7 @@ Methods (count = 13):
         - Methodref [java/util/Date.getTime ()J]
       [40] aload_0 v0
       [41] getfield #138
-        - Fieldref [com/matthewma/swipe_home/SwipeService.j Ljava/util/Date;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.j Ljava/util/Date;]
       [44] invokevirtual #231
         - Methodref [java/util/Date.getTime ()J]
       [47] lsub
@@ -5215,18 +5215,18 @@ Methods (count = 13):
       [85] aload_2 v2
       [86] aload_0 v0
       [87] getfield #131
-        - Fieldref [com/matthewma/swipe_home/SwipeService.c Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.c Ljava/lang/Boolean;]
       [90] invokevirtual #214
         - Methodref [java/lang/Boolean.booleanValue ()Z]
       [93] invokevirtual #194
         - Methodref [android/widget/CheckBox.setChecked (Z)V]
       [96] aload_2 v2
       [97] new #94
-        - Class [com/matthewma/swipe_home/l]
+        - Class [com/matthewma/swipehomebuttonfree/l]
       [100] dup
       [101] aload_0 v0
       [102] invokespecial #212
-        - Methodref [com/matthewma/swipe_home/l.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/l.<init> (Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
       [105] invokevirtual #195
         - Methodref [android/widget/CheckBox.setOnCheckedChangeListener (Landroid/widget/CompoundButton$OnCheckedChangeListener;)V]
       [108] new #58
@@ -5253,19 +5253,19 @@ Methods (count = 13):
       [134] ldc #13
         - Integer [2131034194]
       [136] invokevirtual #204
-        - Methodref [com/matthewma/swipe_home/SwipeService.getString (I)Ljava/lang/String;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getString (I)Ljava/lang/String;]
       [139] new #95
-        - Class [com/matthewma/swipe_home/m]
+        - Class [com/matthewma/swipehomebuttonfree/m]
       [142] dup
       [143] aload_0 v0
       [144] invokespecial #213
-        - Methodref [com/matthewma/swipe_home/m.<init> (Lcom/matthewma/swipe_home/SwipeService;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/m.<init> (Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
       [147] invokevirtual #149
         - Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
       [150] pop
       [151] aload_0 v0
       [152] getfield #137
-        - Fieldref [com/matthewma/swipe_home/SwipeService.i Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.i Ljava/lang/Boolean;]
       [155] invokevirtual #214
         - Methodref [java/lang/Boolean.booleanValue ()Z]
       [158] ifne +12 (target=170)
@@ -5280,7 +5280,7 @@ Methods (count = 13):
       [172] invokestatic #215
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
       [175] putfield #137
-        - Fieldref [com/matthewma/swipe_home/SwipeService.i Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.i Ljava/lang/Boolean;]
       [178] aload_2 v2
       [179] invokevirtual #146
         - Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
@@ -5303,7 +5303,7 @@ Methods (count = 13):
       [204] invokespecial #230
         - Methodref [java/util/Date.<init> ()V]
       [207] putfield #138
-        - Fieldref [com/matthewma/swipe_home/SwipeService.j Ljava/util/Date;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.j Ljava/util/Date;]
       [210] iconst_0
       [211] ireturn
       Code attribute exceptions (count = 0):
@@ -5321,7 +5321,7 @@ Methods (count = 13):
     - Code attribute instructions (code length = 17, locals = 3, stack = 3):
       [0] aload_0 v0
       [1] invokevirtual #203
-        - Methodref [com/matthewma/swipe_home/SwipeService.getResources ()Landroid/content/res/Resources;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getResources ()Landroid/content/res/Resources;]
       [4] astore_2 v2
       [5] iconst_1
       [6] iload_1 v1
@@ -5349,13 +5349,13 @@ Methods (count = 13):
       [9] return
       [10] aload_0 v0
       [11] getfield #140
-        - Fieldref [com/matthewma/swipe_home/SwipeService.l Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.l Ljava/lang/Boolean;]
       [14] invokevirtual #214
         - Methodref [java/lang/Boolean.booleanValue ()Z]
       [17] ifeq +13 (target=30)
       [20] aload_0 v0
       [21] getfield #139
-        - Fieldref [com/matthewma/swipe_home/SwipeService.k Landroid/os/Vibrator;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.k Landroid/os/Vibrator;]
       [24] ldc2_w #109
         - Long [10]
       [27] invokevirtual #176
@@ -5389,7 +5389,7 @@ Methods (count = 13):
       [63] aload_0 v0
       [64] aload_2 v2
       [65] invokevirtual #207
-        - Methodref [com/matthewma/swipe_home/SwipeService.startActivity (Landroid/content/Intent;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.startActivity (Landroid/content/Intent;)V]
       [68] goto +4 (target=72)
       [71] astore_3 v3
       [72] aload_1 v1
@@ -5516,7 +5516,7 @@ Methods (count = 13):
       [226] ifeq +131 (target=357)
       [229] aload_0 v0
       [230] getfield #134
-        - Fieldref [com/matthewma/swipe_home/SwipeService.f Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.f Ljava/lang/Boolean;]
       [233] invokevirtual #214
         - Methodref [java/lang/Boolean.booleanValue ()Z]
       [236] ifeq +35 (target=271)
@@ -5525,9 +5525,9 @@ Methods (count = 13):
       [242] dup
       [243] aload_0 v0
       [244] invokevirtual #201
-        - Methodref [com/matthewma/swipe_home/SwipeService.getBaseContext ()Landroid/content/Context;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getBaseContext ()Landroid/content/Context;]
       [247] ldc #89
-        - Class [com/matthewma/swipe_home/NotificationHelper]
+        - Class [com/matthewma/swipehomebuttonfree/NotificationHelper]
       [249] invokespecial #165
         - Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
       [252] dup
@@ -5539,7 +5539,7 @@ Methods (count = 13):
       [259] pop
       [260] aload_0 v0
       [261] invokevirtual #199
-        - Methodref [com/matthewma/swipe_home/SwipeService.getApplication ()Landroid/app/Application;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getApplication ()Landroid/app/Application;]
       [264] aload_2 v2
       [265] invokevirtual #152
         - Methodref [android/app/Application.startActivity (Landroid/content/Intent;)V]
@@ -5552,7 +5552,7 @@ Methods (count = 13):
       [276] ldc #51
         - String [statusbar]
       [278] invokevirtual #205
-        - Methodref [com/matthewma/swipe_home/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
       [281] astore_3 v3
       [282] ldc #24
         - String [android.app.StatusBarManager]
@@ -5638,7 +5638,7 @@ Methods (count = 13):
       [399] astore_3 v3
       [400] aload_0 v0
       [401] invokevirtual #202
-        - Methodref [com/matthewma/swipe_home/SwipeService.getPackageManager ()Landroid/content/pm/PackageManager;]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.getPackageManager ()Landroid/content/pm/PackageManager;]
       [404] dup
       [405] astore v4
       [407] aload_2 v2
@@ -5656,7 +5656,7 @@ Methods (count = 13):
       [421] aload_0 v0
       [422] aload_3 v3
       [423] invokevirtual #207
-        - Methodref [com/matthewma/swipe_home/SwipeService.startActivity (Landroid/content/Intent;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.startActivity (Landroid/content/Intent;)V]
       [426] goto +4 (target=430)
       [429] astore_3 v3
       [430] aload_1 v1
@@ -5694,7 +5694,7 @@ Methods (count = 13):
       [471] aload_2 v2
       [472] aconst_null
       [473] invokevirtual #206
-        - Methodref [com/matthewma/swipe_home/SwipeService.sendOrderedBroadcast (Landroid/content/Intent;Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.sendOrderedBroadcast (Landroid/content/Intent;Ljava/lang/String;)V]
       [476] aload_2 v2
       [477] ldc #28
         - String [android.intent.extra.KEY_EVENT]
@@ -5712,7 +5712,7 @@ Methods (count = 13):
       [494] aload_2 v2
       [495] aconst_null
       [496] invokevirtual #206
-        - Methodref [com/matthewma/swipe_home/SwipeService.sendOrderedBroadcast (Landroid/content/Intent;Ljava/lang/String;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.sendOrderedBroadcast (Landroid/content/Intent;Ljava/lang/String;)V]
       [499] aload_3 v3
       [500] monitorexit
       [501] goto +6 (target=507)
@@ -5760,7 +5760,7 @@ Methods (count = 13):
       [557] aload_0 v0
       [558] aload_3 v3
       [559] invokevirtual #207
-        - Methodref [com/matthewma/swipe_home/SwipeService.startActivity (Landroid/content/Intent;)V]
+        - Methodref [com/matthewma/swipehomebuttonfree/SwipeService.startActivity (Landroid/content/Intent;)V]
       [562] return
       [563] astore_3 v3
       [564] return
@@ -5784,33 +5784,33 @@ Methods (count = 13):
         - [30] Var: ..., Stack: (empty)
         - [71] Var: ..., Stack: [a:android/content/ActivityNotFoundException]
         - [72] Var: ..., Stack: (empty)
-        - [203] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/String][a:com/matthewma/swipe_home/SwipeService], Stack: [a:java/lang/Exception]
+        - [203] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/String][a:com/matthewma/swipehomebuttonfree/SwipeService], Stack: [a:java/lang/Exception]
         - [212] Var: ..., Stack: (empty)
-        - [217] Var: [T][T][a:com/matthewma/swipe_home/SwipeService], Stack: [a:java/lang/Throwable]
-        - [220] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/String], Stack: 
+        - [217] Var: [T][T][a:com/matthewma/swipehomebuttonfree/SwipeService], Stack: [a:java/lang/Throwable]
+        - [220] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/String], Stack: 
         - [271] Var: ..., Stack: (empty)
-        - [313] Var: ...[a:com/matthewma/swipe_home/SwipeService][a:java/lang/Object][a:java/lang/Class], Stack: (empty)
-        - [326] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/String][a:com/matthewma/swipe_home/SwipeService][a:java/lang/Object][T][a:java/lang/reflect/Method], Stack: 
-        - [340] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/String][a:com/matthewma/swipe_home/SwipeService], Stack: [a:java/lang/Exception]
+        - [313] Var: ...[a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/Object][a:java/lang/Class], Stack: (empty)
+        - [326] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/String][a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/Object][T][a:java/lang/reflect/Method], Stack: 
+        - [340] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/String][a:com/matthewma/swipehomebuttonfree/SwipeService], Stack: [a:java/lang/Exception]
         - [349] Var: ..., Stack: (empty)
-        - [354] Var: [T][T][a:com/matthewma/swipe_home/SwipeService], Stack: [a:java/lang/Throwable]
-        - [357] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/String], Stack: 
+        - [354] Var: [T][T][a:com/matthewma/swipehomebuttonfree/SwipeService], Stack: [a:java/lang/Throwable]
+        - [357] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/String], Stack: 
         - [429] Var: ..., Stack: [a:java/lang/Exception]
         - [430] Var: ..., Stack: (empty)
-        - [504] Var: [T][T][T][a:com/matthewma/swipe_home/SwipeService], Stack: [a:java/lang/Throwable]
-        - [507] Var: [a:com/matthewma/swipe_home/SwipeService][a:java/lang/String], Stack: 
+        - [504] Var: [T][T][T][a:com/matthewma/swipehomebuttonfree/SwipeService], Stack: [a:java/lang/Throwable]
+        - [507] Var: [a:com/matthewma/swipehomebuttonfree/SwipeService][a:java/lang/String], Stack: 
         - [563] Var: , Stack: [a:java/lang/Exception]
         - [564] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/k
+- Program class: com/matthewma/swipehomebuttonfree/k
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.k extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.k extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/view/View$OnTouchListener]
@@ -5818,50 +5818,50 @@ Interfaces (count = 1):
 Constant Pool (count = 31):
   - Class [android/view/GestureDetector]
   - Class [android/view/View$OnTouchListener]
-  - Class [com/matthewma/swipe_home/SwipeService]
-  - Class [com/matthewma/swipe_home/k]
+  - Class [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Class [com/matthewma/swipehomebuttonfree/k]
   - Class [java/lang/Object]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/view/GestureDetector;]
-  - Fieldref [com/matthewma/swipe_home/k.a Lcom/matthewma/swipe_home/SwipeService;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.b Landroid/view/GestureDetector;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/k.a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
   - Methodref [android/view/GestureDetector.onTouchEvent (Landroid/view/MotionEvent;)Z]
   - Methodref [java/lang/Object.<init> ()V]
   - NameAndType [<init> ()V]
-  - NameAndType [a Lcom/matthewma/swipe_home/SwipeService;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
   - NameAndType [b Landroid/view/GestureDetector;]
   - NameAndType [onTouchEvent (Landroid/view/MotionEvent;)Z]
   - Utf8 [()V]
   - Utf8 [(Landroid/view/MotionEvent;)Z]
   - Utf8 [(Landroid/view/View;Landroid/view/MotionEvent;)Z]
-  - Utf8 [(Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [Landroid/view/GestureDetector;]
-  - Utf8 [Lcom/matthewma/swipe_home/SwipeService;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/SwipeService;]
   - Utf8 [a]
   - Utf8 [android/view/GestureDetector]
   - Utf8 [android/view/View$OnTouchListener]
   - Utf8 [b]
-  - Utf8 [com/matthewma/swipe_home/SwipeService]
-  - Utf8 [com/matthewma/swipe_home/k]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Utf8 [com/matthewma/swipehomebuttonfree/k]
   - Utf8 [java/lang/Object]
   - Utf8 [onTouch]
   - Utf8 [onTouchEvent]
 
 Fields (count = 1):
-  - Field:        a Lcom/matthewma/swipe_home/SwipeService;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/SwipeService;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.SwipeService a
+      = private synthetic com.matthewma.swipehomebuttonfree.SwipeService a
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SwipeService;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SwipeService;)V
     Access flags: 0x0
-      = k(com.matthewma.swipe_home.SwipeService)
+      = k(com.matthewma.swipehomebuttonfree.SwipeService)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #7
-        - Fieldref [com/matthewma/swipe_home/k.a Lcom/matthewma/swipe_home/SwipeService;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/k.a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
       [5] aload_0 v0
       [6] invokespecial #9
         - Methodref [java/lang/Object.<init> ()V]
@@ -5875,9 +5875,9 @@ Methods (count = 2):
     - Code attribute instructions (code length = 14, locals = 3, stack = 2):
       [0] aload_0 v0
       [1] getfield #7
-        - Fieldref [com/matthewma/swipe_home/k.a Lcom/matthewma/swipe_home/SwipeService;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/k.a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
       [4] getfield #6
-        - Fieldref [com/matthewma/swipe_home/SwipeService.b Landroid/view/GestureDetector;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.b Landroid/view/GestureDetector;]
       [7] aload_2 v2
       [8] invokevirtual #8
         - Methodref [android/view/GestureDetector.onTouchEvent (Landroid/view/MotionEvent;)Z]
@@ -5890,12 +5890,12 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/l
+- Program class: com/matthewma/swipehomebuttonfree/l
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.l extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.l extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/widget/CompoundButton$OnCheckedChangeListener]
@@ -5905,13 +5905,13 @@ Constant Pool (count = 52):
   - Class [android/content/SharedPreferences]
   - Class [android/content/SharedPreferences$Editor]
   - Class [android/widget/CompoundButton$OnCheckedChangeListener]
-  - Class [com/matthewma/swipe_home/SwipeService]
-  - Class [com/matthewma/swipe_home/l]
+  - Class [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Class [com/matthewma/swipehomebuttonfree/l]
   - Class [java/lang/Boolean]
   - Class [java/lang/Object]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
-  - Fieldref [com/matthewma/swipe_home/SwipeService.c Ljava/lang/Boolean;]
-  - Fieldref [com/matthewma/swipe_home/l.a Lcom/matthewma/swipe_home/SwipeService;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.c Ljava/lang/Boolean;]
+  - Fieldref [com/matthewma/swipehomebuttonfree/l.a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
   - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
   - Methodref [java/lang/Object.<init> ()V]
   - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
@@ -5919,7 +5919,7 @@ Constant Pool (count = 52):
   - InterfaceMethodref [android/content/SharedPreferences$Editor.putBoolean (Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
   - NameAndType [<init> ()V]
   - NameAndType [a Landroid/content/SharedPreferences;]
-  - NameAndType [a Lcom/matthewma/swipe_home/SwipeService;]
+  - NameAndType [a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
   - NameAndType [c Ljava/lang/Boolean;]
   - NameAndType [commit ()Z]
   - NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
@@ -5929,21 +5929,21 @@ Constant Pool (count = 52):
   - Utf8 [()V]
   - Utf8 [()Z]
   - Utf8 [(Landroid/widget/CompoundButton;Z)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
   - Utf8 [(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;]
   - Utf8 [(Z)Ljava/lang/Boolean;]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [Landroid/content/SharedPreferences;]
-  - Utf8 [Lcom/matthewma/swipe_home/SwipeService;]
+  - Utf8 [Lcom/matthewma/swipehomebuttonfree/SwipeService;]
   - Utf8 [Ljava/lang/Boolean;]
   - Utf8 [a]
   - Utf8 [android/content/SharedPreferences]
   - Utf8 [android/content/SharedPreferences$Editor]
   - Utf8 [android/widget/CompoundButton$OnCheckedChangeListener]
   - Utf8 [c]
-  - Utf8 [com/matthewma/swipe_home/SwipeService]
-  - Utf8 [com/matthewma/swipe_home/l]
+  - Utf8 [com/matthewma/swipehomebuttonfree/SwipeService]
+  - Utf8 [com/matthewma/swipehomebuttonfree/l]
   - Utf8 [commit]
   - Utf8 [edit]
   - Utf8 [java/lang/Boolean]
@@ -5954,20 +5954,20 @@ Constant Pool (count = 52):
   - Utf8 [valueOf]
 
 Fields (count = 1):
-  - Field:        a Lcom/matthewma/swipe_home/SwipeService;
+  - Field:        a Lcom/matthewma/swipehomebuttonfree/SwipeService;
     Access flags: 0x1002
-      = private synthetic com.matthewma.swipe_home.SwipeService a
+      = private synthetic com.matthewma.swipehomebuttonfree.SwipeService a
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SwipeService;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SwipeService;)V
     Access flags: 0x0
-      = l(com.matthewma.swipe_home.SwipeService)
+      = l(com.matthewma.swipehomebuttonfree.SwipeService)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #11
-        - Fieldref [com/matthewma/swipe_home/l.a Lcom/matthewma/swipe_home/SwipeService;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/l.a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
       [5] aload_0 v0
       [6] invokespecial #13
         - Methodref [java/lang/Object.<init> ()V]
@@ -5981,17 +5981,17 @@ Methods (count = 2):
     - Code attribute instructions (code length = 42, locals = 3, stack = 3):
       [0] aload_0 v0
       [1] getfield #11
-        - Fieldref [com/matthewma/swipe_home/l.a Lcom/matthewma/swipe_home/SwipeService;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/l.a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
       [4] iload_2 v2
       [5] invokestatic #12
         - Methodref [java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;]
       [8] putfield #10
-        - Fieldref [com/matthewma/swipe_home/SwipeService.c Ljava/lang/Boolean;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.c Ljava/lang/Boolean;]
       [11] aload_0 v0
       [12] getfield #11
-        - Fieldref [com/matthewma/swipe_home/l.a Lcom/matthewma/swipe_home/SwipeService;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/l.a Lcom/matthewma/swipehomebuttonfree/SwipeService;]
       [15] getfield #9
-        - Fieldref [com/matthewma/swipe_home/SwipeService.a Landroid/content/SharedPreferences;]
+        - Fieldref [com/matthewma/swipehomebuttonfree/SwipeService.a Landroid/content/SharedPreferences;]
       [18] invokeinterface #14
         - InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
       [23] dup
@@ -6013,38 +6013,38 @@ Methods (count = 2):
 Class file attributes (count = 0):
 
 _____________________________________________________________________
-- Program class: com/matthewma/swipe_home/m
+- Program class: com/matthewma/swipehomebuttonfree/m
   Superclass:    java/lang/Object
   Major version: 0x32
   Minor version: 0x0
   Access flags:  0x30
-    = final class com.matthewma.swipe_home.m extends java.lang.Object
+    = final class com.matthewma.swipehomebuttonfree.m extends java.lang.Object
 
 Interfaces (count = 1):
   - Class [android/content/DialogInterface$OnClickListener]
 
 Constant Pool (count = 15):
   - Class [android/content/DialogInterface$OnClickListener]
-  - Class [com/matthewma/swipe_home/m]
+  - Class [com/matthewma/swipehomebuttonfree/m]
   - Class [java/lang/Object]
   - Methodref [java/lang/Object.<init> ()V]
   - NameAndType [<init> ()V]
   - Utf8 [()V]
   - Utf8 [(Landroid/content/DialogInterface;I)V]
-  - Utf8 [(Lcom/matthewma/swipe_home/SwipeService;)V]
+  - Utf8 [(Lcom/matthewma/swipehomebuttonfree/SwipeService;)V]
   - Utf8 [<init>]
   - Utf8 [Code]
   - Utf8 [android/content/DialogInterface$OnClickListener]
-  - Utf8 [com/matthewma/swipe_home/m]
+  - Utf8 [com/matthewma/swipehomebuttonfree/m]
   - Utf8 [java/lang/Object]
   - Utf8 [onClick]
 
 Fields (count = 0):
 
 Methods (count = 2):
-  - Method:       <init>(Lcom/matthewma/swipe_home/SwipeService;)V
+  - Method:       <init>(Lcom/matthewma/swipehomebuttonfree/SwipeService;)V
     Access flags: 0x0
-      = m(com.matthewma.swipe_home.SwipeService)
+      = m(com.matthewma.swipehomebuttonfree.SwipeService)
     Class member attributes (count = 1):
     - Code attribute instructions (code length = 5, locals = 2, stack = 1):
       [0] aload_0 v0

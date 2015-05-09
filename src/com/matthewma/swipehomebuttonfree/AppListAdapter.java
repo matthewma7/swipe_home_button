@@ -1,6 +1,6 @@
-package com.matthewma.swipe_home;
+package com.matthewma.swipehomebuttonfree;
 
-import com.matthewma.swipe_home.SettingsActivity.PInfo;
+import com.matthewma.swipehomebuttonfree.SettingsActivity.PInfo;
 
 import android.content.Context;
 import android.view.LayoutInflater;
