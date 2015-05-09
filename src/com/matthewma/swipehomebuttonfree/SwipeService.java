@@ -2,6 +2,8 @@ package com.matthewma.swipehomebuttonfree;
 
 import java.lang.reflect.Method;
 import java.util.Date;
+
+import android.accessibilityservice.AccessibilityService;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Notification;
@@ -37,13 +39,14 @@ import android.view.Window;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
+import android.view.accessibility.AccessibilityEvent;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
 
-public class SwipeService extends Service implements OnGestureListener{
+public class SwipeService extends AccessibilityService implements OnGestureListener{
 	HandlerThread thread;
 	SharedPreferences sharedPrefs;
 	Button mButton;
@@ -53,7 +56,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean prefTabNotice;
 	final int ANGLE=25;
 	final int XYThreshold=65;
-	final int buttonWidth=140;
+	final int buttonWidth=3000;
 	int buttonHeight;
 	int screenHeight;
 	Boolean firstTapNotice=true;
@@ -161,11 +164,6 @@ public class SwipeService extends Service implements OnGestureListener{
 		wm.addView(mButton, params);
 //		Toast.makeText(this, "Swipe Home Service Started", Toast.LENGTH_SHORT).show();
 		return START_STICKY;
-	}
-
-	@Override
-	public IBinder onBind(Intent intent) {
-		return null;
 	}
 
 	@Override
@@ -303,6 +301,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	    return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics());
 	}
 	
+	@SuppressLint("NewApi")
 	public void action(String action){
 		
 		if(action.equals("0")){
@@ -353,7 +352,8 @@ public class SwipeService extends Service implements OnGestureListener{
 			}
 			else{
 				synchronized(this){
-					try{
+					this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
+					/*try{
 						Object sbservice = getSystemService( "statusbar" );
 						Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
 						Method showsb;
@@ -367,7 +367,7 @@ public class SwipeService extends Service implements OnGestureListener{
 					}
 					catch(Exception e){
 						Log.e("swipe", "pull down notification exception");
-					}
+					}*/
 				}
 			}
 		}
@@ -416,6 +416,18 @@ public class SwipeService extends Service implements OnGestureListener{
 				}
 			}
 		}
+	}
+
+	@Override
+	public void onAccessibilityEvent(AccessibilityEvent event) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onInterrupt() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

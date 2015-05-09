@@ -14,11 +14,13 @@ import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
+import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,6 +29,7 @@ import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
@@ -50,8 +53,24 @@ public class SettingsActivity extends PreferenceActivity implements
 		sharedPrefs=PreferenceManager.getDefaultSharedPreferences(this);
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.settings);
+		
+		if(Build.VERSION.SDK_INT >= 16){
+			Toast.makeText(this, "settingactivity onCreate", Toast.LENGTH_SHORT).show();
+			PreferenceCategory targetCategory = (PreferenceCategory)findPreference("prefCategorySetting");
+			CheckBoxPreference checkBoxPreference = new CheckBoxPreference(this);
+	        checkBoxPreference.setKey("prefUseAccessibility");
+	        checkBoxPreference.setTitle("N'Use Accessiblity");
+	        checkBoxPreference.setSummary("N'Use Android Accessiblity for pulling down notification and go back");
+	        checkBoxPreference.setDefaultValue(false);
+	        checkBoxPreference.setChecked(false);
+
+	        targetCategory.addPreference(checkBoxPreference);
+		}
+
+		
 		sharedPrefs.registerOnSharedPreferenceChangeListener(this);
 
+		/*
 		final Intent intent = new Intent(this, SwipeService.class);
 		if (isMyServiceRunning()) {
 			this.stopService(intent);
@@ -60,6 +79,7 @@ public class SettingsActivity extends PreferenceActivity implements
 		if (prefEnable) {
 			this.startService(intent);
 		}
+		*/
 		
 		findPreference("prefShare").setOnPreferenceClickListener(this);
 		findPreference("prefTransparentIcon").setOnPreferenceClickListener(this);

@@ -6,7 +6,7 @@
 <!--  	</PreferenceCategory>  -->
      
      
-    <PreferenceCategory android:title="@string/pref_category_settings" >
+    <PreferenceCategory android:title="@string/pref_category_settings" android:key="prefCategorySetting">
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="prefEnable"
