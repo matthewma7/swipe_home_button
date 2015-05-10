@@ -1,3 +1,5 @@
+%% I am aware that on Samsung Lollipop device the pull down notification feature is not working. I managed to get a Samsung Lollipop device and a One Plus One on Lollipop. Unfortunately, I found out this is a Samsung lollipop specific problem. Not only this app, other app that has pull notification won't work on Samsung Lollipop too. I know many of you are Samsung users, but there is nothing I can do at this moment except waiting for next system update :( Meanwhile, please un-check the Force notification under Advanced settings since it only make it worse. %%
+
 Do you find physical Home Button is hard to press? Do you worry your home button will be broken soon? Do you feel your notification bar is too far to reach?
 
 Swipe Home Button is a revolutionary tool that changes the way you control your android.
@@ -5,7 +7,6 @@ It provide five most useful actions on Android with bezel swipe gestures.
 
 No more Home Button. No more reaching to the status bar.
 And, now it is possible to use your big phone with only one hand!
-
 
 Five most useful actions!
 1, Go back to home screen
@@ -16,9 +17,11 @@ Five most useful actions!
     ----No more reaching to the far notification bar.
 4, Play next track. 
     ----One swipe to play next track even if you are in a full screen game.
+        (Only works on certain music play, has been tested on Poweramp, and stock Music Play)
 5, Open any other app
     ----You could open you most used app in one action!
-
+6, Open app shortcuts
+    ----Go directly to where you want to
 
 Five Amazing customizable swipe gestures!
 1, Swipe up
@@ -41,11 +44,17 @@ In addition, This app has a tiny footprint. Not a single unnecessary permission 
 
 Free your Home Button with gestures!
 
-
-##Important hints: 
-1, You could hide notification bar icon. With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting in your phone's application manager. Otherwise it is required to have a notification icon to keep the swipes work.
+###############################
+Known issues,
+1, This app may hinder touching space bar while typing. The workaround is touch the upper part space bar, disable "improve sensitivity" if possible, or use a IME that has a bigger space bar.
+2, No back button and Menu button support, because those feature need root permissions. This could be true for other specific feature.
+3, This app is not suitable for device that solely use virtual keys.
+4, Swipe Home Button has been tested with Galaxy S4, Galaxy S3, Galaxy S2, Galaxy Note 2, and HTC One. However, I can not assure other device can use this app.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Useful hints: 
+1, With Android 4.1+, you could even hide the icon in notification pull-down by unchecking "show notification" setting for Swipe Home Button in your phone's application manager. On Android 4.0 device, the icon in notification pull-down is required to keep the swipes working.
 2, Every swipe should start from outside of the screen. The swipe don't need to be fast.
-
-To HTC One user: 
-Dear HTC one users, I am aware of the problem of the black bar. I currently don't have a good solution. I will try to hide the black bar and then add menu button as a swipe gesture. However, I currently have no idea if it is possible to achieve that.
-Here is a possible workaround. A dear user told me that when the black bar presents, try to use the black bar as the bottom of the screen and do the swipe. It could work but may not be so well. I am glad this app could be helpful for you guys.
+3, Because of this app you may need to press upper part of your space bar when typing. The lower part is occupied by this app.
+4, Combining with other "Lock Screen" app can achieve lock screen using swipe.
+5, Combining with the great app called "Tasker", by creating tasker Shortcuts, you could achieve any command with swipe, including "Menu back" and "back button".
