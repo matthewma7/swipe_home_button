@@ -99,4 +99,6 @@
     <string name="notice_title">Notice:</string>
     <string name="notice_understand">I understand</string>
     <string name="notice_ok">OK</string>
+    
+    <string name="accessibility_description">N\'Swipe home button needs accessibility service to enable going back feature and pulling down notification bar on Samsung Lollipop system</string>
 </resources>
