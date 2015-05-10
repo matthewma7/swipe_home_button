@@ -133,7 +133,7 @@
   <!--Original value: Tap Notice-->
   <string name="dialog_tapnotice_title">誤觸提示</string>
   <!--Original value: You have tap on the swipe detection area for two concecutive times, please try tapping an upper area.-->
-  <string name="dialog_tapnotice">已兩虛兩次誤觸手勢檢測區域，請嘗試點擊更高一些的區域</string>
+  <string name="dialog_tapnotice">已連續兩次誤觸手勢檢測區域，請嘗試點擊更高一些的區域</string>
   <!--Original value: Show this notice next time-->
   <string name="dialog_tapnotice_checkbox">下次顯示這個提示</string>
   <!--Original value: Buy full version-->
