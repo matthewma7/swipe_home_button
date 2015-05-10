@@ -1,11 +1,7 @@
 package com.matthewma.swipehomebuttonfree;
 
-import java.lang.reflect.Method;
-
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.app.Activity;
 
 public class NotificationHelper extends Activity {

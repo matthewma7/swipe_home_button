@@ -58,8 +58,9 @@ public class Util {
 				result=true;
 			}
 			catch(Exception e){
-				Log.e("swipe", "pull down notification exception try use accessibility");
-				if(Build.VERSION.SDK_INT>=16){
+				Log.e("swipe", "pull down notification exception");
+				if(e.getCause() instanceof java.lang.SecurityException && Build.VERSION.SDK_INT>=16){
+					Log.e("swipe","change pref to use accessibility for pulling down notification");
 					SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 					Editor editor = sharedPrefs.edit();
 					editor.putBoolean("prefUseAccessibility",true);

@@ -25,7 +25,7 @@ public class MyAccessibilityService extends AccessibilityService {
 			Intent openAccessiblity = new Intent("android.settings.ACCESSIBILITY_SETTINGS");
 			openAccessiblity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
 			context.startActivity(openAccessiblity);
-		    Toast.makeText(context,"N'Please enable Swipe Home Button in this setting page", Toast.LENGTH_SHORT).show();
+		    Toast.makeText(context,context.getString(R.string.accessibility_tosater), Toast.LENGTH_SHORT).show();
 		}
 		return null;
 	}

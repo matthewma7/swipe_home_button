@@ -190,7 +190,7 @@ public class SettingsActivity extends PreferenceActivity implements
 					getString(R.string.dialog0_none), getString(R.string.dialog0_homebutton),
 					getString(R.string.dialog0_recentapp), getString(R.string.dialog0_pullnotification),
 					getString(R.string.dialog0_nexttrack), getString(R.string.dialog0_customapp),
-					getString(R.string.dialog0_shortcut), "N'Go Back"
+					getString(R.string.dialog0_shortcut), getString(R.string.dialog0_backbutton)
 				};
 				
 				Builder builder0 = new AlertDialog.Builder(this);
@@ -377,7 +377,7 @@ public class SettingsActivity extends PreferenceActivity implements
 			return getString(R.string.dialog0_pullnotification);
 		}
 		if(action.equals("7")){
-			return "N'Go Back description";
+			return getString(R.string.dialog0_backbutton);
 		}
 		if(action.equals("4")){
 			return getString(R.string.dialog0_nexttrack);

@@ -1,22 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
-          Copyright (C) 2009 The Android Open Source Project
-
-          Licensed under the Apache License, Version 2.0 (the "License");
-          you may not use this file except in compliance with the License.
-          You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-          Unless required by applicable law or agreed to in writing, software
-          distributed under the License is distributed on an "AS IS" BASIS,
-          WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-          See the License for the specific language governing permissions and
-          limitations under the License.
-
-          Editor: 
-            ArtfulBits Inc. (c) 2005-2009 (http://www.artfulbits.com)
-            Android Localizer (aiLocalizer)
         -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:android="http://schemas.android.com/apk/res/android">
   <!--Original value: Swipe Home Button-->
@@ -95,20 +78,16 @@
   <string name="dialog0_recentapp">最近使用應用</string>
   <!--Original value: Pull down notification-->
   <string name="dialog0_pullnotification">下拉通知欄</string>
-  <!--Original value: Back button-->
-  <string name="dialog0_menubutton">Back Button</string>
   <!--Original value: Menu button-->
-  <string name="dialog0_backbutton">Menu Button</string>
+  <string name="dialog0_menubutton" />
+  <!--Original value: Back button-->
+  <string name="dialog0_backbutton">返回鍵</string>
   <!--Original value: Custom app-->
   <string name="dialog0_customapp">自定義程序</string>
-  <!--Original value: Custom app \n(full version only)-->
-  <string name="dialog0_customapp_free">自定義程序（需付費版）</string>
   <!--Original value: Play next track-->
   <string name="dialog0_nexttrack">播放下一曲</string>
   <!--Original value: App shortcut-->
   <string name="dialog0_shortcut">應用快捷方式</string>
-  <!--Original value: App shortcut \n(full version only)-->
-  <string name="dialog0_shortcut_free">應用快捷方式（需付費版）</string>
   <!--Original value: Choose an app-->
   <string name="dialog1_title">選擇一個程序</string>
   <!--Original value: Swipe up-->
@@ -187,4 +166,8 @@
   <string name="notice_understand">我明白了</string>
   <!--Original value: OK-->
   <string name="notice_ok">好的</string>
+  <!--Original value: this app needs accessibility service for Go Back and Pull Down Notification on Samsung Lollipop system-->
+  <string name="accessibility_description">這個程式需要輔助功能服務來實現返回鍵和在Samsung Lollipop設備上的下拉菜單功能</string>
+  <!--Original value: Please turn Swipe Home Button on this page-->
+  <string name="accessibility_tosater">請在這個界面上打開滑動Home鍵</string>
 </resources>

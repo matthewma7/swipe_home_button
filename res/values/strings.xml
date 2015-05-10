@@ -46,13 +46,11 @@
     <string name="dialog0_homebutton">Home button</string>
     <string name="dialog0_recentapp">Show recent app</string>
     <string name="dialog0_pullnotification">Pull down notification</string>
-    <string name="dialog0_menubutton">Back button</string>
-    <string name="dialog0_backbutton">Menu button</string>
+    <string name="dialog0_menubutton">Menu button</string>
+    <string name="dialog0_backbutton">Back button</string>
     <string name="dialog0_customapp">Custom app</string>
-    <string name="dialog0_customapp_free">Custom app \n(full version only)</string>
     <string name="dialog0_nexttrack">Play next track</string>
     <string name="dialog0_shortcut">App shortcut</string>
-    <string name="dialog0_shortcut_free">App shortcut \n(full version only)</string>
     <string name="dialog1_title">Choose an app</string>
 
     <string name="pref_swipeup">Swipe up</string>
@@ -100,5 +98,6 @@
     <string name="notice_understand">I understand</string>
     <string name="notice_ok">OK</string>
     
-    <string name="accessibility_description">N\'Swipe home button needs accessibility service to enable going back feature and pulling down notification bar on Samsung Lollipop system</string>
+    <string name="accessibility_description">this app needs accessibility service for Go Back and Pull Down Notification on Samsung Lollipop system</string>
+    <string name="accessibility_tosater">Please turn Swipe Home Button on this page</string>
 </resources>
