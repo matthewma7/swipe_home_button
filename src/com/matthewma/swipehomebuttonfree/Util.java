@@ -1,6 +1,12 @@
 package com.matthewma.swipehomebuttonfree;
 
+import java.lang.reflect.Method;
+
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Build;
+import android.preference.PreferenceManager;
+import android.util.Log;
 
 public class Util {
 	//public static final int PrefRatingThreshold=150;
@@ -29,6 +35,34 @@ public class Util {
 			return "2";
 		}
 		return "0";
+	}
+	
+	public static boolean pullNotification(Context context){
+		boolean result=false;
+		try{
+			Object sbservice = context.getSystemService( "statusbar" );
+			Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
+			Method showsb;
+			SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+			boolean useAccessibility=sharedPrefs.getBoolean("prefUseAccessibility", false);
+			if(useAccessibility && Build.VERSION.SDK_INT>=16){
+				result=MyAccessibilityService.pullNotification(context);
+			}
+			else{
+				if (Build.VERSION.SDK_INT >= 17) {
+				    showsb = statusbarManager.getMethod("expandNotificationsPanel");
+				}
+				else {
+				    showsb = statusbarManager.getMethod("expand");
+				}
+				showsb.invoke( sbservice );
+			}
+			result=true;
+		}
+		catch(Exception e){
+			Log.e("swipe", "pull down notification exception");
+		}
+		return result;
 	}
 }
 

@@ -39,14 +39,13 @@ import android.view.Window;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
-import android.view.accessibility.AccessibilityEvent;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
 
-public class SwipeService extends AccessibilityService implements OnGestureListener{
+public class SwipeService extends Service implements OnGestureListener{
 	HandlerThread thread;
 	SharedPreferences sharedPrefs;
 	Button mButton;
@@ -56,7 +55,7 @@ public class SwipeService extends AccessibilityService implements OnGestureListe
 	Boolean prefTabNotice;
 	final int ANGLE=25;
 	final int XYThreshold=65;
-	final int buttonWidth=3000;
+	final int buttonWidth=1000;
 	int buttonHeight;
 	int screenHeight;
 	Boolean firstTapNotice=true;
@@ -164,6 +163,11 @@ public class SwipeService extends AccessibilityService implements OnGestureListe
 		wm.addView(mButton, params);
 //		Toast.makeText(this, "Swipe Home Service Started", Toast.LENGTH_SHORT).show();
 		return START_STICKY;
+	}
+
+	@Override
+	public IBinder onBind(Intent intent) {
+		return null;
 	}
 
 	@Override
@@ -352,24 +356,14 @@ public class SwipeService extends AccessibilityService implements OnGestureListe
 			}
 			else{
 				synchronized(this){
-					this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
-					/*try{
-						Object sbservice = getSystemService( "statusbar" );
-						Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
-						Method showsb;
-						if (Build.VERSION.SDK_INT >= 17) {
-						    showsb = statusbarManager.getMethod("expandNotificationsPanel");
-						}
-						else {
-						    showsb = statusbarManager.getMethod("expand");
-						}
-						showsb.invoke( sbservice );
-					}
-					catch(Exception e){
-						Log.e("swipe", "pull down notification exception");
-					}*/
+					Util.pullNotification(this);
 				}
 			}
+		}
+		
+		if(action.equals("7")){
+			MyAccessibilityService.GoBack(this);
+			return;
 		}
 		
 		if(action.length()>1 && action.substring(0, 1).equals("5")){
@@ -416,18 +410,6 @@ public class SwipeService extends AccessibilityService implements OnGestureListe
 				}
 			}
 		}
-	}
-
-	@Override
-	public void onAccessibilityEvent(AccessibilityEvent event) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onInterrupt() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

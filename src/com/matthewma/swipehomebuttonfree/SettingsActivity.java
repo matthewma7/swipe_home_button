@@ -29,7 +29,6 @@ import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
@@ -55,7 +54,6 @@ public class SettingsActivity extends PreferenceActivity implements
 		addPreferencesFromResource(R.xml.settings);
 		
 		if(Build.VERSION.SDK_INT >= 16){
-			Toast.makeText(this, "settingactivity onCreate", Toast.LENGTH_SHORT).show();
 			PreferenceCategory targetCategory = (PreferenceCategory)findPreference("prefCategorySetting");
 			CheckBoxPreference checkBoxPreference = new CheckBoxPreference(this);
 	        checkBoxPreference.setKey("prefUseAccessibility");
@@ -70,7 +68,7 @@ public class SettingsActivity extends PreferenceActivity implements
 		
 		sharedPrefs.registerOnSharedPreferenceChangeListener(this);
 
-		/*
+		
 		final Intent intent = new Intent(this, SwipeService.class);
 		if (isMyServiceRunning()) {
 			this.stopService(intent);
@@ -79,7 +77,6 @@ public class SettingsActivity extends PreferenceActivity implements
 		if (prefEnable) {
 			this.startService(intent);
 		}
-		*/
 		
 		findPreference("prefShare").setOnPreferenceClickListener(this);
 		findPreference("prefTransparentIcon").setOnPreferenceClickListener(this);
@@ -210,7 +207,7 @@ public class SettingsActivity extends PreferenceActivity implements
 					getString(R.string.dialog0_none), getString(R.string.dialog0_homebutton),
 					getString(R.string.dialog0_recentapp), getString(R.string.dialog0_pullnotification),
 					getString(R.string.dialog0_nexttrack), getString(R.string.dialog0_customapp),
-					getString(R.string.dialog0_shortcut)
+					getString(R.string.dialog0_shortcut), "N'Go Back"
 				};
 				
 				Builder builder0 = new AlertDialog.Builder(this);
@@ -222,7 +219,7 @@ public class SettingsActivity extends PreferenceActivity implements
 	                    new DialogInterface.OnClickListener() {
 			                public void onClick(DialogInterface dialog, int item) {
 	//		                    Toast.makeText(getApplicationContext(),items[item], Toast.LENGTH_SHORT).show();
-			                	if(item==0||item==1||item==2||item==3|item==4){
+			                	if(item==0||item==1||item==2||item==3||item==4||item==7){
 			                		Editor editor = sharedPrefs.edit();
 				                	editor.putString(currentPref, Integer.toString(item));
 				                	editor.commit();
@@ -395,6 +392,9 @@ public class SettingsActivity extends PreferenceActivity implements
 		}
 		if(action.equals("3")){
 			return getString(R.string.dialog0_pullnotification);
+		}
+		if(action.equals("7")){
+			return "N'Go Back description";
 		}
 		if(action.equals("4")){
 			return getString(R.string.dialog0_nexttrack);

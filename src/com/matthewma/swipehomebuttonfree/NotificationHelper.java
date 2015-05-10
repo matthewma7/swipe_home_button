@@ -20,21 +20,8 @@ public class NotificationHelper extends Activity {
 		mHandler.postDelayed(new Runnable() {
             public void run() {
             	synchronized(this){
-        			try{
-        				Object sbservice = getSystemService( "statusbar" );
-        				Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
-        				Method showsb;
-        				if (Build.VERSION.SDK_INT >= 17) {
-        				    showsb = statusbarManager.getMethod("expandNotificationsPanel");
-        				}
-        				else {
-        				    showsb = statusbarManager.getMethod("expand");
-        				}
-        				showsb.invoke( sbservice );
+        			if(Util.pullNotification(NotificationHelper.this)){
         				opened=true;
-        			}
-        			catch(Exception e){
-        				Log.e("swipe", "pull down notification exception");
         			}
         		}
             }
