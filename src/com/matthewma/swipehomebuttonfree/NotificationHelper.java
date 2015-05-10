@@ -20,7 +20,7 @@ public class NotificationHelper extends Activity {
 		mHandler.postDelayed(new Runnable() {
             public void run() {
             	synchronized(this){
-        			if(Util.pullNotification(NotificationHelper.this)){
+        			if(Util.pullNotification(NotificationHelper.this,false)){
         				opened=true;
         			}
         		}

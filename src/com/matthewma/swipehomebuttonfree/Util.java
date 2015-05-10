@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -37,30 +38,35 @@ public class Util {
 		return "0";
 	}
 	
-	public static boolean pullNotification(Context context){
+	public static boolean pullNotification(Context context,boolean useAccessibility){
 		boolean result=false;
-		try{
-			Object sbservice = context.getSystemService( "statusbar" );
-			Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
-			Method showsb;
-			SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-			boolean useAccessibility=sharedPrefs.getBoolean("prefUseAccessibility", false);
-			if(useAccessibility && Build.VERSION.SDK_INT>=16){
-				result=MyAccessibilityService.pullNotification(context);
-			}
-			else{
-				if (Build.VERSION.SDK_INT >= 17) {
-				    showsb = statusbarManager.getMethod("expandNotificationsPanel");
-				}
-				else {
-				    showsb = statusbarManager.getMethod("expand");
-				}
-				showsb.invoke( sbservice );
-			}
-			result=true;
+		if(useAccessibility && Build.VERSION.SDK_INT>=16){
+			result=MyAccessibilityService.pullNotification(context);
 		}
-		catch(Exception e){
-			Log.e("swipe", "pull down notification exception");
+		else{
+			try{
+				Object sbservice = context.getSystemService( "statusbar" );
+				Class<?> statusbarManager = Class.forName( "android.app.StatusBarManager" );
+				Method showsb;
+					if (Build.VERSION.SDK_INT >= 17) {
+					    showsb = statusbarManager.getMethod("expandNotificationsPanel");
+					}
+					else {
+					    showsb = statusbarManager.getMethod("expand");
+					}
+					showsb.invoke( sbservice );
+				result=true;
+			}
+			catch(Exception e){
+				Log.e("swipe", "pull down notification exception try use accessibility");
+				if(Build.VERSION.SDK_INT>=16){
+					SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+					Editor editor = sharedPrefs.edit();
+					editor.putBoolean("prefUseAccessibility",true);
+					editor.commit();
+					result=MyAccessibilityService.pullNotification(context);
+				}
+			}
 		}
 		return result;
 	}

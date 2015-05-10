@@ -2,8 +2,6 @@ package com.matthewma.swipehomebuttonfree;
 
 import java.lang.reflect.Method;
 import java.util.Date;
-
-import android.accessibilityservice.AccessibilityService;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Notification;
@@ -55,7 +53,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean prefTabNotice;
 	final int ANGLE=25;
 	final int XYThreshold=65;
-	final int buttonWidth=1000;
+	final int buttonWidth=10000;
 	int buttonHeight;
 	int screenHeight;
 	Boolean firstTapNotice=true;
@@ -63,6 +61,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	Vibrator vibrator;
 	Boolean swipeVibrate;
 	Boolean tapVibrate;
+	boolean useAccessibility;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -73,6 +72,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		prefTabNotice=sharedPrefs.getBoolean("prefTabNotice", true);
 		swipeVibrate=sharedPrefs.getBoolean("prefVibrate", true);
 		tapVibrate=sharedPrefs.getBoolean("prefTapVibrate", true);
+		useAccessibility=sharedPrefs.getBoolean("prefUseAccessibility", false);
 		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
 		int detectAreaHeight=sharedPrefs.getInt("prefDetectAreaHeight", 2);
 		AreaHeight areaHeight=new AreaHeight();
@@ -305,7 +305,6 @@ public class SwipeService extends Service implements OnGestureListener{
 	    return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics());
 	}
 	
-	@SuppressLint("NewApi")
 	public void action(String action){
 		
 		if(action.equals("0")){
@@ -348,7 +347,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		}
 		
 		if(action.equals("3")){
-			if(prefForceNotification){
+			if(!useAccessibility && prefForceNotification){
 				Intent dialogIntent = new Intent(getBaseContext(), NotificationHelper.class);
 //				dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 				dialogIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -356,7 +355,7 @@ public class SwipeService extends Service implements OnGestureListener{
 			}
 			else{
 				synchronized(this){
-					Util.pullNotification(this);
+					Util.pullNotification(this,useAccessibility);
 				}
 			}
 		}
