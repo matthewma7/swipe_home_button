@@ -50,6 +50,10 @@
   <string name="pref_areaheight_larger">Ampliar</string>
   <!--Original value: Large-->
   <string name="pref_areaheight_large">grande</string>
+  <!--Original value: Extend detection area width-->
+  <string name="pref_extend_areawidth">Extender la detección anchura del área</string>
+  <!--Original value: Extend detection area width to full screen width to fit bigger screen-->
+  <string name="pref_extend_areawidth_summary">Amplíe la anchura del área de detección de ancho de pantalla completa para adaptarse a la pantalla grande</string>
   <!--Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. -->
   <string name="dialog_areaheight_notice">Altos bloques de altura más espacio. </string>
   <!--Original value: Force notification-->
@@ -168,6 +172,6 @@
   <string name="notice_ok">bueno</string>
   <!--Original value: this app needs accessibility service for Go Back and Pull Down Notification on Samsung Lollipop system-->
   <string name="accessibility_description">esta aplicación requiere un servicio de accesibilidad para volver atrás y tira hacia abajo de notificación en el sistema de Samsung Lollipop</string>
-  <!--Original value: Please turn Swipe Home Button on this page-->
-  <string name="accessibility_tosater">Desconecte Botón Swipe Inicio de esta página</string>
+  <!--Original value: Please switch on Swipe Home Button on this page in order to perform this swipe action-->
+  <string name="accessibility_tosater">Por favor, cambia en el botón Inicio Swipe en esta página con el fin de realizar esta acción magnética</string>
 </resources>

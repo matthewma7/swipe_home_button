@@ -50,6 +50,10 @@
   <string name="pref_areaheight_larger">Больше</string>
   <!--Original value: Large-->
   <string name="pref_areaheight_large">Большая</string>
+  <!--Original value: Extend detection area width-->
+  <string name="pref_extend_areawidth">Продлить обнаружения ширину области</string>
+  <!--Original value: Extend detection area width to full screen width to fit bigger screen-->
+  <string name="pref_extend_areawidth_summary">Продлить ширину зоны обнаружения до полной ширины экрана, чтобы соответствовать больший экран</string>
   <!--Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. -->
   <string name="dialog_areaheight_notice">Большая высота блокирует больше пространства, а небольшая снижает чувствительность и требует устойчивого и медленного жеста</string>
   <!--Original value: Force notification-->
@@ -168,6 +172,6 @@
   <string name="notice_ok">OK</string>
   <!--Original value: this app needs accessibility service for Go Back and Pull Down Notification on Samsung Lollipop system-->
   <string name="accessibility_description">это приложение должно доступности услуг для вернуться и Pull Down Уведомление о системе Samsung Lollipop</string>
-  <!--Original value: Please turn Swipe Home Button on this page-->
-  <string name="accessibility_tosater">Пожалуйста, включите Проведите Главная кнопка на этой странице</string>
+  <!--Original value: Please switch on Swipe Home Button on this page in order to perform this swipe action-->
+  <string name="accessibility_tosater">Пожалуйста, включите Проведите домашняя кнопка на этой странице, чтобы выполнить эту салфетки действия</string>
 </resources>

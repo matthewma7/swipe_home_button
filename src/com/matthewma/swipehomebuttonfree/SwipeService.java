@@ -53,7 +53,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean prefTabNotice;
 	final int ANGLE=25;
 	final int XYThreshold=65;
-	final int buttonWidth=10000;
+	final int buttonWidth=140;
 	int buttonHeight;
 	int screenHeight;
 	Boolean firstTapNotice=true;
@@ -62,6 +62,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	Boolean swipeVibrate;
 	Boolean tapVibrate;
 	boolean useAccessibility;
+	boolean extendToFullWidth;
 
 	@SuppressLint("NewApi")
 	@Override
@@ -75,6 +76,7 @@ public class SwipeService extends Service implements OnGestureListener{
 		useAccessibility=sharedPrefs.getBoolean("prefUseAccessibility", false);
 		Boolean prefTransparentIcon=sharedPrefs.getBoolean("prefTransparentIcon", true);
 		int detectAreaHeight=sharedPrefs.getInt("prefDetectAreaHeight", 2);
+		extendToFullWidth=sharedPrefs.getBoolean("prefExtendWidth", false);
 		AreaHeight areaHeight=new AreaHeight();
 		areaHeight.SetHeight(detectAreaHeight,this);
 		buttonHeight=areaHeight.Height;
@@ -135,7 +137,7 @@ public class SwipeService extends Service implements OnGestureListener{
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		int hight=dp2px(buttonHeight);
-		int width=dp2px(buttonWidth);
+		int width=dp2px(!extendToFullWidth?buttonWidth:10000);
 		WindowManager.LayoutParams params = new WindowManager.LayoutParams(
 			width, hight,
 			//WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT,
@@ -281,7 +283,8 @@ public class SwipeService extends Service implements OnGestureListener{
 	    		.setMessage(R.string.dialog_tapnotice)
 	    		.setPositiveButton(getString(R.string.notice_understand),new DialogInterface.OnClickListener() {  
 	                @Override  
-	                public void onClick(DialogInterface dialog, int which) {  
+	                public void onClick(DialogInterface dialog, int which) {
+	                	dialog.dismiss();
 	                }
 	            });
 				if(!firstTapNotice){

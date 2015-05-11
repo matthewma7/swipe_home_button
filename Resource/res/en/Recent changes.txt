@@ -1,5 +1,5 @@
 1, Fix Pull Down Notification on Samsung Lollipop system
 2, Add Back Button support.
-3, Extend the swipe area at the bottom to full width of screen.
+3, Add Option to extend the swipe area at the bottom to full width of screen.
 
-Give a five star if you like this update :)
+Don't hesitate to give a five star if you like this update :)

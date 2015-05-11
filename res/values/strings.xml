@@ -30,6 +30,8 @@
     <string name="pref_areaheight_normal">Normal</string>
     <string name="pref_areaheight_larger">Larger</string>
     <string name="pref_areaheight_large">Large</string>
+    <string name="pref_extend_areawidth">Extend detection area width</string>
+    <string name="pref_extend_areawidth_summary">Extend detection area width to full screen width to fit bigger screen</string>
     <string name="dialog_areaheight_notice">Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. </string>
     <string name="pref_forcenotification">Force notification</string>
     <string name="pref_forcenotification_summary">Force to pull-down notification even in full screen app.</string>
@@ -99,5 +101,5 @@
     <string name="notice_ok">OK</string>
     
     <string name="accessibility_description">this app needs accessibility service for Go Back and Pull Down Notification on Samsung Lollipop system</string>
-    <string name="accessibility_tosater">Please turn Swipe Home Button on this page</string>
+    <string name="accessibility_tosater">Please switch on Swipe Home Button on this page in order to perform this swipe action</string>
 </resources>

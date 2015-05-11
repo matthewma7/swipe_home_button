@@ -2,11 +2,14 @@ package com.matthewma.swipehomebuttonfree;
 
 import android.accessibilityservice.AccessibilityService;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.accessibility.AccessibilityEvent;
-import android.widget.Toast;
 
 public class MyAccessibilityService extends AccessibilityService {
 
@@ -25,7 +28,23 @@ public class MyAccessibilityService extends AccessibilityService {
 			Intent openAccessiblity = new Intent("android.settings.ACCESSIBILITY_SETTINGS");
 			openAccessiblity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
 			context.startActivity(openAccessiblity);
-		    Toast.makeText(context,context.getString(R.string.accessibility_tosater), Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder builder=new AlertDialog.Builder(context);  
+			builder
+    		.setTitle(R.string.notice_title)
+    		.setIcon(R.drawable.s_launcher_48)
+    		.setCancelable(false)
+    		.setMessage(R.string.accessibility_tosater)
+    		.setPositiveButton(context.getString(R.string.notice_understand),new DialogInterface.OnClickListener() {  
+                @Override  
+                public void onClick(DialogInterface dialog, int which) {
+                	dialog.dismiss();
+                }
+            });
+    		AlertDialog dialog=builder.create();
+            Window win=dialog.getWindow();
+            win.setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+            dialog.show();
+		    //Toast.makeText(context,context.getString(R.string.accessibility_tosater), Toast.LENGTH_SHORT).show();
 		}
 		return null;
 	}

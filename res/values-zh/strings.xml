@@ -50,6 +50,10 @@
   <string name="pref_areaheight_larger">較大</string>
   <!--Original value: Large-->
   <string name="pref_areaheight_large">大</string>
+  <!--Original value: Extend detection area width-->
+  <string name="pref_extend_areawidth">增加監測區域高度</string>
+  <!--Original value: Extend detection area width to full screen width to fit bigger screen-->
+  <string name="pref_extend_areawidth_summary">增加監測區域高度至屏幕寬度來適應大屏幕</string>
   <!--Original value: Higher height blocks more space. Lower height lowers sensitivity and needs firm and slow swipes. -->
   <string name="dialog_areaheight_notice">高度越高，阻擋越多屏幕空間。高度越低，靈敏度越低，且需要更慢更有力的滑動手勢。</string>
   <!--Original value: Force notification-->
@@ -168,6 +172,6 @@
   <string name="notice_ok">好的</string>
   <!--Original value: this app needs accessibility service for Go Back and Pull Down Notification on Samsung Lollipop system-->
   <string name="accessibility_description">這個程式需要輔助功能服務來實現返回鍵和在Samsung Lollipop設備上的下拉菜單功能</string>
-  <!--Original value: Please turn Swipe Home Button on this page-->
-  <string name="accessibility_tosater">請在這個界面上打開滑動Home鍵</string>
+  <!--Original value: Please switch on Swipe Home Button on this page in order to perform this swipe action-->
+  <string name="accessibility_tosater">請在這個頁面上打開滑動Home鍵來實現這個滑動操作</string>
 </resources>
