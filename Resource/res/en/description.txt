@@ -1,4 +1,4 @@
-%% I am aware that on Samsung Lollipop device the pull down notification feature is not working. I managed to get a Samsung Lollipop device and a One Plus One on Lollipop. Unfortunately, I found out this is a Samsung lollipop specific problem. Not only this app, other app that has pull notification won't work on Samsung Lollipop too. I know many of you are Samsung users, but there is nothing I can do at this moment except waiting for next system update :( Meanwhile, please un-check the Force notification under Advanced settings since it only make it worse. %%
+%% Thanks to tip from a user, I fixed the pull down notification feature on Samsung Lollipop device. You will receive the update soon :) %%
 
 Do you find physical Home Button is hard to press? Do you worry your home button will be broken soon? Do you feel your notification bar is too far to reach?
 
@@ -22,6 +22,8 @@ Five most useful actions!
     ----You could open you most used app in one action!
 6, Open app shortcuts
     ----Go directly to where you want to
+7, Back Button
+    ----Simulate press back button on your phone
 
 Five Amazing customizable swipe gestures!
 1, Swipe up

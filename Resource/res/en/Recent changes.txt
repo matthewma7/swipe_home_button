@@ -1,7 +1,5 @@
-Canceled "Improve sensibility" option.
+1, Fix Pull Down Notification on Samsung Lollipop system
+2, Add Back Button support.
+3, Extend the swipe area at the bottom to full width of screen.
 
-Adds tip for hiding notification icon.
-
-Some reviews below might be misleading.
-
-If you like this app, a five star rating will be great :)
+Give a five star if you like this update :)
